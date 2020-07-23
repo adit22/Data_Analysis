@@ -12491,7 +12491,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x4ee1fff6d8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xa9ff111710&gt;</pre>
 </div>
 
 </div>
@@ -12539,7 +12539,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x4ee33469e8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xa9ff49bc50&gt;</pre>
 </div>
 
 </div>
@@ -12587,7 +12587,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x4ee340bc18&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xa9ff44ef60&gt;</pre>
 </div>
 
 </div>
@@ -12635,7 +12635,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x4ee33f07b8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xa9ff6037f0&gt;</pre>
 </div>
 
 </div>
@@ -12683,7 +12683,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x4ee3544e48&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xa9ff44ed30&gt;</pre>
 </div>
 
 </div>
@@ -12731,7 +12731,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x4ee36111d0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xa9ff745ac8&gt;</pre>
 </div>
 
 </div>
@@ -13930,10 +13930,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataapr</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataapr</span><span class="o">=</span><span class="n">dataapr</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Date_tmp&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">dataapr</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> 
 <span class="n">dataapr</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -13947,7 +13948,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[33]:</div>
+<div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -13977,7 +13978,6 @@ div#notebook {
       <th>Total Recovered</th>
       <th>Daily Deceased</th>
       <th>Total Deceased</th>
-      <th>Date_tmp</th>
     </tr>
   </thead>
   <tbody>
@@ -13990,7 +13990,6 @@ div#notebook {
       <td>169</td>
       <td>6</td>
       <td>53</td>
-      <td>1</td>
     </tr>
     <tr>
       <th>1</th>
@@ -14001,7 +14000,6 @@ div#notebook {
       <td>191</td>
       <td>16</td>
       <td>69</td>
-      <td>2</td>
     </tr>
     <tr>
       <th>2</th>
@@ -14012,7 +14010,6 @@ div#notebook {
       <td>230</td>
       <td>14</td>
       <td>83</td>
-      <td>3</td>
     </tr>
     <tr>
       <th>3</th>
@@ -14023,7 +14020,6 @@ div#notebook {
       <td>286</td>
       <td>13</td>
       <td>96</td>
-      <td>4</td>
     </tr>
     <tr>
       <th>4</th>
@@ -14034,7 +14030,6 @@ div#notebook {
       <td>329</td>
       <td>22</td>
       <td>118</td>
-      <td>5</td>
     </tr>
   </tbody>
 </table>
@@ -14049,7 +14044,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataapr_diff</span><span class="o">=</span><span class="n">dataapr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -14066,7 +14061,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[34]:</div>
+<div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -14096,7 +14091,6 @@ div#notebook {
       <th>Total Recovered</th>
       <th>Daily Deceased</th>
       <th>Total Deceased</th>
-      <th>Date_tmp</th>
     </tr>
   </thead>
   <tbody>
@@ -14109,7 +14103,6 @@ div#notebook {
       <td>169</td>
       <td>6</td>
       <td>53</td>
-      <td>1</td>
     </tr>
     <tr>
       <th>1</th>
@@ -14120,7 +14113,6 @@ div#notebook {
       <td>191</td>
       <td>16</td>
       <td>69</td>
-      <td>2</td>
     </tr>
     <tr>
       <th>2</th>
@@ -14131,7 +14123,6 @@ div#notebook {
       <td>230</td>
       <td>14</td>
       <td>83</td>
-      <td>3</td>
     </tr>
     <tr>
       <th>3</th>
@@ -14142,7 +14133,6 @@ div#notebook {
       <td>286</td>
       <td>13</td>
       <td>96</td>
-      <td>4</td>
     </tr>
     <tr>
       <th>4</th>
@@ -14153,7 +14143,6 @@ div#notebook {
       <td>329</td>
       <td>22</td>
       <td>118</td>
-      <td>5</td>
     </tr>
   </tbody>
 </table>
@@ -14168,7 +14157,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_diff&quot;</span><span class="p">]</span>
@@ -14212,13 +14201,141 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 </div>
 
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[48]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>Daily Confirmed</th>
+      <th>Total Confirmed</th>
+      <th>Daily Recovered</th>
+      <th>Total Recovered</th>
+      <th>Daily Deceased</th>
+      <th>Total Deceased</th>
+      <th>Daily_Confirmed_Diff</th>
+      <th>Total_Confirmed_Diff</th>
+      <th>Daily_Recovered_Diff</th>
+      <th>Total_Recovered_Diff</th>
+      <th>Daily_Deceased_Diff</th>
+      <th>Total_Deceased_diff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020-04-01</td>
+      <td>424</td>
+      <td>2059</td>
+      <td>19</td>
+      <td>169</td>
+      <td>6</td>
+      <td>53</td>
+      <td>115</td>
+      <td>424</td>
+      <td>6</td>
+      <td>19</td>
+      <td>0</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-04-02</td>
+      <td>486</td>
+      <td>2545</td>
+      <td>22</td>
+      <td>191</td>
+      <td>16</td>
+      <td>69</td>
+      <td>62</td>
+      <td>486</td>
+      <td>3</td>
+      <td>22</td>
+      <td>10</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020-04-03</td>
+      <td>560</td>
+      <td>3105</td>
+      <td>39</td>
+      <td>230</td>
+      <td>14</td>
+      <td>83</td>
+      <td>74</td>
+      <td>560</td>
+      <td>17</td>
+      <td>39</td>
+      <td>-2</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020-04-04</td>
+      <td>579</td>
+      <td>3684</td>
+      <td>56</td>
+      <td>286</td>
+      <td>13</td>
+      <td>96</td>
+      <td>19</td>
+      <td>579</td>
+      <td>17</td>
+      <td>56</td>
+      <td>-1</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020-04-05</td>
+      <td>609</td>
+      <td>4293</td>
+      <td>43</td>
+      <td>329</td>
+      <td>22</td>
+      <td>118</td>
+      <td>30</td>
+      <td>609</td>
+      <td>-13</td>
+      <td>43</td>
+      <td>9</td>
+      <td>22</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataapr_diff</span><span class="p">[</span><span class="s2">&quot;Total Confirmed&quot;</span><span class="p">][</span><span class="mi">24</span><span class="p">]</span><span class="o">-</span><span class="n">dataapr_diff</span><span class="p">[</span><span class="s2">&quot;Total Confirmed&quot;</span><span class="p">][</span><span class="mi">23</span><span class="p">]</span><span class="o">==</span><span class="n">dataapr_diff</span><span class="p">[</span><span class="s2">&quot;Total_Confirmed_Diff&quot;</span><span class="p">][</span><span class="mi">24</span><span class="p">]</span>
@@ -14234,7 +14351,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[37]:</div>
+<div class="prompt output_prompt">Out[49]:</div>
 
 
 
@@ -14251,7 +14368,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataapr_diff</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -14267,7 +14384,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[38]:</div>
+<div class="prompt output_prompt">Out[50]:</div>
 
 
 
@@ -14296,7 +14413,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <th>Total Recovered</th>
       <th>Daily Deceased</th>
       <th>Total Deceased</th>
-      <th>Date_tmp</th>
       <th>Daily_Confirmed_Diff</th>
       <th>Total_Confirmed_Diff</th>
       <th>Daily_Recovered_Diff</th>
@@ -14320,7 +14436,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>30.000000</td>
       <td>30.000000</td>
       <td>30.000000</td>
-      <td>30.000000</td>
     </tr>
     <tr>
       <th>mean</th>
@@ -14330,7 +14445,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>2874.300000</td>
       <td>36.900000</td>
       <td>483.300000</td>
-      <td>15.500000</td>
       <td>49.733333</td>
       <td>1107.700000</td>
       <td>20.566667</td>
@@ -14346,7 +14460,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>2789.124497</td>
       <td>18.077134</td>
       <td>328.006849</td>
-      <td>8.803408</td>
       <td>228.355430</td>
       <td>472.721479</td>
       <td>108.255981</td>
@@ -14362,7 +14475,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>169.000000</td>
       <td>6.000000</td>
       <td>53.000000</td>
-      <td>1.000000</td>
       <td>-341.000000</td>
       <td>424.000000</td>
       <td>-309.000000</td>
@@ -14378,7 +14490,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>582.500000</td>
       <td>23.000000</td>
       <td>192.500000</td>
-      <td>8.250000</td>
       <td>-135.500000</td>
       <td>646.250000</td>
       <td>-20.500000</td>
@@ -14394,7 +14505,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>1638.000000</td>
       <td>36.500000</td>
       <td>436.000000</td>
-      <td>15.500000</td>
       <td>44.000000</td>
       <td>1046.000000</td>
       <td>16.000000</td>
@@ -14410,7 +14520,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>4851.500000</td>
       <td>45.500000</td>
       <td>712.000000</td>
-      <td>22.750000</td>
       <td>200.500000</td>
       <td>1560.250000</td>
       <td>54.750000</td>
@@ -14426,7 +14535,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>9059.000000</td>
       <td>75.000000</td>
       <td>1154.000000</td>
-      <td>30.000000</td>
       <td>485.000000</td>
       <td>1902.000000</td>
       <td>284.000000</td>
@@ -14447,7 +14555,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Blue&quot;</span><span class="p">,</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span><span class="s2">&quot;Yellow&quot;</span><span class="p">,</span><span class="s2">&quot;Green&quot;</span><span class="p">,</span><span class="s2">&quot;Orange&quot;</span><span class="p">,</span><span class="s2">&quot;Violet&quot;</span><span class="p">]</span>
@@ -14559,7 +14667,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataapr_diff</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
@@ -14575,7 +14683,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[40]:</div>
+<div class="prompt output_prompt">Out[52]:</div>
 
 
 
@@ -14605,7 +14713,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <th>Total Recovered</th>
       <th>Daily Deceased</th>
       <th>Total Deceased</th>
-      <th>Date_tmp</th>
       <th>Daily_Confirmed_Diff</th>
       <th>Total_Confirmed_Diff</th>
       <th>Daily_Recovered_Diff</th>
@@ -14624,7 +14731,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>6523</td>
       <td>56</td>
       <td>881</td>
-      <td>26</td>
       <td>-228</td>
       <td>1607</td>
       <td>143</td>
@@ -14641,7 +14747,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>7103</td>
       <td>58</td>
       <td>939</td>
-      <td>27</td>
       <td>-39</td>
       <td>1568</td>
       <td>-5</td>
@@ -14658,7 +14763,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>7739</td>
       <td>69</td>
       <td>1008</td>
-      <td>28</td>
       <td>334</td>
       <td>1902</td>
       <td>56</td>
@@ -14675,7 +14779,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>8429</td>
       <td>71</td>
       <td>1079</td>
-      <td>29</td>
       <td>-197</td>
       <td>1705</td>
       <td>54</td>
@@ -14692,7 +14795,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>9059</td>
       <td>75</td>
       <td>1154</td>
-      <td>30</td>
       <td>96</td>
       <td>1801</td>
       <td>-60</td>
@@ -14713,121 +14815,52 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataapr_ratio</span><span class="o">=</span><span class="n">dataapr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">dataapr_ratio</span><span class="o">=</span><span class="n">dataapr_ratio</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Date_tmp&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">dataapr_ratio</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;daily_cnf_diff_pos_neg&quot;</span><span class="p">,</span><span class="s2">&quot;total_cnf_diff_pos_neg&quot;</span><span class="p">,</span><span class="s2">&quot;daily_rcvd_diff_pos_neg&quot;</span><span class="p">,</span><span class="s2">&quot;total_rcvd_diff_pos_neg&quot;</span><span class="p">,</span><span class="s2">&quot;daily_dcsd_diff_pos_neg&quot;</span><span class="p">,</span><span class="s2">&quot;total_dcsd_diff_pos_neg&quot;</span><span class="p">]</span>
+<span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_diff&quot;</span><span class="p">]</span>
+<span class="n">pos_neg_dict</span><span class="o">=</span><span class="p">{}</span>
+<span class="n">pos_neg_len_dict</span><span class="o">=</span><span class="p">{}</span>
+<span class="n">a</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">b</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">kys</span><span class="p">,</span><span class="n">new_cols</span><span class="p">):</span>
+    <span class="n">pos</span><span class="o">=</span><span class="n">dataapr_diff</span><span class="p">[</span><span class="n">dataapr_diff</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pos</span><span class="p">))</span>
+    <span class="n">neg</span><span class="o">=</span><span class="n">dataapr_diff</span><span class="p">[</span><span class="n">dataapr_diff</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">neg</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">neg</span><span class="p">))</span>
+    <span class="n">zro</span><span class="o">=</span><span class="n">dataapr_diff</span><span class="p">[</span><span class="n">dataapr_diff</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zro</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">zro</span><span class="p">))</span>
+    <span class="n">pos_neg_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">i</span><span class="p">:</span><span class="n">a</span><span class="p">})</span>
+    <span class="n">pos_neg_len_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">i</span><span class="p">:</span><span class="n">b</span><span class="p">})</span>
+    <span class="n">a</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">b</span><span class="o">=</span><span class="p">[]</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[49]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Date</th>
-      <th>Daily Confirmed</th>
-      <th>Total Confirmed</th>
-      <th>Daily Recovered</th>
-      <th>Total Recovered</th>
-      <th>Daily Deceased</th>
-      <th>Total Deceased</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2020-04-01</td>
-      <td>424</td>
-      <td>2059</td>
-      <td>19</td>
-      <td>169</td>
-      <td>6</td>
-      <td>53</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2020-04-02</td>
-      <td>486</td>
-      <td>2545</td>
-      <td>22</td>
-      <td>191</td>
-      <td>16</td>
-      <td>69</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2020-04-03</td>
-      <td>560</td>
-      <td>3105</td>
-      <td>39</td>
-      <td>230</td>
-      <td>14</td>
-      <td>83</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2020-04-04</td>
-      <td>579</td>
-      <td>3684</td>
-      <td>56</td>
-      <td>286</td>
-      <td>13</td>
-      <td>96</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2020-04-05</td>
-      <td>609</td>
-      <td>4293</td>
-      <td>43</td>
-      <td>329</td>
-      <td>22</td>
-      <td>118</td>
-    </tr>
-  </tbody>
-</table>
 </div>
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataapr_ratio</span><span class="o">=</span><span class="n">dataapr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
 
 </div>
-
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_Ratio&quot;</span><span class="p">]</span>
@@ -14872,7 +14905,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[50]:</div>
+<div class="prompt output_prompt">Out[56]:</div>
 
 
 
@@ -15004,7 +15037,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="n">dataapr_ratio</span><span class="p">[</span><span class="s2">&quot;Total Confirmed&quot;</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="o">/</span><span class="n">dataapr_ratio</span><span class="p">[</span><span class="s2">&quot;Total Confirmed&quot;</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span><span class="o">==</span><span class="n">dataapr_ratio</span><span class="p">[</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span>
@@ -15020,7 +15053,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[51]:</div>
+<div class="prompt output_prompt">Out[57]:</div>
 
 
 
@@ -15037,7 +15070,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Blue&quot;</span><span class="p">,</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span><span class="s2">&quot;Yellow&quot;</span><span class="p">,</span><span class="s2">&quot;Green&quot;</span><span class="p">,</span><span class="s2">&quot;Orange&quot;</span><span class="p">,</span><span class="s2">&quot;Violet&quot;</span><span class="p">]</span>
@@ -15149,7 +15182,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_Ratio&quot;</span><span class="p">]</span>
@@ -15194,7 +15227,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[53]:</div>
+<div class="prompt output_prompt">Out[59]:</div>
 
 
 
@@ -15326,7 +15359,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Blue&quot;</span><span class="p">,</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span><span class="s2">&quot;Yellow&quot;</span><span class="p">,</span><span class="s2">&quot;Green&quot;</span><span class="p">,</span><span class="s2">&quot;Orange&quot;</span><span class="p">,</span><span class="s2">&quot;Violet&quot;</span><span class="p">]</span>
@@ -15428,6 +15461,63 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <img src="data:image/png;base64,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LeL0008f92f52Mc+xuDgIKrKI488Ujp+44038v3vfx/P89i6dStPP/00S5curXidSr+HKQ0AqrpmnPN/B/xdhXPXAdfV3rTmKfUAdgVoQZGkTcsz8VZ+Mx7LD37wA/r6+njkkUdIJBIsWrSo7jnpjz76KEcffXTp+W+99Vbe8pa37NeukdMeVZVly5Zx33337XfNCy64gDvvvJOenh6uvfZaHnzwQQC+973v8bvf/Y477riD5cuX8/jjj6OqXHXVVbz73e/e5xq33HJLzVMtb775ZpYuXcpf/dVf8bnPfY4f/ehHPP/883znO99h3bp1zJ49m09+8pPjvlbV/h4aJZZ7AWlOIXxDgb/DegHGnHrqqdxyyy0MDw8zMDDAbbfdxjvf+U66urr2mZ3S19fH/PnzSSQS3H333fvku2vx4osv8pd/+Zd87nOfA8JZMMXxAAiDA8Dq1av513/9V3w//DvduXMnS5cuZcuWLaxbtw6AfD7PU089BcDg4CAHHXQQhUKBH/7wh/s830knncTXv/515syZw5YtWzjrrLO46qqr8DwPgGeffZbh4WFOPfVUbrrpJoIgYMuWLfzmN7+p6mdKpVJ84xvf4N577+W5555jz549dHV1MWvWLF599VXuuuuu0mNHvq5FlX4PzRLLrSA0r7gHufhbfILtARw01S0yZmqtWrWKNWvWcMIJJwBw6aWXcuyxxwKwcuVKjj32WN73vvfxpS99ife///2sXLmS448/niOOOKLq53j22Wc57rjjGB4eZtasWXz5y1/mU5/6FACXX345X/ziFzn22GMJgoDDDz+c2267jT/5kz/h+eefZ9myZSQSCS699FIuueQS/uu//ovPf/7z9Pf343keX/7yl0sDratWreLQQw+lp6en9I77sssu46WXXkJVWb16NT09PRx99NFs2rSJFStWADB//nxuu+02PvrRj3LPPffQ09PDkUceyamnnlr1z9je3l7K8V999dUsXbqUnp4e3vzmN3PKKaeUHnfxxRdz5plnsnjxYn75y19W9XtoBpnsLkc1Vq5cqc0sCLPr73aRXpYm93COzCkZ2s5oa9pzGVNu48aNpbSHMfUa7f+RiDysqitruU7sUkCqCnmQNsE50LGBYGNMbMUvBRQtdpS04M5zLQAY00AbNmzgoosu2udYe3s7a9eunZoGNdAHPvABNm3a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
 "
 >
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;daily_cnf_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;total_cnf_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;daily_rcvd_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;total_rcvd_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;daily_dcsd_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;total_dcsd_diff_rat10&quot;</span><span class="p">]</span>
+<span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_Ratio&quot;</span><span class="p">]</span>
+<span class="n">one_zro_dict</span><span class="o">=</span><span class="p">{}</span>
+<span class="n">one_zro_len_dict</span><span class="o">=</span><span class="p">{}</span>
+<span class="n">a</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">b</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">kys</span><span class="p">,</span><span class="n">new_cols</span><span class="p">):</span>
+    <span class="n">pos</span><span class="o">=</span><span class="n">dataapr_ratio</span><span class="p">[</span><span class="n">dataapr_ratio</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pos</span><span class="p">))</span>
+    <span class="n">neg</span><span class="o">=</span><span class="n">dataapr_ratio</span><span class="p">[</span><span class="n">dataapr_ratio</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">neg</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">neg</span><span class="p">))</span>
+    <span class="n">zro</span><span class="o">=</span><span class="n">dataapr_ratio</span><span class="p">[</span><span class="n">dataapr_ratio</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zro</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">zro</span><span class="p">))</span>
+    <span class="n">one_zro_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">i</span><span class="p">:</span><span class="n">a</span><span class="p">})</span>
+    <span class="n">one_zro_len_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">i</span><span class="p">:</span><span class="n">b</span><span class="p">})</span>
+    <span class="n">a</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">b</span><span class="o">=</span><span class="p">[]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[65]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;daily_cnf_diff_rat10&#39;: [17, 13, 0],
+ &#39;total_cnf_diff_rat10&#39;: [30, 0, 0],
+ &#39;daily_rcvd_diff_rat10&#39;: [19, 11, 0],
+ &#39;total_rcvd_diff_rat10&#39;: [30, 0, 0],
+ &#39;daily_dcsd_diff_rat10&#39;: [18, 12, 0],
+ &#39;total_dcsd_diff_rat10&#39;: [30, 0, 0]}</pre>
 </div>
 
 </div>

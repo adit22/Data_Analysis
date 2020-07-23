@@ -12501,7 +12501,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x56b35b30f0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x64afe65048&gt;</pre>
 </div>
 
 </div>
@@ -12549,7 +12549,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x56b46989b0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x64aff60b70&gt;</pre>
 </div>
 
 </div>
@@ -12597,7 +12597,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x56b365d828&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x64b0026f98&gt;</pre>
 </div>
 
 </div>
@@ -12645,7 +12645,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x56b47e1f98&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x64affd2e10&gt;</pre>
 </div>
 
 </div>
@@ -12693,7 +12693,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x56b48a5208&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x64b0185ac8&gt;</pre>
 </div>
 
 </div>
@@ -12741,7 +12741,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x56b4953518&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x64b0233390&gt;</pre>
 </div>
 
 </div>
@@ -13933,7 +13933,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datamay</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datamay</span><span class="o">=</span><span class="n">datamay</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Date_tmp&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">datamay</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> 
 <span class="n">datamay</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -13977,7 +13978,6 @@ div#notebook {
       <th>Total Recovered</th>
       <th>Daily Deceased</th>
       <th>Total Deceased</th>
-      <th>Date_tmp</th>
     </tr>
   </thead>
   <tbody>
@@ -13990,7 +13990,6 @@ div#notebook {
       <td>10021</td>
       <td>77</td>
       <td>1231</td>
-      <td>1</td>
     </tr>
     <tr>
       <th>1</th>
@@ -14001,7 +14000,6 @@ div#notebook {
       <td>10852</td>
       <td>92</td>
       <td>1323</td>
-      <td>2</td>
     </tr>
     <tr>
       <th>2</th>
@@ -14012,7 +14010,6 @@ div#notebook {
       <td>11763</td>
       <td>140</td>
       <td>1463</td>
-      <td>3</td>
     </tr>
     <tr>
       <th>3</th>
@@ -14023,7 +14020,6 @@ div#notebook {
       <td>12845</td>
       <td>103</td>
       <td>1566</td>
-      <td>4</td>
     </tr>
     <tr>
       <th>4</th>
@@ -14034,7 +14030,6 @@ div#notebook {
       <td>14140</td>
       <td>128</td>
       <td>1694</td>
-      <td>5</td>
     </tr>
   </tbody>
 </table>
@@ -14096,7 +14091,6 @@ div#notebook {
       <th>Total Recovered</th>
       <th>Daily Deceased</th>
       <th>Total Deceased</th>
-      <th>Date_tmp</th>
     </tr>
   </thead>
   <tbody>
@@ -14109,7 +14103,6 @@ div#notebook {
       <td>10021</td>
       <td>77</td>
       <td>1231</td>
-      <td>1</td>
     </tr>
     <tr>
       <th>1</th>
@@ -14120,7 +14113,6 @@ div#notebook {
       <td>10852</td>
       <td>92</td>
       <td>1323</td>
-      <td>2</td>
     </tr>
     <tr>
       <th>2</th>
@@ -14131,7 +14123,6 @@ div#notebook {
       <td>11763</td>
       <td>140</td>
       <td>1463</td>
-      <td>3</td>
     </tr>
     <tr>
       <th>3</th>
@@ -14142,7 +14133,6 @@ div#notebook {
       <td>12845</td>
       <td>103</td>
       <td>1566</td>
-      <td>4</td>
     </tr>
     <tr>
       <th>4</th>
@@ -14153,7 +14143,6 @@ div#notebook {
       <td>14140</td>
       <td>128</td>
       <td>1694</td>
-      <td>5</td>
     </tr>
   </tbody>
 </table>
@@ -14264,7 +14253,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <th>Total Recovered</th>
       <th>Daily Deceased</th>
       <th>Total Deceased</th>
-      <th>Date_tmp</th>
       <th>Daily_Confirmed_Diff</th>
       <th>Total_Confirmed_Diff</th>
       <th>Daily_Recovered_Diff</th>
@@ -14283,7 +14271,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>10021</td>
       <td>77</td>
       <td>1231</td>
-      <td>1</td>
       <td>595</td>
       <td>2396</td>
       <td>332</td>
@@ -14300,7 +14287,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>10852</td>
       <td>92</td>
       <td>1323</td>
-      <td>2</td>
       <td>168</td>
       <td>2564</td>
       <td>-131</td>
@@ -14317,7 +14303,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>11763</td>
       <td>140</td>
       <td>1463</td>
-      <td>3</td>
       <td>388</td>
       <td>2952</td>
       <td>80</td>
@@ -14334,7 +14319,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>12845</td>
       <td>103</td>
       <td>1566</td>
-      <td>4</td>
       <td>704</td>
       <td>3656</td>
       <td>171</td>
@@ -14351,7 +14335,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>14140</td>
       <td>128</td>
       <td>1694</td>
-      <td>5</td>
       <td>-685</td>
       <td>2971</td>
       <td>213</td>
@@ -14450,7 +14433,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <th>Total Recovered</th>
       <th>Daily Deceased</th>
       <th>Total Deceased</th>
-      <th>Date_tmp</th>
       <th>Daily_Confirmed_Diff</th>
       <th>Total_Confirmed_Diff</th>
       <th>Daily_Recovered_Diff</th>
@@ -14474,7 +14456,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>31.000000</td>
       <td>31.000000</td>
       <td>31.000000</td>
-      <td>31.000000</td>
     </tr>
     <tr>
       <th>mean</th>
@@ -14484,7 +14465,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>39262.129032</td>
       <td>137.161290</td>
       <td>3039.580645</td>
-      <td>16.000000</td>
       <td>225.419355</td>
       <td>5025.258065</td>
       <td>138.645161</td>
@@ -14500,7 +14480,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>24219.678486</td>
       <td>42.790261</td>
       <td>1215.692060</td>
-      <td>9.092121</td>
       <td>583.174804</td>
       <td>1855.884748</td>
       <td>2135.501761</td>
@@ -14516,7 +14495,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>10021.000000</td>
       <td>77.000000</td>
       <td>1231.000000</td>
-      <td>1.000000</td>
       <td>-719.000000</td>
       <td>2396.000000</td>
       <td>-7432.000000</td>
@@ -14532,7 +14510,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>18594.000000</td>
       <td>104.000000</td>
       <td>2043.500000</td>
-      <td>8.500000</td>
       <td>-173.500000</td>
       <td>3577.000000</td>
       <td>-142.500000</td>
@@ -14548,7 +14525,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>34257.000000</td>
       <td>134.000000</td>
       <td>2872.000000</td>
-      <td>16.000000</td>
       <td>226.000000</td>
       <td>4628.000000</td>
       <td>81.000000</td>
@@ -14564,7 +14540,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>56051.500000</td>
       <td>151.000000</td>
       <td>3945.000000</td>
-      <td>23.500000</td>
       <td>554.000000</td>
       <td>6475.000000</td>
       <td>329.000000</td>
@@ -14580,7 +14555,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>91862.000000</td>
       <td>269.000000</td>
       <td>5406.000000</td>
-      <td>31.000000</td>
       <td>1526.000000</td>
       <td>8789.000000</td>
       <td>8564.000000</td>
@@ -14759,7 +14733,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <th>Total Recovered</th>
       <th>Daily Deceased</th>
       <th>Total Deceased</th>
-      <th>Date_tmp</th>
       <th>Daily_Confirmed_Diff</th>
       <th>Total_Confirmed_Diff</th>
       <th>Daily_Recovered_Diff</th>
@@ -14778,7 +14751,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>67725</td>
       <td>188</td>
       <td>4534</td>
-      <td>27</td>
       <td>1339</td>
       <td>7246</td>
       <td>-151</td>
@@ -14795,7 +14767,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>70896</td>
       <td>176</td>
       <td>4710</td>
-      <td>28</td>
       <td>8</td>
       <td>7254</td>
       <td>-263</td>
@@ -14812,7 +14783,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>82631</td>
       <td>269</td>
       <td>4979</td>
-      <td>29</td>
       <td>884</td>
       <td>8138</td>
       <td>8564</td>
@@ -14829,7 +14799,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>86934</td>
       <td>205</td>
       <td>5184</td>
-      <td>30</td>
       <td>226</td>
       <td>8364</td>
       <td>-7432</td>
@@ -14846,7 +14815,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>91862</td>
       <td>222</td>
       <td>5406</td>
-      <td>31</td>
       <td>425</td>
       <td>8789</td>
       <td>625</td>
@@ -14867,12 +14835,42 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;daily_cnf_diff_pos_neg&quot;</span><span class="p">,</span><span class="s2">&quot;total_cnf_diff_pos_neg&quot;</span><span class="p">,</span><span class="s2">&quot;daily_rcvd_diff_pos_neg&quot;</span><span class="p">,</span><span class="s2">&quot;total_rcvd_diff_pos_neg&quot;</span><span class="p">,</span><span class="s2">&quot;daily_dcsd_diff_pos_neg&quot;</span><span class="p">,</span><span class="s2">&quot;total_dcsd_diff_pos_neg&quot;</span><span class="p">]</span>
+<span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_diff&quot;</span><span class="p">]</span>
+<span class="n">pos_neg_dict</span><span class="o">=</span><span class="p">{}</span>
+<span class="n">pos_neg_len_dict</span><span class="o">=</span><span class="p">{}</span>
+<span class="n">a</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">b</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">kys</span><span class="p">,</span><span class="n">new_cols</span><span class="p">):</span>
+    <span class="n">pos</span><span class="o">=</span><span class="n">datamay_diff</span><span class="p">[</span><span class="n">datamay_diff</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pos</span><span class="p">))</span>
+    <span class="n">neg</span><span class="o">=</span><span class="n">datamay_diff</span><span class="p">[</span><span class="n">datamay_diff</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">neg</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">neg</span><span class="p">))</span>
+    <span class="n">zro</span><span class="o">=</span><span class="n">datamay_diff</span><span class="p">[</span><span class="n">datamay_diff</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zro</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">zro</span><span class="p">))</span>
+    <span class="n">pos_neg_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">i</span><span class="p">:</span><span class="n">a</span><span class="p">})</span>
+    <span class="n">pos_neg_len_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">i</span><span class="p">:</span><span class="n">b</span><span class="p">})</span>
+    <span class="n">a</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">b</span><span class="o">=</span><span class="p">[]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">datamay_ratio</span><span class="o">=</span><span class="n">datamay</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">datamay_ratio</span><span class="o">=</span><span class="n">datamay_ratio</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Date_tmp&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">datamay_ratio</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 <span class="n">datamay_ratio</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -14886,7 +14884,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[46]:</div>
+<div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -14982,7 +14980,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_Ratio&quot;</span><span class="p">]</span>
@@ -15027,7 +15025,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[47]:</div>
+<div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -15159,7 +15157,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="n">datamay_ratio</span><span class="p">[</span><span class="s2">&quot;Total Confirmed&quot;</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="o">/</span><span class="n">datamay_ratio</span><span class="p">[</span><span class="s2">&quot;Total Confirmed&quot;</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span><span class="o">==</span><span class="n">datamay_ratio</span><span class="p">[</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span>
@@ -15175,7 +15173,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[48]:</div>
+<div class="prompt output_prompt">Out[40]:</div>
 
 
 
@@ -15192,7 +15190,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Blue&quot;</span><span class="p">,</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span><span class="s2">&quot;Yellow&quot;</span><span class="p">,</span><span class="s2">&quot;Green&quot;</span><span class="p">,</span><span class="s2">&quot;Orange&quot;</span><span class="p">,</span><span class="s2">&quot;Violet&quot;</span><span class="p">]</span>
@@ -15304,7 +15302,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">datamay_ratio</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
@@ -15320,7 +15318,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[50]:</div>
+<div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -15452,7 +15450,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_Ratio&quot;</span><span class="p">]</span>
@@ -15497,7 +15495,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[51]:</div>
+<div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -15629,7 +15627,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Blue&quot;</span><span class="p">,</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span><span class="s2">&quot;Yellow&quot;</span><span class="p">,</span><span class="s2">&quot;Green&quot;</span><span class="p">,</span><span class="s2">&quot;Orange&quot;</span><span class="p">,</span><span class="s2">&quot;Violet&quot;</span><span class="p">]</span>
@@ -15735,6 +15733,38 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;daily_cnf_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;total_cnf_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;daily_rcvd_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;total_rcvd_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;daily_dcsd_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;total_dcsd_diff_rat10&quot;</span><span class="p">]</span>
+<span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_Ratio&quot;</span><span class="p">]</span>
+<span class="n">one_zro_dict</span><span class="o">=</span><span class="p">{}</span>
+<span class="n">one_zro_len_dict</span><span class="o">=</span><span class="p">{}</span>
+<span class="n">a</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">b</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">kys</span><span class="p">,</span><span class="n">new_cols</span><span class="p">):</span>
+    <span class="n">pos</span><span class="o">=</span><span class="n">datamay_ratio</span><span class="p">[</span><span class="n">datamay_ratio</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pos</span><span class="p">))</span>
+    <span class="n">neg</span><span class="o">=</span><span class="n">datamay_ratio</span><span class="p">[</span><span class="n">datamay_ratio</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">neg</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">neg</span><span class="p">))</span>
+    <span class="n">zro</span><span class="o">=</span><span class="n">datamay_ratio</span><span class="p">[</span><span class="n">datamay_ratio</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">zro</span><span class="p">)</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">zro</span><span class="p">))</span>
+    <span class="n">one_zro_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">i</span><span class="p">:</span><span class="n">a</span><span class="p">})</span>
+    <span class="n">one_zro_len_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">i</span><span class="p">:</span><span class="n">b</span><span class="p">})</span>
+    <span class="n">a</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">b</span><span class="o">=</span><span class="p">[]</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
