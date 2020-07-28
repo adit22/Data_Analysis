@@ -12491,7 +12491,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xa7433e25f8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xf00d2375f8&gt;</pre>
 </div>
 
 </div>
@@ -12539,7 +12539,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xa744738a58&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xf00e586c18&gt;</pre>
 </div>
 
 </div>
@@ -12587,7 +12587,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xa7447d2208&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xf00e63bc50&gt;</pre>
 </div>
 
 </div>
@@ -12635,7 +12635,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xa7448a20f0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xf00e6f1c50&gt;</pre>
 </div>
 
 </div>
@@ -12683,7 +12683,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xa74487bf60&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xf00e6465c0&gt;</pre>
 </div>
 
 </div>
@@ -12731,7 +12731,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xa7449e4ac8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xf00e836b38&gt;</pre>
 </div>
 
 </div>
@@ -14049,7 +14049,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colls</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dataapr_for_scattering</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -14068,7 +14068,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[35]:</div>
+<div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -14170,7 +14170,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span><span class="s2">&quot;Violet&quot;</span><span class="p">,</span><span class="s2">&quot;Orange&quot;</span><span class="p">,</span><span class="s2">&quot;Yellow&quot;</span><span class="p">,</span><span class="s2">&quot;Green&quot;</span><span class="p">,</span><span class="s2">&quot;Black&quot;</span><span class="p">]</span>
@@ -14282,12 +14282,125 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataapr</span><span class="o">=</span><span class="n">dataapr</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Date_tmp&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">dataapr</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> 
 <span class="n">dataapr</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[36]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>Daily Confirmed</th>
+      <th>Total Confirmed</th>
+      <th>Daily Recovered</th>
+      <th>Total Recovered</th>
+      <th>Daily Deceased</th>
+      <th>Total Deceased</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020-04-01</td>
+      <td>424</td>
+      <td>2059</td>
+      <td>19</td>
+      <td>169</td>
+      <td>6</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-04-02</td>
+      <td>486</td>
+      <td>2545</td>
+      <td>22</td>
+      <td>191</td>
+      <td>16</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020-04-03</td>
+      <td>560</td>
+      <td>3105</td>
+      <td>39</td>
+      <td>230</td>
+      <td>14</td>
+      <td>83</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020-04-04</td>
+      <td>579</td>
+      <td>3684</td>
+      <td>56</td>
+      <td>286</td>
+      <td>13</td>
+      <td>96</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020-04-05</td>
+      <td>609</td>
+      <td>4293</td>
+      <td>43</td>
+      <td>329</td>
+      <td>22</td>
+      <td>118</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataapr_diff</span><span class="o">=</span><span class="n">dataapr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">dataapr_diff</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -14399,119 +14512,6 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataapr_diff</span><span class="o">=</span><span class="n">dataapr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">dataapr_diff</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[38]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Date</th>
-      <th>Daily Confirmed</th>
-      <th>Total Confirmed</th>
-      <th>Daily Recovered</th>
-      <th>Total Recovered</th>
-      <th>Daily Deceased</th>
-      <th>Total Deceased</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2020-04-01</td>
-      <td>424</td>
-      <td>2059</td>
-      <td>19</td>
-      <td>169</td>
-      <td>6</td>
-      <td>53</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2020-04-02</td>
-      <td>486</td>
-      <td>2545</td>
-      <td>22</td>
-      <td>191</td>
-      <td>16</td>
-      <td>69</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2020-04-03</td>
-      <td>560</td>
-      <td>3105</td>
-      <td>39</td>
-      <td>230</td>
-      <td>14</td>
-      <td>83</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2020-04-04</td>
-      <td>579</td>
-      <td>3684</td>
-      <td>56</td>
-      <td>286</td>
-      <td>13</td>
-      <td>96</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2020-04-05</td>
-      <td>609</td>
-      <td>4293</td>
-      <td>43</td>
-      <td>329</td>
-      <td>22</td>
-      <td>118</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_diff&quot;</span><span class="p">]</span>
 <span class="n">existing_cols</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dataapr_diff</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 <span class="n">existing_cols</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -14555,7 +14555,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[39]:</div>
+<div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -14687,7 +14687,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataapr_diff</span><span class="p">[</span><span class="s2">&quot;Total Confirmed&quot;</span><span class="p">][</span><span class="mi">24</span><span class="p">]</span><span class="o">-</span><span class="n">dataapr_diff</span><span class="p">[</span><span class="s2">&quot;Total Confirmed&quot;</span><span class="p">][</span><span class="mi">23</span><span class="p">]</span><span class="o">==</span><span class="n">dataapr_diff</span><span class="p">[</span><span class="s2">&quot;Total_Confirmed_Diff&quot;</span><span class="p">][</span><span class="mi">24</span><span class="p">]</span>
@@ -14703,7 +14703,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[40]:</div>
+<div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -14720,7 +14720,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataapr_diff</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -14736,7 +14736,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[41]:</div>
+<div class="prompt output_prompt">Out[40]:</div>
 
 
 
@@ -14907,7 +14907,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Blue&quot;</span><span class="p">,</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span><span class="s2">&quot;Yellow&quot;</span><span class="p">,</span><span class="s2">&quot;Green&quot;</span><span class="p">,</span><span class="s2">&quot;Orange&quot;</span><span class="p">,</span><span class="s2">&quot;Violet&quot;</span><span class="p">]</span>
@@ -15019,7 +15019,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataapr_diff</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
@@ -15035,7 +15035,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[43]:</div>
+<div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -15161,6 +15161,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#dataapr_diff.to_excel(&quot;dataapr_diff.xlsx&quot;)</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
@@ -15824,6 +15837,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#dataapr_ratio.to_excel(&quot;dataapr_ratio.xlsx&quot;)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;daily_cnf_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;total_cnf_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;daily_rcvd_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;total_rcvd_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;daily_dcsd_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;total_dcsd_diff_rat10&quot;</span><span class="p">]</span>

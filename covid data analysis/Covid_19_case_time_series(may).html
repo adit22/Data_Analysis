@@ -12501,7 +12501,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xe47fe730f0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x871d1d40f0&gt;</pre>
 </div>
 
 </div>
@@ -12549,7 +12549,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xe47ff890f0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x871d2ea240&gt;</pre>
 </div>
 
 </div>
@@ -12597,7 +12597,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xe40121fc18&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x871d37dcc0&gt;</pre>
 </div>
 
 </div>
@@ -12645,7 +12645,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xe4011fdbe0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x871d2d2780&gt;</pre>
 </div>
 
 </div>
@@ -12693,7 +12693,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xe401374748&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x871d4f37f0&gt;</pre>
 </div>
 
 </div>
@@ -12741,7 +12741,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xe4011fddd8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x871d5a0748&gt;</pre>
 </div>
 
 </div>
@@ -15190,6 +15190,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#datamay_diff.to_excel(&quot;datamay_diff.xlsx&quot;)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;daily_cnf_diff_pos_neg&quot;</span><span class="p">,</span><span class="s2">&quot;total_cnf_diff_pos_neg&quot;</span><span class="p">,</span><span class="s2">&quot;daily_rcvd_diff_pos_neg&quot;</span><span class="p">,</span><span class="s2">&quot;total_rcvd_diff_pos_neg&quot;</span><span class="p">,</span><span class="s2">&quot;daily_dcsd_diff_pos_neg&quot;</span><span class="p">,</span><span class="s2">&quot;total_dcsd_diff_pos_neg&quot;</span><span class="p">]</span>
 <span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Diff&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_diff&quot;</span><span class="p">]</span>
 <span class="n">pos_neg_dict</span><span class="o">=</span><span class="p">{}</span>
@@ -15219,7 +15232,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">datamay_ratio</span><span class="o">=</span><span class="n">datamay</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -15236,7 +15249,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[42]:</div>
+<div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -15332,7 +15345,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_Ratio&quot;</span><span class="p">]</span>
@@ -15377,7 +15390,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[43]:</div>
+<div class="prompt output_prompt">Out[44]:</div>
 
 
 
@@ -15509,7 +15522,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="n">datamay_ratio</span><span class="p">[</span><span class="s2">&quot;Total Confirmed&quot;</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="o">/</span><span class="n">datamay_ratio</span><span class="p">[</span><span class="s2">&quot;Total Confirmed&quot;</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span><span class="o">==</span><span class="n">datamay_ratio</span><span class="p">[</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span>
@@ -15525,7 +15538,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[44]:</div>
+<div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -15542,7 +15555,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Blue&quot;</span><span class="p">,</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span><span class="s2">&quot;Yellow&quot;</span><span class="p">,</span><span class="s2">&quot;Green&quot;</span><span class="p">,</span><span class="s2">&quot;Orange&quot;</span><span class="p">,</span><span class="s2">&quot;Violet&quot;</span><span class="p">]</span>
@@ -15654,7 +15667,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">datamay_ratio</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
@@ -15670,7 +15683,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[46]:</div>
+<div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -15802,7 +15815,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_Ratio&quot;</span><span class="p">]</span>
@@ -15847,7 +15860,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[47]:</div>
+<div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -15979,7 +15992,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Blue&quot;</span><span class="p">,</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span><span class="s2">&quot;Yellow&quot;</span><span class="p">,</span><span class="s2">&quot;Green&quot;</span><span class="p">,</span><span class="s2">&quot;Orange&quot;</span><span class="p">,</span><span class="s2">&quot;Violet&quot;</span><span class="p">]</span>
@@ -16091,7 +16104,20 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#datamay_ratio.to_excel(&quot;datamay_ratio.xlsx&quot;)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;daily_cnf_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;total_cnf_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;daily_rcvd_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;total_rcvd_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;daily_dcsd_diff_rat10&quot;</span><span class="p">,</span><span class="s2">&quot;total_dcsd_diff_rat10&quot;</span><span class="p">]</span>
