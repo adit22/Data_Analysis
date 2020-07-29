@@ -11773,7 +11773,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -11791,7 +11791,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tc</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\tcprd_df_strd.xlsx&quot;</span><span class="p">)</span>
@@ -11805,7 +11805,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tco</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\coviddata_jly.xlsx&quot;</span><span class="p">)</span>
@@ -11822,7 +11822,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[3]:</div>
+<div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -11918,7 +11918,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tco</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
@@ -11934,7 +11934,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[4]:</div>
+<div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -11968,16 +11968,6 @@ div#notebook {
   </thead>
   <tbody>
     <tr>
-      <th>23</th>
-      <td>2020-07-24</td>
-      <td>48888</td>
-      <td>1337016</td>
-      <td>32514</td>
-      <td>849999</td>
-      <td>763</td>
-      <td>31420</td>
-    </tr>
-    <tr>
       <th>24</th>
       <td>2020-07-25</td>
       <td>50072</td>
@@ -12010,12 +12000,22 @@ div#notebook {
     <tr>
       <th>27</th>
       <td>2020-07-28</td>
-      <td>49632</td>
-      <td>1532136</td>
-      <td>35671</td>
-      <td>988661</td>
-      <td>770</td>
-      <td>34239</td>
+      <td>49631</td>
+      <td>1532135</td>
+      <td>35683</td>
+      <td>988673</td>
+      <td>774</td>
+      <td>34243</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>2020-07-29</td>
+      <td>52263</td>
+      <td>1584398</td>
+      <td>32829</td>
+      <td>1021502</td>
+      <td>775</td>
+      <td>35018</td>
     </tr>
   </tbody>
 </table>
@@ -12030,7 +12030,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tc</span><span class="p">[</span><span class="s2">&quot;original_val&quot;</span><span class="p">][</span><span class="nb">len</span><span class="p">(</span><span class="n">tc</span><span class="p">)</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">tco</span><span class="p">[</span><span class="s2">&quot;Total Confirmed&quot;</span><span class="p">][</span><span class="nb">len</span><span class="p">(</span><span class="n">tco</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
@@ -12062,7 +12062,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -12114,7 +12114,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>1</th>
       <td>2020-07-28</td>
-      <td>1532136</td>
+      <td>1532135</td>
       <td>1386376</td>
       <td>1540436</td>
       <td>1536347</td>
@@ -12127,7 +12127,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>2</th>
       <td>2020-07-29</td>
-      <td>0</td>
+      <td>1532135</td>
       <td>1436337</td>
       <td>1592007</td>
       <td>1587686</td>
@@ -12136,6 +12136,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>1432486</td>
       <td>1583430</td>
       <td>1439035</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020-07-30</td>
+      <td>0</td>
+      <td>1486530</td>
+      <td>1646311</td>
+      <td>1640919</td>
+      <td>1491415</td>
+      <td>1640919</td>
+      <td>1484288</td>
+      <td>1638444</td>
+      <td>1486678</td>
     </tr>
   </tbody>
 </table>
@@ -12150,117 +12163,31 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tc</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tce</span><span class="o">=</span><span class="n">tc</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[8]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>date</th>
-      <th>original_val</th>
-      <th>mean_based</th>
-      <th>max_based</th>
-      <th>mean_max_based</th>
-      <th>max_mean_based</th>
-      <th>mean_last_based</th>
-      <th>last_mean_based</th>
-      <th>last_based</th>
-      <th>middle_based</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2020-07-27</td>
-      <td>1482504</td>
-      <td>1337979</td>
-      <td>1492135</td>
-      <td>1488287</td>
-      <td>1341439</td>
-      <td>1488287</td>
-      <td>1336533</td>
-      <td>1486678</td>
-      <td>1338464</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2020-07-28</td>
-      <td>1532136</td>
-      <td>1386376</td>
-      <td>1540436</td>
-      <td>1536347</td>
-      <td>1390066</td>
-      <td>1536347</td>
-      <td>1381094</td>
-      <td>1530493</td>
-      <td>1387759</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2020-07-29</td>
-      <td>0</td>
-      <td>1436337</td>
-      <td>1592007</td>
-      <td>1587686</td>
-      <td>1440246</td>
-      <td>1587686</td>
-      <td>1432486</td>
-      <td>1583430</td>
-      <td>1439035</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colls</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">tc</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 <span class="n">colls</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">colls</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">collss</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mb&quot;</span><span class="p">,</span><span class="s2">&quot;mxb&quot;</span><span class="p">,</span><span class="s2">&quot;memb&quot;</span><span class="p">,</span><span class="s2">&quot;mxmb&quot;</span><span class="p">,</span><span class="s2">&quot;mlb&quot;</span><span class="p">,</span><span class="s2">&quot;lmb&quot;</span><span class="p">,</span><span class="s2">&quot;lb&quot;</span><span class="p">,</span><span class="s2">&quot;mdb&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">collss</span><span class="p">:</span>
+    <span class="n">tce</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">tce</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
 <span class="n">colls</span>
+
+        
 </pre></div>
 
 </div>
@@ -12273,7 +12200,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[9]:</div>
+<div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -12297,31 +12224,13 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">collss</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mb&quot;</span><span class="p">,</span><span class="s2">&quot;mxb&quot;</span><span class="p">,</span><span class="s2">&quot;memb&quot;</span><span class="p">,</span><span class="s2">&quot;mxmb&quot;</span><span class="p">,</span><span class="s2">&quot;mlb&quot;</span><span class="p">,</span><span class="s2">&quot;lmb&quot;</span><span class="p">,</span><span class="s2">&quot;lb&quot;</span><span class="p">,</span><span class="s2">&quot;mdb&quot;</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">collss</span><span class="p">:</span>
-    <span class="n">tc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">tc</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-    
-
-        
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">colls</span><span class="p">,</span><span class="n">collss</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tc</span><span class="p">)):</span>
-        <span class="n">tc</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">=</span><span class="n">tc</span><span class="p">[</span><span class="s2">&quot;original_val&quot;</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">-</span><span class="n">tc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span>
-<span class="n">tc</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tce</span><span class="p">)):</span>
+        <span class="n">tce</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">=</span><span class="n">tce</span><span class="p">[</span><span class="s2">&quot;original_val&quot;</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">-</span><span class="n">tce</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span>
+<span class="n">tce</span>
 </pre></div>
 
 </div>
@@ -12349,7 +12258,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -12417,7 +12326,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>1</th>
       <td>2020-07-28</td>
-      <td>1532136</td>
+      <td>1532135</td>
       <td>1386376</td>
       <td>1540436</td>
       <td>1536347</td>
@@ -12426,19 +12335,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>1381094</td>
       <td>1530493</td>
       <td>1387759</td>
-      <td>145760</td>
-      <td>-8300</td>
-      <td>-4211</td>
-      <td>142070</td>
-      <td>-4211</td>
-      <td>151042</td>
-      <td>1643</td>
-      <td>144377</td>
+      <td>145759</td>
+      <td>-8301</td>
+      <td>-4212</td>
+      <td>142069</td>
+      <td>-4212</td>
+      <td>151041</td>
+      <td>1642</td>
+      <td>144376</td>
     </tr>
     <tr>
       <th>2</th>
       <td>2020-07-29</td>
-      <td>0</td>
+      <td>1532135</td>
       <td>1436337</td>
       <td>1592007</td>
       <td>1587686</td>
@@ -12447,14 +12356,35 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>1432486</td>
       <td>1583430</td>
       <td>1439035</td>
-      <td>-1436337</td>
-      <td>-1592007</td>
-      <td>-1587686</td>
-      <td>-1440246</td>
-      <td>-1587686</td>
-      <td>-1432486</td>
-      <td>-1583430</td>
-      <td>-1439035</td>
+      <td>95798</td>
+      <td>-59872</td>
+      <td>-55551</td>
+      <td>91889</td>
+      <td>-55551</td>
+      <td>99649</td>
+      <td>-51295</td>
+      <td>93100</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020-07-30</td>
+      <td>0</td>
+      <td>1486530</td>
+      <td>1646311</td>
+      <td>1640919</td>
+      <td>1491415</td>
+      <td>1640919</td>
+      <td>1484288</td>
+      <td>1638444</td>
+      <td>1486678</td>
+      <td>-1486530</td>
+      <td>-1646311</td>
+      <td>-1640919</td>
+      <td>-1491415</td>
+      <td>-1640919</td>
+      <td>-1484288</td>
+      <td>-1638444</td>
+      <td>-1486678</td>
     </tr>
   </tbody>
 </table>
@@ -12469,7 +12399,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tc</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;tcprd_df_strd.xlsx&quot;</span><span class="p">)</span>
@@ -12482,10 +12412,23 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">edf</span><span class="o">=</span><span class="n">tc</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">tc</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">:]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tce</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;errtcprd_df_strd.xlsx&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">edf</span><span class="o">=</span><span class="n">tce</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">tce</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">:]</span>
 <span class="n">edf</span>
 </pre></div>
 
@@ -12499,7 +12442,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[14]:</div>
+<div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -12546,14 +12489,25 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     </tr>
     <tr>
       <th>1</th>
-      <td>145760</td>
-      <td>-8300</td>
-      <td>-4211</td>
-      <td>142070</td>
-      <td>-4211</td>
-      <td>151042</td>
-      <td>1643</td>
-      <td>144377</td>
+      <td>145759</td>
+      <td>-8301</td>
+      <td>-4212</td>
+      <td>142069</td>
+      <td>-4212</td>
+      <td>151041</td>
+      <td>1642</td>
+      <td>144376</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>95798</td>
+      <td>-59872</td>
+      <td>-55551</td>
+      <td>91889</td>
+      <td>-55551</td>
+      <td>99649</td>
+      <td>-51295</td>
+      <td>93100</td>
     </tr>
   </tbody>
 </table>
@@ -12568,10 +12522,10 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">k</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">edf</span><span class="p">)),</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tc</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">k</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">edf</span><span class="p">)),</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tce</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)):</span>
     
     <span class="n">a</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">edf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
     <span class="n">pos</span><span class="o">=</span><span class="p">[]</span>
@@ -12608,6 +12562,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>for date: 2020-07-27  the lowest positve error was by the method: mxmb and the highest negative error by the method: lb
 for date: 2020-07-28  the lowest positve error was by the method: lb and the highest negative error by the method: memb
+for date: 2020-07-29  the lowest positve error was by the method: mxmb and the highest negative error by the method: lb
 </pre>
 </div>
 </div>
@@ -12618,16 +12573,19 @@ for date: 2020-07-28  the lowest positve error was by the method: lb and the hig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_dict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:[],</span><span class="s2">&quot;mxpe&quot;</span><span class="p">:[],</span><span class="s2">&quot;mnne&quot;</span><span class="p">:[],</span><span class="s2">&quot;mipv&quot;</span><span class="p">:[],</span><span class="s2">&quot;mxnv&quot;</span><span class="p">:[]}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_dict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:[],</span><span class="s2">&quot;mipe&quot;</span><span class="p">:[],</span><span class="s2">&quot;mxne&quot;</span><span class="p">:[],</span><span class="s2">&quot;mipv&quot;</span><span class="p">:[],</span><span class="s2">&quot;mxnv&quot;</span><span class="p">:[],</span><span class="s2">&quot;original_val&quot;</span><span class="p">:[],</span><span class="s2">&quot;pprd_val&quot;</span><span class="p">:[],</span><span class="s2">&quot;nprd_val&quot;</span><span class="p">:[]}</span>
 <span class="n">psc</span><span class="o">=</span><span class="p">[]</span>
 <span class="n">ngc</span><span class="o">=</span><span class="p">[]</span>
 <span class="n">date</span><span class="o">=</span><span class="p">[]</span>
 <span class="n">ps</span><span class="o">=</span><span class="p">[]</span>
 <span class="n">ng</span><span class="o">=</span><span class="p">[]</span>
-<span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">k</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">edf</span><span class="p">)),</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tc</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)):</span>
+<span class="n">org_val</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">pprd_val</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">nprd_val</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">k</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">edf</span><span class="p">)),</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tce</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)):</span>
     
     <span class="n">a</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">edf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
     <span class="n">pos</span><span class="o">=</span><span class="p">[]</span>
@@ -12645,13 +12603,19 @@ for date: 2020-07-28  the lowest positve error was by the method: lb and the hig
     <span class="n">ng</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bb</span><span class="p">)</span>
     <span class="n">psc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">edf</span><span class="o">.</span><span class="n">columns</span><span class="p">)[</span><span class="n">psi</span><span class="p">])</span>
     <span class="n">ngc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">edf</span><span class="o">.</span><span class="n">columns</span><span class="p">)[</span><span class="n">ngi</span><span class="p">])</span>
-    <span class="n">date</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">tc</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">][</span><span class="n">k</span><span class="p">])</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;00:00:00&quot;</span><span class="p">))</span>
+    <span class="n">date</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">tce</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">][</span><span class="n">k</span><span class="p">])</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;00:00:00&quot;</span><span class="p">))</span>
+    <span class="n">org_val</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tce</span><span class="p">[</span><span class="s2">&quot;original_val&quot;</span><span class="p">][</span><span class="n">k</span><span class="p">])</span>
+    <span class="n">pprd_val</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tce</span><span class="p">[</span><span class="s2">&quot;original_val&quot;</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">-</span><span class="n">aa</span><span class="p">)</span>
+    <span class="n">nprd_val</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tce</span><span class="p">[</span><span class="s2">&quot;original_val&quot;</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">-</span><span class="n">bb</span><span class="p">)</span>
     
 <span class="n">err_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;date&quot;</span><span class="p">:</span><span class="n">date</span><span class="p">})</span>
-<span class="n">err_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;mxpe&quot;</span><span class="p">:</span><span class="n">psc</span><span class="p">})</span>
-<span class="n">err_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;mnne&quot;</span><span class="p">:</span><span class="n">ngc</span><span class="p">})</span>
+<span class="n">err_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;mipe&quot;</span><span class="p">:</span><span class="n">psc</span><span class="p">})</span>
+<span class="n">err_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;mxne&quot;</span><span class="p">:</span><span class="n">ngc</span><span class="p">})</span>
 <span class="n">err_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;mipv&quot;</span><span class="p">:</span><span class="n">ps</span><span class="p">})</span>
 <span class="n">err_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;mxnv&quot;</span><span class="p">:</span><span class="n">ng</span><span class="p">})</span>
+<span class="n">err_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;original_val&quot;</span><span class="p">:</span><span class="n">org_val</span><span class="p">})</span>
+<span class="n">err_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;pprd_val&quot;</span><span class="p">:</span><span class="n">pprd_val</span><span class="p">})</span>
+<span class="n">err_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;nprd_val&quot;</span><span class="p">:</span><span class="n">nprd_val</span><span class="p">})</span>
 </pre></div>
 
 </div>
@@ -12661,10 +12625,50 @@ for date: 2020-07-28  the lowest positve error was by the method: lb and the hig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_dict</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[43]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;date&#39;: [&#39;2020-07-27 &#39;, &#39;2020-07-28 &#39;, &#39;2020-07-29 &#39;],
+ &#39;mipe&#39;: [&#39;mxmb&#39;, &#39;lb&#39;, &#39;mxmb&#39;],
+ &#39;mxne&#39;: [&#39;lb&#39;, &#39;memb&#39;, &#39;lb&#39;],
+ &#39;mipv&#39;: [141065, 1642, 91889],
+ &#39;mxnv&#39;: [-4174, -4212, -51295],
+ &#39;original_val&#39;: [1482504, 1532135, 1532135],
+ &#39;pprd_val&#39;: [1341439, 1530493, 1440246],
+ &#39;nprd_val&#39;: [1486678, 1536347, 1583430]}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">err_dict</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12681,13 +12685,72 @@ for date: 2020-07-28  the lowest positve error was by the method: lb and the hig
 
 
 
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;date&#39;: [&#39;2020-07-27 &#39;, &#39;2020-07-28 &#39;],
- &#39;mxpe&#39;: [&#39;mxmb&#39;, &#39;lb&#39;],
- &#39;mnne&#39;: [&#39;lb&#39;, &#39;memb&#39;],
- &#39;mipv&#39;: [141065, 1643],
- &#39;mxnv&#39;: [-4174, -4211]}</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>mipe</th>
+      <th>mxne</th>
+      <th>mipv</th>
+      <th>mxnv</th>
+      <th>original_val</th>
+      <th>pprd_val</th>
+      <th>nprd_val</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020-07-27</td>
+      <td>mxmb</td>
+      <td>lb</td>
+      <td>141065</td>
+      <td>-4174</td>
+      <td>1482504</td>
+      <td>1341439</td>
+      <td>1486678</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-07-28</td>
+      <td>lb</td>
+      <td>memb</td>
+      <td>1642</td>
+      <td>-4212</td>
+      <td>1532135</td>
+      <td>1530493</td>
+      <td>1536347</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020-07-29</td>
+      <td>mxmb</td>
+      <td>lb</td>
+      <td>91889</td>
+      <td>-51295</td>
+      <td>1532135</td>
+      <td>1440246</td>
+      <td>1583430</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
