@@ -11773,7 +11773,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -11792,10 +11792,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\Desktop\Lockdown\data\Covid-19\28\case_time_series.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\Desktop\Lockdown\data\Covid-19\29\case_time_series.csv&quot;</span><span class="p">)</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -11809,7 +11809,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[2]:</div>
+<div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -11905,7 +11905,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">53</span><span class="p">:]</span>
@@ -11923,7 +11923,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[3]:</div>
+<div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -12019,7 +12019,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
@@ -12035,7 +12035,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[4]:</div>
+<div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -12068,16 +12068,6 @@ div#notebook {
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th>125</th>
-      <td>26 July</td>
-      <td>48932</td>
-      <td>1436020</td>
-      <td>31512</td>
-      <td>918636</td>
-      <td>704</td>
-      <td>32827</td>
-    </tr>
     <tr>
       <th>126</th>
       <td>27 July</td>
@@ -12111,12 +12101,22 @@ div#notebook {
     <tr>
       <th>129</th>
       <td>30 July</td>
-      <td>54750</td>
-      <td>1639364</td>
+      <td>54968</td>
+      <td>1639582</td>
       <td>37425</td>
       <td>1058984</td>
-      <td>783</td>
-      <td>35801</td>
+      <td>784</td>
+      <td>35802</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>31 July</td>
+      <td>57212</td>
+      <td>1696794</td>
+      <td>36554</td>
+      <td>1095538</td>
+      <td>764</td>
+      <td>36566</td>
     </tr>
   </tbody>
 </table>
@@ -12131,7 +12131,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colls</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">data_daily</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -12148,7 +12148,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[5]:</div>
+<div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -12171,7 +12171,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily</span><span class="o">.</span><span class="n">dtypes</span>
@@ -12187,7 +12187,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[6]:</div>
+<div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -12211,7 +12211,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily</span><span class="p">[</span><span class="n">data_daily</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()]</span>
@@ -12227,7 +12227,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -12273,7 +12273,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_daily</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">)</span> 
@@ -12309,7 +12309,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">):</span>
@@ -12358,7 +12358,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">39</span><span class="p">):</span>
@@ -12407,7 +12407,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">39</span><span class="p">,</span><span class="mi">70</span><span class="p">):</span>
@@ -12456,7 +12456,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span><span class="mi">100</span><span class="p">):</span>
@@ -12505,12 +12505,12 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">130</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">131</span><span class="p">):</span>
     <span class="n">data_daily</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">data_daily</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot; July&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">130</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">131</span><span class="p">):</span>
     <span class="n">data_daily</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;2020-07-&quot;</span><span class="o">+</span><span class="n">data_daily</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
     
 </pre></div>
@@ -12554,7 +12554,45 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">for i in range(130,len(data_daily)):</span>
+<span class="sd">    data_daily[&quot;Date&quot;][i]=data_daily[&quot;Date&quot;][i].strip(&quot; August&quot;)</span>
+<span class="sd">for i in range(130,len(data_daily)):</span>
+<span class="sd">    data_daily[&quot;Date&quot;][i]=&quot;2020-07-&quot;+data_daily[&quot;Date&quot;][i]</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[42]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;\nfor i in range(130,len(data_daily)):\n    data_daily[&#34;Date&#34;][i]=data_daily[&#34;Date&#34;][i].strip(&#34; August&#34;)\nfor i in range(130,len(data_daily)):\n    data_daily[&#34;Date&#34;][i]=&#34;2020-07-&#34;+data_daily[&#34;Date&#34;][i]\n&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">data_daily</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;datetime64[ns]&#39;</span><span class="p">)</span>
@@ -12590,7 +12628,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily</span><span class="o">.</span><span class="n">dtypes</span>
@@ -12606,7 +12644,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[44]:</div>
 
 
 
@@ -12630,7 +12668,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily_ratio_with_two_precision</span><span class="o">=</span><span class="n">data_daily</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -12643,7 +12681,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_Ratio&quot;</span><span class="p">]</span>
@@ -12687,7 +12725,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[17]:</div>
+<div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -12819,7 +12857,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily_ratio</span><span class="o">=</span><span class="n">data_daily</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -12832,7 +12870,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_Ratio&quot;</span><span class="p">]</span>
@@ -12876,7 +12914,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[19]:</div>
+<div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -13008,7 +13046,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">strt_cnt</span><span class="o">=</span><span class="mi">1</span>
@@ -13071,8 +13109,8 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <span class="n">pred_val</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">next_day_recovered_case_count_last_based</span><span class="p">))</span>
     <span class="n">pred_val</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">next_day_recovered_case_count_middle_based</span><span class="p">))</span>
 
-    <span class="k">if</span><span class="p">(</span><span class="n">en</span><span class="o">!=</span><span class="nb">len</span><span class="p">(</span><span class="n">data_daily_ratio</span><span class="p">)):</span>
-        <span class="n">pred_dict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:</span><span class="n">data_daily_ratio</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">en</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">24</span><span class="p">),</span><span class="s2">&quot;original_val&quot;</span><span class="p">:</span><span class="n">data_daily_ratio</span><span class="p">[</span><span class="s2">&quot;Daily Recovered&quot;</span><span class="p">][</span><span class="n">en</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="s2">&quot;mean_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s2">&quot;max_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="s2">&quot;mean_max_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="s2">&quot;max_mean_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="s2">&quot;mean_last_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="s2">&quot;last_mean_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="s2">&quot;last_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="s2">&quot;middle_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">7</span><span class="p">]}</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">en</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">data_daily_ratio</span><span class="p">)):</span>
+        <span class="n">pred_dict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:</span><span class="n">data_daily_ratio</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">en</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">24</span><span class="p">),</span><span class="s2">&quot;original_val&quot;</span><span class="p">:</span><span class="n">data_daily_ratio</span><span class="p">[</span><span class="s2">&quot;Daily Recovered&quot;</span><span class="p">][</span><span class="n">en</span><span class="p">],</span><span class="s2">&quot;mean_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s2">&quot;max_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="s2">&quot;mean_max_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="s2">&quot;max_mean_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="s2">&quot;mean_last_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="s2">&quot;last_mean_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="s2">&quot;last_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="s2">&quot;middle_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">7</span><span class="p">]}</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">pred_dict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:</span><span class="n">data_daily_ratio</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">en</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">24</span><span class="p">),</span><span class="s2">&quot;original_val&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;mean_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s2">&quot;max_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="s2">&quot;mean_max_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="s2">&quot;max_mean_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="s2">&quot;mean_last_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="s2">&quot;last_mean_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="s2">&quot;last_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="s2">&quot;middle_based&quot;</span><span class="p">:</span><span class="n">pred_val</span><span class="p">[</span><span class="mi">7</span><span class="p">]}</span>
         
@@ -13094,7 +13132,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dc</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\ramprd_df_strd.xlsx&quot;</span><span class="p">)</span>
@@ -13111,7 +13149,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[25]:</div>
+<div class="prompt output_prompt">Out[50]:</div>
 
 
 
@@ -13150,7 +13188,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>0</th>
       <td>2020-03-31</td>
-      <td>35</td>
+      <td>13</td>
       <td>41</td>
       <td>262</td>
       <td>89</td>
@@ -13163,7 +13201,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>1</th>
       <td>2020-04-01</td>
-      <td>13</td>
+      <td>19</td>
       <td>24</td>
       <td>125</td>
       <td>53</td>
@@ -13176,7 +13214,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>2</th>
       <td>2020-04-02</td>
-      <td>19</td>
+      <td>22</td>
       <td>31</td>
       <td>125</td>
       <td>59</td>
@@ -13189,7 +13227,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>3</th>
       <td>2020-04-03</td>
-      <td>22</td>
+      <td>39</td>
       <td>31</td>
       <td>125</td>
       <td>54</td>
@@ -13202,7 +13240,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>4</th>
       <td>2020-04-04</td>
-      <td>39</td>
+      <td>56</td>
       <td>28</td>
       <td>80</td>
       <td>50</td>
@@ -13215,7 +13253,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>5</th>
       <td>2020-04-05</td>
-      <td>56</td>
+      <td>43</td>
       <td>41</td>
       <td>115</td>
       <td>80</td>
@@ -13228,7 +13266,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>6</th>
       <td>2020-04-06</td>
-      <td>43</td>
+      <td>65</td>
       <td>42</td>
       <td>115</td>
       <td>72</td>
@@ -13241,7 +13279,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>7</th>
       <td>2020-04-07</td>
-      <td>65</td>
+      <td>75</td>
       <td>44</td>
       <td>115</td>
       <td>79</td>
@@ -13254,7 +13292,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>8</th>
       <td>2020-04-08</td>
-      <td>75</td>
+      <td>96</td>
       <td>60</td>
       <td>133</td>
       <td>99</td>
@@ -13267,7 +13305,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>9</th>
       <td>2020-04-09</td>
-      <td>96</td>
+      <td>70</td>
       <td>73</td>
       <td>170</td>
       <td>125</td>
@@ -13280,7 +13318,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>10</th>
       <td>2020-04-10</td>
-      <td>70</td>
+      <td>151</td>
       <td>78</td>
       <td>170</td>
       <td>119</td>
@@ -13293,7 +13331,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>11</th>
       <td>2020-04-11</td>
-      <td>151</td>
+      <td>186</td>
       <td>103</td>
       <td>326</td>
       <td>195</td>
@@ -13306,7 +13344,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>12</th>
       <td>2020-04-12</td>
-      <td>186</td>
+      <td>114</td>
       <td>124</td>
       <td>401</td>
       <td>235</td>
@@ -13319,7 +13357,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>13</th>
       <td>2020-04-13</td>
-      <td>114</td>
+      <td>112</td>
       <td>134</td>
       <td>401</td>
       <td>231</td>
@@ -13332,7 +13370,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>14</th>
       <td>2020-04-14</td>
-      <td>112</td>
+      <td>167</td>
       <td>134</td>
       <td>401</td>
       <td>216</td>
@@ -13345,7 +13383,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>15</th>
       <td>2020-04-15</td>
-      <td>167</td>
+      <td>144</td>
       <td>155</td>
       <td>401</td>
       <td>225</td>
@@ -13358,7 +13396,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>16</th>
       <td>2020-04-16</td>
-      <td>144</td>
+      <td>258</td>
       <td>155</td>
       <td>401</td>
       <td>214</td>
@@ -13371,7 +13409,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>17</th>
       <td>2020-04-17</td>
-      <td>258</td>
+      <td>273</td>
       <td>211</td>
       <td>557</td>
       <td>336</td>
@@ -13384,7 +13422,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>18</th>
       <td>2020-04-18</td>
-      <td>273</td>
+      <td>426</td>
       <td>206</td>
       <td>489</td>
       <td>313</td>
@@ -13397,7 +13435,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>19</th>
       <td>2020-04-19</td>
-      <td>426</td>
+      <td>388</td>
       <td>255</td>
       <td>763</td>
       <td>509</td>
@@ -13410,7 +13448,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>20</th>
       <td>2020-04-20</td>
-      <td>388</td>
+      <td>419</td>
       <td>312</td>
       <td>763</td>
       <td>527</td>
@@ -13423,7 +13461,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>21</th>
       <td>2020-04-21</td>
-      <td>419</td>
+      <td>703</td>
       <td>371</td>
       <td>763</td>
       <td>533</td>
@@ -13436,7 +13474,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>22</th>
       <td>2020-04-22</td>
-      <td>703</td>
+      <td>394</td>
       <td>476</td>
       <td>1260</td>
       <td>898</td>
@@ -13449,7 +13487,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>23</th>
       <td>2020-04-23</td>
-      <td>394</td>
+      <td>642</td>
       <td>504</td>
       <td>1260</td>
       <td>868</td>
@@ -13462,7 +13500,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>24</th>
       <td>2020-04-24</td>
-      <td>642</td>
+      <td>484</td>
       <td>561</td>
       <td>1179</td>
       <td>851</td>
@@ -13475,7 +13513,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>25</th>
       <td>2020-04-25</td>
-      <td>484</td>
+      <td>442</td>
       <td>576</td>
       <td>1179</td>
       <td>821</td>
@@ -13488,7 +13526,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>26</th>
       <td>2020-04-26</td>
-      <td>442</td>
+      <td>585</td>
       <td>533</td>
       <td>1179</td>
       <td>756</td>
@@ -13501,7 +13539,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>27</th>
       <td>2020-04-27</td>
-      <td>585</td>
+      <td>580</td>
       <td>594</td>
       <td>1179</td>
       <td>797</td>
@@ -13514,7 +13552,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>28</th>
       <td>2020-04-28</td>
-      <td>580</td>
+      <td>636</td>
       <td>614</td>
       <td>1179</td>
       <td>788</td>
@@ -13527,7 +13565,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>29</th>
       <td>2020-04-29</td>
-      <td>636</td>
+      <td>690</td>
       <td>558</td>
       <td>1046</td>
       <td>667</td>
@@ -13551,22 +13589,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>...</td>
     </tr>
     <tr>
-      <th>93</th>
-      <td>2020-07-02</td>
-      <td>12064</td>
-      <td>12708</td>
-      <td>19760</td>
-      <td>14348</td>
-      <td>17501</td>
-      <td>12165</td>
-      <td>12100</td>
-      <td>11583</td>
-      <td>9507</td>
-    </tr>
-    <tr>
-      <th>94</th>
+      <th>218</th>
       <td>2020-07-03</td>
-      <td>19999</td>
+      <td>14417</td>
       <td>14708</td>
       <td>33153</td>
       <td>21851</td>
@@ -13577,9 +13602,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>15662</td>
     </tr>
     <tr>
-      <th>95</th>
+      <th>219</th>
       <td>2020-07-04</td>
-      <td>14417</td>
+      <td>14746</td>
       <td>15335</td>
       <td>33153</td>
       <td>21817</td>
@@ -13590,9 +13615,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>11697</td>
     </tr>
     <tr>
-      <th>96</th>
+      <th>220</th>
       <td>2020-07-05</td>
-      <td>14746</td>
+      <td>15829</td>
       <td>14677</td>
       <td>33153</td>
       <td>20771</td>
@@ -13603,9 +13628,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>11583</td>
     </tr>
     <tr>
-      <th>97</th>
+      <th>221</th>
       <td>2020-07-06</td>
-      <td>15829</td>
+      <td>15315</td>
       <td>15839</td>
       <td>33153</td>
       <td>21503</td>
@@ -13616,9 +13641,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>33153</td>
     </tr>
     <tr>
-      <th>98</th>
+      <th>222</th>
       <td>2020-07-07</td>
-      <td>15315</td>
+      <td>16836</td>
       <td>15705</td>
       <td>33153</td>
       <td>20952</td>
@@ -13629,9 +13654,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>10393</td>
     </tr>
     <tr>
-      <th>99</th>
+      <th>223</th>
       <td>2020-07-08</td>
-      <td>16836</td>
+      <td>19508</td>
       <td>16719</td>
       <td>33153</td>
       <td>21433</td>
@@ -13642,9 +13667,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>15083</td>
     </tr>
     <tr>
-      <th>100</th>
+      <th>224</th>
       <td>2020-07-09</td>
-      <td>19508</td>
+      <td>19408</td>
       <td>18332</td>
       <td>33153</td>
       <td>22000</td>
@@ -13655,9 +13680,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>16992</td>
     </tr>
     <tr>
-      <th>101</th>
+      <th>225</th>
       <td>2020-07-10</td>
-      <td>19408</td>
+      <td>20289</td>
       <td>16669</td>
       <td>22604</td>
       <td>19613</td>
@@ -13668,9 +13693,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>14818</td>
     </tr>
     <tr>
-      <th>102</th>
+      <th>226</th>
       <td>2020-07-11</td>
-      <td>20289</td>
+      <td>19981</td>
       <td>18320</td>
       <td>23509</td>
       <td>21338</td>
@@ -13681,9 +13706,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>18508</td>
     </tr>
     <tr>
-      <th>103</th>
+      <th>227</th>
       <td>2020-07-12</td>
-      <td>19981</td>
+      <td>18198</td>
       <td>19008</td>
       <td>23509</td>
       <td>21228</td>
@@ -13694,9 +13719,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>22604</td>
     </tr>
     <tr>
-      <th>104</th>
+      <th>228</th>
       <td>2020-07-13</td>
-      <td>18198</td>
+      <td>17683</td>
       <td>18932</td>
       <td>23509</td>
       <td>20757</td>
@@ -13707,9 +13732,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>19309</td>
     </tr>
     <tr>
-      <th>105</th>
+      <th>229</th>
       <td>2020-07-14</td>
-      <td>17683</td>
+      <td>20977</td>
       <td>19289</td>
       <td>23509</td>
       <td>20769</td>
@@ -13720,9 +13745,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>21210</td>
     </tr>
     <tr>
-      <th>106</th>
+      <th>230</th>
       <td>2020-07-15</td>
-      <td>20977</td>
+      <td>20646</td>
       <td>20136</td>
       <td>24885</td>
       <td>21734</td>
@@ -13733,9 +13758,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>19678</td>
     </tr>
     <tr>
-      <th>107</th>
+      <th>231</th>
       <td>2020-07-16</td>
-      <td>20646</td>
+      <td>22867</td>
       <td>19816</td>
       <td>24885</td>
       <td>21211</td>
@@ -13746,9 +13771,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>16574</td>
     </tr>
     <tr>
-      <th>108</th>
+      <th>232</th>
       <td>2020-07-17</td>
-      <td>22867</td>
+      <td>17476</td>
       <td>20639</td>
       <td>27127</td>
       <td>23490</td>
@@ -13759,9 +13784,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>17183</td>
     </tr>
     <tr>
-      <th>109</th>
+      <th>233</th>
       <td>2020-07-18</td>
-      <td>17476</td>
+      <td>23583</td>
       <td>19435</td>
       <td>27127</td>
       <td>22572</td>
@@ -13772,9 +13797,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>24885</td>
     </tr>
     <tr>
-      <th>110</th>
+      <th>234</th>
       <td>2020-07-19</td>
-      <td>23583</td>
+      <td>22730</td>
       <td>20996</td>
       <td>31824</td>
       <td>24507</td>
@@ -13785,9 +13810,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>20320</td>
     </tr>
     <tr>
-      <th>111</th>
+      <th>235</th>
       <td>2020-07-20</td>
-      <td>22730</td>
+      <td>24303</td>
       <td>21827</td>
       <td>31824</td>
       <td>24686</td>
@@ -13798,9 +13823,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>25327</td>
     </tr>
     <tr>
-      <th>112</th>
+      <th>236</th>
       <td>2020-07-21</td>
-      <td>24303</td>
+      <td>27589</td>
       <td>23120</td>
       <td>32796</td>
       <td>25778</td>
@@ -13811,9 +13836,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>13356</td>
     </tr>
     <tr>
-      <th>113</th>
+      <th>237</th>
       <td>2020-07-22</td>
-      <td>27589</td>
+      <td>31875</td>
       <td>23956</td>
       <td>37230</td>
       <td>29062</td>
@@ -13824,9 +13849,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>31824</td>
     </tr>
     <tr>
-      <th>114</th>
+      <th>238</th>
       <td>2020-07-23</td>
-      <td>31875</td>
+      <td>33326</td>
       <td>26241</td>
       <td>43014</td>
       <td>34356</td>
@@ -13837,9 +13862,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>21908</td>
     </tr>
     <tr>
-      <th>115</th>
+      <th>239</th>
       <td>2020-07-24</td>
-      <td>33326</td>
+      <td>32514</td>
       <td>27623</td>
       <td>44972</td>
       <td>35625</td>
@@ -13850,9 +13875,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>25985</td>
     </tr>
     <tr>
-      <th>116</th>
+      <th>240</th>
       <td>2020-07-25</td>
-      <td>32514</td>
+      <td>37125</td>
       <td>30764</td>
       <td>44972</td>
       <td>36631</td>
@@ -13863,9 +13888,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>31319</td>
     </tr>
     <tr>
-      <th>117</th>
+      <th>241</th>
       <td>2020-07-26</td>
-      <td>37125</td>
+      <td>31512</td>
       <td>32003</td>
       <td>42892</td>
       <td>39706</td>
@@ -13876,9 +13901,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>36827</td>
     </tr>
     <tr>
-      <th>118</th>
+      <th>242</th>
       <td>2020-07-27</td>
-      <td>31512</td>
+      <td>34354</td>
       <td>32833</td>
       <td>42892</td>
       <td>39096</td>
@@ -13889,9 +13914,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>34843</td>
     </tr>
     <tr>
-      <th>119</th>
+      <th>243</th>
       <td>2020-07-28</td>
-      <td>34354</td>
+      <td>35683</td>
       <td>34442</td>
       <td>42892</td>
       <td>39207</td>
@@ -13902,9 +13927,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>31722</td>
     </tr>
     <tr>
-      <th>120</th>
+      <th>244</th>
       <td>2020-07-29</td>
-      <td>35683</td>
+      <td>32886</td>
       <td>35198</td>
       <td>42892</td>
       <td>38695</td>
@@ -13915,9 +13940,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>42390</td>
     </tr>
     <tr>
-      <th>121</th>
+      <th>245</th>
       <td>2020-07-30</td>
-      <td>32886</td>
+      <td>37425</td>
       <td>34216</td>
       <td>42390</td>
       <td>37455</td>
@@ -13928,9 +13953,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>26748</td>
     </tr>
     <tr>
-      <th>122</th>
+      <th>246</th>
       <td>2020-07-31</td>
-      <td>0</td>
+      <td>36554</td>
       <td>35263</td>
       <td>42732</td>
       <td>38252</td>
@@ -13940,9 +13965,22 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>42590</td>
       <td>37452</td>
     </tr>
+    <tr>
+      <th>247</th>
+      <td>2020-08-01</td>
+      <td>0</td>
+      <td>35858</td>
+      <td>42732</td>
+      <td>38258</td>
+      <td>40051</td>
+      <td>37368</td>
+      <td>34261</td>
+      <td>35703</td>
+      <td>37063</td>
+    </tr>
   </tbody>
 </table>
-<p>123 rows × 10 columns</p>
+<p>248 rows × 10 columns</p>
 </div>
 </div>
 
@@ -13954,7 +13992,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dce</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -13967,7 +14005,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colls</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dc</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -13991,7 +14029,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[28]:</div>
+<div class="prompt output_prompt">Out[52]:</div>
 
 
 
@@ -14015,7 +14053,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">colls</span><span class="p">,</span><span class="n">collss</span><span class="p">):</span>
@@ -14049,7 +14087,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[29]:</div>
+<div class="prompt output_prompt">Out[53]:</div>
 
 
 
@@ -14096,7 +14134,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>0</th>
       <td>2020-03-31</td>
-      <td>35</td>
+      <td>13</td>
       <td>41</td>
       <td>262</td>
       <td>89</td>
@@ -14105,19 +14143,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>33</td>
       <td>72</td>
       <td>89</td>
-      <td>-6</td>
-      <td>-227</td>
-      <td>-54</td>
-      <td>-85</td>
-      <td>-54</td>
-      <td>2</td>
-      <td>-37</td>
-      <td>-54</td>
+      <td>-28</td>
+      <td>-249</td>
+      <td>-76</td>
+      <td>-107</td>
+      <td>-76</td>
+      <td>-20</td>
+      <td>-59</td>
+      <td>-76</td>
     </tr>
     <tr>
       <th>1</th>
       <td>2020-04-01</td>
-      <td>13</td>
+      <td>19</td>
       <td>24</td>
       <td>125</td>
       <td>53</td>
@@ -14126,19 +14164,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>6</td>
       <td>5</td>
       <td>4</td>
-      <td>-11</td>
-      <td>-112</td>
-      <td>-40</td>
-      <td>-43</td>
-      <td>-7</td>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
+      <td>-5</td>
+      <td>-106</td>
+      <td>-34</td>
+      <td>-37</td>
+      <td>-1</td>
+      <td>13</td>
+      <td>14</td>
+      <td>15</td>
     </tr>
     <tr>
       <th>2</th>
       <td>2020-04-02</td>
-      <td>19</td>
+      <td>22</td>
       <td>31</td>
       <td>125</td>
       <td>59</td>
@@ -14147,19 +14185,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>26</td>
       <td>28</td>
       <td>29</td>
-      <td>-12</td>
-      <td>-106</td>
-      <td>-40</td>
-      <td>-45</td>
-      <td>-13</td>
-      <td>-7</td>
       <td>-9</td>
+      <td>-103</td>
+      <td>-37</td>
+      <td>-42</td>
       <td>-10</td>
+      <td>-4</td>
+      <td>-6</td>
+      <td>-7</td>
     </tr>
     <tr>
       <th>3</th>
       <td>2020-04-03</td>
-      <td>22</td>
+      <td>39</td>
       <td>31</td>
       <td>125</td>
       <td>54</td>
@@ -14168,19 +14206,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>23</td>
       <td>25</td>
       <td>72</td>
-      <td>-9</td>
-      <td>-103</td>
-      <td>-32</td>
-      <td>-50</td>
-      <td>-12</td>
-      <td>-1</td>
-      <td>-3</td>
-      <td>-50</td>
+      <td>8</td>
+      <td>-86</td>
+      <td>-15</td>
+      <td>-33</td>
+      <td>5</td>
+      <td>16</td>
+      <td>14</td>
+      <td>-33</td>
     </tr>
     <tr>
       <th>4</th>
       <td>2020-04-04</td>
-      <td>39</td>
+      <td>56</td>
       <td>28</td>
       <td>80</td>
       <td>50</td>
@@ -14189,19 +14227,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>39</td>
       <td>69</td>
       <td>5</td>
-      <td>11</td>
-      <td>-41</td>
-      <td>-11</td>
-      <td>-7</td>
-      <td>-11</td>
-      <td>0</td>
-      <td>-30</td>
-      <td>34</td>
+      <td>28</td>
+      <td>-24</td>
+      <td>6</td>
+      <td>10</td>
+      <td>6</td>
+      <td>17</td>
+      <td>-13</td>
+      <td>51</td>
     </tr>
     <tr>
       <th>5</th>
       <td>2020-04-05</td>
-      <td>56</td>
+      <td>43</td>
       <td>41</td>
       <td>115</td>
       <td>80</td>
@@ -14210,19 +14248,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>41</td>
       <td>80</td>
       <td>28</td>
+      <td>2</td>
+      <td>-72</td>
+      <td>-37</td>
+      <td>-16</td>
+      <td>-37</td>
+      <td>2</td>
+      <td>-37</td>
       <td>15</td>
-      <td>-59</td>
-      <td>-24</td>
-      <td>-3</td>
-      <td>-24</td>
-      <td>15</td>
-      <td>-24</td>
-      <td>28</td>
     </tr>
     <tr>
       <th>6</th>
       <td>2020-04-06</td>
-      <td>43</td>
+      <td>65</td>
       <td>42</td>
       <td>115</td>
       <td>72</td>
@@ -14231,19 +14269,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>25</td>
       <td>33</td>
       <td>25</td>
-      <td>1</td>
-      <td>-72</td>
-      <td>-29</td>
-      <td>-24</td>
-      <td>-12</td>
-      <td>18</td>
+      <td>23</td>
+      <td>-50</td>
+      <td>-7</td>
+      <td>-2</td>
       <td>10</td>
-      <td>18</td>
+      <td>40</td>
+      <td>32</td>
+      <td>40</td>
     </tr>
     <tr>
       <th>7</th>
       <td>2020-04-07</td>
-      <td>65</td>
+      <td>75</td>
       <td>44</td>
       <td>115</td>
       <td>79</td>
@@ -14252,19 +14290,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>55</td>
       <td>98</td>
       <td>69</td>
-      <td>21</td>
-      <td>-50</td>
-      <td>-14</td>
-      <td>0</td>
-      <td>-14</td>
-      <td>10</td>
-      <td>-33</td>
+      <td>31</td>
+      <td>-40</td>
       <td>-4</td>
+      <td>10</td>
+      <td>-4</td>
+      <td>20</td>
+      <td>-23</td>
+      <td>6</td>
     </tr>
     <tr>
       <th>8</th>
       <td>2020-04-08</td>
-      <td>75</td>
+      <td>96</td>
       <td>60</td>
       <td>133</td>
       <td>99</td>
@@ -14273,19 +14311,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>53</td>
       <td>87</td>
       <td>80</td>
+      <td>36</td>
+      <td>-37</td>
+      <td>-3</td>
       <td>15</td>
-      <td>-58</td>
-      <td>-24</td>
-      <td>-6</td>
-      <td>-24</td>
-      <td>22</td>
-      <td>-12</td>
-      <td>-5</td>
+      <td>-3</td>
+      <td>43</td>
+      <td>9</td>
+      <td>16</td>
     </tr>
     <tr>
       <th>9</th>
       <td>2020-04-09</td>
-      <td>96</td>
+      <td>70</td>
       <td>73</td>
       <td>170</td>
       <td>125</td>
@@ -14294,19 +14332,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>72</td>
       <td>123</td>
       <td>33</td>
-      <td>23</td>
-      <td>-74</td>
-      <td>-29</td>
-      <td>-4</td>
-      <td>-29</td>
-      <td>24</td>
-      <td>-27</td>
-      <td>63</td>
+      <td>-3</td>
+      <td>-100</td>
+      <td>-55</td>
+      <td>-30</td>
+      <td>-55</td>
+      <td>-2</td>
+      <td>-53</td>
+      <td>37</td>
     </tr>
     <tr>
       <th>10</th>
       <td>2020-04-10</td>
-      <td>70</td>
+      <td>151</td>
       <td>78</td>
       <td>170</td>
       <td>119</td>
@@ -14315,19 +14353,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>46</td>
       <td>51</td>
       <td>98</td>
-      <td>-8</td>
-      <td>-100</td>
-      <td>-49</td>
-      <td>-42</td>
-      <td>-17</td>
-      <td>24</td>
-      <td>19</td>
-      <td>-28</td>
+      <td>73</td>
+      <td>-19</td>
+      <td>32</td>
+      <td>39</td>
+      <td>64</td>
+      <td>105</td>
+      <td>100</td>
+      <td>53</td>
     </tr>
     <tr>
       <th>11</th>
       <td>2020-04-11</td>
-      <td>151</td>
+      <td>186</td>
       <td>103</td>
       <td>326</td>
       <td>195</td>
@@ -14336,19 +14374,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>171</td>
       <td>326</td>
       <td>87</td>
-      <td>48</td>
-      <td>-175</td>
-      <td>-44</td>
-      <td>-20</td>
-      <td>-44</td>
-      <td>-20</td>
-      <td>-175</td>
-      <td>64</td>
+      <td>83</td>
+      <td>-140</td>
+      <td>-9</td>
+      <td>15</td>
+      <td>-9</td>
+      <td>15</td>
+      <td>-140</td>
+      <td>99</td>
     </tr>
     <tr>
       <th>12</th>
       <td>2020-04-12</td>
-      <td>186</td>
+      <td>114</td>
       <td>124</td>
       <td>401</td>
       <td>235</td>
@@ -14357,19 +14395,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>121</td>
       <td>229</td>
       <td>123</td>
-      <td>62</td>
-      <td>-215</td>
-      <td>-49</td>
-      <td>-25</td>
-      <td>-49</td>
-      <td>65</td>
-      <td>-43</td>
-      <td>63</td>
+      <td>-10</td>
+      <td>-287</td>
+      <td>-121</td>
+      <td>-97</td>
+      <td>-121</td>
+      <td>-7</td>
+      <td>-115</td>
+      <td>-9</td>
     </tr>
     <tr>
       <th>13</th>
       <td>2020-04-13</td>
-      <td>114</td>
+      <td>112</td>
       <td>134</td>
       <td>401</td>
       <td>231</td>
@@ -14378,19 +14416,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>66</td>
       <td>70</td>
       <td>51</td>
-      <td>-20</td>
-      <td>-287</td>
-      <td>-117</td>
+      <td>-22</td>
+      <td>-289</td>
       <td>-119</td>
-      <td>-27</td>
-      <td>48</td>
-      <td>44</td>
-      <td>63</td>
+      <td>-121</td>
+      <td>-29</td>
+      <td>46</td>
+      <td>42</td>
+      <td>61</td>
     </tr>
     <tr>
       <th>14</th>
       <td>2020-04-14</td>
-      <td>112</td>
+      <td>167</td>
       <td>134</td>
       <td>401</td>
       <td>216</td>
@@ -14399,19 +14437,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>113</td>
       <td>110</td>
       <td>326</td>
-      <td>-22</td>
-      <td>-289</td>
-      <td>-104</td>
-      <td>-136</td>
-      <td>-18</td>
-      <td>-1</td>
-      <td>2</td>
-      <td>-214</td>
+      <td>33</td>
+      <td>-234</td>
+      <td>-49</td>
+      <td>-81</td>
+      <td>37</td>
+      <td>54</td>
+      <td>57</td>
+      <td>-159</td>
     </tr>
     <tr>
       <th>15</th>
       <td>2020-04-15</td>
-      <td>167</td>
+      <td>144</td>
       <td>155</td>
       <td>401</td>
       <td>225</td>
@@ -14420,19 +14458,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>191</td>
       <td>249</td>
       <td>229</td>
-      <td>12</td>
-      <td>-234</td>
+      <td>-11</td>
+      <td>-257</td>
+      <td>-81</td>
+      <td>-132</td>
       <td>-58</td>
-      <td>-109</td>
-      <td>-35</td>
-      <td>-24</td>
-      <td>-82</td>
-      <td>-62</td>
+      <td>-47</td>
+      <td>-105</td>
+      <td>-85</td>
     </tr>
     <tr>
       <th>16</th>
       <td>2020-04-16</td>
-      <td>144</td>
+      <td>258</td>
       <td>155</td>
       <td>401</td>
       <td>214</td>
@@ -14441,19 +14479,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>116</td>
       <td>124</td>
       <td>70</td>
-      <td>-11</td>
-      <td>-257</td>
-      <td>-70</td>
-      <td>-147</td>
-      <td>-22</td>
-      <td>28</td>
-      <td>20</td>
-      <td>74</td>
+      <td>103</td>
+      <td>-143</td>
+      <td>44</td>
+      <td>-33</td>
+      <td>92</td>
+      <td>142</td>
+      <td>134</td>
+      <td>188</td>
     </tr>
     <tr>
       <th>17</th>
       <td>2020-04-17</td>
-      <td>258</td>
+      <td>273</td>
       <td>211</td>
       <td>557</td>
       <td>336</td>
@@ -14462,19 +14500,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>290</td>
       <td>462</td>
       <td>110</td>
-      <td>47</td>
-      <td>-299</td>
-      <td>-78</td>
-      <td>-91</td>
-      <td>-78</td>
-      <td>-32</td>
-      <td>-204</td>
-      <td>148</td>
+      <td>62</td>
+      <td>-284</td>
+      <td>-63</td>
+      <td>-76</td>
+      <td>-63</td>
+      <td>-17</td>
+      <td>-189</td>
+      <td>163</td>
     </tr>
     <tr>
       <th>18</th>
       <td>2020-04-18</td>
-      <td>273</td>
+      <td>426</td>
       <td>206</td>
       <td>489</td>
       <td>313</td>
@@ -14483,19 +14521,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>190</td>
       <td>289</td>
       <td>249</td>
-      <td>67</td>
-      <td>-216</td>
-      <td>-40</td>
-      <td>-48</td>
-      <td>-40</td>
-      <td>83</td>
-      <td>-16</td>
-      <td>24</td>
+      <td>220</td>
+      <td>-63</td>
+      <td>113</td>
+      <td>105</td>
+      <td>113</td>
+      <td>236</td>
+      <td>137</td>
+      <td>177</td>
     </tr>
     <tr>
       <th>19</th>
       <td>2020-04-19</td>
-      <td>426</td>
+      <td>388</td>
       <td>255</td>
       <td>763</td>
       <td>509</td>
@@ -14504,19 +14542,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>333</td>
       <td>665</td>
       <td>124</td>
-      <td>171</td>
-      <td>-337</td>
-      <td>-83</td>
-      <td>44</td>
-      <td>-83</td>
-      <td>93</td>
-      <td>-239</td>
-      <td>302</td>
+      <td>133</td>
+      <td>-375</td>
+      <td>-121</td>
+      <td>6</td>
+      <td>-121</td>
+      <td>55</td>
+      <td>-277</td>
+      <td>264</td>
     </tr>
     <tr>
       <th>20</th>
       <td>2020-04-20</td>
-      <td>388</td>
+      <td>419</td>
       <td>312</td>
       <td>763</td>
       <td>527</td>
@@ -14525,19 +14563,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>230</td>
       <td>353</td>
       <td>462</td>
-      <td>76</td>
-      <td>-375</td>
-      <td>-139</td>
-      <td>-65</td>
-      <td>-92</td>
-      <td>158</td>
-      <td>35</td>
-      <td>-74</td>
+      <td>107</td>
+      <td>-344</td>
+      <td>-108</td>
+      <td>-34</td>
+      <td>-61</td>
+      <td>189</td>
+      <td>66</td>
+      <td>-43</td>
     </tr>
     <tr>
       <th>21</th>
       <td>2020-04-21</td>
-      <td>419</td>
+      <td>703</td>
       <td>371</td>
       <td>763</td>
       <td>533</td>
@@ -14546,19 +14584,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>320</td>
       <td>452</td>
       <td>289</td>
-      <td>48</td>
-      <td>-344</td>
-      <td>-114</td>
-      <td>-112</td>
-      <td>-105</td>
-      <td>99</td>
-      <td>-33</td>
-      <td>130</td>
+      <td>332</td>
+      <td>-60</td>
+      <td>170</td>
+      <td>172</td>
+      <td>179</td>
+      <td>383</td>
+      <td>251</td>
+      <td>414</td>
     </tr>
     <tr>
       <th>22</th>
       <td>2020-04-22</td>
-      <td>703</td>
+      <td>394</td>
       <td>476</td>
       <td>1260</td>
       <td>898</td>
@@ -14567,19 +14605,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>626</td>
       <td>1179</td>
       <td>665</td>
-      <td>227</td>
-      <td>-557</td>
-      <td>-195</td>
-      <td>35</td>
-      <td>-195</td>
-      <td>77</td>
-      <td>-476</td>
-      <td>38</td>
+      <td>-82</td>
+      <td>-866</td>
+      <td>-504</td>
+      <td>-274</td>
+      <td>-504</td>
+      <td>-232</td>
+      <td>-785</td>
+      <td>-271</td>
     </tr>
     <tr>
       <th>23</th>
       <td>2020-04-23</td>
-      <td>394</td>
+      <td>642</td>
       <td>504</td>
       <td>1260</td>
       <td>868</td>
@@ -14588,19 +14626,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>229</td>
       <td>221</td>
       <td>353</td>
-      <td>-110</td>
-      <td>-866</td>
-      <td>-474</td>
-      <td>-338</td>
-      <td>-92</td>
-      <td>165</td>
-      <td>173</td>
-      <td>41</td>
+      <td>138</td>
+      <td>-618</td>
+      <td>-226</td>
+      <td>-90</td>
+      <td>156</td>
+      <td>413</td>
+      <td>421</td>
+      <td>289</td>
     </tr>
     <tr>
       <th>24</th>
       <td>2020-04-24</td>
-      <td>642</td>
+      <td>484</td>
       <td>561</td>
       <td>1179</td>
       <td>851</td>
@@ -14609,19 +14647,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>755</td>
       <td>1046</td>
       <td>452</td>
-      <td>81</td>
-      <td>-537</td>
-      <td>-209</td>
-      <td>-136</td>
-      <td>-135</td>
-      <td>-113</td>
-      <td>-404</td>
-      <td>190</td>
+      <td>-77</td>
+      <td>-695</td>
+      <td>-367</td>
+      <td>-294</td>
+      <td>-293</td>
+      <td>-271</td>
+      <td>-562</td>
+      <td>32</td>
     </tr>
     <tr>
       <th>25</th>
       <td>2020-04-25</td>
-      <td>484</td>
+      <td>442</td>
       <td>576</td>
       <td>1179</td>
       <td>821</td>
@@ -14630,19 +14668,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>372</td>
       <td>365</td>
       <td>1179</td>
-      <td>-92</td>
-      <td>-695</td>
-      <td>-337</td>
-      <td>-344</td>
-      <td>-81</td>
-      <td>112</td>
-      <td>119</td>
-      <td>-695</td>
+      <td>-134</td>
+      <td>-737</td>
+      <td>-379</td>
+      <td>-386</td>
+      <td>-123</td>
+      <td>70</td>
+      <td>77</td>
+      <td>-737</td>
     </tr>
     <tr>
       <th>26</th>
       <td>2020-04-26</td>
-      <td>442</td>
+      <td>585</td>
       <td>533</td>
       <td>1179</td>
       <td>756</td>
@@ -14651,19 +14689,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>453</td>
       <td>404</td>
       <td>221</td>
-      <td>-91</td>
-      <td>-737</td>
-      <td>-314</td>
-      <td>-390</td>
-      <td>-33</td>
-      <td>-11</td>
-      <td>38</td>
-      <td>221</td>
+      <td>52</td>
+      <td>-594</td>
+      <td>-171</td>
+      <td>-247</td>
+      <td>110</td>
+      <td>132</td>
+      <td>181</td>
+      <td>364</td>
     </tr>
     <tr>
       <th>27</th>
       <td>2020-04-27</td>
-      <td>585</td>
+      <td>580</td>
       <td>594</td>
       <td>1179</td>
       <td>797</td>
@@ -14672,19 +14710,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>694</td>
       <td>774</td>
       <td>1046</td>
-      <td>-9</td>
-      <td>-594</td>
-      <td>-212</td>
-      <td>-294</td>
-      <td>-78</td>
-      <td>-109</td>
-      <td>-189</td>
-      <td>-461</td>
+      <td>-14</td>
+      <td>-599</td>
+      <td>-217</td>
+      <td>-299</td>
+      <td>-83</td>
+      <td>-114</td>
+      <td>-194</td>
+      <td>-466</td>
     </tr>
     <tr>
       <th>28</th>
       <td>2020-04-28</td>
-      <td>580</td>
+      <td>636</td>
       <td>614</td>
       <td>1179</td>
       <td>788</td>
@@ -14693,19 +14731,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>542</td>
       <td>575</td>
       <td>365</td>
-      <td>-34</td>
-      <td>-599</td>
-      <td>-208</td>
-      <td>-338</td>
-      <td>-70</td>
-      <td>38</td>
-      <td>5</td>
-      <td>215</td>
+      <td>22</td>
+      <td>-543</td>
+      <td>-152</td>
+      <td>-282</td>
+      <td>-14</td>
+      <td>94</td>
+      <td>61</td>
+      <td>271</td>
     </tr>
     <tr>
       <th>29</th>
       <td>2020-04-29</td>
-      <td>636</td>
+      <td>690</td>
       <td>558</td>
       <td>1046</td>
       <td>667</td>
@@ -14714,14 +14752,14 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>589</td>
       <td>697</td>
       <td>404</td>
-      <td>78</td>
-      <td>-410</td>
-      <td>-31</td>
-      <td>-240</td>
-      <td>-24</td>
-      <td>47</td>
-      <td>-61</td>
-      <td>232</td>
+      <td>132</td>
+      <td>-356</td>
+      <td>23</td>
+      <td>-186</td>
+      <td>30</td>
+      <td>101</td>
+      <td>-7</td>
+      <td>286</td>
     </tr>
     <tr>
       <th>...</th>
@@ -14745,30 +14783,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>...</td>
     </tr>
     <tr>
-      <th>93</th>
-      <td>2020-07-02</td>
-      <td>12064</td>
-      <td>12708</td>
-      <td>19760</td>
-      <td>14348</td>
-      <td>17501</td>
-      <td>12165</td>
-      <td>12100</td>
-      <td>11583</td>
-      <td>9507</td>
-      <td>-644</td>
-      <td>-7696</td>
-      <td>-2284</td>
-      <td>-5437</td>
-      <td>-101</td>
-      <td>-36</td>
-      <td>481</td>
-      <td>2557</td>
-    </tr>
-    <tr>
-      <th>94</th>
+      <th>218</th>
       <td>2020-07-03</td>
-      <td>19999</td>
+      <td>14417</td>
       <td>14708</td>
       <td>33153</td>
       <td>21851</td>
@@ -14777,19 +14794,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>22316</td>
       <td>33153</td>
       <td>15662</td>
-      <td>5291</td>
-      <td>-13154</td>
-      <td>-1852</td>
-      <td>-2317</td>
-      <td>-1852</td>
-      <td>-2317</td>
-      <td>-13154</td>
-      <td>4337</td>
+      <td>-291</td>
+      <td>-18736</td>
+      <td>-7434</td>
+      <td>-7899</td>
+      <td>-7434</td>
+      <td>-7899</td>
+      <td>-18736</td>
+      <td>-1245</td>
     </tr>
     <tr>
-      <th>95</th>
+      <th>219</th>
       <td>2020-07-04</td>
-      <td>14417</td>
+      <td>14746</td>
       <td>15335</td>
       <td>33153</td>
       <td>21817</td>
@@ -14798,19 +14815,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>10134</td>
       <td>10393</td>
       <td>11697</td>
-      <td>-918</td>
-      <td>-18736</td>
-      <td>-7400</td>
-      <td>-8887</td>
-      <td>-1310</td>
-      <td>4283</td>
-      <td>4024</td>
-      <td>2720</td>
+      <td>-589</td>
+      <td>-18407</td>
+      <td>-7071</td>
+      <td>-8558</td>
+      <td>-981</td>
+      <td>4612</td>
+      <td>4353</td>
+      <td>3049</td>
     </tr>
     <tr>
-      <th>96</th>
+      <th>220</th>
       <td>2020-07-05</td>
-      <td>14746</td>
+      <td>15829</td>
       <td>14677</td>
       <td>33153</td>
       <td>20771</td>
@@ -14819,19 +14836,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>14454</td>
       <td>15083</td>
       <td>11583</td>
-      <td>69</td>
-      <td>-18407</td>
-      <td>-6025</td>
-      <td>-8680</td>
-      <td>-570</td>
-      <td>292</td>
-      <td>-337</td>
-      <td>3163</td>
+      <td>1152</td>
+      <td>-17324</td>
+      <td>-4942</td>
+      <td>-7597</td>
+      <td>513</td>
+      <td>1375</td>
+      <td>746</td>
+      <td>4246</td>
     </tr>
     <tr>
-      <th>97</th>
+      <th>221</th>
       <td>2020-07-06</td>
-      <td>15829</td>
+      <td>15315</td>
       <td>15839</td>
       <td>33153</td>
       <td>21503</td>
@@ -14840,19 +14857,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>15813</td>
       <td>16992</td>
       <td>33153</td>
-      <td>-10</td>
-      <td>-17324</td>
-      <td>-5674</td>
-      <td>-8591</td>
-      <td>-1190</td>
-      <td>16</td>
-      <td>-1163</td>
-      <td>-17324</td>
+      <td>-524</td>
+      <td>-17838</td>
+      <td>-6188</td>
+      <td>-9105</td>
+      <td>-1704</td>
+      <td>-498</td>
+      <td>-1677</td>
+      <td>-17838</td>
     </tr>
     <tr>
-      <th>98</th>
+      <th>222</th>
       <td>2020-07-07</td>
-      <td>15315</td>
+      <td>16836</td>
       <td>15705</td>
       <td>33153</td>
       <td>20952</td>
@@ -14861,19 +14878,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>14504</td>
       <td>14818</td>
       <td>10393</td>
-      <td>-390</td>
-      <td>-17838</td>
-      <td>-5637</td>
-      <td>-9536</td>
-      <td>-730</td>
-      <td>811</td>
-      <td>497</td>
-      <td>4922</td>
+      <td>1131</td>
+      <td>-16317</td>
+      <td>-4116</td>
+      <td>-8015</td>
+      <td>791</td>
+      <td>2332</td>
+      <td>2018</td>
+      <td>6443</td>
     </tr>
     <tr>
-      <th>99</th>
+      <th>223</th>
       <td>2020-07-08</td>
-      <td>16836</td>
+      <td>19508</td>
       <td>16719</td>
       <td>33153</td>
       <td>21433</td>
@@ -14882,19 +14899,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>17150</td>
       <td>18508</td>
       <td>15083</td>
-      <td>117</td>
-      <td>-16317</td>
-      <td>-4597</td>
-      <td>-9026</td>
-      <td>-1207</td>
-      <td>-314</td>
-      <td>-1672</td>
-      <td>1753</td>
+      <td>2789</td>
+      <td>-13645</td>
+      <td>-1925</td>
+      <td>-6354</td>
+      <td>1465</td>
+      <td>2358</td>
+      <td>1000</td>
+      <td>4425</td>
     </tr>
     <tr>
-      <th>100</th>
+      <th>224</th>
       <td>2020-07-09</td>
-      <td>19508</td>
+      <td>19408</td>
       <td>18332</td>
       <td>33153</td>
       <td>22000</td>
@@ -14903,19 +14920,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>19309</td>
       <td>22604</td>
       <td>16992</td>
-      <td>1176</td>
-      <td>-13645</td>
-      <td>-2492</td>
-      <td>-8117</td>
-      <td>-1952</td>
-      <td>199</td>
-      <td>-3096</td>
-      <td>2516</td>
+      <td>1076</td>
+      <td>-13745</td>
+      <td>-2592</td>
+      <td>-8217</td>
+      <td>-2052</td>
+      <td>99</td>
+      <td>-3196</td>
+      <td>2416</td>
     </tr>
     <tr>
-      <th>101</th>
+      <th>225</th>
       <td>2020-07-10</td>
-      <td>19408</td>
+      <td>20289</td>
       <td>16669</td>
       <td>22604</td>
       <td>19613</td>
@@ -14924,19 +14941,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>16495</td>
       <td>19309</td>
       <td>14818</td>
-      <td>2739</td>
-      <td>-3196</td>
-      <td>-205</td>
-      <td>197</td>
-      <td>-104</td>
-      <td>2913</td>
-      <td>99</td>
-      <td>4590</td>
+      <td>3620</td>
+      <td>-2315</td>
+      <td>676</td>
+      <td>1078</td>
+      <td>777</td>
+      <td>3794</td>
+      <td>980</td>
+      <td>5471</td>
     </tr>
     <tr>
-      <th>102</th>
+      <th>226</th>
       <td>2020-07-11</td>
-      <td>20289</td>
+      <td>19981</td>
       <td>18320</td>
       <td>23509</td>
       <td>21338</td>
@@ -14945,19 +14962,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>18209</td>
       <td>21210</td>
       <td>18508</td>
-      <td>1969</td>
-      <td>-3220</td>
-      <td>-1049</td>
-      <td>106</td>
-      <td>-1049</td>
-      <td>2080</td>
-      <td>-921</td>
-      <td>1781</td>
+      <td>1661</td>
+      <td>-3528</td>
+      <td>-1357</td>
+      <td>-202</td>
+      <td>-1357</td>
+      <td>1772</td>
+      <td>-1229</td>
+      <td>1473</td>
     </tr>
     <tr>
-      <th>103</th>
+      <th>227</th>
       <td>2020-07-12</td>
-      <td>19981</td>
+      <td>18198</td>
       <td>19008</td>
       <td>23509</td>
       <td>21228</td>
@@ -14966,19 +14983,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>17891</td>
       <td>19678</td>
       <td>22604</td>
-      <td>973</td>
-      <td>-3528</td>
-      <td>-1247</td>
-      <td>-1069</td>
-      <td>-925</td>
-      <td>2090</td>
-      <td>303</td>
-      <td>-2623</td>
+      <td>-810</td>
+      <td>-5311</td>
+      <td>-3030</td>
+      <td>-2852</td>
+      <td>-2708</td>
+      <td>307</td>
+      <td>-1480</td>
+      <td>-4406</td>
     </tr>
     <tr>
-      <th>104</th>
+      <th>228</th>
       <td>2020-07-13</td>
-      <td>18198</td>
+      <td>17683</td>
       <td>18932</td>
       <td>23509</td>
       <td>20757</td>
@@ -14987,19 +15004,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>16854</td>
       <td>16574</td>
       <td>19309</td>
-      <td>-734</td>
-      <td>-5311</td>
-      <td>-2559</td>
-      <td>-3244</td>
-      <td>-420</td>
-      <td>1344</td>
-      <td>1624</td>
-      <td>-1111</td>
+      <td>-1249</td>
+      <td>-5826</td>
+      <td>-3074</td>
+      <td>-3759</td>
+      <td>-935</td>
+      <td>829</td>
+      <td>1109</td>
+      <td>-1626</td>
     </tr>
     <tr>
-      <th>105</th>
+      <th>229</th>
       <td>2020-07-14</td>
-      <td>17683</td>
+      <td>20977</td>
       <td>19289</td>
       <td>23509</td>
       <td>20769</td>
@@ -15008,19 +15025,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>18310</td>
       <td>17183</td>
       <td>21210</td>
-      <td>-1606</td>
-      <td>-5826</td>
-      <td>-3086</td>
-      <td>-4151</td>
-      <td>-418</td>
-      <td>-627</td>
-      <td>500</td>
-      <td>-3527</td>
+      <td>1688</td>
+      <td>-2532</td>
+      <td>208</td>
+      <td>-857</td>
+      <td>2876</td>
+      <td>2667</td>
+      <td>3794</td>
+      <td>-233</td>
     </tr>
     <tr>
-      <th>106</th>
+      <th>230</th>
       <td>2020-07-15</td>
-      <td>20977</td>
+      <td>20646</td>
       <td>20136</td>
       <td>24885</td>
       <td>21734</td>
@@ -15029,19 +15046,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>23055</td>
       <td>24885</td>
       <td>19678</td>
-      <td>841</td>
-      <td>-3908</td>
-      <td>-757</td>
-      <td>-2078</td>
-      <td>-757</td>
-      <td>-2078</td>
-      <td>-3908</td>
-      <td>1299</td>
+      <td>510</td>
+      <td>-4239</td>
+      <td>-1088</td>
+      <td>-2409</td>
+      <td>-1088</td>
+      <td>-2409</td>
+      <td>-4239</td>
+      <td>968</td>
     </tr>
     <tr>
-      <th>107</th>
+      <th>231</th>
       <td>2020-07-16</td>
-      <td>20646</td>
+      <td>22867</td>
       <td>19816</td>
       <td>24885</td>
       <td>21211</td>
@@ -15050,19 +15067,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>19288</td>
       <td>20320</td>
       <td>16574</td>
-      <td>830</td>
-      <td>-4239</td>
-      <td>-565</td>
-      <td>-2602</td>
-      <td>-230</td>
-      <td>1358</td>
-      <td>326</td>
-      <td>4072</td>
+      <td>3051</td>
+      <td>-2018</td>
+      <td>1656</td>
+      <td>-381</td>
+      <td>1991</td>
+      <td>3579</td>
+      <td>2547</td>
+      <td>6293</td>
     </tr>
     <tr>
-      <th>108</th>
+      <th>232</th>
       <td>2020-07-17</td>
-      <td>22867</td>
+      <td>17476</td>
       <td>20639</td>
       <td>27127</td>
       <td>23490</td>
@@ -15071,19 +15088,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>22253</td>
       <td>25327</td>
       <td>17183</td>
-      <td>2228</td>
-      <td>-4260</td>
-      <td>-623</td>
-      <td>-967</td>
-      <td>-623</td>
-      <td>614</td>
-      <td>-2460</td>
-      <td>5684</td>
+      <td>-3163</td>
+      <td>-9651</td>
+      <td>-6014</td>
+      <td>-6358</td>
+      <td>-6014</td>
+      <td>-4777</td>
+      <td>-7851</td>
+      <td>293</td>
     </tr>
     <tr>
-      <th>109</th>
+      <th>233</th>
       <td>2020-07-18</td>
-      <td>17476</td>
+      <td>23583</td>
       <td>19435</td>
       <td>27127</td>
       <td>22572</td>
@@ -15092,19 +15109,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>15048</td>
       <td>13356</td>
       <td>24885</td>
-      <td>-1959</td>
-      <td>-9651</td>
-      <td>-5096</td>
-      <td>-5882</td>
-      <td>226</td>
-      <td>2428</td>
-      <td>4120</td>
-      <td>-7409</td>
+      <td>4148</td>
+      <td>-3544</td>
+      <td>1011</td>
+      <td>225</td>
+      <td>6333</td>
+      <td>8535</td>
+      <td>10227</td>
+      <td>-1302</td>
     </tr>
     <tr>
-      <th>110</th>
+      <th>234</th>
       <td>2020-07-19</td>
-      <td>23583</td>
+      <td>22730</td>
       <td>20996</td>
       <td>31824</td>
       <td>24507</td>
@@ -15113,19 +15130,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>27265</td>
       <td>31824</td>
       <td>20320</td>
-      <td>2587</td>
-      <td>-8241</td>
-      <td>-924</td>
-      <td>-3682</td>
-      <td>-924</td>
-      <td>-3682</td>
-      <td>-8241</td>
-      <td>3263</td>
+      <td>1734</td>
+      <td>-9094</td>
+      <td>-1777</td>
+      <td>-4535</td>
+      <td>-1777</td>
+      <td>-4535</td>
+      <td>-9094</td>
+      <td>2410</td>
     </tr>
     <tr>
-      <th>111</th>
+      <th>235</th>
       <td>2020-07-20</td>
-      <td>22730</td>
+      <td>24303</td>
       <td>21827</td>
       <td>31824</td>
       <td>24686</td>
@@ -15134,19 +15151,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>20098</td>
       <td>21908</td>
       <td>25327</td>
-      <td>903</td>
-      <td>-9094</td>
-      <td>-1956</td>
-      <td>-5408</td>
-      <td>-1063</td>
-      <td>2632</td>
-      <td>822</td>
-      <td>-2597</td>
+      <td>2476</td>
+      <td>-7521</td>
+      <td>-383</td>
+      <td>-3835</td>
+      <td>510</td>
+      <td>4205</td>
+      <td>2395</td>
+      <td>-1024</td>
     </tr>
     <tr>
-      <th>112</th>
+      <th>236</th>
       <td>2020-07-21</td>
-      <td>24303</td>
+      <td>27589</td>
       <td>23120</td>
       <td>32796</td>
       <td>25778</td>
@@ -15155,19 +15172,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>23306</td>
       <td>25985</td>
       <td>13356</td>
-      <td>1183</td>
-      <td>-8493</td>
-      <td>-1475</td>
-      <td>-5112</td>
-      <td>-1475</td>
-      <td>997</td>
-      <td>-1682</td>
-      <td>10947</td>
+      <td>4469</td>
+      <td>-5207</td>
+      <td>1811</td>
+      <td>-1826</td>
+      <td>1811</td>
+      <td>4283</td>
+      <td>1604</td>
+      <td>14233</td>
     </tr>
     <tr>
-      <th>113</th>
+      <th>237</th>
       <td>2020-07-22</td>
-      <td>27589</td>
+      <td>31875</td>
       <td>23956</td>
       <td>37230</td>
       <td>29062</td>
@@ -15176,19 +15193,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>25817</td>
       <td>31319</td>
       <td>31824</td>
-      <td>3633</td>
-      <td>-9641</td>
-      <td>-1473</td>
-      <td>-3100</td>
-      <td>-1473</td>
-      <td>1772</td>
-      <td>-3730</td>
-      <td>-4235</td>
+      <td>7919</td>
+      <td>-5355</td>
+      <td>2813</td>
+      <td>1186</td>
+      <td>2813</td>
+      <td>6058</td>
+      <td>556</td>
+      <td>51</td>
     </tr>
     <tr>
-      <th>114</th>
+      <th>238</th>
       <td>2020-07-23</td>
-      <td>31875</td>
+      <td>33326</td>
       <td>26241</td>
       <td>43014</td>
       <td>34356</td>
@@ -15197,19 +15214,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>28128</td>
       <td>36827</td>
       <td>21908</td>
-      <td>5634</td>
-      <td>-11139</td>
-      <td>-2481</td>
-      <td>-979</td>
-      <td>-2481</td>
-      <td>3747</td>
-      <td>-4952</td>
-      <td>9967</td>
+      <td>7085</td>
+      <td>-9688</td>
+      <td>-1030</td>
+      <td>472</td>
+      <td>-1030</td>
+      <td>5198</td>
+      <td>-3501</td>
+      <td>11418</td>
     </tr>
     <tr>
-      <th>115</th>
+      <th>239</th>
       <td>2020-07-24</td>
-      <td>33326</td>
+      <td>32514</td>
       <td>27623</td>
       <td>44972</td>
       <td>35625</td>
@@ -15218,19 +15235,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>27017</td>
       <td>34843</td>
       <td>25985</td>
-      <td>5703</td>
-      <td>-11646</td>
-      <td>-2299</td>
-      <td>-1544</td>
-      <td>-2299</td>
-      <td>6309</td>
-      <td>-1517</td>
-      <td>7341</td>
+      <td>4891</td>
+      <td>-12458</td>
+      <td>-3111</td>
+      <td>-2356</td>
+      <td>-3111</td>
+      <td>5497</td>
+      <td>-2329</td>
+      <td>6529</td>
     </tr>
     <tr>
-      <th>116</th>
+      <th>240</th>
       <td>2020-07-25</td>
-      <td>32514</td>
+      <td>37125</td>
       <td>30764</td>
       <td>44972</td>
       <td>36631</td>
@@ -15239,19 +15256,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>27307</td>
       <td>31722</td>
       <td>31319</td>
-      <td>1750</td>
-      <td>-12458</td>
-      <td>-4117</td>
-      <td>-5255</td>
-      <td>-3224</td>
-      <td>5207</td>
-      <td>792</td>
-      <td>1195</td>
+      <td>6361</td>
+      <td>-7847</td>
+      <td>494</td>
+      <td>-644</td>
+      <td>1387</td>
+      <td>9818</td>
+      <td>5403</td>
+      <td>5806</td>
     </tr>
     <tr>
-      <th>117</th>
+      <th>241</th>
       <td>2020-07-26</td>
-      <td>37125</td>
+      <td>31512</td>
       <td>32003</td>
       <td>42892</td>
       <td>39706</td>
@@ -15260,19 +15277,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>34167</td>
       <td>42390</td>
       <td>36827</td>
-      <td>5122</td>
-      <td>-5767</td>
-      <td>-2581</td>
-      <td>2553</td>
-      <td>-2581</td>
-      <td>2958</td>
-      <td>-5265</td>
-      <td>298</td>
+      <td>-491</td>
+      <td>-11380</td>
+      <td>-8194</td>
+      <td>-3060</td>
+      <td>-8194</td>
+      <td>-2655</td>
+      <td>-10878</td>
+      <td>-5315</td>
     </tr>
     <tr>
-      <th>118</th>
+      <th>242</th>
       <td>2020-07-27</td>
-      <td>31512</td>
+      <td>34354</td>
       <td>32833</td>
       <td>42892</td>
       <td>39096</td>
@@ -15281,19 +15298,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>26464</td>
       <td>26748</td>
       <td>34843</td>
-      <td>-1321</td>
-      <td>-11380</td>
-      <td>-7584</td>
-      <td>-4509</td>
-      <td>-1673</td>
-      <td>5048</td>
-      <td>4764</td>
-      <td>-3331</td>
+      <td>1521</td>
+      <td>-8538</td>
+      <td>-4742</td>
+      <td>-1667</td>
+      <td>1169</td>
+      <td>7890</td>
+      <td>7606</td>
+      <td>-489</td>
     </tr>
     <tr>
-      <th>119</th>
+      <th>243</th>
       <td>2020-07-28</td>
-      <td>34354</td>
+      <td>35683</td>
       <td>34442</td>
       <td>42892</td>
       <td>39207</td>
@@ -15302,19 +15319,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>35555</td>
       <td>37452</td>
       <td>31722</td>
-      <td>-88</td>
-      <td>-8538</td>
-      <td>-4853</td>
-      <td>-3326</td>
-      <td>-1926</td>
-      <td>-1201</td>
-      <td>-3098</td>
-      <td>2632</td>
+      <td>1241</td>
+      <td>-7209</td>
+      <td>-3524</td>
+      <td>-1997</td>
+      <td>-597</td>
+      <td>128</td>
+      <td>-1769</td>
+      <td>3961</td>
     </tr>
     <tr>
-      <th>120</th>
+      <th>244</th>
       <td>2020-07-29</td>
-      <td>35683</td>
+      <td>32886</td>
       <td>35198</td>
       <td>42892</td>
       <td>38695</td>
@@ -15323,19 +15340,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>35076</td>
       <td>37063</td>
       <td>42390</td>
-      <td>485</td>
-      <td>-7209</td>
-      <td>-3012</td>
-      <td>-3333</td>
-      <td>-1509</td>
-      <td>607</td>
-      <td>-1380</td>
-      <td>-6707</td>
+      <td>-2312</td>
+      <td>-10006</td>
+      <td>-5809</td>
+      <td>-6130</td>
+      <td>-4306</td>
+      <td>-2190</td>
+      <td>-4177</td>
+      <td>-9504</td>
     </tr>
     <tr>
-      <th>121</th>
+      <th>245</th>
       <td>2020-07-30</td>
-      <td>32886</td>
+      <td>37425</td>
       <td>34216</td>
       <td>42390</td>
       <td>37455</td>
@@ -15344,19 +15361,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>31256</td>
       <td>30308</td>
       <td>26748</td>
-      <td>-1330</td>
-      <td>-9504</td>
-      <td>-4569</td>
-      <td>-5838</td>
-      <td>-293</td>
-      <td>1630</td>
-      <td>2578</td>
-      <td>6138</td>
+      <td>3209</td>
+      <td>-4965</td>
+      <td>-30</td>
+      <td>-1299</td>
+      <td>4246</td>
+      <td>6169</td>
+      <td>7117</td>
+      <td>10677</td>
     </tr>
     <tr>
-      <th>122</th>
+      <th>246</th>
       <td>2020-07-31</td>
-      <td>0</td>
+      <td>36554</td>
       <td>35263</td>
       <td>42732</td>
       <td>38252</td>
@@ -15365,18 +15382,39 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>39262</td>
       <td>42590</td>
       <td>37452</td>
-      <td>-35263</td>
+      <td>1291</td>
+      <td>-6178</td>
+      <td>-1698</td>
+      <td>-2838</td>
+      <td>-1698</td>
+      <td>-2708</td>
+      <td>-6036</td>
+      <td>-898</td>
+    </tr>
+    <tr>
+      <th>247</th>
+      <td>2020-08-01</td>
+      <td>0</td>
+      <td>35858</td>
+      <td>42732</td>
+      <td>38258</td>
+      <td>40051</td>
+      <td>37368</td>
+      <td>34261</td>
+      <td>35703</td>
+      <td>37063</td>
+      <td>-35858</td>
       <td>-42732</td>
-      <td>-38252</td>
-      <td>-39392</td>
-      <td>-38252</td>
-      <td>-39262</td>
-      <td>-42590</td>
-      <td>-37452</td>
+      <td>-38258</td>
+      <td>-40051</td>
+      <td>-37368</td>
+      <td>-34261</td>
+      <td>-35703</td>
+      <td>-37063</td>
     </tr>
   </tbody>
 </table>
-<p>123 rows × 18 columns</p>
+<p>248 rows × 18 columns</p>
 </div>
 </div>
 
@@ -15388,7 +15426,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dce</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;ramerrprd_df_strd.xlsx&quot;</span><span class="p">)</span>
@@ -15401,7 +15439,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">edf</span><span class="o">=</span><span class="n">dce</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">dce</span><span class="p">),</span><span class="mi">10</span><span class="p">:]</span>
@@ -15418,7 +15456,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[31]:</div>
+<div class="prompt output_prompt">Out[55]:</div>
 
 
 
@@ -15454,333 +15492,333 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
   <tbody>
     <tr>
       <th>0</th>
-      <td>-6</td>
-      <td>-227</td>
-      <td>-54</td>
-      <td>-85</td>
-      <td>-54</td>
-      <td>2</td>
-      <td>-37</td>
-      <td>-54</td>
+      <td>-28</td>
+      <td>-249</td>
+      <td>-76</td>
+      <td>-107</td>
+      <td>-76</td>
+      <td>-20</td>
+      <td>-59</td>
+      <td>-76</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-11</td>
-      <td>-112</td>
-      <td>-40</td>
-      <td>-43</td>
-      <td>-7</td>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
+      <td>-5</td>
+      <td>-106</td>
+      <td>-34</td>
+      <td>-37</td>
+      <td>-1</td>
+      <td>13</td>
+      <td>14</td>
+      <td>15</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>-12</td>
-      <td>-106</td>
-      <td>-40</td>
-      <td>-45</td>
-      <td>-13</td>
-      <td>-7</td>
       <td>-9</td>
+      <td>-103</td>
+      <td>-37</td>
+      <td>-42</td>
       <td>-10</td>
+      <td>-4</td>
+      <td>-6</td>
+      <td>-7</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>-9</td>
-      <td>-103</td>
-      <td>-32</td>
-      <td>-50</td>
-      <td>-12</td>
-      <td>-1</td>
-      <td>-3</td>
-      <td>-50</td>
+      <td>8</td>
+      <td>-86</td>
+      <td>-15</td>
+      <td>-33</td>
+      <td>5</td>
+      <td>16</td>
+      <td>14</td>
+      <td>-33</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>11</td>
-      <td>-41</td>
-      <td>-11</td>
-      <td>-7</td>
-      <td>-11</td>
-      <td>0</td>
-      <td>-30</td>
-      <td>34</td>
+      <td>28</td>
+      <td>-24</td>
+      <td>6</td>
+      <td>10</td>
+      <td>6</td>
+      <td>17</td>
+      <td>-13</td>
+      <td>51</td>
     </tr>
     <tr>
       <th>5</th>
+      <td>2</td>
+      <td>-72</td>
+      <td>-37</td>
+      <td>-16</td>
+      <td>-37</td>
+      <td>2</td>
+      <td>-37</td>
       <td>15</td>
-      <td>-59</td>
-      <td>-24</td>
-      <td>-3</td>
-      <td>-24</td>
-      <td>15</td>
-      <td>-24</td>
-      <td>28</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>1</td>
-      <td>-72</td>
-      <td>-29</td>
-      <td>-24</td>
-      <td>-12</td>
-      <td>18</td>
+      <td>23</td>
+      <td>-50</td>
+      <td>-7</td>
+      <td>-2</td>
       <td>10</td>
-      <td>18</td>
+      <td>40</td>
+      <td>32</td>
+      <td>40</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>21</td>
-      <td>-50</td>
-      <td>-14</td>
-      <td>0</td>
-      <td>-14</td>
-      <td>10</td>
-      <td>-33</td>
+      <td>31</td>
+      <td>-40</td>
       <td>-4</td>
+      <td>10</td>
+      <td>-4</td>
+      <td>20</td>
+      <td>-23</td>
+      <td>6</td>
     </tr>
     <tr>
       <th>8</th>
+      <td>36</td>
+      <td>-37</td>
+      <td>-3</td>
       <td>15</td>
-      <td>-58</td>
-      <td>-24</td>
-      <td>-6</td>
-      <td>-24</td>
-      <td>22</td>
-      <td>-12</td>
-      <td>-5</td>
+      <td>-3</td>
+      <td>43</td>
+      <td>9</td>
+      <td>16</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>23</td>
-      <td>-74</td>
-      <td>-29</td>
-      <td>-4</td>
-      <td>-29</td>
-      <td>24</td>
-      <td>-27</td>
-      <td>63</td>
+      <td>-3</td>
+      <td>-100</td>
+      <td>-55</td>
+      <td>-30</td>
+      <td>-55</td>
+      <td>-2</td>
+      <td>-53</td>
+      <td>37</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>-8</td>
-      <td>-100</td>
-      <td>-49</td>
-      <td>-42</td>
-      <td>-17</td>
-      <td>24</td>
-      <td>19</td>
-      <td>-28</td>
+      <td>73</td>
+      <td>-19</td>
+      <td>32</td>
+      <td>39</td>
+      <td>64</td>
+      <td>105</td>
+      <td>100</td>
+      <td>53</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>48</td>
-      <td>-175</td>
-      <td>-44</td>
-      <td>-20</td>
-      <td>-44</td>
-      <td>-20</td>
-      <td>-175</td>
-      <td>64</td>
+      <td>83</td>
+      <td>-140</td>
+      <td>-9</td>
+      <td>15</td>
+      <td>-9</td>
+      <td>15</td>
+      <td>-140</td>
+      <td>99</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>62</td>
-      <td>-215</td>
-      <td>-49</td>
-      <td>-25</td>
-      <td>-49</td>
-      <td>65</td>
-      <td>-43</td>
-      <td>63</td>
+      <td>-10</td>
+      <td>-287</td>
+      <td>-121</td>
+      <td>-97</td>
+      <td>-121</td>
+      <td>-7</td>
+      <td>-115</td>
+      <td>-9</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>-20</td>
-      <td>-287</td>
-      <td>-117</td>
+      <td>-22</td>
+      <td>-289</td>
       <td>-119</td>
-      <td>-27</td>
-      <td>48</td>
-      <td>44</td>
-      <td>63</td>
+      <td>-121</td>
+      <td>-29</td>
+      <td>46</td>
+      <td>42</td>
+      <td>61</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>-22</td>
-      <td>-289</td>
-      <td>-104</td>
-      <td>-136</td>
-      <td>-18</td>
-      <td>-1</td>
-      <td>2</td>
-      <td>-214</td>
+      <td>33</td>
+      <td>-234</td>
+      <td>-49</td>
+      <td>-81</td>
+      <td>37</td>
+      <td>54</td>
+      <td>57</td>
+      <td>-159</td>
     </tr>
     <tr>
       <th>15</th>
-      <td>12</td>
-      <td>-234</td>
+      <td>-11</td>
+      <td>-257</td>
+      <td>-81</td>
+      <td>-132</td>
       <td>-58</td>
-      <td>-109</td>
-      <td>-35</td>
-      <td>-24</td>
-      <td>-82</td>
-      <td>-62</td>
+      <td>-47</td>
+      <td>-105</td>
+      <td>-85</td>
     </tr>
     <tr>
       <th>16</th>
-      <td>-11</td>
-      <td>-257</td>
-      <td>-70</td>
-      <td>-147</td>
-      <td>-22</td>
-      <td>28</td>
-      <td>20</td>
-      <td>74</td>
+      <td>103</td>
+      <td>-143</td>
+      <td>44</td>
+      <td>-33</td>
+      <td>92</td>
+      <td>142</td>
+      <td>134</td>
+      <td>188</td>
     </tr>
     <tr>
       <th>17</th>
-      <td>47</td>
-      <td>-299</td>
-      <td>-78</td>
-      <td>-91</td>
-      <td>-78</td>
-      <td>-32</td>
-      <td>-204</td>
-      <td>148</td>
+      <td>62</td>
+      <td>-284</td>
+      <td>-63</td>
+      <td>-76</td>
+      <td>-63</td>
+      <td>-17</td>
+      <td>-189</td>
+      <td>163</td>
     </tr>
     <tr>
       <th>18</th>
-      <td>67</td>
-      <td>-216</td>
-      <td>-40</td>
-      <td>-48</td>
-      <td>-40</td>
-      <td>83</td>
-      <td>-16</td>
-      <td>24</td>
+      <td>220</td>
+      <td>-63</td>
+      <td>113</td>
+      <td>105</td>
+      <td>113</td>
+      <td>236</td>
+      <td>137</td>
+      <td>177</td>
     </tr>
     <tr>
       <th>19</th>
-      <td>171</td>
-      <td>-337</td>
-      <td>-83</td>
-      <td>44</td>
-      <td>-83</td>
-      <td>93</td>
-      <td>-239</td>
-      <td>302</td>
+      <td>133</td>
+      <td>-375</td>
+      <td>-121</td>
+      <td>6</td>
+      <td>-121</td>
+      <td>55</td>
+      <td>-277</td>
+      <td>264</td>
     </tr>
     <tr>
       <th>20</th>
-      <td>76</td>
-      <td>-375</td>
-      <td>-139</td>
-      <td>-65</td>
-      <td>-92</td>
-      <td>158</td>
-      <td>35</td>
-      <td>-74</td>
+      <td>107</td>
+      <td>-344</td>
+      <td>-108</td>
+      <td>-34</td>
+      <td>-61</td>
+      <td>189</td>
+      <td>66</td>
+      <td>-43</td>
     </tr>
     <tr>
       <th>21</th>
-      <td>48</td>
-      <td>-344</td>
-      <td>-114</td>
-      <td>-112</td>
-      <td>-105</td>
-      <td>99</td>
-      <td>-33</td>
-      <td>130</td>
+      <td>332</td>
+      <td>-60</td>
+      <td>170</td>
+      <td>172</td>
+      <td>179</td>
+      <td>383</td>
+      <td>251</td>
+      <td>414</td>
     </tr>
     <tr>
       <th>22</th>
-      <td>227</td>
-      <td>-557</td>
-      <td>-195</td>
-      <td>35</td>
-      <td>-195</td>
-      <td>77</td>
-      <td>-476</td>
-      <td>38</td>
+      <td>-82</td>
+      <td>-866</td>
+      <td>-504</td>
+      <td>-274</td>
+      <td>-504</td>
+      <td>-232</td>
+      <td>-785</td>
+      <td>-271</td>
     </tr>
     <tr>
       <th>23</th>
-      <td>-110</td>
-      <td>-866</td>
-      <td>-474</td>
-      <td>-338</td>
-      <td>-92</td>
-      <td>165</td>
-      <td>173</td>
-      <td>41</td>
+      <td>138</td>
+      <td>-618</td>
+      <td>-226</td>
+      <td>-90</td>
+      <td>156</td>
+      <td>413</td>
+      <td>421</td>
+      <td>289</td>
     </tr>
     <tr>
       <th>24</th>
-      <td>81</td>
-      <td>-537</td>
-      <td>-209</td>
-      <td>-136</td>
-      <td>-135</td>
-      <td>-113</td>
-      <td>-404</td>
-      <td>190</td>
+      <td>-77</td>
+      <td>-695</td>
+      <td>-367</td>
+      <td>-294</td>
+      <td>-293</td>
+      <td>-271</td>
+      <td>-562</td>
+      <td>32</td>
     </tr>
     <tr>
       <th>25</th>
-      <td>-92</td>
-      <td>-695</td>
-      <td>-337</td>
-      <td>-344</td>
-      <td>-81</td>
-      <td>112</td>
-      <td>119</td>
-      <td>-695</td>
+      <td>-134</td>
+      <td>-737</td>
+      <td>-379</td>
+      <td>-386</td>
+      <td>-123</td>
+      <td>70</td>
+      <td>77</td>
+      <td>-737</td>
     </tr>
     <tr>
       <th>26</th>
-      <td>-91</td>
-      <td>-737</td>
-      <td>-314</td>
-      <td>-390</td>
-      <td>-33</td>
-      <td>-11</td>
-      <td>38</td>
-      <td>221</td>
+      <td>52</td>
+      <td>-594</td>
+      <td>-171</td>
+      <td>-247</td>
+      <td>110</td>
+      <td>132</td>
+      <td>181</td>
+      <td>364</td>
     </tr>
     <tr>
       <th>27</th>
-      <td>-9</td>
-      <td>-594</td>
-      <td>-212</td>
-      <td>-294</td>
-      <td>-78</td>
-      <td>-109</td>
-      <td>-189</td>
-      <td>-461</td>
+      <td>-14</td>
+      <td>-599</td>
+      <td>-217</td>
+      <td>-299</td>
+      <td>-83</td>
+      <td>-114</td>
+      <td>-194</td>
+      <td>-466</td>
     </tr>
     <tr>
       <th>28</th>
-      <td>-34</td>
-      <td>-599</td>
-      <td>-208</td>
-      <td>-338</td>
-      <td>-70</td>
-      <td>38</td>
-      <td>5</td>
-      <td>215</td>
+      <td>22</td>
+      <td>-543</td>
+      <td>-152</td>
+      <td>-282</td>
+      <td>-14</td>
+      <td>94</td>
+      <td>61</td>
+      <td>271</td>
     </tr>
     <tr>
       <th>29</th>
-      <td>78</td>
-      <td>-410</td>
-      <td>-31</td>
-      <td>-240</td>
-      <td>-24</td>
-      <td>47</td>
-      <td>-61</td>
-      <td>232</td>
+      <td>132</td>
+      <td>-356</td>
+      <td>23</td>
+      <td>-186</td>
+      <td>30</td>
+      <td>101</td>
+      <td>-7</td>
+      <td>286</td>
     </tr>
     <tr>
       <th>...</th>
@@ -15794,338 +15832,338 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>...</td>
     </tr>
     <tr>
-      <th>93</th>
-      <td>-644</td>
-      <td>-7696</td>
-      <td>-2284</td>
-      <td>-5437</td>
-      <td>-101</td>
-      <td>-36</td>
-      <td>481</td>
-      <td>2557</td>
-    </tr>
-    <tr>
-      <th>94</th>
-      <td>5291</td>
-      <td>-13154</td>
-      <td>-1852</td>
-      <td>-2317</td>
-      <td>-1852</td>
-      <td>-2317</td>
-      <td>-13154</td>
-      <td>4337</td>
-    </tr>
-    <tr>
-      <th>95</th>
-      <td>-918</td>
+      <th>218</th>
+      <td>-291</td>
       <td>-18736</td>
-      <td>-7400</td>
-      <td>-8887</td>
-      <td>-1310</td>
-      <td>4283</td>
-      <td>4024</td>
-      <td>2720</td>
+      <td>-7434</td>
+      <td>-7899</td>
+      <td>-7434</td>
+      <td>-7899</td>
+      <td>-18736</td>
+      <td>-1245</td>
     </tr>
     <tr>
-      <th>96</th>
-      <td>69</td>
+      <th>219</th>
+      <td>-589</td>
       <td>-18407</td>
-      <td>-6025</td>
-      <td>-8680</td>
-      <td>-570</td>
-      <td>292</td>
-      <td>-337</td>
-      <td>3163</td>
+      <td>-7071</td>
+      <td>-8558</td>
+      <td>-981</td>
+      <td>4612</td>
+      <td>4353</td>
+      <td>3049</td>
     </tr>
     <tr>
-      <th>97</th>
-      <td>-10</td>
+      <th>220</th>
+      <td>1152</td>
       <td>-17324</td>
-      <td>-5674</td>
-      <td>-8591</td>
-      <td>-1190</td>
-      <td>16</td>
-      <td>-1163</td>
-      <td>-17324</td>
+      <td>-4942</td>
+      <td>-7597</td>
+      <td>513</td>
+      <td>1375</td>
+      <td>746</td>
+      <td>4246</td>
     </tr>
     <tr>
-      <th>98</th>
-      <td>-390</td>
+      <th>221</th>
+      <td>-524</td>
       <td>-17838</td>
-      <td>-5637</td>
-      <td>-9536</td>
-      <td>-730</td>
-      <td>811</td>
-      <td>497</td>
-      <td>4922</td>
+      <td>-6188</td>
+      <td>-9105</td>
+      <td>-1704</td>
+      <td>-498</td>
+      <td>-1677</td>
+      <td>-17838</td>
     </tr>
     <tr>
-      <th>99</th>
-      <td>117</td>
+      <th>222</th>
+      <td>1131</td>
       <td>-16317</td>
-      <td>-4597</td>
-      <td>-9026</td>
-      <td>-1207</td>
-      <td>-314</td>
-      <td>-1672</td>
-      <td>1753</td>
+      <td>-4116</td>
+      <td>-8015</td>
+      <td>791</td>
+      <td>2332</td>
+      <td>2018</td>
+      <td>6443</td>
     </tr>
     <tr>
-      <th>100</th>
-      <td>1176</td>
+      <th>223</th>
+      <td>2789</td>
       <td>-13645</td>
-      <td>-2492</td>
-      <td>-8117</td>
-      <td>-1952</td>
-      <td>199</td>
-      <td>-3096</td>
-      <td>2516</td>
+      <td>-1925</td>
+      <td>-6354</td>
+      <td>1465</td>
+      <td>2358</td>
+      <td>1000</td>
+      <td>4425</td>
     </tr>
     <tr>
-      <th>101</th>
-      <td>2739</td>
-      <td>-3196</td>
-      <td>-205</td>
-      <td>197</td>
-      <td>-104</td>
-      <td>2913</td>
+      <th>224</th>
+      <td>1076</td>
+      <td>-13745</td>
+      <td>-2592</td>
+      <td>-8217</td>
+      <td>-2052</td>
       <td>99</td>
-      <td>4590</td>
+      <td>-3196</td>
+      <td>2416</td>
     </tr>
     <tr>
-      <th>102</th>
-      <td>1969</td>
-      <td>-3220</td>
-      <td>-1049</td>
-      <td>106</td>
-      <td>-1049</td>
-      <td>2080</td>
-      <td>-921</td>
-      <td>1781</td>
+      <th>225</th>
+      <td>3620</td>
+      <td>-2315</td>
+      <td>676</td>
+      <td>1078</td>
+      <td>777</td>
+      <td>3794</td>
+      <td>980</td>
+      <td>5471</td>
     </tr>
     <tr>
-      <th>103</th>
-      <td>973</td>
+      <th>226</th>
+      <td>1661</td>
       <td>-3528</td>
-      <td>-1247</td>
-      <td>-1069</td>
-      <td>-925</td>
-      <td>2090</td>
-      <td>303</td>
-      <td>-2623</td>
-    </tr>
-    <tr>
-      <th>104</th>
-      <td>-734</td>
-      <td>-5311</td>
-      <td>-2559</td>
-      <td>-3244</td>
-      <td>-420</td>
-      <td>1344</td>
-      <td>1624</td>
-      <td>-1111</td>
-    </tr>
-    <tr>
-      <th>105</th>
-      <td>-1606</td>
-      <td>-5826</td>
-      <td>-3086</td>
-      <td>-4151</td>
-      <td>-418</td>
-      <td>-627</td>
-      <td>500</td>
-      <td>-3527</td>
-    </tr>
-    <tr>
-      <th>106</th>
-      <td>841</td>
-      <td>-3908</td>
-      <td>-757</td>
-      <td>-2078</td>
-      <td>-757</td>
-      <td>-2078</td>
-      <td>-3908</td>
-      <td>1299</td>
-    </tr>
-    <tr>
-      <th>107</th>
-      <td>830</td>
-      <td>-4239</td>
-      <td>-565</td>
-      <td>-2602</td>
-      <td>-230</td>
-      <td>1358</td>
-      <td>326</td>
-      <td>4072</td>
-    </tr>
-    <tr>
-      <th>108</th>
-      <td>2228</td>
-      <td>-4260</td>
-      <td>-623</td>
-      <td>-967</td>
-      <td>-623</td>
-      <td>614</td>
-      <td>-2460</td>
-      <td>5684</td>
-    </tr>
-    <tr>
-      <th>109</th>
-      <td>-1959</td>
-      <td>-9651</td>
-      <td>-5096</td>
-      <td>-5882</td>
-      <td>226</td>
-      <td>2428</td>
-      <td>4120</td>
-      <td>-7409</td>
-    </tr>
-    <tr>
-      <th>110</th>
-      <td>2587</td>
-      <td>-8241</td>
-      <td>-924</td>
-      <td>-3682</td>
-      <td>-924</td>
-      <td>-3682</td>
-      <td>-8241</td>
-      <td>3263</td>
-    </tr>
-    <tr>
-      <th>111</th>
-      <td>903</td>
-      <td>-9094</td>
-      <td>-1956</td>
-      <td>-5408</td>
-      <td>-1063</td>
-      <td>2632</td>
-      <td>822</td>
-      <td>-2597</td>
-    </tr>
-    <tr>
-      <th>112</th>
-      <td>1183</td>
-      <td>-8493</td>
-      <td>-1475</td>
-      <td>-5112</td>
-      <td>-1475</td>
-      <td>997</td>
-      <td>-1682</td>
-      <td>10947</td>
-    </tr>
-    <tr>
-      <th>113</th>
-      <td>3633</td>
-      <td>-9641</td>
-      <td>-1473</td>
-      <td>-3100</td>
-      <td>-1473</td>
+      <td>-1357</td>
+      <td>-202</td>
+      <td>-1357</td>
       <td>1772</td>
-      <td>-3730</td>
-      <td>-4235</td>
+      <td>-1229</td>
+      <td>1473</td>
     </tr>
     <tr>
-      <th>114</th>
-      <td>5634</td>
-      <td>-11139</td>
-      <td>-2481</td>
-      <td>-979</td>
-      <td>-2481</td>
-      <td>3747</td>
-      <td>-4952</td>
-      <td>9967</td>
+      <th>227</th>
+      <td>-810</td>
+      <td>-5311</td>
+      <td>-3030</td>
+      <td>-2852</td>
+      <td>-2708</td>
+      <td>307</td>
+      <td>-1480</td>
+      <td>-4406</td>
     </tr>
     <tr>
-      <th>115</th>
-      <td>5703</td>
-      <td>-11646</td>
-      <td>-2299</td>
-      <td>-1544</td>
-      <td>-2299</td>
-      <td>6309</td>
-      <td>-1517</td>
-      <td>7341</td>
+      <th>228</th>
+      <td>-1249</td>
+      <td>-5826</td>
+      <td>-3074</td>
+      <td>-3759</td>
+      <td>-935</td>
+      <td>829</td>
+      <td>1109</td>
+      <td>-1626</td>
     </tr>
     <tr>
-      <th>116</th>
-      <td>1750</td>
+      <th>229</th>
+      <td>1688</td>
+      <td>-2532</td>
+      <td>208</td>
+      <td>-857</td>
+      <td>2876</td>
+      <td>2667</td>
+      <td>3794</td>
+      <td>-233</td>
+    </tr>
+    <tr>
+      <th>230</th>
+      <td>510</td>
+      <td>-4239</td>
+      <td>-1088</td>
+      <td>-2409</td>
+      <td>-1088</td>
+      <td>-2409</td>
+      <td>-4239</td>
+      <td>968</td>
+    </tr>
+    <tr>
+      <th>231</th>
+      <td>3051</td>
+      <td>-2018</td>
+      <td>1656</td>
+      <td>-381</td>
+      <td>1991</td>
+      <td>3579</td>
+      <td>2547</td>
+      <td>6293</td>
+    </tr>
+    <tr>
+      <th>232</th>
+      <td>-3163</td>
+      <td>-9651</td>
+      <td>-6014</td>
+      <td>-6358</td>
+      <td>-6014</td>
+      <td>-4777</td>
+      <td>-7851</td>
+      <td>293</td>
+    </tr>
+    <tr>
+      <th>233</th>
+      <td>4148</td>
+      <td>-3544</td>
+      <td>1011</td>
+      <td>225</td>
+      <td>6333</td>
+      <td>8535</td>
+      <td>10227</td>
+      <td>-1302</td>
+    </tr>
+    <tr>
+      <th>234</th>
+      <td>1734</td>
+      <td>-9094</td>
+      <td>-1777</td>
+      <td>-4535</td>
+      <td>-1777</td>
+      <td>-4535</td>
+      <td>-9094</td>
+      <td>2410</td>
+    </tr>
+    <tr>
+      <th>235</th>
+      <td>2476</td>
+      <td>-7521</td>
+      <td>-383</td>
+      <td>-3835</td>
+      <td>510</td>
+      <td>4205</td>
+      <td>2395</td>
+      <td>-1024</td>
+    </tr>
+    <tr>
+      <th>236</th>
+      <td>4469</td>
+      <td>-5207</td>
+      <td>1811</td>
+      <td>-1826</td>
+      <td>1811</td>
+      <td>4283</td>
+      <td>1604</td>
+      <td>14233</td>
+    </tr>
+    <tr>
+      <th>237</th>
+      <td>7919</td>
+      <td>-5355</td>
+      <td>2813</td>
+      <td>1186</td>
+      <td>2813</td>
+      <td>6058</td>
+      <td>556</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <th>238</th>
+      <td>7085</td>
+      <td>-9688</td>
+      <td>-1030</td>
+      <td>472</td>
+      <td>-1030</td>
+      <td>5198</td>
+      <td>-3501</td>
+      <td>11418</td>
+    </tr>
+    <tr>
+      <th>239</th>
+      <td>4891</td>
       <td>-12458</td>
-      <td>-4117</td>
-      <td>-5255</td>
-      <td>-3224</td>
-      <td>5207</td>
-      <td>792</td>
-      <td>1195</td>
+      <td>-3111</td>
+      <td>-2356</td>
+      <td>-3111</td>
+      <td>5497</td>
+      <td>-2329</td>
+      <td>6529</td>
     </tr>
     <tr>
-      <th>117</th>
-      <td>5122</td>
-      <td>-5767</td>
-      <td>-2581</td>
-      <td>2553</td>
-      <td>-2581</td>
-      <td>2958</td>
-      <td>-5265</td>
-      <td>298</td>
+      <th>240</th>
+      <td>6361</td>
+      <td>-7847</td>
+      <td>494</td>
+      <td>-644</td>
+      <td>1387</td>
+      <td>9818</td>
+      <td>5403</td>
+      <td>5806</td>
     </tr>
     <tr>
-      <th>118</th>
-      <td>-1321</td>
+      <th>241</th>
+      <td>-491</td>
       <td>-11380</td>
-      <td>-7584</td>
-      <td>-4509</td>
-      <td>-1673</td>
-      <td>5048</td>
-      <td>4764</td>
-      <td>-3331</td>
+      <td>-8194</td>
+      <td>-3060</td>
+      <td>-8194</td>
+      <td>-2655</td>
+      <td>-10878</td>
+      <td>-5315</td>
     </tr>
     <tr>
-      <th>119</th>
-      <td>-88</td>
+      <th>242</th>
+      <td>1521</td>
       <td>-8538</td>
-      <td>-4853</td>
-      <td>-3326</td>
-      <td>-1926</td>
-      <td>-1201</td>
-      <td>-3098</td>
-      <td>2632</td>
+      <td>-4742</td>
+      <td>-1667</td>
+      <td>1169</td>
+      <td>7890</td>
+      <td>7606</td>
+      <td>-489</td>
     </tr>
     <tr>
-      <th>120</th>
-      <td>485</td>
+      <th>243</th>
+      <td>1241</td>
       <td>-7209</td>
-      <td>-3012</td>
-      <td>-3333</td>
-      <td>-1509</td>
-      <td>607</td>
-      <td>-1380</td>
-      <td>-6707</td>
+      <td>-3524</td>
+      <td>-1997</td>
+      <td>-597</td>
+      <td>128</td>
+      <td>-1769</td>
+      <td>3961</td>
     </tr>
     <tr>
-      <th>121</th>
-      <td>-1330</td>
+      <th>244</th>
+      <td>-2312</td>
+      <td>-10006</td>
+      <td>-5809</td>
+      <td>-6130</td>
+      <td>-4306</td>
+      <td>-2190</td>
+      <td>-4177</td>
       <td>-9504</td>
-      <td>-4569</td>
-      <td>-5838</td>
-      <td>-293</td>
-      <td>1630</td>
-      <td>2578</td>
-      <td>6138</td>
     </tr>
     <tr>
-      <th>122</th>
-      <td>-35263</td>
+      <th>245</th>
+      <td>3209</td>
+      <td>-4965</td>
+      <td>-30</td>
+      <td>-1299</td>
+      <td>4246</td>
+      <td>6169</td>
+      <td>7117</td>
+      <td>10677</td>
+    </tr>
+    <tr>
+      <th>246</th>
+      <td>1291</td>
+      <td>-6178</td>
+      <td>-1698</td>
+      <td>-2838</td>
+      <td>-1698</td>
+      <td>-2708</td>
+      <td>-6036</td>
+      <td>-898</td>
+    </tr>
+    <tr>
+      <th>247</th>
+      <td>-35858</td>
       <td>-42732</td>
-      <td>-38252</td>
-      <td>-39392</td>
-      <td>-38252</td>
-      <td>-39262</td>
-      <td>-42590</td>
-      <td>-37452</td>
+      <td>-38258</td>
+      <td>-40051</td>
+      <td>-37368</td>
+      <td>-34261</td>
+      <td>-35703</td>
+      <td>-37063</td>
     </tr>
   </tbody>
 </table>
-<p>123 rows × 8 columns</p>
+<p>248 rows × 8 columns</p>
 </div>
 </div>
 
@@ -16137,30 +16175,32 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">k</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">edf</span><span class="p">)),</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dce</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)):</span>
-    
-    <span class="n">a</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">edf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
-    <span class="n">pos</span><span class="o">=</span><span class="p">[]</span>
-    <span class="n">neg</span><span class="o">=</span><span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">):</span>
-            <span class="n">pos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">neg</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pos</span><span class="p">)):</span>
-        <span class="n">ps</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
-        <span class="n">psi</span><span class="o">=</span><span class="n">a</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">ps</span><span class="p">)</span>
-        <span class="n">psc</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">edf</span><span class="o">.</span><span class="n">columns</span><span class="p">)[</span><span class="n">psi</span><span class="p">]</span>
-    <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">neg</span><span class="p">)):</span>
-        <span class="n">ng</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">neg</span><span class="p">)</span>
-        <span class="n">ngi</span><span class="o">=</span><span class="n">a</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">ng</span><span class="p">)</span>
-        <span class="n">ngc</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">edf</span><span class="o">.</span><span class="n">columns</span><span class="p">)[</span><span class="n">ngi</span><span class="p">]</span>
-    
-    
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;for date: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dce</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">][</span><span class="n">k</span><span class="p">])</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;00:00:00&quot;</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; the lowest positve error was by the method: &quot;</span><span class="o">+</span><span class="n">psc</span><span class="o">+</span><span class="s2">&quot; and the highest negative error by the method: &quot;</span><span class="o">+</span><span class="n">ngc</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">for j,k in zip(range(len(edf)),range(len(dce)-1)):</span>
+<span class="sd">    </span>
+<span class="sd">    a=list(edf.loc[j])</span>
+<span class="sd">    pos=[]</span>
+<span class="sd">    neg=[]</span>
+<span class="sd">    for i in a:</span>
+<span class="sd">        if(i&gt;=0):</span>
+<span class="sd">            pos.append(i)</span>
+<span class="sd">        else:</span>
+<span class="sd">            neg.append(i)</span>
+<span class="sd">    if(len(pos)):</span>
+<span class="sd">        ps=min(pos)</span>
+<span class="sd">        psi=a.index(ps)</span>
+<span class="sd">        psc=list(edf.columns)[psi]</span>
+<span class="sd">    if(len(neg)):</span>
+<span class="sd">        ng=max(neg)</span>
+<span class="sd">        ngi=a.index(ng)</span>
+<span class="sd">        ngc=list(edf.columns)[ngi]</span>
+<span class="sd">    </span>
+<span class="sd">    </span>
+<span class="sd">    print(&quot;for date: &quot;+str(dce[&quot;date&quot;][k]).strip(&quot;00:00:00&quot;)+&quot; the lowest positve error was by the method: &quot;+ psc +&quot; and the highest negative error by the method: &quot;+ngc)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 </pre></div>
 
 </div>
@@ -16173,134 +16213,15 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+<div class="prompt output_prompt">Out[59]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>for date: 2020-03-31  the lowest positve error was by the method: lmb and the highest negative error by the method: mb
-for date: 2020-04-01  the lowest positve error was by the method: lmb and the highest negative error by the method: mlb
-for date: 2020-04-02  the lowest positve error was by the method: lmb and the highest negative error by the method: lmb
-for date: 2020-04-03  the lowest positve error was by the method: lmb and the highest negative error by the method: lmb
-for date: 2020-04-04  the lowest positve error was by the method: lmb and the highest negative error by the method: mxmb
-for date: 2020-04-05  the lowest positve error was by the method: mb and the highest negative error by the method: mxmb
-for date: 2020-04-06  the lowest positve error was by the method: mb and the highest negative error by the method: mlb
-for date: 2020-04-07  the lowest positve error was by the method: mxmb and the highest negative error by the method: mdb
-for date: 2020-04-08  the lowest positve error was by the method: mb and the highest negative error by the method: mdb
-for date: 2020-04-09  the lowest positve error was by the method: mb and the highest negative error by the method: mxmb
-for date: 2020-04-10  the lowest positve error was by the method: lb and the highest negative error by the method: mb
-for date: 2020-04-11  the lowest positve error was by the method: mb and the highest negative error by the method: mxmb
-for date: 2020-04-12  the lowest positve error was by the method: mb and the highest negative error by the method: mxmb
-for date: 2020-04-13  the lowest positve error was by the method: lb and the highest negative error by the method: mb
-for date: 2020-04-14  the lowest positve error was by the method: lb and the highest negative error by the method: lmb
-for date: 2020-04-15  the lowest positve error was by the method: mb and the highest negative error by the method: lmb
-for date: 2020-04-16  the lowest positve error was by the method: lb and the highest negative error by the method: mb
-for date: 2020-04-17  the lowest positve error was by the method: mb and the highest negative error by the method: lmb
-for date: 2020-04-18  the lowest positve error was by the method: mdb and the highest negative error by the method: lb
-for date: 2020-04-19  the lowest positve error was by the method: mxmb and the highest negative error by the method: memb
-for date: 2020-04-20  the lowest positve error was by the method: lb and the highest negative error by the method: mxmb
-for date: 2020-04-21  the lowest positve error was by the method: mb and the highest negative error by the method: lb
-for date: 2020-04-22  the lowest positve error was by the method: mxmb and the highest negative error by the method: memb
-for date: 2020-04-23  the lowest positve error was by the method: mdb and the highest negative error by the method: mlb
-for date: 2020-04-24  the lowest positve error was by the method: mb and the highest negative error by the method: lmb
-for date: 2020-04-25  the lowest positve error was by the method: lmb and the highest negative error by the method: mlb
-for date: 2020-04-26  the lowest positve error was by the method: lb and the highest negative error by the method: lmb
-for date: 2020-04-27  the lowest positve error was by the method: lb and the highest negative error by the method: mb
-for date: 2020-04-28  the lowest positve error was by the method: lb and the highest negative error by the method: mb
-for date: 2020-04-29  the lowest positve error was by the method: lmb and the highest negative error by the method: mlb
-for date: 2020-04-30  the lowest positve error was by the method: mb and the highest negative error by the method: lb
-for date: 2020-05-01  the lowest positve error was by the method: mb and the highest negative error by the method: mlb
-for date: 2020-05-02  the lowest positve error was by the method: mb and the highest negative error by the method: mxmb
-for date: 2020-05-03  the lowest positve error was by the method: mb and the highest negative error by the method: mlb
-for date: 2020-05-04  the lowest positve error was by the method: lmb and the highest negative error by the method: mlb
-for date: 2020-05-05  the lowest positve error was by the method: lmb and the highest negative error by the method: memb
-for date: 2020-05-06  the lowest positve error was by the method: lmb and the highest negative error by the method: mxmb
-for date: 2020-05-07  the lowest positve error was by the method: mb and the highest negative error by the method: mlb
-for date: 2020-05-08  the lowest positve error was by the method: lmb and the highest negative error by the method: mxmb
-for date: 2020-05-09  the lowest positve error was by the method: lmb and the highest negative error by the method: mlb
-for date: 2020-05-10  the lowest positve error was by the method: mb and the highest negative error by the method: mxmb
-for date: 2020-05-11  the lowest positve error was by the method: lmb and the highest negative error by the method: mxmb
-for date: 2020-05-12  the lowest positve error was by the method: lb and the highest negative error by the method: mlb
-for date: 2020-05-13  the lowest positve error was by the method: mxmb and the highest negative error by the method: memb
-for date: 2020-05-14  the lowest positve error was by the method: mb and the highest negative error by the method: mdb
-for date: 2020-05-15  the lowest positve error was by the method: mdb and the highest negative error by the method: mlb
-for date: 2020-05-16  the lowest positve error was by the method: mb and the highest negative error by the method: mdb
-for date: 2020-05-17  the lowest positve error was by the method: mxmb and the highest negative error by the method: memb
-for date: 2020-05-18  the lowest positve error was by the method: mb and the highest negative error by the method: mlb
-for date: 2020-05-19  the lowest positve error was by the method: lb and the highest negative error by the method: mb
-for date: 2020-05-20  the lowest positve error was by the method: mb and the highest negative error by the method: lmb
-for date: 2020-05-21  the lowest positve error was by the method: mb and the highest negative error by the method: lb
-for date: 2020-05-22  the lowest positve error was by the method: lmb and the highest negative error by the method: lb
-for date: 2020-05-23  the lowest positve error was by the method: lmb and the highest negative error by the method: mb
-for date: 2020-05-24  the lowest positve error was by the method: mlb and the highest negative error by the method: mb
-for date: 2020-05-25  the lowest positve error was by the method: mdb and the highest negative error by the method: memb
-for date: 2020-05-26  the lowest positve error was by the method: lmb and the highest negative error by the method: mlb
-for date: 2020-05-27  the lowest positve error was by the method: mb and the highest negative error by the method: memb
-for date: 2020-05-28  the lowest positve error was by the method: lb and the highest negative error by the method: mlb
-for date: 2020-05-29  the lowest positve error was by the method: lmb and the highest negative error by the method: mlb
-for date: 2020-05-30  the lowest positve error was by the method: mb and the highest negative error by the method: mxmb
-for date: 2020-05-31  the lowest positve error was by the method: mdb and the highest negative error by the method: mlb
-for date: 2020-06-01  the lowest positve error was by the method: mdb and the highest negative error by the method: lmb
-for date: 2020-06-02  the lowest positve error was by the method: lb and the highest negative error by the method: lmb
-for date: 2020-06-03  the lowest positve error was by the method: mdb and the highest negative error by the method: lb
-for date: 2020-06-04  the lowest positve error was by the method: lb and the highest negative error by the method: lmb
-for date: 2020-06-05  the lowest positve error was by the method: mdb and the highest negative error by the method: lb
-for date: 2020-06-06  the lowest positve error was by the method: lmb and the highest negative error by the method: mxmb
-for date: 2020-06-07  the lowest positve error was by the method: mxmb and the highest negative error by the method: memb
-for date: 2020-06-08  the lowest positve error was by the method: mdb and the highest negative error by the method: mlb
-for date: 2020-06-09  the lowest positve error was by the method: lb and the highest negative error by the method: mdb
-for date: 2020-06-10  the lowest positve error was by the method: lmb and the highest negative error by the method: mxmb
-for date: 2020-06-11  the lowest positve error was by the method: mxmb and the highest negative error by the method: memb
-for date: 2020-06-12  the lowest positve error was by the method: lb and the highest negative error by the method: mxmb
-for date: 2020-06-13  the lowest positve error was by the method: mxmb and the highest negative error by the method: memb
-for date: 2020-06-14  the lowest positve error was by the method: mxmb and the highest negative error by the method: memb
-for date: 2020-06-15  the lowest positve error was by the method: mb and the highest negative error by the method: mlb
-for date: 2020-06-16  the lowest positve error was by the method: mxmb and the highest negative error by the method: memb
-for date: 2020-06-17  the lowest positve error was by the method: lmb and the highest negative error by the method: mlb
-for date: 2020-06-18  the lowest positve error was by the method: mdb and the highest negative error by the method: mlb
-for date: 2020-06-19  the lowest positve error was by the method: mb and the highest negative error by the method: memb
-for date: 2020-06-20  the lowest positve error was by the method: lb and the highest negative error by the method: mb
-for date: 2020-06-21  the lowest positve error was by the method: mb and the highest negative error by the method: lmb
-for date: 2020-06-22  the lowest positve error was by the method: lmb and the highest negative error by the method: mlb
-for date: 2020-06-23  the lowest positve error was by the method: mb and the highest negative error by the method: mlb
-for date: 2020-06-24  the lowest positve error was by the method: lb and the highest negative error by the method: mb
-for date: 2020-06-25  the lowest positve error was by the method: mb and the highest negative error by the method: lmb
-for date: 2020-06-26  the lowest positve error was by the method: mdb and the highest negative error by the method: lb
-for date: 2020-06-27  the lowest positve error was by the method: mdb and the highest negative error by the method: mlb
-for date: 2020-06-28  the lowest positve error was by the method: mb and the highest negative error by the method: memb
-for date: 2020-06-29  the lowest positve error was by the method: lmb and the highest negative error by the method: mlb
-for date: 2020-06-30  the lowest positve error was by the method: mb and the highest negative error by the method: mlb
-for date: 2020-07-01  the lowest positve error was by the method: lmb and the highest negative error by the method: mlb
-for date: 2020-07-02  the lowest positve error was by the method: lb and the highest negative error by the method: lmb
-for date: 2020-07-03  the lowest positve error was by the method: mdb and the highest negative error by the method: memb
-for date: 2020-07-04  the lowest positve error was by the method: mdb and the highest negative error by the method: mb
-for date: 2020-07-05  the lowest positve error was by the method: mb and the highest negative error by the method: lb
-for date: 2020-07-06  the lowest positve error was by the method: lmb and the highest negative error by the method: mb
-for date: 2020-07-07  the lowest positve error was by the method: lb and the highest negative error by the method: mb
-for date: 2020-07-08  the lowest positve error was by the method: mb and the highest negative error by the method: lmb
-for date: 2020-07-09  the lowest positve error was by the method: lmb and the highest negative error by the method: mlb
-for date: 2020-07-10  the lowest positve error was by the method: lb and the highest negative error by the method: mlb
-for date: 2020-07-11  the lowest positve error was by the method: mxmb and the highest negative error by the method: lb
-for date: 2020-07-12  the lowest positve error was by the method: lb and the highest negative error by the method: mlb
-for date: 2020-07-13  the lowest positve error was by the method: lmb and the highest negative error by the method: mlb
-for date: 2020-07-14  the lowest positve error was by the method: lb and the highest negative error by the method: mlb
-for date: 2020-07-15  the lowest positve error was by the method: mb and the highest negative error by the method: memb
-for date: 2020-07-16  the lowest positve error was by the method: lb and the highest negative error by the method: mlb
-for date: 2020-07-17  the lowest positve error was by the method: lmb and the highest negative error by the method: memb
-for date: 2020-07-18  the lowest positve error was by the method: mlb and the highest negative error by the method: mb
-for date: 2020-07-19  the lowest positve error was by the method: mb and the highest negative error by the method: memb
-for date: 2020-07-20  the lowest positve error was by the method: lb and the highest negative error by the method: mlb
-for date: 2020-07-21  the lowest positve error was by the method: lmb and the highest negative error by the method: memb
-for date: 2020-07-22  the lowest positve error was by the method: lmb and the highest negative error by the method: memb
-for date: 2020-07-23  the lowest positve error was by the method: lmb and the highest negative error by the method: mxmb
-for date: 2020-07-24  the lowest positve error was by the method: mb and the highest negative error by the method: lb
-for date: 2020-07-25  the lowest positve error was by the method: lb and the highest negative error by the method: mlb
-for date: 2020-07-26  the lowest positve error was by the method: mdb and the highest negative error by the method: memb
-for date: 2020-07-27  the lowest positve error was by the method: lb and the highest negative error by the method: mb
-for date: 2020-07-28  the lowest positve error was by the method: mdb and the highest negative error by the method: mb
-for date: 2020-07-29  the lowest positve error was by the method: mb and the highest negative error by the method: lb
-for date: 2020-07-30  the lowest positve error was by the method: lmb and the highest negative error by the method: mlb
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;\nfor j,k in zip(range(len(edf)),range(len(dce)-1)):\n    \n    a=list(edf.loc[j])\n    pos=[]\n    neg=[]\n    for i in a:\n        if(i&gt;=0):\n            pos.append(i)\n        else:\n            neg.append(i)\n    if(len(pos)):\n        ps=min(pos)\n        psi=a.index(ps)\n        psc=list(edf.columns)[psi]\n    if(len(neg)):\n        ng=max(neg)\n        ngi=a.index(ng)\n        ngc=list(edf.columns)[ngi]\n    \n    \n    print(&#34;for date: &#34;+str(dce[&#34;date&#34;][k]).strip(&#34;00:00:00&#34;)+&#34; the lowest positve error was by the method: &#34;+ psc +&#34; and the highest negative error by the method: &#34;+ngc)\n    &#39;</pre>
 </div>
+
 </div>
 
 </div>
@@ -16309,7 +16230,7 @@ for date: 2020-07-30  the lowest positve error was by the method: lmb and the hi
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_dict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:[],</span><span class="s2">&quot;mipe&quot;</span><span class="p">:[],</span><span class="s2">&quot;mxne&quot;</span><span class="p">:[],</span><span class="s2">&quot;mipv&quot;</span><span class="p">:[],</span><span class="s2">&quot;mxnv&quot;</span><span class="p">:[],</span><span class="s2">&quot;original_val&quot;</span><span class="p">:[],</span><span class="s2">&quot;pprd_val&quot;</span><span class="p">:[],</span><span class="s2">&quot;nprd_val&quot;</span><span class="p">:[]}</span>
@@ -16384,7 +16305,7 @@ for date: 2020-07-30  the lowest positve error was by the method: lmb and the hi
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_dict</span>
@@ -16400,7 +16321,7 @@ for date: 2020-07-30  the lowest positve error was by the method: lmb and the hi
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[34]:</div>
+<div class="prompt output_prompt">Out[61]:</div>
 
 
 
@@ -16528,500 +16449,1248 @@ for date: 2020-07-30  the lowest positve error was by the method: lmb and the hi
   &#39;2020-07-28 &#39;,
   &#39;2020-07-29 &#39;,
   &#39;2020-07-30 &#39;,
-  &#39;2020-07-31 &#39;],
- &#39;mipe&#39;: [&#39;lmb&#39;,
+  &#39;2020-07-31 &#39;,
+  &#39;2020-08-01 &#39;,
+  &#39;2020-03-31 &#39;,
+  &#39;2020-04-01 &#39;,
+  &#39;2020-04-02 &#39;,
+  &#39;2020-04-03 &#39;,
+  &#39;2020-04-04 &#39;,
+  &#39;2020-04-05 &#39;,
+  &#39;2020-04-06 &#39;,
+  &#39;2020-04-07 &#39;,
+  &#39;2020-04-08 &#39;,
+  &#39;2020-04-09 &#39;,
+  &#39;2020-04-10 &#39;,
+  &#39;2020-04-11 &#39;,
+  &#39;2020-04-12 &#39;,
+  &#39;2020-04-13 &#39;,
+  &#39;2020-04-14 &#39;,
+  &#39;2020-04-15 &#39;,
+  &#39;2020-04-16 &#39;,
+  &#39;2020-04-17 &#39;,
+  &#39;2020-04-18 &#39;,
+  &#39;2020-04-19 &#39;,
+  &#39;2020-04-20 &#39;,
+  &#39;2020-04-21 &#39;,
+  &#39;2020-04-22 &#39;,
+  &#39;2020-04-23 &#39;,
+  &#39;2020-04-24 &#39;,
+  &#39;2020-04-25 &#39;,
+  &#39;2020-04-26 &#39;,
+  &#39;2020-04-27 &#39;,
+  &#39;2020-04-28 &#39;,
+  &#39;2020-04-29 &#39;,
+  &#39;2020-04-30 &#39;,
+  &#39;2020-05-01 &#39;,
+  &#39;2020-05-02 &#39;,
+  &#39;2020-05-03 &#39;,
+  &#39;2020-05-04 &#39;,
+  &#39;2020-05-05 &#39;,
+  &#39;2020-05-06 &#39;,
+  &#39;2020-05-07 &#39;,
+  &#39;2020-05-08 &#39;,
+  &#39;2020-05-09 &#39;,
+  &#39;2020-05-10 &#39;,
+  &#39;2020-05-11 &#39;,
+  &#39;2020-05-12 &#39;,
+  &#39;2020-05-13 &#39;,
+  &#39;2020-05-14 &#39;,
+  &#39;2020-05-15 &#39;,
+  &#39;2020-05-16 &#39;,
+  &#39;2020-05-17 &#39;,
+  &#39;2020-05-18 &#39;,
+  &#39;2020-05-19 &#39;,
+  &#39;2020-05-20 &#39;,
+  &#39;2020-05-21 &#39;,
+  &#39;2020-05-22 &#39;,
+  &#39;2020-05-23 &#39;,
+  &#39;2020-05-24 &#39;,
+  &#39;2020-05-25 &#39;,
+  &#39;2020-05-26 &#39;,
+  &#39;2020-05-27 &#39;,
+  &#39;2020-05-28 &#39;,
+  &#39;2020-05-29 &#39;,
+  &#39;2020-05-30 &#39;,
+  &#39;2020-05-31 &#39;,
+  &#39;2020-06-01 &#39;,
+  &#39;2020-06-02 &#39;,
+  &#39;2020-06-03 &#39;,
+  &#39;2020-06-04 &#39;,
+  &#39;2020-06-05 &#39;,
+  &#39;2020-06-06 &#39;,
+  &#39;2020-06-07 &#39;,
+  &#39;2020-06-08 &#39;,
+  &#39;2020-06-09 &#39;,
+  &#39;2020-06-10 &#39;,
+  &#39;2020-06-11 &#39;,
+  &#39;2020-06-12 &#39;,
+  &#39;2020-06-13 &#39;,
+  &#39;2020-06-14 &#39;,
+  &#39;2020-06-15 &#39;,
+  &#39;2020-06-16 &#39;,
+  &#39;2020-06-17 &#39;,
+  &#39;2020-06-18 &#39;,
+  &#39;2020-06-19 &#39;,
+  &#39;2020-06-20 &#39;,
+  &#39;2020-06-21 &#39;,
+  &#39;2020-06-22 &#39;,
+  &#39;2020-06-23 &#39;,
+  &#39;2020-06-24 &#39;,
+  &#39;2020-06-25 &#39;,
+  &#39;2020-06-26 &#39;,
+  &#39;2020-06-27 &#39;,
+  &#39;2020-06-28 &#39;,
+  &#39;2020-06-29 &#39;,
+  &#39;2020-06-30 &#39;,
+  &#39;2020-07-01 &#39;,
+  &#39;2020-07-02 &#39;,
+  &#39;2020-07-03 &#39;,
+  &#39;2020-07-04 &#39;,
+  &#39;2020-07-05 &#39;,
+  &#39;2020-07-06 &#39;,
+  &#39;2020-07-07 &#39;,
+  &#39;2020-07-08 &#39;,
+  &#39;2020-07-09 &#39;,
+  &#39;2020-07-10 &#39;,
+  &#39;2020-07-11 &#39;,
+  &#39;2020-07-12 &#39;,
+  &#39;2020-07-13 &#39;,
+  &#39;2020-07-14 &#39;,
+  &#39;2020-07-15 &#39;,
+  &#39;2020-07-16 &#39;,
+  &#39;2020-07-17 &#39;,
+  &#39;2020-07-18 &#39;,
+  &#39;2020-07-19 &#39;,
+  &#39;2020-07-20 &#39;,
+  &#39;2020-07-21 &#39;,
+  &#39;2020-07-22 &#39;,
+  &#39;2020-07-23 &#39;,
+  &#39;2020-07-24 &#39;,
+  &#39;2020-07-25 &#39;,
+  &#39;2020-07-26 &#39;,
+  &#39;2020-07-27 &#39;,
+  &#39;2020-07-28 &#39;,
+  &#39;2020-07-29 &#39;,
+  &#39;2020-07-30 &#39;,
+  &#39;2020-07-31 &#39;,
+  &#39;2020-08-01 &#39;],
+ &#39;mipe&#39;: [&#39;No&#39;,
   &#39;lmb&#39;,
   &#39;No&#39;,
-  &#39;No&#39;,
-  &#39;lmb&#39;,
+  &#39;mlb&#39;,
+  &#39;memb&#39;,
   &#39;mb&#39;,
-  &#39;mb&#39;,
-  &#39;mxmb&#39;,
-  &#39;mb&#39;,
-  &#39;mb&#39;,
-  &#39;lb&#39;,
-  &#39;mb&#39;,
-  &#39;mb&#39;,
-  &#39;lb&#39;,
-  &#39;lb&#39;,
-  &#39;mb&#39;,
-  &#39;lb&#39;,
-  &#39;mb&#39;,
-  &#39;mdb&#39;,
-  &#39;mxmb&#39;,
-  &#39;lb&#39;,
-  &#39;mb&#39;,
-  &#39;mxmb&#39;,
-  &#39;mdb&#39;,
-  &#39;mb&#39;,
-  &#39;lmb&#39;,
-  &#39;lb&#39;,
-  &#39;No&#39;,
-  &#39;lb&#39;,
-  &#39;lmb&#39;,
-  &#39;mb&#39;,
-  &#39;mb&#39;,
-  &#39;mb&#39;,
-  &#39;mb&#39;,
-  &#39;lmb&#39;,
-  &#39;lmb&#39;,
-  &#39;lmb&#39;,
-  &#39;mb&#39;,
-  &#39;lmb&#39;,
-  &#39;lmb&#39;,
-  &#39;mb&#39;,
-  &#39;lmb&#39;,
-  &#39;lb&#39;,
-  &#39;mxmb&#39;,
-  &#39;mb&#39;,
-  &#39;mdb&#39;,
-  &#39;mb&#39;,
-  &#39;mxmb&#39;,
-  &#39;mb&#39;,
-  &#39;lb&#39;,
-  &#39;mb&#39;,
-  &#39;mb&#39;,
-  &#39;lmb&#39;,
-  &#39;lmb&#39;,
   &#39;mlb&#39;,
   &#39;mdb&#39;,
-  &#39;lmb&#39;,
-  &#39;mb&#39;,
-  &#39;lb&#39;,
-  &#39;lmb&#39;,
-  &#39;mb&#39;,
-  &#39;mdb&#39;,
-  &#39;mdb&#39;,
   &#39;lb&#39;,
   &#39;mdb&#39;,
-  &#39;lb&#39;,
-  &#39;mdb&#39;,
-  &#39;lmb&#39;,
+  &#39;memb&#39;,
   &#39;mxmb&#39;,
-  &#39;mdb&#39;,
+  &#39;No&#39;,
   &#39;lb&#39;,
-  &#39;lmb&#39;,
-  &#39;mxmb&#39;,
-  &#39;lb&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
   &#39;mxmb&#39;,
   &#39;mxmb&#39;,
+  &#39;lb&#39;,
+  &#39;memb&#39;,
+  &#39;No&#39;,
   &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;lb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
   &#39;mxmb&#39;,
-  &#39;lmb&#39;,
-  &#39;mdb&#39;,
-  &#39;mb&#39;,
-  &#39;lb&#39;,
-  &#39;mb&#39;,
-  &#39;lmb&#39;,
-  &#39;mb&#39;,
-  &#39;lb&#39;,
-  &#39;mb&#39;,
-  &#39;mdb&#39;,
-  &#39;mdb&#39;,
-  &#39;mb&#39;,
-  &#39;lmb&#39;,
-  &#39;mb&#39;,
-  &#39;lmb&#39;,
-  &#39;lb&#39;,
-  &#39;mdb&#39;,
-  &#39;mdb&#39;,
-  &#39;mb&#39;,
-  &#39;lmb&#39;,
-  &#39;lb&#39;,
-  &#39;mb&#39;,
-  &#39;lmb&#39;,
-  &#39;lb&#39;,
+  &#39;No&#39;,
   &#39;mxmb&#39;,
+  &#39;mxb&#39;,
+  &#39;mdb&#39;,
   &#39;lb&#39;,
-  &#39;lmb&#39;,
-  &#39;lb&#39;,
-  &#39;mb&#39;,
-  &#39;lb&#39;,
-  &#39;lmb&#39;,
   &#39;mlb&#39;,
   &#39;mb&#39;,
-  &#39;lb&#39;,
-  &#39;lmb&#39;,
-  &#39;lmb&#39;,
-  &#39;lmb&#39;,
   &#39;mb&#39;,
   &#39;lb&#39;,
+  &#39;No&#39;,
   &#39;mdb&#39;,
-  &#39;lb&#39;,
+  &#39;No&#39;,
   &#39;mdb&#39;,
   &#39;mb&#39;,
   &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;mdb&#39;,
+  &#39;mdb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mdb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mdb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;memb&#39;,
+  &#39;mdb&#39;,
+  &#39;mxb&#39;,
+  &#39;No&#39;,
+  &#39;lmb&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;mxmb&#39;,
+  &#39;mdb&#39;,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;No&#39;,
+  &#39;mdb&#39;,
+  &#39;mlb&#39;,
+  &#39;No&#39;,
+  &#39;mlb&#39;,
+  &#39;lb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;mdb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;lb&#39;,
+  &#39;mdb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;No&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;No&#39;,
+  &#39;lmb&#39;,
+  &#39;No&#39;,
+  &#39;mlb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;mdb&#39;,
+  &#39;lb&#39;,
+  &#39;mdb&#39;,
+  &#39;memb&#39;,
+  &#39;mxmb&#39;,
+  &#39;No&#39;,
+  &#39;lb&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxmb&#39;,
+  &#39;lb&#39;,
+  &#39;memb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;lb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;mxmb&#39;,
+  &#39;No&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxb&#39;,
+  &#39;mdb&#39;,
+  &#39;lb&#39;,
+  &#39;mlb&#39;,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
+  &#39;lb&#39;,
+  &#39;No&#39;,
+  &#39;mdb&#39;,
+  &#39;No&#39;,
+  &#39;mdb&#39;,
+  &#39;mb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;mdb&#39;,
+  &#39;mdb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mdb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mdb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;memb&#39;,
+  &#39;mdb&#39;,
+  &#39;mxb&#39;,
+  &#39;No&#39;,
+  &#39;lmb&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;mxmb&#39;,
+  &#39;mdb&#39;,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;No&#39;,
+  &#39;mdb&#39;,
+  &#39;mlb&#39;,
+  &#39;No&#39;,
+  &#39;mlb&#39;,
+  &#39;lb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;mdb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;lb&#39;,
+  &#39;mdb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;No&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
   &#39;No&#39;],
- &#39;mxne&#39;: [&#39;mb&#39;,
+ &#39;mxne&#39;: [&#39;lmb&#39;,
   &#39;mlb&#39;,
   &#39;lmb&#39;,
-  &#39;lmb&#39;,
-  &#39;mxmb&#39;,
-  &#39;mxmb&#39;,
-  &#39;mlb&#39;,
-  &#39;mdb&#39;,
-  &#39;mdb&#39;,
-  &#39;mxmb&#39;,
-  &#39;mb&#39;,
-  &#39;mxmb&#39;,
-  &#39;mxmb&#39;,
-  &#39;mb&#39;,
-  &#39;lmb&#39;,
-  &#39;lmb&#39;,
-  &#39;mb&#39;,
-  &#39;lmb&#39;,
-  &#39;lb&#39;,
   &#39;memb&#39;,
-  &#39;mxmb&#39;,
-  &#39;lb&#39;,
-  &#39;memb&#39;,
-  &#39;mlb&#39;,
-  &#39;lmb&#39;,
-  &#39;mlb&#39;,
-  &#39;lmb&#39;,
-  &#39;mb&#39;,
-  &#39;mb&#39;,
-  &#39;mlb&#39;,
-  &#39;lb&#39;,
-  &#39;mlb&#39;,
-  &#39;mxmb&#39;,
-  &#39;mlb&#39;,
-  &#39;mlb&#39;,
-  &#39;memb&#39;,
-  &#39;mxmb&#39;,
-  &#39;mlb&#39;,
-  &#39;mxmb&#39;,
-  &#39;mlb&#39;,
-  &#39;mxmb&#39;,
-  &#39;mxmb&#39;,
-  &#39;mlb&#39;,
-  &#39;memb&#39;,
-  &#39;mdb&#39;,
-  &#39;mlb&#39;,
-  &#39;mdb&#39;,
-  &#39;memb&#39;,
-  &#39;mlb&#39;,
-  &#39;mb&#39;,
-  &#39;lmb&#39;,
-  &#39;lb&#39;,
-  &#39;lb&#39;,
-  &#39;mb&#39;,
-  &#39;mb&#39;,
-  &#39;memb&#39;,
-  &#39;mlb&#39;,
-  &#39;memb&#39;,
-  &#39;mlb&#39;,
-  &#39;mlb&#39;,
-  &#39;mxmb&#39;,
-  &#39;mlb&#39;,
-  &#39;lmb&#39;,
-  &#39;lmb&#39;,
-  &#39;lb&#39;,
-  &#39;lmb&#39;,
   &#39;lb&#39;,
   &#39;mxmb&#39;,
-  &#39;memb&#39;,
-  &#39;mlb&#39;,
-  &#39;mdb&#39;,
-  &#39;mxmb&#39;,
-  &#39;memb&#39;,
   &#39;mxmb&#39;,
   &#39;memb&#39;,
   &#39;memb&#39;,
-  &#39;mlb&#39;,
-  &#39;memb&#39;,
-  &#39;mlb&#39;,
-  &#39;mlb&#39;,
-  &#39;memb&#39;,
-  &#39;mb&#39;,
   &#39;lmb&#39;,
-  &#39;mlb&#39;,
-  &#39;mlb&#39;,
-  &#39;mb&#39;,
+  &#39;mxb&#39;,
+  &#39;memb&#39;,
   &#39;lmb&#39;,
-  &#39;lb&#39;,
-  &#39;mlb&#39;,
+  &#39;mb&#39;,
   &#39;memb&#39;,
-  &#39;mlb&#39;,
-  &#39;mlb&#39;,
-  &#39;mlb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
   &#39;lmb&#39;,
-  &#39;memb&#39;,
-  &#39;mb&#39;,
-  &#39;lb&#39;,
-  &#39;mb&#39;,
-  &#39;mb&#39;,
-  &#39;lmb&#39;,
-  &#39;mlb&#39;,
-  &#39;mlb&#39;,
-  &#39;lb&#39;,
-  &#39;mlb&#39;,
-  &#39;mlb&#39;,
-  &#39;mlb&#39;,
-  &#39;memb&#39;,
-  &#39;mlb&#39;,
-  &#39;memb&#39;,
-  &#39;mb&#39;,
-  &#39;memb&#39;,
-  &#39;mlb&#39;,
-  &#39;memb&#39;,
+  &#39;mxb&#39;,
   &#39;memb&#39;,
   &#39;mxmb&#39;,
-  &#39;lb&#39;,
+  &#39;mxb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
   &#39;mlb&#39;,
   &#39;memb&#39;,
   &#39;mb&#39;,
-  &#39;mb&#39;,
-  &#39;lb&#39;,
   &#39;mlb&#39;,
-  &#39;mb&#39;],
- &#39;mipv&#39;: [2,
-  7,
+  &#39;lb&#39;,
+  &#39;mb&#39;,
   &#39;No&#39;,
+  &#39;mxmb&#39;,
+  &#39;mlb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mdb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
+  &#39;lb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
   &#39;No&#39;,
-  0,
-  15,
-  1,
-  0,
-  15,
-  23,
-  19,
-  48,
-  62,
-  44,
-  2,
-  12,
-  20,
-  47,
-  24,
-  44,
-  35,
-  48,
-  35,
-  41,
-  81,
-  112,
-  38,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;lb&#39;,
+  &#39;mb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;mlb&#39;,
+  &#39;lb&#39;,
+  &#39;mlb&#39;,
+  &#39;lb&#39;,
+  &#39;mxb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mlb&#39;,
+  &#39;memb&#39;,
+  &#39;mxb&#39;,
+  &#39;mxmb&#39;,
+  &#39;No&#39;,
+  &#39;mxb&#39;,
+  &#39;mxmb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;mxb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mlb&#39;,
+  &#39;memb&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;memb&#39;,
+  &#39;mlb&#39;,
+  &#39;mxb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;mdb&#39;,
+  &#39;memb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;memb&#39;,
+  &#39;memb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxb&#39;,
+  &#39;memb&#39;,
+  &#39;lb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;lmb&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;lb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxmb&#39;,
+  &#39;memb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;memb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;lb&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;mxmb&#39;,
+  &#39;mlb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mdb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
+  &#39;lb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;lb&#39;,
+  &#39;mb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;mlb&#39;,
+  &#39;lb&#39;,
+  &#39;mlb&#39;,
+  &#39;lb&#39;,
+  &#39;mxb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mlb&#39;,
+  &#39;memb&#39;,
+  &#39;mxb&#39;,
+  &#39;mxmb&#39;,
+  &#39;No&#39;,
+  &#39;mxb&#39;,
+  &#39;mxmb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;mxb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mlb&#39;,
+  &#39;memb&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;memb&#39;,
+  &#39;mlb&#39;,
+  &#39;mxb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;mdb&#39;,
+  &#39;memb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;memb&#39;,
+  &#39;memb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxb&#39;,
+  &#39;memb&#39;,
+  &#39;lb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;],
+ &#39;mipv&#39;: [&#39;No&#39;,
+  13,
   &#39;No&#39;,
   5,
-  47,
-  44,
-  46,
-  237,
-  49,
-  90,
-  108,
-  201,
-  84,
-  74,
-  265,
-  91,
-  117,
-  85,
-  30,
-  225,
-  100,
-  254,
-  175,
-  11,
-  55,
-  164,
-  61,
-  179,
-  49,
-  111,
-  136,
-  205,
-  334,
-  145,
-  224,
-  5607,
-  1014,
-  2000,
-  824,
-  2953,
-  620,
-  1332,
-  21,
-  143,
-  105,
-  20,
-  283,
-  173,
-  222,
-  223,
-  595,
-  447,
+  6,
+  2,
+  10,
+  6,
+  9,
+  37,
+  32,
+  15,
+  &#39;No&#39;,
   42,
-  2093,
-  199,
-  1401,
-  1439,
-  3309,
-  2806,
-  599,
-  401,
-  464,
-  941,
-  185,
-  2101,
-  1761,
-  372,
-  697,
-  481,
-  4337,
-  2720,
-  69,
-  16,
-  497,
-  117,
-  199,
-  99,
+  33,
+  &#39;No&#39;,
+  44,
+  62,
+  105,
+  6,
+  66,
+  170,
+  &#39;No&#39;,
+  138,
+  32,
+  70,
+  52,
+  &#39;No&#39;,
+  22,
+  23,
+  1,
+  49,
   106,
-  303,
-  1344,
-  500,
-  841,
-  326,
-  614,
-  226,
-  2587,
-  822,
-  997,
-  1772,
-  3747,
-  5703,
-  792,
-  298,
-  4764,
-  2632,
-  485,
-  1630,
+  129,
+  41,
+  10,
+  67,
+  54,
+  &#39;No&#39;,
+  248,
+  52,
+  27,
+  113,
+  88,
+  &#39;No&#39;,
+  191,
+  881,
+  515,
+  876,
+  246,
+  245,
+  79,
+  131,
+  &#39;No&#39;,
+  89,
+  &#39;No&#39;,
+  149,
+  183,
+  119,
+  7163,
+  36,
+  1639,
+  954,
+  588,
+  2211,
+  49,
+  1712,
+  144,
+  29,
+  85,
+  86,
+  87,
+  179,
+  116,
+  353,
+  369,
+  915,
+  &#39;No&#39;,
+  1757,
+  2805,
+  &#39;No&#39;,
+  617,
+  2505,
+  294,
+  182,
+  1565,
+  176,
+  &#39;No&#39;,
+  1873,
+  &#39;No&#39;,
+  701,
+  5057,
+  196,
+  239,
+  &#39;No&#39;,
+  3049,
+  513,
+  &#39;No&#39;,
+  791,
+  1000,
+  99,
+  676,
+  1473,
+  307,
+  829,
+  208,
+  510,
+  1656,
+  293,
+  225,
+  1734,
+  510,
+  1604,
+  51,
+  472,
+  4891,
+  494,
+  &#39;No&#39;,
+  1169,
+  128,
+  &#39;No&#39;,
+  3209,
+  1291,
+  &#39;No&#39;,
+  &#39;No&#39;,
+  13,
+  &#39;No&#39;,
+  5,
+  6,
+  2,
+  10,
+  6,
+  9,
+  37,
+  32,
+  15,
+  &#39;No&#39;,
+  42,
+  33,
+  &#39;No&#39;,
+  44,
+  62,
+  105,
+  6,
+  66,
+  170,
+  &#39;No&#39;,
+  138,
+  32,
+  70,
+  52,
+  &#39;No&#39;,
+  22,
+  23,
+  1,
+  49,
+  106,
+  129,
+  41,
+  10,
+  67,
+  54,
+  &#39;No&#39;,
+  248,
+  52,
+  27,
+  113,
+  88,
+  &#39;No&#39;,
+  191,
+  881,
+  515,
+  876,
+  246,
+  245,
+  79,
+  131,
+  &#39;No&#39;,
+  89,
+  &#39;No&#39;,
+  149,
+  183,
+  119,
+  7163,
+  36,
+  1639,
+  954,
+  588,
+  2211,
+  49,
+  1712,
+  144,
+  29,
+  85,
+  86,
+  87,
+  179,
+  116,
+  353,
+  369,
+  915,
+  &#39;No&#39;,
+  1757,
+  2805,
+  &#39;No&#39;,
+  617,
+  2505,
+  294,
+  182,
+  1565,
+  176,
+  &#39;No&#39;,
+  1873,
+  &#39;No&#39;,
+  701,
+  5057,
+  196,
+  239,
+  &#39;No&#39;,
+  3049,
+  513,
+  &#39;No&#39;,
+  791,
+  1000,
+  99,
+  676,
+  1473,
+  307,
+  829,
+  208,
+  510,
+  1656,
+  293,
+  225,
+  1734,
+  510,
+  1604,
+  51,
+  472,
+  4891,
+  494,
+  &#39;No&#39;,
+  1169,
+  128,
+  &#39;No&#39;,
+  3209,
+  1291,
   &#39;No&#39;],
- &#39;mxnv&#39;: [-6,
-  -7,
-  -7,
+ &#39;mxnv&#39;: [-20,
   -1,
-  -7,
-  -3,
-  -12,
   -4,
-  -5,
-  -4,
-  -8,
-  -20,
-  -25,
-  -20,
-  -1,
-  -24,
-  -11,
-  -32,
+  -15,
+  -13,
   -16,
-  -83,
-  -65,
-  -33,
-  -195,
-  -92,
-  -113,
-  -81,
-  -11,
+  -2,
+  -4,
+  -3,
+  -2,
+  -19,
   -9,
+  -7,
+  -22,
+  -49,
+  -11,
+  -33,
+  -17,
+  -63,
+  -121,
   -34,
-  -24,
-  -59,
+  -60,
+  -82,
+  -90,
+  -77,
+  -123,
+  -171,
+  -14,
+  -14,
   -7,
-  -25,
-  -95,
-  -75,
-  -119,
-  -101,
-  -113,
-  -208,
-  -42,
-  -122,
-  -5,
-  -116,
-  -143,
-  -7,
-  -46,
-  -64,
-  -787,
-  -299,
-  -200,
-  -84,
-  -83,
-  -18,
-  -116,
-  -178,
-  -160,
-  -120,
-  -127,
-  -88,
-  -44,
-  -4547,
-  -1433,
-  -662,
+  -16,
+  &#39;No&#39;,
+  -156,
+  -15,
   -61,
-  -758,
-  -552,
-  -696,
-  -331,
-  -249,
+  -174,
+  -235,
+  -24,
+  -155,
+  -14,
+  -131,
+  -95,
+  -219,
+  -85,
+  -42,
+  -264,
+  &#39;No&#39;,
+  -18,
+  -45,
+  -99,
+  -3,
+  -65,
+  -100,
+  -655,
+  -232,
+  -119,
+  -319,
+  -278,
   -97,
-  -12,
-  -56,
-  -483,
-  -223,
-  -476,
-  -502,
-  -408,
-  -1273,
-  -441,
-  -263,
-  -1324,
-  -153,
-  -587,
-  -875,
-  -665,
-  -718,
-  -718,
-  -955,
-  -600,
-  -510,
-  -696,
-  -733,
-  -628,
-  -36,
-  -1852,
-  -918,
-  -337,
-  -10,
-  -390,
-  -314,
-  -1952,
-  -104,
-  -921,
-  -925,
-  -420,
-  -418,
-  -757,
-  -230,
-  -623,
-  -1959,
-  -924,
-  -1063,
-  -1475,
-  -1473,
-  -979,
-  -1517,
-  -3224,
-  -2581,
-  -1321,
-  -88,
-  -1380,
-  -293,
-  -35263],
- &#39;original_val&#39;: [35,
+  &#39;No&#39;,
+  -1825,
+  -808,
+  -1708,
+  -500,
+  -1500,
+  -442,
+  -316,
+  -319,
+  -99,
+  -117,
+  -62,
+  -253,
+  -58,
+  &#39;No&#39;,
+  -636,
+  -139,
+  &#39;No&#39;,
+  -980,
+  -777,
+  -304,
+  -311,
+  -2770,
+  -1590,
+  -4170,
+  -1082,
+  -2304,
+  -991,
+  -2038,
+  -572,
+  -497,
+  -1441,
+  -560,
+  -1129,
+  &#39;No&#39;,
+  -291,
+  -589,
+  -4942,
+  -498,
+  -4116,
+  -1925,
+  -2052,
+  -2315,
+  -202,
+  -810,
+  -935,
+  -233,
+  -1088,
+  -381,
+  -3163,
+  -1302,
+  -1777,
+  -383,
+  -1826,
+  -5355,
+  -1030,
+  -2329,
+  -644,
+  -491,
+  -489,
+  -597,
+  -2190,
+  -30,
+  -898,
+  -34261,
+  -20,
+  -1,
+  -4,
+  -15,
+  -13,
+  -16,
+  -2,
+  -4,
+  -3,
+  -2,
+  -19,
+  -9,
+  -7,
+  -22,
+  -49,
+  -11,
+  -33,
+  -17,
+  -63,
+  -121,
+  -34,
+  -60,
+  -82,
+  -90,
+  -77,
+  -123,
+  -171,
+  -14,
+  -14,
+  -7,
+  -16,
+  &#39;No&#39;,
+  -156,
+  -15,
+  -61,
+  -174,
+  -235,
+  -24,
+  -155,
+  -14,
+  -131,
+  -95,
+  -219,
+  -85,
+  -42,
+  -264,
+  &#39;No&#39;,
+  -18,
+  -45,
+  -99,
+  -3,
+  -65,
+  -100,
+  -655,
+  -232,
+  -119,
+  -319,
+  -278,
+  -97,
+  &#39;No&#39;,
+  -1825,
+  -808,
+  -1708,
+  -500,
+  -1500,
+  -442,
+  -316,
+  -319,
+  -99,
+  -117,
+  -62,
+  -253,
+  -58,
+  &#39;No&#39;,
+  -636,
+  -139,
+  &#39;No&#39;,
+  -980,
+  -777,
+  -304,
+  -311,
+  -2770,
+  -1590,
+  -4170,
+  -1082,
+  -2304,
+  -991,
+  -2038,
+  -572,
+  -497,
+  -1441,
+  -560,
+  -1129,
+  &#39;No&#39;,
+  -291,
+  -589,
+  -4942,
+  -498,
+  -4116,
+  -1925,
+  -2052,
+  -2315,
+  -202,
+  -810,
+  -935,
+  -233,
+  -1088,
+  -381,
+  -3163,
+  -1302,
+  -1777,
+  -383,
+  -1826,
+  -5355,
+  -1030,
+  -2329,
+  -644,
+  -491,
+  -489,
+  -597,
+  -2190,
+  -30,
+  -898,
+  -34261],
+ &#39;original_val&#39;: [13,
+  19,
+  22,
+  39,
+  56,
+  43,
+  65,
+  75,
+  96,
+  70,
+  151,
+  186,
+  114,
+  112,
+  167,
+  144,
+  258,
+  273,
+  426,
+  388,
+  419,
+  703,
+  394,
+  642,
+  484,
+  442,
+  585,
+  580,
+  636,
+  690,
+  630,
+  962,
+  831,
+  911,
+  1082,
+  1295,
+  1161,
+  1475,
+  1111,
+  1414,
+  1669,
+  1579,
+  1905,
+  1963,
+  1594,
+  2234,
+  4012,
+  2538,
+  2482,
+  3032,
+  3113,
+  3131,
+  3280,
+  2576,
+  3285,
+  3012,
+  3585,
+  3434,
+  3171,
+  11735,
+  4303,
+  4928,
+  3882,
+  4531,
+  3789,
+  4390,
+  4770,
+  5433,
+  5191,
+  5171,
+  5634,
+  6275,
+  6044,
+  7263,
+  8092,
+  7358,
+  10639,
+  7226,
+  6890,
+  10741,
+  9029,
+  13974,
+  9075,
+  10879,
+  10462,
+  13089,
+  13983,
+  10246,
+  14229,
+  11631,
+  13497,
+  12565,
+  12064,
+  19999,
+  14417,
+  14746,
+  15829,
+  15315,
+  16836,
+  19508,
+  19408,
+  20289,
+  19981,
+  18198,
+  17683,
+  20977,
+  20646,
+  22867,
+  17476,
+  23583,
+  22730,
+  24303,
+  27589,
+  31875,
+  33326,
+  32514,
+  37125,
+  31512,
+  34354,
+  35683,
+  32886,
+  37425,
+  36554,
+  0,
   13,
   19,
   22,
@@ -17143,253 +17812,505 @@ for date: 2020-07-30  the lowest positve error was by the method: lmb and the hi
   34354,
   35683,
   32886,
+  37425,
+  36554,
   0],
- &#39;pprd_val&#39;: [33,
+ &#39;pprd_val&#39;: [&#39;No&#39;,
   6,
   &#39;No&#39;,
-  &#39;No&#39;,
-  39,
+  34,
+  50,
   41,
-  42,
-  65,
-  60,
-  73,
-  51,
-  103,
-  124,
-  70,
-  110,
-  155,
-  124,
-  211,
-  249,
-  382,
-  353,
-  371,
-  668,
-  353,
-  561,
-  372,
-  404,
-  &#39;No&#39;,
-  575,
-  589,
-  646,
-  584,
-  725,
-  782,
-  821,
-  974,
-  1094,
-  1077,
-  1401,
-  846,
-  1323,
-  1552,
-  1494,
-  1875,
-  1738,
-  1494,
-  1980,
-  3837,
-  2527,
-  2427,
-  2868,
-  3052,
-  2952,
-  3231,
-  2465,
-  3149,
-  2807,
-  3251,
-  3289,
-  2947,
-  6128,
-  3289,
-  2928,
-  3058,
-  1578,
-  3169,
-  3058,
-  4749,
-  5290,
-  5086,
-  5151,
-  5351,
-  6102,
-  5822,
-  7040,
-  7497,
-  6911,
-  10597,
-  5133,
-  6691,
-  9340,
-  7590,
-  10665,
-  6269,
-  10280,
-  10061,
-  12625,
-  13042,
-  10061,
-  12128,
-  9870,
-  13125,
-  11868,
-  11583,
-  15662,
-  11697,
-  14677,
-  15813,
-  14818,
-  16719,
-  19309,
-  19309,
-  20183,
-  19678,
-  16854,
-  17183,
-  20136,
-  20320,
-  22253,
-  17250,
-  20996,
-  21908,
-  23306,
-  25817,
-  28128,
-  27623,
-  31722,
-  36827,
-  26748,
-  31722,
-  35198,
-  31256,
-  &#39;No&#39;],
- &#39;nprd_val&#39;: [41,
-  20,
-  26,
-  23,
-  46,
-  59,
   55,
   69,
-  80,
-  100,
-  78,
+  87,
+  33,
+  119,
   171,
-  211,
+  &#39;No&#39;,
+  70,
   134,
-  113,
-  191,
+  &#39;No&#39;,
+  214,
+  211,
+  321,
+  382,
+  353,
+  533,
+  &#39;No&#39;,
+  504,
+  452,
+  372,
+  533,
+  &#39;No&#39;,
+  614,
+  667,
+  629,
+  913,
+  725,
+  782,
+  1041,
+  1285,
+  1094,
+  1421,
+  &#39;No&#39;,
+  1166,
+  1617,
+  1552,
+  1792,
+  1875,
+  &#39;No&#39;,
+  2043,
+  3131,
+  2023,
+  1606,
+  2786,
+  2868,
+  3052,
+  3149,
+  &#39;No&#39;,
+  3196,
+  &#39;No&#39;,
+  3436,
+  3251,
+  3052,
+  4572,
+  4267,
+  3289,
+  2928,
+  3943,
+  1578,
+  4341,
+  3058,
+  5289,
+  5162,
+  5086,
+  5548,
+  6188,
+  5865,
+  7147,
+  7739,
+  6989,
+  9724,
+  &#39;No&#39;,
+  5133,
+  7936,
+  &#39;No&#39;,
+  13357,
+  6570,
+  10585,
+  10280,
+  11524,
+  13807,
+  &#39;No&#39;,
+  12356,
+  &#39;No&#39;,
+  12796,
+  7508,
+  11868,
+  19760,
+  &#39;No&#39;,
+  11697,
+  15316,
+  &#39;No&#39;,
+  16045,
+  18508,
+  19309,
+  19613,
+  18508,
+  17891,
+  16854,
+  20769,
+  20136,
+  21211,
+  17183,
+  23358,
+  20996,
+  23793,
+  25985,
+  31824,
+  32854,
+  27623,
+  36631,
+  &#39;No&#39;,
+  33185,
+  35555,
+  &#39;No&#39;,
+  34216,
+  35263,
+  &#39;No&#39;,
+  &#39;No&#39;,
+  6,
+  &#39;No&#39;,
+  34,
+  50,
+  41,
+  55,
+  69,
+  87,
+  33,
+  119,
+  171,
+  &#39;No&#39;,
+  70,
+  134,
+  &#39;No&#39;,
+  214,
+  211,
+  321,
+  382,
+  353,
+  533,
+  &#39;No&#39;,
+  504,
+  452,
+  372,
+  533,
+  &#39;No&#39;,
+  614,
+  667,
+  629,
+  913,
+  725,
+  782,
+  1041,
+  1285,
+  1094,
+  1421,
+  &#39;No&#39;,
+  1166,
+  1617,
+  1552,
+  1792,
+  1875,
+  &#39;No&#39;,
+  2043,
+  3131,
+  2023,
+  1606,
+  2786,
+  2868,
+  3052,
+  3149,
+  &#39;No&#39;,
+  3196,
+  &#39;No&#39;,
+  3436,
+  3251,
+  3052,
+  4572,
+  4267,
+  3289,
+  2928,
+  3943,
+  1578,
+  4341,
+  3058,
+  5289,
+  5162,
+  5086,
+  5548,
+  6188,
+  5865,
+  7147,
+  7739,
+  6989,
+  9724,
+  &#39;No&#39;,
+  5133,
+  7936,
+  &#39;No&#39;,
+  13357,
+  6570,
+  10585,
+  10280,
+  11524,
+  13807,
+  &#39;No&#39;,
+  12356,
+  &#39;No&#39;,
+  12796,
+  7508,
+  11868,
+  19760,
+  &#39;No&#39;,
+  11697,
+  15316,
+  &#39;No&#39;,
+  16045,
+  18508,
+  19309,
+  19613,
+  18508,
+  17891,
+  16854,
+  20769,
+  20136,
+  21211,
+  17183,
+  23358,
+  20996,
+  23793,
+  25985,
+  31824,
+  32854,
+  27623,
+  36631,
+  &#39;No&#39;,
+  33185,
+  35555,
+  &#39;No&#39;,
+  34216,
+  35263,
+  &#39;No&#39;],
+ &#39;nprd_val&#39;: [33,
+  20,
+  26,
+  54,
+  69,
+  59,
+  67,
+  79,
+  99,
+  72,
+  170,
+  195,
+  121,
+  134,
+  216,
   155,
+  291,
   290,
-  289,
+  489,
   509,
   453,
-  452,
-  898,
-  486,
-  755,
+  763,
+  476,
+  732,
+  561,
   565,
-  453,
+  756,
   594,
-  614,
-  660,
-  749,
-  637,
+  650,
+  697,
+  646,
+  &#39;No&#39;,
   987,
   926,
-  986,
-  1201,
+  1143,
+  1469,
   1396,
-  1274,
-  1683,
-  1153,
-  1536,
+  1499,
+  1266,
+  1428,
+  1800,
   1674,
-  1695,
+  2124,
   2048,
-  1970,
-  1640,
-  2298,
-  4799,
-  2837,
-  2682,
+  1636,
+  2498,
+  &#39;No&#39;,
+  2556,
+  2527,
+  3131,
   3116,
   3196,
-  3149,
-  3396,
-  2754,
-  3445,
-  3132,
+  3380,
+  3231,
+  3517,
+  3131,
+  3904,
   3712,
-  3522,
-  3215,
-  16282,
+  3268,
+  &#39;No&#39;,
+  6128,
   5736,
   5590,
-  3943,
+  5031,
   5289,
-  4341,
+  4832,
   5086,
-  5101,
-  5682,
+  5752,
+  5290,
   5288,
-  5183,
-  5690,
-  6758,
-  6267,
-  7739,
-  8594,
-  7766,
-  11912,
+  5696,
+  6528,
+  6102,
+  &#39;No&#39;,
+  8728,
+  7497,
+  &#39;No&#39;,
+  8206,
   7667,
-  7153,
-  12065,
-  9182,
-  14561,
-  9950,
+  11045,
+  9340,
+  16744,
+  10665,
+  15049,
   11544,
-  11180,
-  13807,
+  15393,
+  14974,
+  12284,
+  14801,
+  12128,
   14938,
-  10846,
-  14739,
-  12327,
-  14230,
+  13125,
   13193,
-  12100,
-  21851,
+  &#39;No&#39;,
+  14708,
   15335,
-  15083,
-  15839,
-  15705,
-  17150,
+  20771,
+  15813,
+  20952,
+  21433,
   21460,
-  19512,
-  21210,
-  20906,
+  22604,
+  20183,
+  19008,
   18618,
-  18101,
+  21210,
   21734,
-  20876,
-  23490,
-  19435,
+  23248,
+  20639,
+  24885,
   24507,
-  23793,
-  25778,
-  29062,
-  32854,
+  24686,
+  29415,
+  37230,
+  34356,
   34843,
-  35738,
-  39706,
-  32833,
-  34442,
-  37063,
-  33179,
-  35263]}</pre>
+  37769,
+  32003,
+  34843,
+  36280,
+  35076,
+  37455,
+  37452,
+  34261,
+  33,
+  20,
+  26,
+  54,
+  69,
+  59,
+  67,
+  79,
+  99,
+  72,
+  170,
+  195,
+  121,
+  134,
+  216,
+  155,
+  291,
+  290,
+  489,
+  509,
+  453,
+  763,
+  476,
+  732,
+  561,
+  565,
+  756,
+  594,
+  650,
+  697,
+  646,
+  &#39;No&#39;,
+  987,
+  926,
+  1143,
+  1469,
+  1396,
+  1499,
+  1266,
+  1428,
+  1800,
+  1674,
+  2124,
+  2048,
+  1636,
+  2498,
+  &#39;No&#39;,
+  2556,
+  2527,
+  3131,
+  3116,
+  3196,
+  3380,
+  3231,
+  3517,
+  3131,
+  3904,
+  3712,
+  3268,
+  &#39;No&#39;,
+  6128,
+  5736,
+  5590,
+  5031,
+  5289,
+  4832,
+  5086,
+  5752,
+  5290,
+  5288,
+  5696,
+  6528,
+  6102,
+  &#39;No&#39;,
+  8728,
+  7497,
+  &#39;No&#39;,
+  8206,
+  7667,
+  11045,
+  9340,
+  16744,
+  10665,
+  15049,
+  11544,
+  15393,
+  14974,
+  12284,
+  14801,
+  12128,
+  14938,
+  13125,
+  13193,
+  &#39;No&#39;,
+  14708,
+  15335,
+  20771,
+  15813,
+  20952,
+  21433,
+  21460,
+  22604,
+  20183,
+  19008,
+  18618,
+  21210,
+  21734,
+  23248,
+  20639,
+  24885,
+  24507,
+  24686,
+  29415,
+  37230,
+  34356,
+  34843,
+  37769,
+  32003,
+  34843,
+  36280,
+  35076,
+  37455,
+  37452,
+  34261]}</pre>
 </div>
 
 </div>
@@ -17400,7 +18321,7 @@ for date: 2020-07-30  the lowest positve error was by the method: lmb and the hi
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">err_dict</span><span class="p">)</span>
@@ -17416,7 +18337,7 @@ for date: 2020-07-30  the lowest positve error was by the method: lmb and the hi
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[35]:</div>
+<div class="prompt output_prompt">Out[62]:</div>
 
 
 
@@ -17453,22 +18374,22 @@ for date: 2020-07-30  the lowest positve error was by the method: lmb and the hi
     <tr>
       <th>0</th>
       <td>2020-03-31</td>
+      <td>No</td>
       <td>lmb</td>
-      <td>mb</td>
-      <td>2</td>
-      <td>-6</td>
-      <td>35</td>
+      <td>No</td>
+      <td>-20</td>
+      <td>13</td>
+      <td>No</td>
       <td>33</td>
-      <td>41</td>
     </tr>
     <tr>
       <th>1</th>
       <td>2020-04-01</td>
       <td>lmb</td>
       <td>mlb</td>
-      <td>7</td>
-      <td>-7</td>
       <td>13</td>
+      <td>-1</td>
+      <td>19</td>
       <td>6</td>
       <td>20</td>
     </tr>
@@ -17478,195 +18399,195 @@ for date: 2020-07-30  the lowest positve error was by the method: lmb and the hi
       <td>No</td>
       <td>lmb</td>
       <td>No</td>
-      <td>-7</td>
-      <td>19</td>
+      <td>-4</td>
+      <td>22</td>
       <td>No</td>
       <td>26</td>
     </tr>
     <tr>
       <th>3</th>
       <td>2020-04-03</td>
-      <td>No</td>
-      <td>lmb</td>
-      <td>No</td>
-      <td>-1</td>
-      <td>22</td>
-      <td>No</td>
-      <td>23</td>
+      <td>mlb</td>
+      <td>memb</td>
+      <td>5</td>
+      <td>-15</td>
+      <td>39</td>
+      <td>34</td>
+      <td>54</td>
     </tr>
     <tr>
       <th>4</th>
       <td>2020-04-04</td>
-      <td>lmb</td>
-      <td>mxmb</td>
-      <td>0</td>
-      <td>-7</td>
-      <td>39</td>
-      <td>39</td>
-      <td>46</td>
+      <td>memb</td>
+      <td>lb</td>
+      <td>6</td>
+      <td>-13</td>
+      <td>56</td>
+      <td>50</td>
+      <td>69</td>
     </tr>
     <tr>
       <th>5</th>
       <td>2020-04-05</td>
       <td>mb</td>
       <td>mxmb</td>
-      <td>15</td>
-      <td>-3</td>
-      <td>56</td>
+      <td>2</td>
+      <td>-16</td>
+      <td>43</td>
       <td>41</td>
       <td>59</td>
     </tr>
     <tr>
       <th>6</th>
       <td>2020-04-06</td>
-      <td>mb</td>
       <td>mlb</td>
-      <td>1</td>
-      <td>-12</td>
-      <td>43</td>
-      <td>42</td>
+      <td>mxmb</td>
+      <td>10</td>
+      <td>-2</td>
+      <td>65</td>
       <td>55</td>
+      <td>67</td>
     </tr>
     <tr>
       <th>7</th>
       <td>2020-04-07</td>
-      <td>mxmb</td>
       <td>mdb</td>
-      <td>0</td>
+      <td>memb</td>
+      <td>6</td>
       <td>-4</td>
-      <td>65</td>
-      <td>65</td>
+      <td>75</td>
       <td>69</td>
+      <td>79</td>
     </tr>
     <tr>
       <th>8</th>
       <td>2020-04-08</td>
-      <td>mb</td>
-      <td>mdb</td>
-      <td>15</td>
-      <td>-5</td>
-      <td>75</td>
-      <td>60</td>
-      <td>80</td>
+      <td>lb</td>
+      <td>memb</td>
+      <td>9</td>
+      <td>-3</td>
+      <td>96</td>
+      <td>87</td>
+      <td>99</td>
     </tr>
     <tr>
       <th>9</th>
       <td>2020-04-09</td>
-      <td>mb</td>
-      <td>mxmb</td>
-      <td>23</td>
-      <td>-4</td>
-      <td>96</td>
-      <td>73</td>
-      <td>100</td>
+      <td>mdb</td>
+      <td>lmb</td>
+      <td>37</td>
+      <td>-2</td>
+      <td>70</td>
+      <td>33</td>
+      <td>72</td>
     </tr>
     <tr>
       <th>10</th>
       <td>2020-04-10</td>
-      <td>lb</td>
-      <td>mb</td>
-      <td>19</td>
-      <td>-8</td>
-      <td>70</td>
-      <td>51</td>
-      <td>78</td>
+      <td>memb</td>
+      <td>mxb</td>
+      <td>32</td>
+      <td>-19</td>
+      <td>151</td>
+      <td>119</td>
+      <td>170</td>
     </tr>
     <tr>
       <th>11</th>
       <td>2020-04-11</td>
-      <td>mb</td>
       <td>mxmb</td>
-      <td>48</td>
-      <td>-20</td>
-      <td>151</td>
-      <td>103</td>
+      <td>memb</td>
+      <td>15</td>
+      <td>-9</td>
+      <td>186</td>
       <td>171</td>
+      <td>195</td>
     </tr>
     <tr>
       <th>12</th>
       <td>2020-04-12</td>
-      <td>mb</td>
-      <td>mxmb</td>
-      <td>62</td>
-      <td>-25</td>
-      <td>186</td>
-      <td>124</td>
-      <td>211</td>
+      <td>No</td>
+      <td>lmb</td>
+      <td>No</td>
+      <td>-7</td>
+      <td>114</td>
+      <td>No</td>
+      <td>121</td>
     </tr>
     <tr>
       <th>13</th>
       <td>2020-04-13</td>
       <td>lb</td>
       <td>mb</td>
-      <td>44</td>
-      <td>-20</td>
-      <td>114</td>
+      <td>42</td>
+      <td>-22</td>
+      <td>112</td>
       <td>70</td>
       <td>134</td>
     </tr>
     <tr>
       <th>14</th>
       <td>2020-04-14</td>
-      <td>lb</td>
-      <td>lmb</td>
-      <td>2</td>
-      <td>-1</td>
-      <td>112</td>
-      <td>110</td>
-      <td>113</td>
+      <td>mb</td>
+      <td>memb</td>
+      <td>33</td>
+      <td>-49</td>
+      <td>167</td>
+      <td>134</td>
+      <td>216</td>
     </tr>
     <tr>
       <th>15</th>
       <td>2020-04-15</td>
+      <td>No</td>
       <td>mb</td>
-      <td>lmb</td>
-      <td>12</td>
-      <td>-24</td>
-      <td>167</td>
+      <td>No</td>
+      <td>-11</td>
+      <td>144</td>
+      <td>No</td>
       <td>155</td>
-      <td>191</td>
     </tr>
     <tr>
       <th>16</th>
       <td>2020-04-16</td>
-      <td>lb</td>
-      <td>mb</td>
-      <td>20</td>
-      <td>-11</td>
-      <td>144</td>
-      <td>124</td>
-      <td>155</td>
+      <td>memb</td>
+      <td>mxmb</td>
+      <td>44</td>
+      <td>-33</td>
+      <td>258</td>
+      <td>214</td>
+      <td>291</td>
     </tr>
     <tr>
       <th>17</th>
       <td>2020-04-17</td>
       <td>mb</td>
       <td>lmb</td>
-      <td>47</td>
-      <td>-32</td>
-      <td>258</td>
+      <td>62</td>
+      <td>-17</td>
+      <td>273</td>
       <td>211</td>
       <td>290</td>
     </tr>
     <tr>
       <th>18</th>
       <td>2020-04-18</td>
-      <td>mdb</td>
-      <td>lb</td>
-      <td>24</td>
-      <td>-16</td>
-      <td>273</td>
-      <td>249</td>
-      <td>289</td>
+      <td>mxmb</td>
+      <td>mxb</td>
+      <td>105</td>
+      <td>-63</td>
+      <td>426</td>
+      <td>321</td>
+      <td>489</td>
     </tr>
     <tr>
       <th>19</th>
       <td>2020-04-19</td>
       <td>mxmb</td>
       <td>memb</td>
-      <td>44</td>
-      <td>-83</td>
-      <td>426</td>
+      <td>6</td>
+      <td>-121</td>
+      <td>388</td>
       <td>382</td>
       <td>509</td>
     </tr>
@@ -17675,77 +18596,77 @@ for date: 2020-07-30  the lowest positve error was by the method: lmb and the hi
       <td>2020-04-20</td>
       <td>lb</td>
       <td>mxmb</td>
-      <td>35</td>
-      <td>-65</td>
-      <td>388</td>
+      <td>66</td>
+      <td>-34</td>
+      <td>419</td>
       <td>353</td>
       <td>453</td>
     </tr>
     <tr>
       <th>21</th>
       <td>2020-04-21</td>
-      <td>mb</td>
-      <td>lb</td>
-      <td>48</td>
-      <td>-33</td>
-      <td>419</td>
-      <td>371</td>
-      <td>452</td>
+      <td>memb</td>
+      <td>mxb</td>
+      <td>170</td>
+      <td>-60</td>
+      <td>703</td>
+      <td>533</td>
+      <td>763</td>
     </tr>
     <tr>
       <th>22</th>
       <td>2020-04-22</td>
-      <td>mxmb</td>
-      <td>memb</td>
-      <td>35</td>
-      <td>-195</td>
-      <td>703</td>
-      <td>668</td>
-      <td>898</td>
+      <td>No</td>
+      <td>mb</td>
+      <td>No</td>
+      <td>-82</td>
+      <td>394</td>
+      <td>No</td>
+      <td>476</td>
     </tr>
     <tr>
       <th>23</th>
       <td>2020-04-23</td>
-      <td>mdb</td>
-      <td>mlb</td>
-      <td>41</td>
-      <td>-92</td>
-      <td>394</td>
-      <td>353</td>
-      <td>486</td>
+      <td>mb</td>
+      <td>mxmb</td>
+      <td>138</td>
+      <td>-90</td>
+      <td>642</td>
+      <td>504</td>
+      <td>732</td>
     </tr>
     <tr>
       <th>24</th>
       <td>2020-04-24</td>
+      <td>mdb</td>
       <td>mb</td>
-      <td>lmb</td>
-      <td>81</td>
-      <td>-113</td>
-      <td>642</td>
+      <td>32</td>
+      <td>-77</td>
+      <td>484</td>
+      <td>452</td>
       <td>561</td>
-      <td>755</td>
     </tr>
     <tr>
       <th>25</th>
       <td>2020-04-25</td>
       <td>lmb</td>
       <td>mlb</td>
-      <td>112</td>
-      <td>-81</td>
-      <td>484</td>
+      <td>70</td>
+      <td>-123</td>
+      <td>442</td>
       <td>372</td>
       <td>565</td>
     </tr>
     <tr>
       <th>26</th>
       <td>2020-04-26</td>
-      <td>lb</td>
-      <td>lmb</td>
-      <td>38</td>
-      <td>-11</td>
-      <td>442</td>
-      <td>404</td>
-      <td>453</td>
+      <td>mb</td>
+      <td>memb</td>
+      <td>52</td>
+      <td>-171</td>
+      <td>585</td>
+      <td>533</td>
+      <td>756</td>
     </tr>
     <tr>
       <th>27</th>
@@ -17753,32 +18674,32 @@ for date: 2020-07-30  the lowest positve error was by the method: lmb and the hi
       <td>No</td>
       <td>mb</td>
       <td>No</td>
-      <td>-9</td>
-      <td>585</td>
+      <td>-14</td>
+      <td>580</td>
       <td>No</td>
       <td>594</td>
     </tr>
     <tr>
       <th>28</th>
       <td>2020-04-28</td>
-      <td>lb</td>
       <td>mb</td>
-      <td>5</td>
-      <td>-34</td>
-      <td>580</td>
-      <td>575</td>
+      <td>mlb</td>
+      <td>22</td>
+      <td>-14</td>
+      <td>636</td>
       <td>614</td>
+      <td>650</td>
     </tr>
     <tr>
       <th>29</th>
       <td>2020-04-29</td>
-      <td>lmb</td>
-      <td>mlb</td>
-      <td>47</td>
-      <td>-24</td>
-      <td>636</td>
-      <td>589</td>
-      <td>660</td>
+      <td>memb</td>
+      <td>lb</td>
+      <td>23</td>
+      <td>-7</td>
+      <td>690</td>
+      <td>667</td>
+      <td>697</td>
     </tr>
     <tr>
       <th>...</th>
@@ -17792,338 +18713,338 @@ for date: 2020-07-30  the lowest positve error was by the method: lmb and the hi
       <td>...</td>
     </tr>
     <tr>
-      <th>93</th>
-      <td>2020-07-02</td>
-      <td>lb</td>
-      <td>lmb</td>
-      <td>481</td>
-      <td>-36</td>
-      <td>12064</td>
-      <td>11583</td>
-      <td>12100</td>
-    </tr>
-    <tr>
-      <th>94</th>
+      <th>218</th>
       <td>2020-07-03</td>
-      <td>mdb</td>
-      <td>memb</td>
-      <td>4337</td>
-      <td>-1852</td>
-      <td>19999</td>
-      <td>15662</td>
-      <td>21851</td>
+      <td>No</td>
+      <td>mb</td>
+      <td>No</td>
+      <td>-291</td>
+      <td>14417</td>
+      <td>No</td>
+      <td>14708</td>
     </tr>
     <tr>
-      <th>95</th>
+      <th>219</th>
       <td>2020-07-04</td>
       <td>mdb</td>
       <td>mb</td>
-      <td>2720</td>
-      <td>-918</td>
-      <td>14417</td>
+      <td>3049</td>
+      <td>-589</td>
+      <td>14746</td>
       <td>11697</td>
       <td>15335</td>
     </tr>
     <tr>
-      <th>96</th>
+      <th>220</th>
       <td>2020-07-05</td>
-      <td>mb</td>
-      <td>lb</td>
-      <td>69</td>
-      <td>-337</td>
-      <td>14746</td>
-      <td>14677</td>
-      <td>15083</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>2020-07-06</td>
-      <td>lmb</td>
-      <td>mb</td>
-      <td>16</td>
-      <td>-10</td>
+      <td>mlb</td>
+      <td>memb</td>
+      <td>513</td>
+      <td>-4942</td>
       <td>15829</td>
-      <td>15813</td>
-      <td>15839</td>
+      <td>15316</td>
+      <td>20771</td>
     </tr>
     <tr>
-      <th>98</th>
-      <td>2020-07-07</td>
-      <td>lb</td>
-      <td>mb</td>
-      <td>497</td>
-      <td>-390</td>
-      <td>15315</td>
-      <td>14818</td>
-      <td>15705</td>
-    </tr>
-    <tr>
-      <th>99</th>
-      <td>2020-07-08</td>
-      <td>mb</td>
+      <th>221</th>
+      <td>2020-07-06</td>
+      <td>No</td>
       <td>lmb</td>
-      <td>117</td>
-      <td>-314</td>
-      <td>16836</td>
-      <td>16719</td>
-      <td>17150</td>
+      <td>No</td>
+      <td>-498</td>
+      <td>15315</td>
+      <td>No</td>
+      <td>15813</td>
     </tr>
     <tr>
-      <th>100</th>
+      <th>222</th>
+      <td>2020-07-07</td>
+      <td>mlb</td>
+      <td>memb</td>
+      <td>791</td>
+      <td>-4116</td>
+      <td>16836</td>
+      <td>16045</td>
+      <td>20952</td>
+    </tr>
+    <tr>
+      <th>223</th>
+      <td>2020-07-08</td>
+      <td>lb</td>
+      <td>memb</td>
+      <td>1000</td>
+      <td>-1925</td>
+      <td>19508</td>
+      <td>18508</td>
+      <td>21433</td>
+    </tr>
+    <tr>
+      <th>224</th>
       <td>2020-07-09</td>
       <td>lmb</td>
       <td>mlb</td>
-      <td>199</td>
-      <td>-1952</td>
-      <td>19508</td>
+      <td>99</td>
+      <td>-2052</td>
+      <td>19408</td>
       <td>19309</td>
       <td>21460</td>
     </tr>
     <tr>
-      <th>101</th>
+      <th>225</th>
       <td>2020-07-10</td>
-      <td>lb</td>
-      <td>mlb</td>
-      <td>99</td>
-      <td>-104</td>
-      <td>19408</td>
-      <td>19309</td>
-      <td>19512</td>
-    </tr>
-    <tr>
-      <th>102</th>
-      <td>2020-07-11</td>
-      <td>mxmb</td>
-      <td>lb</td>
-      <td>106</td>
-      <td>-921</td>
+      <td>memb</td>
+      <td>mxb</td>
+      <td>676</td>
+      <td>-2315</td>
       <td>20289</td>
-      <td>20183</td>
-      <td>21210</td>
+      <td>19613</td>
+      <td>22604</td>
     </tr>
     <tr>
-      <th>103</th>
-      <td>2020-07-12</td>
-      <td>lb</td>
-      <td>mlb</td>
-      <td>303</td>
-      <td>-925</td>
+      <th>226</th>
+      <td>2020-07-11</td>
+      <td>mdb</td>
+      <td>mxmb</td>
+      <td>1473</td>
+      <td>-202</td>
       <td>19981</td>
-      <td>19678</td>
-      <td>20906</td>
+      <td>18508</td>
+      <td>20183</td>
     </tr>
     <tr>
-      <th>104</th>
+      <th>227</th>
+      <td>2020-07-12</td>
+      <td>lmb</td>
+      <td>mb</td>
+      <td>307</td>
+      <td>-810</td>
+      <td>18198</td>
+      <td>17891</td>
+      <td>19008</td>
+    </tr>
+    <tr>
+      <th>228</th>
       <td>2020-07-13</td>
       <td>lmb</td>
       <td>mlb</td>
-      <td>1344</td>
-      <td>-420</td>
-      <td>18198</td>
+      <td>829</td>
+      <td>-935</td>
+      <td>17683</td>
       <td>16854</td>
       <td>18618</td>
     </tr>
     <tr>
-      <th>105</th>
+      <th>229</th>
       <td>2020-07-14</td>
-      <td>lb</td>
-      <td>mlb</td>
-      <td>500</td>
-      <td>-418</td>
-      <td>17683</td>
-      <td>17183</td>
-      <td>18101</td>
+      <td>memb</td>
+      <td>mdb</td>
+      <td>208</td>
+      <td>-233</td>
+      <td>20977</td>
+      <td>20769</td>
+      <td>21210</td>
     </tr>
     <tr>
-      <th>106</th>
+      <th>230</th>
       <td>2020-07-15</td>
       <td>mb</td>
       <td>memb</td>
-      <td>841</td>
-      <td>-757</td>
-      <td>20977</td>
+      <td>510</td>
+      <td>-1088</td>
+      <td>20646</td>
       <td>20136</td>
       <td>21734</td>
     </tr>
     <tr>
-      <th>107</th>
+      <th>231</th>
       <td>2020-07-16</td>
-      <td>lb</td>
-      <td>mlb</td>
-      <td>326</td>
-      <td>-230</td>
-      <td>20646</td>
-      <td>20320</td>
-      <td>20876</td>
-    </tr>
-    <tr>
-      <th>108</th>
-      <td>2020-07-17</td>
-      <td>lmb</td>
       <td>memb</td>
-      <td>614</td>
-      <td>-623</td>
+      <td>mxmb</td>
+      <td>1656</td>
+      <td>-381</td>
       <td>22867</td>
-      <td>22253</td>
-      <td>23490</td>
+      <td>21211</td>
+      <td>23248</td>
     </tr>
     <tr>
-      <th>109</th>
-      <td>2020-07-18</td>
-      <td>mlb</td>
+      <th>232</th>
+      <td>2020-07-17</td>
+      <td>mdb</td>
       <td>mb</td>
-      <td>226</td>
-      <td>-1959</td>
+      <td>293</td>
+      <td>-3163</td>
       <td>17476</td>
-      <td>17250</td>
-      <td>19435</td>
+      <td>17183</td>
+      <td>20639</td>
     </tr>
     <tr>
-      <th>110</th>
+      <th>233</th>
+      <td>2020-07-18</td>
+      <td>mxmb</td>
+      <td>mdb</td>
+      <td>225</td>
+      <td>-1302</td>
+      <td>23583</td>
+      <td>23358</td>
+      <td>24885</td>
+    </tr>
+    <tr>
+      <th>234</th>
       <td>2020-07-19</td>
       <td>mb</td>
       <td>memb</td>
-      <td>2587</td>
-      <td>-924</td>
-      <td>23583</td>
+      <td>1734</td>
+      <td>-1777</td>
+      <td>22730</td>
       <td>20996</td>
       <td>24507</td>
     </tr>
     <tr>
-      <th>111</th>
+      <th>235</th>
       <td>2020-07-20</td>
-      <td>lb</td>
       <td>mlb</td>
-      <td>822</td>
-      <td>-1063</td>
-      <td>22730</td>
-      <td>21908</td>
-      <td>23793</td>
-    </tr>
-    <tr>
-      <th>112</th>
-      <td>2020-07-21</td>
-      <td>lmb</td>
       <td>memb</td>
-      <td>997</td>
-      <td>-1475</td>
+      <td>510</td>
+      <td>-383</td>
       <td>24303</td>
-      <td>23306</td>
-      <td>25778</td>
+      <td>23793</td>
+      <td>24686</td>
     </tr>
     <tr>
-      <th>113</th>
-      <td>2020-07-22</td>
-      <td>lmb</td>
-      <td>memb</td>
-      <td>1772</td>
-      <td>-1473</td>
-      <td>27589</td>
-      <td>25817</td>
-      <td>29062</td>
-    </tr>
-    <tr>
-      <th>114</th>
-      <td>2020-07-23</td>
-      <td>lmb</td>
+      <th>236</th>
+      <td>2020-07-21</td>
+      <td>lb</td>
       <td>mxmb</td>
-      <td>3747</td>
-      <td>-979</td>
-      <td>31875</td>
-      <td>28128</td>
-      <td>32854</td>
+      <td>1604</td>
+      <td>-1826</td>
+      <td>27589</td>
+      <td>25985</td>
+      <td>29415</td>
     </tr>
     <tr>
-      <th>115</th>
+      <th>237</th>
+      <td>2020-07-22</td>
+      <td>mdb</td>
+      <td>mxb</td>
+      <td>51</td>
+      <td>-5355</td>
+      <td>31875</td>
+      <td>31824</td>
+      <td>37230</td>
+    </tr>
+    <tr>
+      <th>238</th>
+      <td>2020-07-23</td>
+      <td>mxmb</td>
+      <td>memb</td>
+      <td>472</td>
+      <td>-1030</td>
+      <td>33326</td>
+      <td>32854</td>
+      <td>34356</td>
+    </tr>
+    <tr>
+      <th>239</th>
       <td>2020-07-24</td>
       <td>mb</td>
       <td>lb</td>
-      <td>5703</td>
-      <td>-1517</td>
-      <td>33326</td>
+      <td>4891</td>
+      <td>-2329</td>
+      <td>32514</td>
       <td>27623</td>
       <td>34843</td>
     </tr>
     <tr>
-      <th>116</th>
+      <th>240</th>
       <td>2020-07-25</td>
-      <td>lb</td>
-      <td>mlb</td>
-      <td>792</td>
-      <td>-3224</td>
-      <td>32514</td>
-      <td>31722</td>
-      <td>35738</td>
-    </tr>
-    <tr>
-      <th>117</th>
-      <td>2020-07-26</td>
-      <td>mdb</td>
       <td>memb</td>
-      <td>298</td>
-      <td>-2581</td>
+      <td>mxmb</td>
+      <td>494</td>
+      <td>-644</td>
       <td>37125</td>
-      <td>36827</td>
-      <td>39706</td>
+      <td>36631</td>
+      <td>37769</td>
     </tr>
     <tr>
-      <th>118</th>
-      <td>2020-07-27</td>
-      <td>lb</td>
+      <th>241</th>
+      <td>2020-07-26</td>
+      <td>No</td>
       <td>mb</td>
-      <td>4764</td>
-      <td>-1321</td>
+      <td>No</td>
+      <td>-491</td>
       <td>31512</td>
-      <td>26748</td>
-      <td>32833</td>
+      <td>No</td>
+      <td>32003</td>
     </tr>
     <tr>
-      <th>119</th>
-      <td>2020-07-28</td>
+      <th>242</th>
+      <td>2020-07-27</td>
+      <td>mlb</td>
       <td>mdb</td>
-      <td>mb</td>
-      <td>2632</td>
-      <td>-88</td>
+      <td>1169</td>
+      <td>-489</td>
       <td>34354</td>
-      <td>31722</td>
-      <td>34442</td>
+      <td>33185</td>
+      <td>34843</td>
     </tr>
     <tr>
-      <th>120</th>
-      <td>2020-07-29</td>
-      <td>mb</td>
-      <td>lb</td>
-      <td>485</td>
-      <td>-1380</td>
-      <td>35683</td>
-      <td>35198</td>
-      <td>37063</td>
-    </tr>
-    <tr>
-      <th>121</th>
-      <td>2020-07-30</td>
+      <th>243</th>
+      <td>2020-07-28</td>
       <td>lmb</td>
       <td>mlb</td>
-      <td>1630</td>
-      <td>-293</td>
-      <td>32886</td>
-      <td>31256</td>
-      <td>33179</td>
+      <td>128</td>
+      <td>-597</td>
+      <td>35683</td>
+      <td>35555</td>
+      <td>36280</td>
     </tr>
     <tr>
-      <th>122</th>
-      <td>2020-07-31</td>
+      <th>244</th>
+      <td>2020-07-29</td>
       <td>No</td>
+      <td>lmb</td>
+      <td>No</td>
+      <td>-2190</td>
+      <td>32886</td>
+      <td>No</td>
+      <td>35076</td>
+    </tr>
+    <tr>
+      <th>245</th>
+      <td>2020-07-30</td>
       <td>mb</td>
+      <td>memb</td>
+      <td>3209</td>
+      <td>-30</td>
+      <td>37425</td>
+      <td>34216</td>
+      <td>37455</td>
+    </tr>
+    <tr>
+      <th>246</th>
+      <td>2020-07-31</td>
+      <td>mb</td>
+      <td>mdb</td>
+      <td>1291</td>
+      <td>-898</td>
+      <td>36554</td>
+      <td>35263</td>
+      <td>37452</td>
+    </tr>
+    <tr>
+      <th>247</th>
+      <td>2020-08-01</td>
       <td>No</td>
-      <td>-35263</td>
+      <td>lmb</td>
+      <td>No</td>
+      <td>-34261</td>
       <td>0</td>
       <td>No</td>
-      <td>35263</td>
+      <td>34261</td>
     </tr>
   </tbody>
 </table>
-<p>123 rows × 8 columns</p>
+<p>248 rows × 8 columns</p>
 </div>
 </div>
 
