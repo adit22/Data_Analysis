@@ -11773,7 +11773,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -11792,10 +11792,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\Desktop\Lockdown\data\Covid-19\29\case_time_series.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\Desktop\Lockdown\data\Covid-19\30\case_time_series.csv&quot;</span><span class="p">)</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -11809,7 +11809,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[30]:</div>
+<div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -11905,7 +11905,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">53</span><span class="p">:]</span>
@@ -11923,7 +11923,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[31]:</div>
+<div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -12019,7 +12019,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
@@ -12035,7 +12035,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[32]:</div>
+<div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -12068,16 +12068,6 @@ div#notebook {
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th>126</th>
-      <td>27 July</td>
-      <td>46484</td>
-      <td>1482504</td>
-      <td>34354</td>
-      <td>952990</td>
-      <td>642</td>
-      <td>33469</td>
-    </tr>
     <tr>
       <th>127</th>
       <td>28 July</td>
@@ -12111,12 +12101,22 @@ div#notebook {
     <tr>
       <th>130</th>
       <td>31 July</td>
-      <td>57212</td>
-      <td>1696794</td>
+      <td>57486</td>
+      <td>1697068</td>
       <td>36554</td>
       <td>1095538</td>
       <td>764</td>
       <td>36566</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>01 August</td>
+      <td>54865</td>
+      <td>1751933</td>
+      <td>51232</td>
+      <td>1146770</td>
+      <td>852</td>
+      <td>37418</td>
     </tr>
   </tbody>
 </table>
@@ -12131,7 +12131,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colls</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">data_daily</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -12148,7 +12148,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[33]:</div>
+<div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -12171,7 +12171,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily</span><span class="o">.</span><span class="n">dtypes</span>
@@ -12187,7 +12187,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[34]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -12211,7 +12211,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily</span><span class="p">[</span><span class="n">data_daily</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()]</span>
@@ -12227,7 +12227,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[35]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -12273,7 +12273,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_daily</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">)</span> 
@@ -12309,7 +12309,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">):</span>
@@ -12358,7 +12358,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">39</span><span class="p">):</span>
@@ -12407,7 +12407,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">39</span><span class="p">,</span><span class="mi">70</span><span class="p">):</span>
@@ -12456,7 +12456,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span><span class="mi">100</span><span class="p">):</span>
@@ -12505,7 +12505,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">131</span><span class="p">):</span>
@@ -12554,15 +12554,13 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">for i in range(130,len(data_daily)):</span>
-<span class="sd">    data_daily[&quot;Date&quot;][i]=data_daily[&quot;Date&quot;][i].strip(&quot; August&quot;)</span>
-<span class="sd">for i in range(130,len(data_daily)):</span>
-<span class="sd">    data_daily[&quot;Date&quot;][i]=&quot;2020-07-&quot;+data_daily[&quot;Date&quot;][i]</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">131</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">data_daily</span><span class="p">)):</span>
+    <span class="n">data_daily</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">data_daily</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot; August&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">131</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">data_daily</span><span class="p">)):</span>
+    <span class="n">data_daily</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;2020-08-&quot;</span><span class="o">+</span><span class="n">data_daily</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -12575,15 +12573,27 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[42]:</div>
+<div class="prompt"></div>
 
 
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:3: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
 
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  This is separate from the ipykernel package so we can avoid doing imports until
+C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\IPython\core\interactiveshell.py:2963: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
 
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;\nfor i in range(130,len(data_daily)):\n    data_daily[&#34;Date&#34;][i]=data_daily[&#34;Date&#34;][i].strip(&#34; August&#34;)\nfor i in range(130,len(data_daily)):\n    data_daily[&#34;Date&#34;][i]=&#34;2020-07-&#34;+data_daily[&#34;Date&#34;][i]\n&#39;</pre>
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  exec(code_obj, self.user_global_ns, self.user_ns)
+C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:5: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  &#34;&#34;&#34;
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -12592,7 +12602,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">data_daily</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;datetime64[ns]&#39;</span><span class="p">)</span>
@@ -12628,7 +12638,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily</span><span class="o">.</span><span class="n">dtypes</span>
@@ -12644,7 +12654,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[44]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -12668,7 +12678,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily_ratio_with_two_precision</span><span class="o">=</span><span class="n">data_daily</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -12681,7 +12691,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_Ratio&quot;</span><span class="p">]</span>
@@ -12725,7 +12735,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[46]:</div>
+<div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -12857,7 +12867,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_daily_ratio</span><span class="o">=</span><span class="n">data_daily</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -12870,7 +12880,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_Ratio&quot;</span><span class="p">]</span>
@@ -12914,7 +12924,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[48]:</div>
+<div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -13046,7 +13056,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">strt_cnt</span><span class="o">=</span><span class="mi">1</span>
@@ -13132,7 +13142,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dc</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\ramprd_df_strd.xlsx&quot;</span><span class="p">)</span>
@@ -13149,7 +13159,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[50]:</div>
+<div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -13589,20 +13599,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>...</td>
     </tr>
     <tr>
-      <th>218</th>
-      <td>2020-07-03</td>
-      <td>14417</td>
-      <td>14708</td>
-      <td>33153</td>
-      <td>21851</td>
-      <td>22316</td>
-      <td>21851</td>
-      <td>22316</td>
-      <td>33153</td>
-      <td>15662</td>
-    </tr>
-    <tr>
-      <th>219</th>
+      <th>343</th>
       <td>2020-07-04</td>
       <td>14746</td>
       <td>15335</td>
@@ -13615,7 +13612,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>11697</td>
     </tr>
     <tr>
-      <th>220</th>
+      <th>344</th>
       <td>2020-07-05</td>
       <td>15829</td>
       <td>14677</td>
@@ -13628,7 +13625,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>11583</td>
     </tr>
     <tr>
-      <th>221</th>
+      <th>345</th>
       <td>2020-07-06</td>
       <td>15315</td>
       <td>15839</td>
@@ -13641,7 +13638,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>33153</td>
     </tr>
     <tr>
-      <th>222</th>
+      <th>346</th>
       <td>2020-07-07</td>
       <td>16836</td>
       <td>15705</td>
@@ -13654,7 +13651,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>10393</td>
     </tr>
     <tr>
-      <th>223</th>
+      <th>347</th>
       <td>2020-07-08</td>
       <td>19508</td>
       <td>16719</td>
@@ -13667,7 +13664,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>15083</td>
     </tr>
     <tr>
-      <th>224</th>
+      <th>348</th>
       <td>2020-07-09</td>
       <td>19408</td>
       <td>18332</td>
@@ -13680,7 +13677,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>16992</td>
     </tr>
     <tr>
-      <th>225</th>
+      <th>349</th>
       <td>2020-07-10</td>
       <td>20289</td>
       <td>16669</td>
@@ -13693,7 +13690,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>14818</td>
     </tr>
     <tr>
-      <th>226</th>
+      <th>350</th>
       <td>2020-07-11</td>
       <td>19981</td>
       <td>18320</td>
@@ -13706,7 +13703,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>18508</td>
     </tr>
     <tr>
-      <th>227</th>
+      <th>351</th>
       <td>2020-07-12</td>
       <td>18198</td>
       <td>19008</td>
@@ -13719,7 +13716,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>22604</td>
     </tr>
     <tr>
-      <th>228</th>
+      <th>352</th>
       <td>2020-07-13</td>
       <td>17683</td>
       <td>18932</td>
@@ -13732,7 +13729,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>19309</td>
     </tr>
     <tr>
-      <th>229</th>
+      <th>353</th>
       <td>2020-07-14</td>
       <td>20977</td>
       <td>19289</td>
@@ -13745,7 +13742,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>21210</td>
     </tr>
     <tr>
-      <th>230</th>
+      <th>354</th>
       <td>2020-07-15</td>
       <td>20646</td>
       <td>20136</td>
@@ -13758,7 +13755,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>19678</td>
     </tr>
     <tr>
-      <th>231</th>
+      <th>355</th>
       <td>2020-07-16</td>
       <td>22867</td>
       <td>19816</td>
@@ -13771,7 +13768,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>16574</td>
     </tr>
     <tr>
-      <th>232</th>
+      <th>356</th>
       <td>2020-07-17</td>
       <td>17476</td>
       <td>20639</td>
@@ -13784,7 +13781,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>17183</td>
     </tr>
     <tr>
-      <th>233</th>
+      <th>357</th>
       <td>2020-07-18</td>
       <td>23583</td>
       <td>19435</td>
@@ -13797,7 +13794,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>24885</td>
     </tr>
     <tr>
-      <th>234</th>
+      <th>358</th>
       <td>2020-07-19</td>
       <td>22730</td>
       <td>20996</td>
@@ -13810,7 +13807,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>20320</td>
     </tr>
     <tr>
-      <th>235</th>
+      <th>359</th>
       <td>2020-07-20</td>
       <td>24303</td>
       <td>21827</td>
@@ -13823,7 +13820,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>25327</td>
     </tr>
     <tr>
-      <th>236</th>
+      <th>360</th>
       <td>2020-07-21</td>
       <td>27589</td>
       <td>23120</td>
@@ -13836,7 +13833,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>13356</td>
     </tr>
     <tr>
-      <th>237</th>
+      <th>361</th>
       <td>2020-07-22</td>
       <td>31875</td>
       <td>23956</td>
@@ -13849,7 +13846,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>31824</td>
     </tr>
     <tr>
-      <th>238</th>
+      <th>362</th>
       <td>2020-07-23</td>
       <td>33326</td>
       <td>26241</td>
@@ -13862,7 +13859,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>21908</td>
     </tr>
     <tr>
-      <th>239</th>
+      <th>363</th>
       <td>2020-07-24</td>
       <td>32514</td>
       <td>27623</td>
@@ -13875,7 +13872,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>25985</td>
     </tr>
     <tr>
-      <th>240</th>
+      <th>364</th>
       <td>2020-07-25</td>
       <td>37125</td>
       <td>30764</td>
@@ -13888,7 +13885,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>31319</td>
     </tr>
     <tr>
-      <th>241</th>
+      <th>365</th>
       <td>2020-07-26</td>
       <td>31512</td>
       <td>32003</td>
@@ -13901,7 +13898,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>36827</td>
     </tr>
     <tr>
-      <th>242</th>
+      <th>366</th>
       <td>2020-07-27</td>
       <td>34354</td>
       <td>32833</td>
@@ -13914,7 +13911,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>34843</td>
     </tr>
     <tr>
-      <th>243</th>
+      <th>367</th>
       <td>2020-07-28</td>
       <td>35683</td>
       <td>34442</td>
@@ -13927,7 +13924,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>31722</td>
     </tr>
     <tr>
-      <th>244</th>
+      <th>368</th>
       <td>2020-07-29</td>
       <td>32886</td>
       <td>35198</td>
@@ -13940,7 +13937,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>42390</td>
     </tr>
     <tr>
-      <th>245</th>
+      <th>369</th>
       <td>2020-07-30</td>
       <td>37425</td>
       <td>34216</td>
@@ -13953,7 +13950,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>26748</td>
     </tr>
     <tr>
-      <th>246</th>
+      <th>370</th>
       <td>2020-07-31</td>
       <td>36554</td>
       <td>35263</td>
@@ -13966,9 +13963,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>37452</td>
     </tr>
     <tr>
-      <th>247</th>
+      <th>371</th>
       <td>2020-08-01</td>
-      <td>0</td>
+      <td>51232</td>
       <td>35858</td>
       <td>42732</td>
       <td>38258</td>
@@ -13978,9 +13975,22 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>35703</td>
       <td>37063</td>
     </tr>
+    <tr>
+      <th>372</th>
+      <td>2020-08-02</td>
+      <td>0</td>
+      <td>39294</td>
+      <td>71804</td>
+      <td>54274</td>
+      <td>51986</td>
+      <td>54274</td>
+      <td>51986</td>
+      <td>71804</td>
+      <td>30308</td>
+    </tr>
   </tbody>
 </table>
-<p>248 rows × 10 columns</p>
+<p>373 rows × 10 columns</p>
 </div>
 </div>
 
@@ -13992,7 +14002,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dce</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -14005,7 +14015,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colls</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dc</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -14029,7 +14039,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[52]:</div>
+<div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -14053,7 +14063,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">colls</span><span class="p">,</span><span class="n">collss</span><span class="p">):</span>
@@ -14087,7 +14097,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[53]:</div>
+<div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -14783,28 +14793,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>...</td>
     </tr>
     <tr>
-      <th>218</th>
-      <td>2020-07-03</td>
-      <td>14417</td>
-      <td>14708</td>
-      <td>33153</td>
-      <td>21851</td>
-      <td>22316</td>
-      <td>21851</td>
-      <td>22316</td>
-      <td>33153</td>
-      <td>15662</td>
-      <td>-291</td>
-      <td>-18736</td>
-      <td>-7434</td>
-      <td>-7899</td>
-      <td>-7434</td>
-      <td>-7899</td>
-      <td>-18736</td>
-      <td>-1245</td>
-    </tr>
-    <tr>
-      <th>219</th>
+      <th>343</th>
       <td>2020-07-04</td>
       <td>14746</td>
       <td>15335</td>
@@ -14825,7 +14814,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>3049</td>
     </tr>
     <tr>
-      <th>220</th>
+      <th>344</th>
       <td>2020-07-05</td>
       <td>15829</td>
       <td>14677</td>
@@ -14846,7 +14835,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>4246</td>
     </tr>
     <tr>
-      <th>221</th>
+      <th>345</th>
       <td>2020-07-06</td>
       <td>15315</td>
       <td>15839</td>
@@ -14867,7 +14856,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-17838</td>
     </tr>
     <tr>
-      <th>222</th>
+      <th>346</th>
       <td>2020-07-07</td>
       <td>16836</td>
       <td>15705</td>
@@ -14888,7 +14877,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>6443</td>
     </tr>
     <tr>
-      <th>223</th>
+      <th>347</th>
       <td>2020-07-08</td>
       <td>19508</td>
       <td>16719</td>
@@ -14909,7 +14898,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>4425</td>
     </tr>
     <tr>
-      <th>224</th>
+      <th>348</th>
       <td>2020-07-09</td>
       <td>19408</td>
       <td>18332</td>
@@ -14930,7 +14919,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>2416</td>
     </tr>
     <tr>
-      <th>225</th>
+      <th>349</th>
       <td>2020-07-10</td>
       <td>20289</td>
       <td>16669</td>
@@ -14951,7 +14940,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>5471</td>
     </tr>
     <tr>
-      <th>226</th>
+      <th>350</th>
       <td>2020-07-11</td>
       <td>19981</td>
       <td>18320</td>
@@ -14972,7 +14961,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>1473</td>
     </tr>
     <tr>
-      <th>227</th>
+      <th>351</th>
       <td>2020-07-12</td>
       <td>18198</td>
       <td>19008</td>
@@ -14993,7 +14982,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-4406</td>
     </tr>
     <tr>
-      <th>228</th>
+      <th>352</th>
       <td>2020-07-13</td>
       <td>17683</td>
       <td>18932</td>
@@ -15014,7 +15003,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-1626</td>
     </tr>
     <tr>
-      <th>229</th>
+      <th>353</th>
       <td>2020-07-14</td>
       <td>20977</td>
       <td>19289</td>
@@ -15035,7 +15024,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-233</td>
     </tr>
     <tr>
-      <th>230</th>
+      <th>354</th>
       <td>2020-07-15</td>
       <td>20646</td>
       <td>20136</td>
@@ -15056,7 +15045,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>968</td>
     </tr>
     <tr>
-      <th>231</th>
+      <th>355</th>
       <td>2020-07-16</td>
       <td>22867</td>
       <td>19816</td>
@@ -15077,7 +15066,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>6293</td>
     </tr>
     <tr>
-      <th>232</th>
+      <th>356</th>
       <td>2020-07-17</td>
       <td>17476</td>
       <td>20639</td>
@@ -15098,7 +15087,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>293</td>
     </tr>
     <tr>
-      <th>233</th>
+      <th>357</th>
       <td>2020-07-18</td>
       <td>23583</td>
       <td>19435</td>
@@ -15119,7 +15108,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-1302</td>
     </tr>
     <tr>
-      <th>234</th>
+      <th>358</th>
       <td>2020-07-19</td>
       <td>22730</td>
       <td>20996</td>
@@ -15140,7 +15129,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>2410</td>
     </tr>
     <tr>
-      <th>235</th>
+      <th>359</th>
       <td>2020-07-20</td>
       <td>24303</td>
       <td>21827</td>
@@ -15161,7 +15150,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-1024</td>
     </tr>
     <tr>
-      <th>236</th>
+      <th>360</th>
       <td>2020-07-21</td>
       <td>27589</td>
       <td>23120</td>
@@ -15182,7 +15171,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>14233</td>
     </tr>
     <tr>
-      <th>237</th>
+      <th>361</th>
       <td>2020-07-22</td>
       <td>31875</td>
       <td>23956</td>
@@ -15203,7 +15192,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>51</td>
     </tr>
     <tr>
-      <th>238</th>
+      <th>362</th>
       <td>2020-07-23</td>
       <td>33326</td>
       <td>26241</td>
@@ -15224,7 +15213,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>11418</td>
     </tr>
     <tr>
-      <th>239</th>
+      <th>363</th>
       <td>2020-07-24</td>
       <td>32514</td>
       <td>27623</td>
@@ -15245,7 +15234,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>6529</td>
     </tr>
     <tr>
-      <th>240</th>
+      <th>364</th>
       <td>2020-07-25</td>
       <td>37125</td>
       <td>30764</td>
@@ -15266,7 +15255,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>5806</td>
     </tr>
     <tr>
-      <th>241</th>
+      <th>365</th>
       <td>2020-07-26</td>
       <td>31512</td>
       <td>32003</td>
@@ -15287,7 +15276,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-5315</td>
     </tr>
     <tr>
-      <th>242</th>
+      <th>366</th>
       <td>2020-07-27</td>
       <td>34354</td>
       <td>32833</td>
@@ -15308,7 +15297,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-489</td>
     </tr>
     <tr>
-      <th>243</th>
+      <th>367</th>
       <td>2020-07-28</td>
       <td>35683</td>
       <td>34442</td>
@@ -15329,7 +15318,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>3961</td>
     </tr>
     <tr>
-      <th>244</th>
+      <th>368</th>
       <td>2020-07-29</td>
       <td>32886</td>
       <td>35198</td>
@@ -15350,7 +15339,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-9504</td>
     </tr>
     <tr>
-      <th>245</th>
+      <th>369</th>
       <td>2020-07-30</td>
       <td>37425</td>
       <td>34216</td>
@@ -15371,7 +15360,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>10677</td>
     </tr>
     <tr>
-      <th>246</th>
+      <th>370</th>
       <td>2020-07-31</td>
       <td>36554</td>
       <td>35263</td>
@@ -15392,9 +15381,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-898</td>
     </tr>
     <tr>
-      <th>247</th>
+      <th>371</th>
       <td>2020-08-01</td>
-      <td>0</td>
+      <td>51232</td>
       <td>35858</td>
       <td>42732</td>
       <td>38258</td>
@@ -15403,18 +15392,39 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>34261</td>
       <td>35703</td>
       <td>37063</td>
-      <td>-35858</td>
-      <td>-42732</td>
-      <td>-38258</td>
-      <td>-40051</td>
-      <td>-37368</td>
-      <td>-34261</td>
-      <td>-35703</td>
-      <td>-37063</td>
+      <td>15374</td>
+      <td>8500</td>
+      <td>12974</td>
+      <td>11181</td>
+      <td>13864</td>
+      <td>16971</td>
+      <td>15529</td>
+      <td>14169</td>
+    </tr>
+    <tr>
+      <th>372</th>
+      <td>2020-08-02</td>
+      <td>0</td>
+      <td>39294</td>
+      <td>71804</td>
+      <td>54274</td>
+      <td>51986</td>
+      <td>54274</td>
+      <td>51986</td>
+      <td>71804</td>
+      <td>30308</td>
+      <td>-39294</td>
+      <td>-71804</td>
+      <td>-54274</td>
+      <td>-51986</td>
+      <td>-54274</td>
+      <td>-51986</td>
+      <td>-71804</td>
+      <td>-30308</td>
     </tr>
   </tbody>
 </table>
-<p>248 rows × 18 columns</p>
+<p>373 rows × 18 columns</p>
 </div>
 </div>
 
@@ -15426,7 +15436,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dce</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;ramerrprd_df_strd.xlsx&quot;</span><span class="p">)</span>
@@ -15439,7 +15449,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">edf</span><span class="o">=</span><span class="n">dce</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">dce</span><span class="p">),</span><span class="mi">10</span><span class="p">:]</span>
@@ -15456,7 +15466,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[55]:</div>
+<div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -15832,18 +15842,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>...</td>
     </tr>
     <tr>
-      <th>218</th>
-      <td>-291</td>
-      <td>-18736</td>
-      <td>-7434</td>
-      <td>-7899</td>
-      <td>-7434</td>
-      <td>-7899</td>
-      <td>-18736</td>
-      <td>-1245</td>
-    </tr>
-    <tr>
-      <th>219</th>
+      <th>343</th>
       <td>-589</td>
       <td>-18407</td>
       <td>-7071</td>
@@ -15854,7 +15853,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>3049</td>
     </tr>
     <tr>
-      <th>220</th>
+      <th>344</th>
       <td>1152</td>
       <td>-17324</td>
       <td>-4942</td>
@@ -15865,7 +15864,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>4246</td>
     </tr>
     <tr>
-      <th>221</th>
+      <th>345</th>
       <td>-524</td>
       <td>-17838</td>
       <td>-6188</td>
@@ -15876,7 +15875,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-17838</td>
     </tr>
     <tr>
-      <th>222</th>
+      <th>346</th>
       <td>1131</td>
       <td>-16317</td>
       <td>-4116</td>
@@ -15887,7 +15886,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>6443</td>
     </tr>
     <tr>
-      <th>223</th>
+      <th>347</th>
       <td>2789</td>
       <td>-13645</td>
       <td>-1925</td>
@@ -15898,7 +15897,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>4425</td>
     </tr>
     <tr>
-      <th>224</th>
+      <th>348</th>
       <td>1076</td>
       <td>-13745</td>
       <td>-2592</td>
@@ -15909,7 +15908,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>2416</td>
     </tr>
     <tr>
-      <th>225</th>
+      <th>349</th>
       <td>3620</td>
       <td>-2315</td>
       <td>676</td>
@@ -15920,7 +15919,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>5471</td>
     </tr>
     <tr>
-      <th>226</th>
+      <th>350</th>
       <td>1661</td>
       <td>-3528</td>
       <td>-1357</td>
@@ -15931,7 +15930,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>1473</td>
     </tr>
     <tr>
-      <th>227</th>
+      <th>351</th>
       <td>-810</td>
       <td>-5311</td>
       <td>-3030</td>
@@ -15942,7 +15941,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-4406</td>
     </tr>
     <tr>
-      <th>228</th>
+      <th>352</th>
       <td>-1249</td>
       <td>-5826</td>
       <td>-3074</td>
@@ -15953,7 +15952,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-1626</td>
     </tr>
     <tr>
-      <th>229</th>
+      <th>353</th>
       <td>1688</td>
       <td>-2532</td>
       <td>208</td>
@@ -15964,7 +15963,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-233</td>
     </tr>
     <tr>
-      <th>230</th>
+      <th>354</th>
       <td>510</td>
       <td>-4239</td>
       <td>-1088</td>
@@ -15975,7 +15974,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>968</td>
     </tr>
     <tr>
-      <th>231</th>
+      <th>355</th>
       <td>3051</td>
       <td>-2018</td>
       <td>1656</td>
@@ -15986,7 +15985,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>6293</td>
     </tr>
     <tr>
-      <th>232</th>
+      <th>356</th>
       <td>-3163</td>
       <td>-9651</td>
       <td>-6014</td>
@@ -15997,7 +15996,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>293</td>
     </tr>
     <tr>
-      <th>233</th>
+      <th>357</th>
       <td>4148</td>
       <td>-3544</td>
       <td>1011</td>
@@ -16008,7 +16007,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-1302</td>
     </tr>
     <tr>
-      <th>234</th>
+      <th>358</th>
       <td>1734</td>
       <td>-9094</td>
       <td>-1777</td>
@@ -16019,7 +16018,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>2410</td>
     </tr>
     <tr>
-      <th>235</th>
+      <th>359</th>
       <td>2476</td>
       <td>-7521</td>
       <td>-383</td>
@@ -16030,7 +16029,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-1024</td>
     </tr>
     <tr>
-      <th>236</th>
+      <th>360</th>
       <td>4469</td>
       <td>-5207</td>
       <td>1811</td>
@@ -16041,7 +16040,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>14233</td>
     </tr>
     <tr>
-      <th>237</th>
+      <th>361</th>
       <td>7919</td>
       <td>-5355</td>
       <td>2813</td>
@@ -16052,7 +16051,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>51</td>
     </tr>
     <tr>
-      <th>238</th>
+      <th>362</th>
       <td>7085</td>
       <td>-9688</td>
       <td>-1030</td>
@@ -16063,7 +16062,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>11418</td>
     </tr>
     <tr>
-      <th>239</th>
+      <th>363</th>
       <td>4891</td>
       <td>-12458</td>
       <td>-3111</td>
@@ -16074,7 +16073,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>6529</td>
     </tr>
     <tr>
-      <th>240</th>
+      <th>364</th>
       <td>6361</td>
       <td>-7847</td>
       <td>494</td>
@@ -16085,7 +16084,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>5806</td>
     </tr>
     <tr>
-      <th>241</th>
+      <th>365</th>
       <td>-491</td>
       <td>-11380</td>
       <td>-8194</td>
@@ -16096,7 +16095,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-5315</td>
     </tr>
     <tr>
-      <th>242</th>
+      <th>366</th>
       <td>1521</td>
       <td>-8538</td>
       <td>-4742</td>
@@ -16107,7 +16106,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-489</td>
     </tr>
     <tr>
-      <th>243</th>
+      <th>367</th>
       <td>1241</td>
       <td>-7209</td>
       <td>-3524</td>
@@ -16118,7 +16117,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>3961</td>
     </tr>
     <tr>
-      <th>244</th>
+      <th>368</th>
       <td>-2312</td>
       <td>-10006</td>
       <td>-5809</td>
@@ -16129,7 +16128,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-9504</td>
     </tr>
     <tr>
-      <th>245</th>
+      <th>369</th>
       <td>3209</td>
       <td>-4965</td>
       <td>-30</td>
@@ -16140,7 +16139,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>10677</td>
     </tr>
     <tr>
-      <th>246</th>
+      <th>370</th>
       <td>1291</td>
       <td>-6178</td>
       <td>-1698</td>
@@ -16151,19 +16150,30 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>-898</td>
     </tr>
     <tr>
-      <th>247</th>
-      <td>-35858</td>
-      <td>-42732</td>
-      <td>-38258</td>
-      <td>-40051</td>
-      <td>-37368</td>
-      <td>-34261</td>
-      <td>-35703</td>
-      <td>-37063</td>
+      <th>371</th>
+      <td>15374</td>
+      <td>8500</td>
+      <td>12974</td>
+      <td>11181</td>
+      <td>13864</td>
+      <td>16971</td>
+      <td>15529</td>
+      <td>14169</td>
+    </tr>
+    <tr>
+      <th>372</th>
+      <td>-39294</td>
+      <td>-71804</td>
+      <td>-54274</td>
+      <td>-51986</td>
+      <td>-54274</td>
+      <td>-51986</td>
+      <td>-71804</td>
+      <td>-30308</td>
     </tr>
   </tbody>
 </table>
-<p>248 rows × 8 columns</p>
+<p>373 rows × 8 columns</p>
 </div>
 </div>
 
@@ -16175,7 +16185,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16213,7 +16223,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[59]:</div>
+<div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -16230,7 +16240,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_dict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:[],</span><span class="s2">&quot;mipe&quot;</span><span class="p">:[],</span><span class="s2">&quot;mxne&quot;</span><span class="p">:[],</span><span class="s2">&quot;mipv&quot;</span><span class="p">:[],</span><span class="s2">&quot;mxnv&quot;</span><span class="p">:[],</span><span class="s2">&quot;original_val&quot;</span><span class="p">:[],</span><span class="s2">&quot;pprd_val&quot;</span><span class="p">:[],</span><span class="s2">&quot;nprd_val&quot;</span><span class="p">:[]}</span>
@@ -16305,7 +16315,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_dict</span>
@@ -16321,7 +16331,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[61]:</div>
+<div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -16574,7 +16584,132 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
   &#39;2020-07-29 &#39;,
   &#39;2020-07-30 &#39;,
   &#39;2020-07-31 &#39;,
-  &#39;2020-08-01 &#39;],
+  &#39;2020-08-01 &#39;,
+  &#39;2020-03-31 &#39;,
+  &#39;2020-04-01 &#39;,
+  &#39;2020-04-02 &#39;,
+  &#39;2020-04-03 &#39;,
+  &#39;2020-04-04 &#39;,
+  &#39;2020-04-05 &#39;,
+  &#39;2020-04-06 &#39;,
+  &#39;2020-04-07 &#39;,
+  &#39;2020-04-08 &#39;,
+  &#39;2020-04-09 &#39;,
+  &#39;2020-04-10 &#39;,
+  &#39;2020-04-11 &#39;,
+  &#39;2020-04-12 &#39;,
+  &#39;2020-04-13 &#39;,
+  &#39;2020-04-14 &#39;,
+  &#39;2020-04-15 &#39;,
+  &#39;2020-04-16 &#39;,
+  &#39;2020-04-17 &#39;,
+  &#39;2020-04-18 &#39;,
+  &#39;2020-04-19 &#39;,
+  &#39;2020-04-20 &#39;,
+  &#39;2020-04-21 &#39;,
+  &#39;2020-04-22 &#39;,
+  &#39;2020-04-23 &#39;,
+  &#39;2020-04-24 &#39;,
+  &#39;2020-04-25 &#39;,
+  &#39;2020-04-26 &#39;,
+  &#39;2020-04-27 &#39;,
+  &#39;2020-04-28 &#39;,
+  &#39;2020-04-29 &#39;,
+  &#39;2020-04-30 &#39;,
+  &#39;2020-05-01 &#39;,
+  &#39;2020-05-02 &#39;,
+  &#39;2020-05-03 &#39;,
+  &#39;2020-05-04 &#39;,
+  &#39;2020-05-05 &#39;,
+  &#39;2020-05-06 &#39;,
+  &#39;2020-05-07 &#39;,
+  &#39;2020-05-08 &#39;,
+  &#39;2020-05-09 &#39;,
+  &#39;2020-05-10 &#39;,
+  &#39;2020-05-11 &#39;,
+  &#39;2020-05-12 &#39;,
+  &#39;2020-05-13 &#39;,
+  &#39;2020-05-14 &#39;,
+  &#39;2020-05-15 &#39;,
+  &#39;2020-05-16 &#39;,
+  &#39;2020-05-17 &#39;,
+  &#39;2020-05-18 &#39;,
+  &#39;2020-05-19 &#39;,
+  &#39;2020-05-20 &#39;,
+  &#39;2020-05-21 &#39;,
+  &#39;2020-05-22 &#39;,
+  &#39;2020-05-23 &#39;,
+  &#39;2020-05-24 &#39;,
+  &#39;2020-05-25 &#39;,
+  &#39;2020-05-26 &#39;,
+  &#39;2020-05-27 &#39;,
+  &#39;2020-05-28 &#39;,
+  &#39;2020-05-29 &#39;,
+  &#39;2020-05-30 &#39;,
+  &#39;2020-05-31 &#39;,
+  &#39;2020-06-01 &#39;,
+  &#39;2020-06-02 &#39;,
+  &#39;2020-06-03 &#39;,
+  &#39;2020-06-04 &#39;,
+  &#39;2020-06-05 &#39;,
+  &#39;2020-06-06 &#39;,
+  &#39;2020-06-07 &#39;,
+  &#39;2020-06-08 &#39;,
+  &#39;2020-06-09 &#39;,
+  &#39;2020-06-10 &#39;,
+  &#39;2020-06-11 &#39;,
+  &#39;2020-06-12 &#39;,
+  &#39;2020-06-13 &#39;,
+  &#39;2020-06-14 &#39;,
+  &#39;2020-06-15 &#39;,
+  &#39;2020-06-16 &#39;,
+  &#39;2020-06-17 &#39;,
+  &#39;2020-06-18 &#39;,
+  &#39;2020-06-19 &#39;,
+  &#39;2020-06-20 &#39;,
+  &#39;2020-06-21 &#39;,
+  &#39;2020-06-22 &#39;,
+  &#39;2020-06-23 &#39;,
+  &#39;2020-06-24 &#39;,
+  &#39;2020-06-25 &#39;,
+  &#39;2020-06-26 &#39;,
+  &#39;2020-06-27 &#39;,
+  &#39;2020-06-28 &#39;,
+  &#39;2020-06-29 &#39;,
+  &#39;2020-06-30 &#39;,
+  &#39;2020-07-01 &#39;,
+  &#39;2020-07-02 &#39;,
+  &#39;2020-07-03 &#39;,
+  &#39;2020-07-04 &#39;,
+  &#39;2020-07-05 &#39;,
+  &#39;2020-07-06 &#39;,
+  &#39;2020-07-07 &#39;,
+  &#39;2020-07-08 &#39;,
+  &#39;2020-07-09 &#39;,
+  &#39;2020-07-10 &#39;,
+  &#39;2020-07-11 &#39;,
+  &#39;2020-07-12 &#39;,
+  &#39;2020-07-13 &#39;,
+  &#39;2020-07-14 &#39;,
+  &#39;2020-07-15 &#39;,
+  &#39;2020-07-16 &#39;,
+  &#39;2020-07-17 &#39;,
+  &#39;2020-07-18 &#39;,
+  &#39;2020-07-19 &#39;,
+  &#39;2020-07-20 &#39;,
+  &#39;2020-07-21 &#39;,
+  &#39;2020-07-22 &#39;,
+  &#39;2020-07-23 &#39;,
+  &#39;2020-07-24 &#39;,
+  &#39;2020-07-25 &#39;,
+  &#39;2020-07-26 &#39;,
+  &#39;2020-07-27 &#39;,
+  &#39;2020-07-28 &#39;,
+  &#39;2020-07-29 &#39;,
+  &#39;2020-07-30 &#39;,
+  &#39;2020-07-31 &#39;,
+  &#39;2020-08-01 &#39;,
+  &#39;2020-08-02 &#39;],
  &#39;mipe&#39;: [&#39;No&#39;,
   &#39;lmb&#39;,
   &#39;No&#39;,
@@ -16822,6 +16957,131 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
   &#39;No&#39;,
   &#39;mb&#39;,
   &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;No&#39;,
+  &#39;lmb&#39;,
+  &#39;No&#39;,
+  &#39;mlb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;mdb&#39;,
+  &#39;lb&#39;,
+  &#39;mdb&#39;,
+  &#39;memb&#39;,
+  &#39;mxmb&#39;,
+  &#39;No&#39;,
+  &#39;lb&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxmb&#39;,
+  &#39;lb&#39;,
+  &#39;memb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;lb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;mxmb&#39;,
+  &#39;No&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxb&#39;,
+  &#39;mdb&#39;,
+  &#39;lb&#39;,
+  &#39;mlb&#39;,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
+  &#39;lb&#39;,
+  &#39;No&#39;,
+  &#39;mdb&#39;,
+  &#39;No&#39;,
+  &#39;mdb&#39;,
+  &#39;mb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;mdb&#39;,
+  &#39;mdb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mdb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mdb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;memb&#39;,
+  &#39;mdb&#39;,
+  &#39;mxb&#39;,
+  &#39;No&#39;,
+  &#39;lmb&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;mxmb&#39;,
+  &#39;mdb&#39;,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;No&#39;,
+  &#39;mdb&#39;,
+  &#39;mlb&#39;,
+  &#39;No&#39;,
+  &#39;mlb&#39;,
+  &#39;lb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;mdb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;lb&#39;,
+  &#39;mdb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;No&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
+  &#39;mxb&#39;,
   &#39;No&#39;],
  &#39;mxne&#39;: [&#39;lmb&#39;,
   &#39;mlb&#39;,
@@ -17070,7 +17330,132 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
   &#39;lmb&#39;,
   &#39;memb&#39;,
   &#39;mdb&#39;,
-  &#39;lmb&#39;],
+  &#39;lmb&#39;,
+  &#39;lmb&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;lb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxmb&#39;,
+  &#39;memb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;memb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;lb&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;mxmb&#39;,
+  &#39;mlb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mdb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
+  &#39;lb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;lmb&#39;,
+  &#39;lb&#39;,
+  &#39;mb&#39;,
+  &#39;lmb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;mlb&#39;,
+  &#39;lb&#39;,
+  &#39;mlb&#39;,
+  &#39;lb&#39;,
+  &#39;mxb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mlb&#39;,
+  &#39;memb&#39;,
+  &#39;mxb&#39;,
+  &#39;mxmb&#39;,
+  &#39;No&#39;,
+  &#39;mxb&#39;,
+  &#39;mxmb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;mxb&#39;,
+  &#39;mb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mlb&#39;,
+  &#39;memb&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;No&#39;,
+  &#39;mb&#39;,
+  &#39;mb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;memb&#39;,
+  &#39;mlb&#39;,
+  &#39;mxb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mlb&#39;,
+  &#39;mdb&#39;,
+  &#39;memb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;memb&#39;,
+  &#39;memb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxb&#39;,
+  &#39;memb&#39;,
+  &#39;lb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mb&#39;,
+  &#39;mdb&#39;,
+  &#39;mlb&#39;,
+  &#39;lmb&#39;,
+  &#39;memb&#39;,
+  &#39;mdb&#39;,
+  &#39;No&#39;,
+  &#39;mdb&#39;],
  &#39;mipv&#39;: [&#39;No&#39;,
   13,
   &#39;No&#39;,
@@ -17318,6 +17703,131 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
   &#39;No&#39;,
   3209,
   1291,
+  &#39;No&#39;,
+  &#39;No&#39;,
+  13,
+  &#39;No&#39;,
+  5,
+  6,
+  2,
+  10,
+  6,
+  9,
+  37,
+  32,
+  15,
+  &#39;No&#39;,
+  42,
+  33,
+  &#39;No&#39;,
+  44,
+  62,
+  105,
+  6,
+  66,
+  170,
+  &#39;No&#39;,
+  138,
+  32,
+  70,
+  52,
+  &#39;No&#39;,
+  22,
+  23,
+  1,
+  49,
+  106,
+  129,
+  41,
+  10,
+  67,
+  54,
+  &#39;No&#39;,
+  248,
+  52,
+  27,
+  113,
+  88,
+  &#39;No&#39;,
+  191,
+  881,
+  515,
+  876,
+  246,
+  245,
+  79,
+  131,
+  &#39;No&#39;,
+  89,
+  &#39;No&#39;,
+  149,
+  183,
+  119,
+  7163,
+  36,
+  1639,
+  954,
+  588,
+  2211,
+  49,
+  1712,
+  144,
+  29,
+  85,
+  86,
+  87,
+  179,
+  116,
+  353,
+  369,
+  915,
+  &#39;No&#39;,
+  1757,
+  2805,
+  &#39;No&#39;,
+  617,
+  2505,
+  294,
+  182,
+  1565,
+  176,
+  &#39;No&#39;,
+  1873,
+  &#39;No&#39;,
+  701,
+  5057,
+  196,
+  239,
+  &#39;No&#39;,
+  3049,
+  513,
+  &#39;No&#39;,
+  791,
+  1000,
+  99,
+  676,
+  1473,
+  307,
+  829,
+  208,
+  510,
+  1656,
+  293,
+  225,
+  1734,
+  510,
+  1604,
+  51,
+  472,
+  4891,
+  494,
+  &#39;No&#39;,
+  1169,
+  128,
+  &#39;No&#39;,
+  3209,
+  1291,
+  8500,
   &#39;No&#39;],
  &#39;mxnv&#39;: [-20,
   -1,
@@ -17566,7 +18076,132 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
   -2190,
   -30,
   -898,
-  -34261],
+  -34261,
+  -20,
+  -1,
+  -4,
+  -15,
+  -13,
+  -16,
+  -2,
+  -4,
+  -3,
+  -2,
+  -19,
+  -9,
+  -7,
+  -22,
+  -49,
+  -11,
+  -33,
+  -17,
+  -63,
+  -121,
+  -34,
+  -60,
+  -82,
+  -90,
+  -77,
+  -123,
+  -171,
+  -14,
+  -14,
+  -7,
+  -16,
+  &#39;No&#39;,
+  -156,
+  -15,
+  -61,
+  -174,
+  -235,
+  -24,
+  -155,
+  -14,
+  -131,
+  -95,
+  -219,
+  -85,
+  -42,
+  -264,
+  &#39;No&#39;,
+  -18,
+  -45,
+  -99,
+  -3,
+  -65,
+  -100,
+  -655,
+  -232,
+  -119,
+  -319,
+  -278,
+  -97,
+  &#39;No&#39;,
+  -1825,
+  -808,
+  -1708,
+  -500,
+  -1500,
+  -442,
+  -316,
+  -319,
+  -99,
+  -117,
+  -62,
+  -253,
+  -58,
+  &#39;No&#39;,
+  -636,
+  -139,
+  &#39;No&#39;,
+  -980,
+  -777,
+  -304,
+  -311,
+  -2770,
+  -1590,
+  -4170,
+  -1082,
+  -2304,
+  -991,
+  -2038,
+  -572,
+  -497,
+  -1441,
+  -560,
+  -1129,
+  &#39;No&#39;,
+  -291,
+  -589,
+  -4942,
+  -498,
+  -4116,
+  -1925,
+  -2052,
+  -2315,
+  -202,
+  -810,
+  -935,
+  -233,
+  -1088,
+  -381,
+  -3163,
+  -1302,
+  -1777,
+  -383,
+  -1826,
+  -5355,
+  -1030,
+  -2329,
+  -644,
+  -491,
+  -489,
+  -597,
+  -2190,
+  -30,
+  -898,
+  &#39;No&#39;,
+  -30308],
  &#39;original_val&#39;: [13,
   19,
   22,
@@ -17814,6 +18449,131 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
   32886,
   37425,
   36554,
+  0,
+  13,
+  19,
+  22,
+  39,
+  56,
+  43,
+  65,
+  75,
+  96,
+  70,
+  151,
+  186,
+  114,
+  112,
+  167,
+  144,
+  258,
+  273,
+  426,
+  388,
+  419,
+  703,
+  394,
+  642,
+  484,
+  442,
+  585,
+  580,
+  636,
+  690,
+  630,
+  962,
+  831,
+  911,
+  1082,
+  1295,
+  1161,
+  1475,
+  1111,
+  1414,
+  1669,
+  1579,
+  1905,
+  1963,
+  1594,
+  2234,
+  4012,
+  2538,
+  2482,
+  3032,
+  3113,
+  3131,
+  3280,
+  2576,
+  3285,
+  3012,
+  3585,
+  3434,
+  3171,
+  11735,
+  4303,
+  4928,
+  3882,
+  4531,
+  3789,
+  4390,
+  4770,
+  5433,
+  5191,
+  5171,
+  5634,
+  6275,
+  6044,
+  7263,
+  8092,
+  7358,
+  10639,
+  7226,
+  6890,
+  10741,
+  9029,
+  13974,
+  9075,
+  10879,
+  10462,
+  13089,
+  13983,
+  10246,
+  14229,
+  11631,
+  13497,
+  12565,
+  12064,
+  19999,
+  14417,
+  14746,
+  15829,
+  15315,
+  16836,
+  19508,
+  19408,
+  20289,
+  19981,
+  18198,
+  17683,
+  20977,
+  20646,
+  22867,
+  17476,
+  23583,
+  22730,
+  24303,
+  27589,
+  31875,
+  33326,
+  32514,
+  37125,
+  31512,
+  34354,
+  35683,
+  32886,
+  37425,
+  36554,
+  51232,
   0],
  &#39;pprd_val&#39;: [&#39;No&#39;,
   6,
@@ -18062,6 +18822,131 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
   &#39;No&#39;,
   34216,
   35263,
+  &#39;No&#39;,
+  &#39;No&#39;,
+  6,
+  &#39;No&#39;,
+  34,
+  50,
+  41,
+  55,
+  69,
+  87,
+  33,
+  119,
+  171,
+  &#39;No&#39;,
+  70,
+  134,
+  &#39;No&#39;,
+  214,
+  211,
+  321,
+  382,
+  353,
+  533,
+  &#39;No&#39;,
+  504,
+  452,
+  372,
+  533,
+  &#39;No&#39;,
+  614,
+  667,
+  629,
+  913,
+  725,
+  782,
+  1041,
+  1285,
+  1094,
+  1421,
+  &#39;No&#39;,
+  1166,
+  1617,
+  1552,
+  1792,
+  1875,
+  &#39;No&#39;,
+  2043,
+  3131,
+  2023,
+  1606,
+  2786,
+  2868,
+  3052,
+  3149,
+  &#39;No&#39;,
+  3196,
+  &#39;No&#39;,
+  3436,
+  3251,
+  3052,
+  4572,
+  4267,
+  3289,
+  2928,
+  3943,
+  1578,
+  4341,
+  3058,
+  5289,
+  5162,
+  5086,
+  5548,
+  6188,
+  5865,
+  7147,
+  7739,
+  6989,
+  9724,
+  &#39;No&#39;,
+  5133,
+  7936,
+  &#39;No&#39;,
+  13357,
+  6570,
+  10585,
+  10280,
+  11524,
+  13807,
+  &#39;No&#39;,
+  12356,
+  &#39;No&#39;,
+  12796,
+  7508,
+  11868,
+  19760,
+  &#39;No&#39;,
+  11697,
+  15316,
+  &#39;No&#39;,
+  16045,
+  18508,
+  19309,
+  19613,
+  18508,
+  17891,
+  16854,
+  20769,
+  20136,
+  21211,
+  17183,
+  23358,
+  20996,
+  23793,
+  25985,
+  31824,
+  32854,
+  27623,
+  36631,
+  &#39;No&#39;,
+  33185,
+  35555,
+  &#39;No&#39;,
+  34216,
+  35263,
+  42732,
   &#39;No&#39;],
  &#39;nprd_val&#39;: [33,
   20,
@@ -18310,7 +19195,132 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
   35076,
   37455,
   37452,
-  34261]}</pre>
+  34261,
+  33,
+  20,
+  26,
+  54,
+  69,
+  59,
+  67,
+  79,
+  99,
+  72,
+  170,
+  195,
+  121,
+  134,
+  216,
+  155,
+  291,
+  290,
+  489,
+  509,
+  453,
+  763,
+  476,
+  732,
+  561,
+  565,
+  756,
+  594,
+  650,
+  697,
+  646,
+  &#39;No&#39;,
+  987,
+  926,
+  1143,
+  1469,
+  1396,
+  1499,
+  1266,
+  1428,
+  1800,
+  1674,
+  2124,
+  2048,
+  1636,
+  2498,
+  &#39;No&#39;,
+  2556,
+  2527,
+  3131,
+  3116,
+  3196,
+  3380,
+  3231,
+  3517,
+  3131,
+  3904,
+  3712,
+  3268,
+  &#39;No&#39;,
+  6128,
+  5736,
+  5590,
+  5031,
+  5289,
+  4832,
+  5086,
+  5752,
+  5290,
+  5288,
+  5696,
+  6528,
+  6102,
+  &#39;No&#39;,
+  8728,
+  7497,
+  &#39;No&#39;,
+  8206,
+  7667,
+  11045,
+  9340,
+  16744,
+  10665,
+  15049,
+  11544,
+  15393,
+  14974,
+  12284,
+  14801,
+  12128,
+  14938,
+  13125,
+  13193,
+  &#39;No&#39;,
+  14708,
+  15335,
+  20771,
+  15813,
+  20952,
+  21433,
+  21460,
+  22604,
+  20183,
+  19008,
+  18618,
+  21210,
+  21734,
+  23248,
+  20639,
+  24885,
+  24507,
+  24686,
+  29415,
+  37230,
+  34356,
+  34843,
+  37769,
+  32003,
+  34843,
+  36280,
+  35076,
+  37455,
+  37452,
+  &#39;No&#39;,
+  30308]}</pre>
 </div>
 
 </div>
@@ -18321,10 +19331,11 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">err_dict</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">err_dict</span><span class="p">)</span>
+<span class="n">err_df</span>
 </pre></div>
 
 </div>
@@ -18337,7 +19348,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[62]:</div>
+<div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -18713,18 +19724,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>...</td>
     </tr>
     <tr>
-      <th>218</th>
-      <td>2020-07-03</td>
-      <td>No</td>
-      <td>mb</td>
-      <td>No</td>
-      <td>-291</td>
-      <td>14417</td>
-      <td>No</td>
-      <td>14708</td>
-    </tr>
-    <tr>
-      <th>219</th>
+      <th>343</th>
       <td>2020-07-04</td>
       <td>mdb</td>
       <td>mb</td>
@@ -18735,7 +19735,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>15335</td>
     </tr>
     <tr>
-      <th>220</th>
+      <th>344</th>
       <td>2020-07-05</td>
       <td>mlb</td>
       <td>memb</td>
@@ -18746,7 +19746,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>20771</td>
     </tr>
     <tr>
-      <th>221</th>
+      <th>345</th>
       <td>2020-07-06</td>
       <td>No</td>
       <td>lmb</td>
@@ -18757,7 +19757,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>15813</td>
     </tr>
     <tr>
-      <th>222</th>
+      <th>346</th>
       <td>2020-07-07</td>
       <td>mlb</td>
       <td>memb</td>
@@ -18768,7 +19768,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>20952</td>
     </tr>
     <tr>
-      <th>223</th>
+      <th>347</th>
       <td>2020-07-08</td>
       <td>lb</td>
       <td>memb</td>
@@ -18779,7 +19779,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>21433</td>
     </tr>
     <tr>
-      <th>224</th>
+      <th>348</th>
       <td>2020-07-09</td>
       <td>lmb</td>
       <td>mlb</td>
@@ -18790,7 +19790,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>21460</td>
     </tr>
     <tr>
-      <th>225</th>
+      <th>349</th>
       <td>2020-07-10</td>
       <td>memb</td>
       <td>mxb</td>
@@ -18801,7 +19801,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>22604</td>
     </tr>
     <tr>
-      <th>226</th>
+      <th>350</th>
       <td>2020-07-11</td>
       <td>mdb</td>
       <td>mxmb</td>
@@ -18812,7 +19812,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>20183</td>
     </tr>
     <tr>
-      <th>227</th>
+      <th>351</th>
       <td>2020-07-12</td>
       <td>lmb</td>
       <td>mb</td>
@@ -18823,7 +19823,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>19008</td>
     </tr>
     <tr>
-      <th>228</th>
+      <th>352</th>
       <td>2020-07-13</td>
       <td>lmb</td>
       <td>mlb</td>
@@ -18834,7 +19834,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>18618</td>
     </tr>
     <tr>
-      <th>229</th>
+      <th>353</th>
       <td>2020-07-14</td>
       <td>memb</td>
       <td>mdb</td>
@@ -18845,7 +19845,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>21210</td>
     </tr>
     <tr>
-      <th>230</th>
+      <th>354</th>
       <td>2020-07-15</td>
       <td>mb</td>
       <td>memb</td>
@@ -18856,7 +19856,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>21734</td>
     </tr>
     <tr>
-      <th>231</th>
+      <th>355</th>
       <td>2020-07-16</td>
       <td>memb</td>
       <td>mxmb</td>
@@ -18867,7 +19867,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>23248</td>
     </tr>
     <tr>
-      <th>232</th>
+      <th>356</th>
       <td>2020-07-17</td>
       <td>mdb</td>
       <td>mb</td>
@@ -18878,7 +19878,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>20639</td>
     </tr>
     <tr>
-      <th>233</th>
+      <th>357</th>
       <td>2020-07-18</td>
       <td>mxmb</td>
       <td>mdb</td>
@@ -18889,7 +19889,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>24885</td>
     </tr>
     <tr>
-      <th>234</th>
+      <th>358</th>
       <td>2020-07-19</td>
       <td>mb</td>
       <td>memb</td>
@@ -18900,7 +19900,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>24507</td>
     </tr>
     <tr>
-      <th>235</th>
+      <th>359</th>
       <td>2020-07-20</td>
       <td>mlb</td>
       <td>memb</td>
@@ -18911,7 +19911,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>24686</td>
     </tr>
     <tr>
-      <th>236</th>
+      <th>360</th>
       <td>2020-07-21</td>
       <td>lb</td>
       <td>mxmb</td>
@@ -18922,7 +19922,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>29415</td>
     </tr>
     <tr>
-      <th>237</th>
+      <th>361</th>
       <td>2020-07-22</td>
       <td>mdb</td>
       <td>mxb</td>
@@ -18933,7 +19933,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>37230</td>
     </tr>
     <tr>
-      <th>238</th>
+      <th>362</th>
       <td>2020-07-23</td>
       <td>mxmb</td>
       <td>memb</td>
@@ -18944,7 +19944,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>34356</td>
     </tr>
     <tr>
-      <th>239</th>
+      <th>363</th>
       <td>2020-07-24</td>
       <td>mb</td>
       <td>lb</td>
@@ -18955,7 +19955,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>34843</td>
     </tr>
     <tr>
-      <th>240</th>
+      <th>364</th>
       <td>2020-07-25</td>
       <td>memb</td>
       <td>mxmb</td>
@@ -18966,7 +19966,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>37769</td>
     </tr>
     <tr>
-      <th>241</th>
+      <th>365</th>
       <td>2020-07-26</td>
       <td>No</td>
       <td>mb</td>
@@ -18977,7 +19977,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>32003</td>
     </tr>
     <tr>
-      <th>242</th>
+      <th>366</th>
       <td>2020-07-27</td>
       <td>mlb</td>
       <td>mdb</td>
@@ -18988,7 +19988,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>34843</td>
     </tr>
     <tr>
-      <th>243</th>
+      <th>367</th>
       <td>2020-07-28</td>
       <td>lmb</td>
       <td>mlb</td>
@@ -18999,7 +19999,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>36280</td>
     </tr>
     <tr>
-      <th>244</th>
+      <th>368</th>
       <td>2020-07-29</td>
       <td>No</td>
       <td>lmb</td>
@@ -19010,7 +20010,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>35076</td>
     </tr>
     <tr>
-      <th>245</th>
+      <th>369</th>
       <td>2020-07-30</td>
       <td>mb</td>
       <td>memb</td>
@@ -19021,7 +20021,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>37455</td>
     </tr>
     <tr>
-      <th>246</th>
+      <th>370</th>
       <td>2020-07-31</td>
       <td>mb</td>
       <td>mdb</td>
@@ -19032,24 +20032,48 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>37452</td>
     </tr>
     <tr>
-      <th>247</th>
+      <th>371</th>
       <td>2020-08-01</td>
+      <td>mxb</td>
       <td>No</td>
-      <td>lmb</td>
+      <td>8500</td>
       <td>No</td>
-      <td>-34261</td>
+      <td>51232</td>
+      <td>42732</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>372</th>
+      <td>2020-08-02</td>
+      <td>No</td>
+      <td>mdb</td>
+      <td>No</td>
+      <td>-30308</td>
       <td>0</td>
       <td>No</td>
-      <td>34261</td>
+      <td>30308</td>
     </tr>
   </tbody>
 </table>
-<p>248 rows × 8 columns</p>
+<p>373 rows × 8 columns</p>
 </div>
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;edrrr_df.xlsx&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
