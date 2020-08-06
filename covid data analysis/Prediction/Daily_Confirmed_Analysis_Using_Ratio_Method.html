@@ -11795,7 +11795,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\Desktop\Lockdown\data\Covid-19\34\case_time_series.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\Desktop\Lockdown\data\Covid-19\35\case_time_series.csv&quot;</span><span class="p">)</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -12069,16 +12069,6 @@ div#notebook {
   </thead>
   <tbody>
     <tr>
-      <th>131</th>
-      <td>01 August</td>
-      <td>55117</td>
-      <td>1752185</td>
-      <td>51368</td>
-      <td>1146906</td>
-      <td>854</td>
-      <td>37420</td>
-    </tr>
-    <tr>
       <th>132</th>
       <td>02 August</td>
       <td>52672</td>
@@ -12113,10 +12103,20 @@ div#notebook {
       <td>05 August</td>
       <td>56626</td>
       <td>1963253</td>
-      <td>45540</td>
-      <td>1327091</td>
+      <td>45583</td>
+      <td>1327134</td>
       <td>919</td>
       <td>40754</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>06 August</td>
+      <td>62170</td>
+      <td>2025423</td>
+      <td>50141</td>
+      <td>1377275</td>
+      <td>899</td>
+      <td>41653</td>
     </tr>
   </tbody>
 </table>
@@ -12660,7 +12660,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Timestamp(&#39;2020-08-05 00:00:00&#39;)</pre>
+<pre>Timestamp(&#39;2020-08-06 00:00:00&#39;)</pre>
 </div>
 
 </div>
@@ -13089,7 +13089,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">strt_cnt</span><span class="o">=</span><span class="mi">1</span>
@@ -13164,6 +13164,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">d</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\amprd_df_strd.xlsx&quot;</span><span class="p">)</span>
 <span class="n">d</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">d</span><span class="p">,</span><span class="n">pred_df</span><span class="p">])</span>
 <span class="n">d</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;original_val&#39;</span><span class="p">][</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">data_daily_ratio</span><span class="p">[</span><span class="s1">&#39;Daily Confirmed&#39;</span><span class="p">][</span><span class="nb">len</span><span class="p">(</span><span class="n">data_daily_ratio</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">d</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;amprd_df_strd.xlsx&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -13174,7 +13175,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dc</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:/Users/Mark 1/amprd_df_strd.xlsx&quot;</span><span class="p">)</span>
@@ -13191,7 +13192,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[28]:</div>
+<div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -13227,19 +13228,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th>124</th>
-      <td>2020-08-02</td>
-      <td>52672</td>
-      <td>52934</td>
-      <td>61378</td>
-      <td>58343</td>
-      <td>55688</td>
-      <td>55938</td>
-      <td>50007</td>
-      <td>52846</td>
-      <td>55490</td>
-    </tr>
     <tr>
       <th>125</th>
       <td>2020-08-03</td>
@@ -13282,7 +13270,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>128</th>
       <td>2020-08-06</td>
-      <td>0</td>
+      <td>62170</td>
       <td>54757</td>
       <td>63477</td>
       <td>58193</td>
@@ -13291,6 +13279,19 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>59728</td>
       <td>62527</td>
       <td>50335</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>2020-08-07</td>
+      <td>0</td>
+      <td>56196</td>
+      <td>68649</td>
+      <td>63383</td>
+      <td>60864</td>
+      <td>63383</td>
+      <td>60517</td>
+      <td>68257</td>
+      <td>48395</td>
     </tr>
   </tbody>
 </table>
@@ -13305,7 +13306,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dce</span><span class="o">=</span><span class="n">dc</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -13318,7 +13319,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">strt_cnt</span><span class="o">=</span><span class="mi">1</span>
@@ -13352,13 +13353,13 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[30]:</div>
+<div class="prompt output_prompt">Out[25]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>130</pre>
+<pre>131</pre>
 </div>
 
 </div>
@@ -13369,7 +13370,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colls</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dc</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -13393,7 +13394,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[31]:</div>
+<div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -13417,7 +13418,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">colls</span><span class="p">,</span><span class="n">collss</span><span class="p">):</span>
@@ -13451,7 +13452,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[32]:</div>
+<div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -14147,27 +14148,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>...</td>
     </tr>
     <tr>
-      <th>99</th>
-      <td>2020-07-08</td>
-      <td>25561</td>
-      <td>23338</td>
-      <td>27131</td>
-      <td>24881</td>
-      <td>25448</td>
-      <td>23979</td>
-      <td>23177</td>
-      <td>23813</td>
-      <td>25392</td>
-      <td>2223</td>
-      <td>-1570</td>
-      <td>680</td>
-      <td>113</td>
-      <td>1582</td>
-      <td>2384</td>
-      <td>1748</td>
-      <td>169</td>
-    </tr>
-    <tr>
       <th>100</th>
       <td>2020-07-09</td>
       <td>25790</td>
@@ -14758,7 +14738,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>128</th>
       <td>2020-08-06</td>
-      <td>0</td>
+      <td>62170</td>
       <td>54757</td>
       <td>63477</td>
       <td>58193</td>
@@ -14767,18 +14747,39 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>59728</td>
       <td>62527</td>
       <td>50335</td>
-      <td>-54757</td>
-      <td>-63477</td>
-      <td>-58193</td>
-      <td>-59728</td>
-      <td>-57323</td>
-      <td>-59728</td>
-      <td>-62527</td>
-      <td>-50335</td>
+      <td>7413</td>
+      <td>-1307</td>
+      <td>3977</td>
+      <td>2442</td>
+      <td>4847</td>
+      <td>2442</td>
+      <td>-357</td>
+      <td>11835</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>2020-08-07</td>
+      <td>0</td>
+      <td>56196</td>
+      <td>68649</td>
+      <td>63383</td>
+      <td>60864</td>
+      <td>63383</td>
+      <td>60517</td>
+      <td>68257</td>
+      <td>48395</td>
+      <td>-56196</td>
+      <td>-68649</td>
+      <td>-63383</td>
+      <td>-60864</td>
+      <td>-63383</td>
+      <td>-60517</td>
+      <td>-68257</td>
+      <td>-48395</td>
     </tr>
   </tbody>
 </table>
-<p>129 rows × 18 columns</p>
+<p>130 rows × 18 columns</p>
 </div>
 </div>
 
@@ -14790,7 +14791,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dce</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;amerrprd_df_strd.xlsx&quot;</span><span class="p">)</span>
@@ -14803,7 +14804,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">edf</span><span class="o">=</span><span class="n">dce</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">dce</span><span class="p">),</span><span class="mi">10</span><span class="p">:]</span>
@@ -14820,7 +14821,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[34]:</div>
+<div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -15196,17 +15197,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>...</td>
     </tr>
     <tr>
-      <th>99</th>
-      <td>2223</td>
-      <td>-1570</td>
-      <td>680</td>
-      <td>113</td>
-      <td>1582</td>
-      <td>2384</td>
-      <td>1748</td>
-      <td>169</td>
-    </tr>
-    <tr>
       <th>100</th>
       <td>1410</td>
       <td>-3084</td>
@@ -15516,18 +15506,29 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     </tr>
     <tr>
       <th>128</th>
-      <td>-54757</td>
-      <td>-63477</td>
-      <td>-58193</td>
-      <td>-59728</td>
-      <td>-57323</td>
-      <td>-59728</td>
-      <td>-62527</td>
-      <td>-50335</td>
+      <td>7413</td>
+      <td>-1307</td>
+      <td>3977</td>
+      <td>2442</td>
+      <td>4847</td>
+      <td>2442</td>
+      <td>-357</td>
+      <td>11835</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>-56196</td>
+      <td>-68649</td>
+      <td>-63383</td>
+      <td>-60864</td>
+      <td>-63383</td>
+      <td>-60517</td>
+      <td>-68257</td>
+      <td>-48395</td>
     </tr>
   </tbody>
 </table>
-<p>129 rows × 8 columns</p>
+<p>130 rows × 8 columns</p>
 </div>
 </div>
 
@@ -15539,7 +15540,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">k</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">edf</span><span class="p">)),</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dce</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)):</span>
@@ -15707,6 +15708,7 @@ for date: 2020-08-02  the lowest positve error was by the method: lmb and the hi
 for date: 2020-08-03  the lowest positve error was by the method: lmb and the highest negative error by the method: mlb
 for date: 2020-08-04  the lowest positve error was by the method: mlb and the highest negative error by the method: mb
 for date: 2020-08-05  the lowest positve error was by the method: mxmb and the highest negative error by the method: memb
+for date: 2020-08-06  the lowest positve error was by the method: mxmb and the highest negative error by the method: lb
 </pre>
 </div>
 </div>
@@ -15717,7 +15719,7 @@ for date: 2020-08-05  the lowest positve error was by the method: mxmb and the h
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_dict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:[],</span><span class="s2">&quot;mipe&quot;</span><span class="p">:[],</span><span class="s2">&quot;mxne&quot;</span><span class="p">:[],</span><span class="s2">&quot;mipv&quot;</span><span class="p">:[],</span><span class="s2">&quot;mxnv&quot;</span><span class="p">:[],</span><span class="s2">&quot;original_val&quot;</span><span class="p">:[],</span><span class="s2">&quot;pprd_val&quot;</span><span class="p">:[],</span><span class="s2">&quot;nprd_val&quot;</span><span class="p">:[]}</span>
@@ -15792,7 +15794,7 @@ for date: 2020-08-05  the lowest positve error was by the method: mxmb and the h
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_dict</span>
@@ -15808,7 +15810,7 @@ for date: 2020-08-05  the lowest positve error was by the method: mxmb and the h
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[37]:</div>
+<div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -15942,7 +15944,8 @@ for date: 2020-08-05  the lowest positve error was by the method: mxmb and the h
   &#39;2020-08-03 &#39;,
   &#39;2020-08-04 &#39;,
   &#39;2020-08-05 &#39;,
-  &#39;2020-08-06 &#39;],
+  &#39;2020-08-06 &#39;,
+  &#39;2020-08-07 &#39;],
  &#39;mipe&#39;: [&#39;lb&#39;,
   &#39;memb&#39;,
   &#39;mxmb&#39;,
@@ -16070,6 +16073,7 @@ for date: 2020-08-05  the lowest positve error was by the method: mxmb and the h
   &#39;lmb&#39;,
   &#39;lmb&#39;,
   &#39;mlb&#39;,
+  &#39;mxmb&#39;,
   &#39;mxmb&#39;,
   &#39;No&#39;],
  &#39;mxne&#39;: [&#39;mdb&#39;,
@@ -16200,6 +16204,7 @@ for date: 2020-08-05  the lowest positve error was by the method: mxmb and the h
   &#39;mlb&#39;,
   &#39;mb&#39;,
   &#39;memb&#39;,
+  &#39;lb&#39;,
   &#39;mdb&#39;],
  &#39;mipv&#39;: [18,
   23,
@@ -16329,6 +16334,7 @@ for date: 2020-08-05  the lowest positve error was by the method: mxmb and the h
   134,
   136,
   57,
+  2442,
   &#39;No&#39;],
  &#39;mxnv&#39;: [-12,
   -87,
@@ -16458,7 +16464,8 @@ for date: 2020-08-05  the lowest positve error was by the method: mxmb and the h
   -2806,
   -2676,
   -1183,
-  -50335],
+  -357,
+  -48395],
  &#39;original_val&#39;: [309,
   424,
   486,
@@ -16587,6 +16594,7 @@ for date: 2020-08-05  the lowest positve error was by the method: mxmb and the h
   50488,
   51282,
   56626,
+  62170,
   0],
  &#39;pprd_val&#39;: [291,
   401,
@@ -16716,6 +16724,7 @@ for date: 2020-08-05  the lowest positve error was by the method: mxmb and the h
   50354,
   51146,
   56569,
+  59728,
   &#39;No&#39;],
  &#39;nprd_val&#39;: [321,
   511,
@@ -16845,7 +16854,8 @@ for date: 2020-08-05  the lowest positve error was by the method: mxmb and the h
   53294,
   53958,
   57809,
-  50335]}</pre>
+  62527,
+  48395]}</pre>
 </div>
 
 </div>
@@ -16856,7 +16866,7 @@ for date: 2020-08-05  the lowest positve error was by the method: mxmb and the h
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">err_dict</span><span class="p">)</span>
@@ -16873,7 +16883,7 @@ for date: 2020-08-05  the lowest positve error was by the method: mxmb and the h
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[38]:</div>
+<div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -17249,17 +17259,6 @@ for date: 2020-08-05  the lowest positve error was by the method: mxmb and the h
       <td>...</td>
     </tr>
     <tr>
-      <th>99</th>
-      <td>2020-07-08</td>
-      <td>mxmb</td>
-      <td>mxb</td>
-      <td>113</td>
-      <td>-1570</td>
-      <td>25561</td>
-      <td>25448</td>
-      <td>27131</td>
-    </tr>
-    <tr>
       <th>100</th>
       <td>2020-07-09</td>
       <td>mb</td>
@@ -17570,17 +17569,28 @@ for date: 2020-08-05  the lowest positve error was by the method: mxmb and the h
     <tr>
       <th>128</th>
       <td>2020-08-06</td>
+      <td>mxmb</td>
+      <td>lb</td>
+      <td>2442</td>
+      <td>-357</td>
+      <td>62170</td>
+      <td>59728</td>
+      <td>62527</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>2020-08-07</td>
       <td>No</td>
       <td>mdb</td>
       <td>No</td>
-      <td>-50335</td>
+      <td>-48395</td>
       <td>0</td>
       <td>No</td>
-      <td>50335</td>
+      <td>48395</td>
     </tr>
   </tbody>
 </table>
-<p>129 rows × 8 columns</p>
+<p>130 rows × 8 columns</p>
 </div>
 </div>
 
@@ -17592,7 +17602,7 @@ for date: 2020-08-05  the lowest positve error was by the method: mxmb and the h
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;dcerr_df.xlsx&quot;</span><span class="p">)</span>
