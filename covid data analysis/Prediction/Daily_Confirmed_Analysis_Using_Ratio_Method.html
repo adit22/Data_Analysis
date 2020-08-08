@@ -11795,7 +11795,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\Desktop\Lockdown\data\Covid-19\35\case_time_series.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\Desktop\Lockdown\data\Covid-19\37\case_time_series.csv&quot;</span><span class="p">)</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -12069,26 +12069,6 @@ div#notebook {
   </thead>
   <tbody>
     <tr>
-      <th>132</th>
-      <td>02 August</td>
-      <td>52672</td>
-      <td>1804857</td>
-      <td>40355</td>
-      <td>1187261</td>
-      <td>760</td>
-      <td>38180</td>
-    </tr>
-    <tr>
-      <th>133</th>
-      <td>03 August</td>
-      <td>50488</td>
-      <td>1855345</td>
-      <td>43070</td>
-      <td>1230331</td>
-      <td>806</td>
-      <td>38986</td>
-    </tr>
-    <tr>
       <th>134</th>
       <td>04 August</td>
       <td>51282</td>
@@ -12117,6 +12097,26 @@ div#notebook {
       <td>1377275</td>
       <td>899</td>
       <td>41653</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>07 August</td>
+      <td>61455</td>
+      <td>2086878</td>
+      <td>50387</td>
+      <td>1427662</td>
+      <td>937</td>
+      <td>42590</td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td>08 August</td>
+      <td>65156</td>
+      <td>2152034</td>
+      <td>52135</td>
+      <td>1479797</td>
+      <td>875</td>
+      <td>43465</td>
     </tr>
   </tbody>
 </table>
@@ -12660,7 +12660,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Timestamp(&#39;2020-08-06 00:00:00&#39;)</pre>
+<pre>Timestamp(&#39;2020-08-08 00:00:00&#39;)</pre>
 </div>
 
 </div>
@@ -13172,13 +13172,34 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:73: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dc</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:/Users/Mark 1/amprd_df_strd.xlsx&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dc</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\amprd_df_strd.xlsx&quot;</span><span class="p">)</span>
 <span class="n">dc</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
 </pre></div>
 
@@ -13192,7 +13213,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[35]:</div>
+<div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -13229,32 +13250,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
   </thead>
   <tbody>
     <tr>
-      <th>125</th>
-      <td>2020-08-03</td>
-      <td>50488</td>
-      <td>53314</td>
-      <td>61378</td>
-      <td>58165</td>
-      <td>56258</td>
-      <td>53294</td>
-      <td>50354</td>
-      <td>50335</td>
-      <td>57575</td>
-    </tr>
-    <tr>
-      <th>126</th>
-      <td>2020-08-04</td>
-      <td>51282</td>
-      <td>53958</td>
-      <td>61378</td>
-      <td>58236</td>
-      <td>56869</td>
-      <td>51146</td>
-      <td>51054</td>
-      <td>48395</td>
-      <td>60119</td>
-    </tr>
-    <tr>
       <th>127</th>
       <td>2020-08-05</td>
       <td>56626</td>
@@ -13283,7 +13278,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>129</th>
       <td>2020-08-07</td>
-      <td>0</td>
+      <td>61455</td>
       <td>56196</td>
       <td>68649</td>
       <td>63383</td>
@@ -13292,6 +13287,32 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>60517</td>
       <td>68257</td>
       <td>48395</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>2020-08-08</td>
+      <td>65156</td>
+      <td>56318</td>
+      <td>68649</td>
+      <td>62874</td>
+      <td>61490</td>
+      <td>62151</td>
+      <td>55047</td>
+      <td>60748</td>
+      <td>52088</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>2020-08-09</td>
+      <td>0</td>
+      <td>58596</td>
+      <td>71946</td>
+      <td>66838</td>
+      <td>63074</td>
+      <td>66838</td>
+      <td>60561</td>
+      <td>69080</td>
+      <td>62527</td>
     </tr>
   </tbody>
 </table>
@@ -13359,7 +13380,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>131</pre>
+<pre>133</pre>
 </div>
 
 </div>
@@ -14148,48 +14169,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>...</td>
     </tr>
     <tr>
-      <th>100</th>
-      <td>2020-07-09</td>
-      <td>25790</td>
-      <td>24380</td>
-      <td>28874</td>
-      <td>26626</td>
-      <td>26438</td>
-      <td>26626</td>
-      <td>25846</td>
-      <td>28227</td>
-      <td>23866</td>
-      <td>1410</td>
-      <td>-3084</td>
-      <td>-836</td>
-      <td>-648</td>
-      <td>-836</td>
-      <td>-56</td>
-      <td>-2437</td>
-      <td>1924</td>
-    </tr>
-    <tr>
-      <th>101</th>
-      <td>2020-07-10</td>
-      <td>27762</td>
-      <td>24539</td>
-      <td>28480</td>
-      <td>26420</td>
-      <td>26452</td>
-      <td>26420</td>
-      <td>24168</td>
-      <td>26021</td>
-      <td>21145</td>
-      <td>3223</td>
-      <td>-718</td>
-      <td>1342</td>
-      <td>1310</td>
-      <td>1342</td>
-      <td>3594</td>
-      <td>1741</td>
-      <td>6617</td>
-    </tr>
-    <tr>
       <th>102</th>
       <td>2020-07-11</td>
       <td>27757</td>
@@ -14759,7 +14738,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>129</th>
       <td>2020-08-07</td>
-      <td>0</td>
+      <td>61455</td>
       <td>56196</td>
       <td>68649</td>
       <td>63383</td>
@@ -14768,18 +14747,60 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>60517</td>
       <td>68257</td>
       <td>48395</td>
-      <td>-56196</td>
-      <td>-68649</td>
-      <td>-63383</td>
-      <td>-60864</td>
-      <td>-63383</td>
-      <td>-60517</td>
-      <td>-68257</td>
-      <td>-48395</td>
+      <td>5259</td>
+      <td>-7194</td>
+      <td>-1928</td>
+      <td>591</td>
+      <td>-1928</td>
+      <td>938</td>
+      <td>-6802</td>
+      <td>13060</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>2020-08-08</td>
+      <td>65156</td>
+      <td>56318</td>
+      <td>68649</td>
+      <td>62874</td>
+      <td>61490</td>
+      <td>62151</td>
+      <td>55047</td>
+      <td>60748</td>
+      <td>52088</td>
+      <td>8838</td>
+      <td>-3493</td>
+      <td>2282</td>
+      <td>3666</td>
+      <td>3005</td>
+      <td>10109</td>
+      <td>4408</td>
+      <td>13068</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>2020-08-09</td>
+      <td>0</td>
+      <td>58596</td>
+      <td>71946</td>
+      <td>66838</td>
+      <td>63074</td>
+      <td>66838</td>
+      <td>60561</td>
+      <td>69080</td>
+      <td>62527</td>
+      <td>-58596</td>
+      <td>-71946</td>
+      <td>-66838</td>
+      <td>-63074</td>
+      <td>-66838</td>
+      <td>-60561</td>
+      <td>-69080</td>
+      <td>-62527</td>
     </tr>
   </tbody>
 </table>
-<p>130 rows × 18 columns</p>
+<p>132 rows × 18 columns</p>
 </div>
 </div>
 
@@ -15197,28 +15218,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>...</td>
     </tr>
     <tr>
-      <th>100</th>
-      <td>1410</td>
-      <td>-3084</td>
-      <td>-836</td>
-      <td>-648</td>
-      <td>-836</td>
-      <td>-56</td>
-      <td>-2437</td>
-      <td>1924</td>
-    </tr>
-    <tr>
-      <th>101</th>
-      <td>3223</td>
-      <td>-718</td>
-      <td>1342</td>
-      <td>1310</td>
-      <td>1342</td>
-      <td>3594</td>
-      <td>1741</td>
-      <td>6617</td>
-    </tr>
-    <tr>
       <th>102</th>
       <td>2334</td>
       <td>-2900</td>
@@ -15517,18 +15516,40 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     </tr>
     <tr>
       <th>129</th>
-      <td>-56196</td>
-      <td>-68649</td>
-      <td>-63383</td>
-      <td>-60864</td>
-      <td>-63383</td>
-      <td>-60517</td>
-      <td>-68257</td>
-      <td>-48395</td>
+      <td>5259</td>
+      <td>-7194</td>
+      <td>-1928</td>
+      <td>591</td>
+      <td>-1928</td>
+      <td>938</td>
+      <td>-6802</td>
+      <td>13060</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>8838</td>
+      <td>-3493</td>
+      <td>2282</td>
+      <td>3666</td>
+      <td>3005</td>
+      <td>10109</td>
+      <td>4408</td>
+      <td>13068</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>-58596</td>
+      <td>-71946</td>
+      <td>-66838</td>
+      <td>-63074</td>
+      <td>-66838</td>
+      <td>-60561</td>
+      <td>-69080</td>
+      <td>-62527</td>
     </tr>
   </tbody>
 </table>
-<p>130 rows × 8 columns</p>
+<p>132 rows × 8 columns</p>
 </div>
 </div>
 
@@ -15709,6 +15730,8 @@ for date: 2020-08-03  the lowest positve error was by the method: lmb and the hi
 for date: 2020-08-04  the lowest positve error was by the method: mlb and the highest negative error by the method: mb
 for date: 2020-08-05  the lowest positve error was by the method: mxmb and the highest negative error by the method: memb
 for date: 2020-08-06  the lowest positve error was by the method: mxmb and the highest negative error by the method: lb
+for date: 2020-08-07  the lowest positve error was by the method: mxmb and the highest negative error by the method: memb
+for date: 2020-08-08  the lowest positve error was by the method: memb and the highest negative error by the method: mxb
 </pre>
 </div>
 </div>
@@ -15945,7 +15968,9 @@ for date: 2020-08-06  the lowest positve error was by the method: mxmb and the h
   &#39;2020-08-04 &#39;,
   &#39;2020-08-05 &#39;,
   &#39;2020-08-06 &#39;,
-  &#39;2020-08-07 &#39;],
+  &#39;2020-08-07 &#39;,
+  &#39;2020-08-08 &#39;,
+  &#39;2020-08-09 &#39;],
  &#39;mipe&#39;: [&#39;lb&#39;,
   &#39;memb&#39;,
   &#39;mxmb&#39;,
@@ -16075,6 +16100,8 @@ for date: 2020-08-06  the lowest positve error was by the method: mxmb and the h
   &#39;mlb&#39;,
   &#39;mxmb&#39;,
   &#39;mxmb&#39;,
+  &#39;mxmb&#39;,
+  &#39;memb&#39;,
   &#39;No&#39;],
  &#39;mxne&#39;: [&#39;mdb&#39;,
   &#39;lb&#39;,
@@ -16205,7 +16232,9 @@ for date: 2020-08-06  the lowest positve error was by the method: mxmb and the h
   &#39;mb&#39;,
   &#39;memb&#39;,
   &#39;lb&#39;,
-  &#39;mdb&#39;],
+  &#39;memb&#39;,
+  &#39;mxb&#39;,
+  &#39;mb&#39;],
  &#39;mipv&#39;: [18,
   23,
   66,
@@ -16335,6 +16364,8 @@ for date: 2020-08-06  the lowest positve error was by the method: mxmb and the h
   136,
   57,
   2442,
+  591,
+  2282,
   &#39;No&#39;],
  &#39;mxnv&#39;: [-12,
   -87,
@@ -16465,7 +16496,9 @@ for date: 2020-08-06  the lowest positve error was by the method: mxmb and the h
   -2676,
   -1183,
   -357,
-  -48395],
+  -1928,
+  -3493,
+  -58596],
  &#39;original_val&#39;: [309,
   424,
   486,
@@ -16595,6 +16628,8 @@ for date: 2020-08-06  the lowest positve error was by the method: mxmb and the h
   51282,
   56626,
   62170,
+  61455,
+  65156,
   0],
  &#39;pprd_val&#39;: [291,
   401,
@@ -16725,6 +16760,8 @@ for date: 2020-08-06  the lowest positve error was by the method: mxmb and the h
   51146,
   56569,
   59728,
+  60864,
+  62874,
   &#39;No&#39;],
  &#39;nprd_val&#39;: [321,
   511,
@@ -16855,7 +16892,9 @@ for date: 2020-08-06  the lowest positve error was by the method: mxmb and the h
   53958,
   57809,
   62527,
-  48395]}</pre>
+  63383,
+  68649,
+  58596]}</pre>
 </div>
 
 </div>
@@ -17259,28 +17298,6 @@ for date: 2020-08-06  the lowest positve error was by the method: mxmb and the h
       <td>...</td>
     </tr>
     <tr>
-      <th>100</th>
-      <td>2020-07-09</td>
-      <td>mb</td>
-      <td>lmb</td>
-      <td>1410</td>
-      <td>-56</td>
-      <td>25790</td>
-      <td>24380</td>
-      <td>25846</td>
-    </tr>
-    <tr>
-      <th>101</th>
-      <td>2020-07-10</td>
-      <td>mxmb</td>
-      <td>mxb</td>
-      <td>1310</td>
-      <td>-718</td>
-      <td>27762</td>
-      <td>26452</td>
-      <td>28480</td>
-    </tr>
-    <tr>
       <th>102</th>
       <td>2020-07-11</td>
       <td>mxmb</td>
@@ -17580,17 +17597,39 @@ for date: 2020-08-06  the lowest positve error was by the method: mxmb and the h
     <tr>
       <th>129</th>
       <td>2020-08-07</td>
+      <td>mxmb</td>
+      <td>memb</td>
+      <td>591</td>
+      <td>-1928</td>
+      <td>61455</td>
+      <td>60864</td>
+      <td>63383</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>2020-08-08</td>
+      <td>memb</td>
+      <td>mxb</td>
+      <td>2282</td>
+      <td>-3493</td>
+      <td>65156</td>
+      <td>62874</td>
+      <td>68649</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>2020-08-09</td>
       <td>No</td>
-      <td>mdb</td>
+      <td>mb</td>
       <td>No</td>
-      <td>-48395</td>
+      <td>-58596</td>
       <td>0</td>
       <td>No</td>
-      <td>48395</td>
+      <td>58596</td>
     </tr>
   </tbody>
 </table>
-<p>130 rows × 8 columns</p>
+<p>132 rows × 8 columns</p>
 </div>
 </div>
 
