@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Total_Recovered_Analysis_Using_Ratio_Method</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+<title>Total_Recovered_Analysis_Using_Ratio_Method</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
 
 <style type="text/css">
     /*!
@@ -199,7 +204,6 @@ th {
   *:before,
   *:after {
     background: transparent !important;
-    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -6744,15 +6748,15 @@ button.close {
 *
 */
 /*!
- *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.2.0');
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6809,6 +6813,19 @@ button.close {
   border: solid 0.08em #eee;
   border-radius: .1em;
 }
+.fa-pull-left {
+  float: left;
+}
+.fa-pull-right {
+  float: right;
+}
+.fa.fa-pull-left {
+  margin-right: .3em;
+}
+.fa.fa-pull-right {
+  margin-left: .3em;
+}
+/* Deprecated as of 4.4.0 */
 .pull-right {
   float: right;
 }
@@ -6824,6 +6841,10 @@ button.close {
 .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
+}
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
 }
 @-webkit-keyframes fa-spin {
   0% {
@@ -6846,31 +6867,31 @@ button.close {
   }
 }
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
@@ -7355,6 +7376,7 @@ button.close {
 .fa-twitter:before {
   content: "\f099";
 }
+.fa-facebook-f:before,
 .fa-facebook:before {
   content: "\f09a";
 }
@@ -7367,6 +7389,7 @@ button.close {
 .fa-credit-card:before {
   content: "\f09d";
 }
+.fa-feed:before,
 .fa-rss:before {
   content: "\f09e";
 }
@@ -8004,7 +8027,8 @@ button.close {
 .fa-male:before {
   content: "\f183";
 }
-.fa-gittip:before {
+.fa-gittip:before,
+.fa-gratipay:before {
   content: "\f184";
 }
 .fa-sun-o:before {
@@ -8108,7 +8132,7 @@ button.close {
 .fa-digg:before {
   content: "\f1a6";
 }
-.fa-pied-piper:before {
+.fa-pied-piper-pp:before {
   content: "\f1a7";
 }
 .fa-pied-piper-alt:before {
@@ -8234,6 +8258,7 @@ button.close {
   content: "\f1ce";
 }
 .fa-ra:before,
+.fa-resistance:before,
 .fa-rebel:before {
   content: "\f1d0";
 }
@@ -8247,6 +8272,8 @@ button.close {
 .fa-git:before {
   content: "\f1d3";
 }
+.fa-y-combinator-square:before,
+.fa-yc-square:before,
 .fa-hacker-news:before {
   content: "\f1d4";
 }
@@ -8414,6 +8441,657 @@ button.close {
 }
 .fa-meanpath:before {
   content: "\f20c";
+}
+.fa-buysellads:before {
+  content: "\f20d";
+}
+.fa-connectdevelop:before {
+  content: "\f20e";
+}
+.fa-dashcube:before {
+  content: "\f210";
+}
+.fa-forumbee:before {
+  content: "\f211";
+}
+.fa-leanpub:before {
+  content: "\f212";
+}
+.fa-sellsy:before {
+  content: "\f213";
+}
+.fa-shirtsinbulk:before {
+  content: "\f214";
+}
+.fa-simplybuilt:before {
+  content: "\f215";
+}
+.fa-skyatlas:before {
+  content: "\f216";
+}
+.fa-cart-plus:before {
+  content: "\f217";
+}
+.fa-cart-arrow-down:before {
+  content: "\f218";
+}
+.fa-diamond:before {
+  content: "\f219";
+}
+.fa-ship:before {
+  content: "\f21a";
+}
+.fa-user-secret:before {
+  content: "\f21b";
+}
+.fa-motorcycle:before {
+  content: "\f21c";
+}
+.fa-street-view:before {
+  content: "\f21d";
+}
+.fa-heartbeat:before {
+  content: "\f21e";
+}
+.fa-venus:before {
+  content: "\f221";
+}
+.fa-mars:before {
+  content: "\f222";
+}
+.fa-mercury:before {
+  content: "\f223";
+}
+.fa-intersex:before,
+.fa-transgender:before {
+  content: "\f224";
+}
+.fa-transgender-alt:before {
+  content: "\f225";
+}
+.fa-venus-double:before {
+  content: "\f226";
+}
+.fa-mars-double:before {
+  content: "\f227";
+}
+.fa-venus-mars:before {
+  content: "\f228";
+}
+.fa-mars-stroke:before {
+  content: "\f229";
+}
+.fa-mars-stroke-v:before {
+  content: "\f22a";
+}
+.fa-mars-stroke-h:before {
+  content: "\f22b";
+}
+.fa-neuter:before {
+  content: "\f22c";
+}
+.fa-genderless:before {
+  content: "\f22d";
+}
+.fa-facebook-official:before {
+  content: "\f230";
+}
+.fa-pinterest-p:before {
+  content: "\f231";
+}
+.fa-whatsapp:before {
+  content: "\f232";
+}
+.fa-server:before {
+  content: "\f233";
+}
+.fa-user-plus:before {
+  content: "\f234";
+}
+.fa-user-times:before {
+  content: "\f235";
+}
+.fa-hotel:before,
+.fa-bed:before {
+  content: "\f236";
+}
+.fa-viacoin:before {
+  content: "\f237";
+}
+.fa-train:before {
+  content: "\f238";
+}
+.fa-subway:before {
+  content: "\f239";
+}
+.fa-medium:before {
+  content: "\f23a";
+}
+.fa-yc:before,
+.fa-y-combinator:before {
+  content: "\f23b";
+}
+.fa-optin-monster:before {
+  content: "\f23c";
+}
+.fa-opencart:before {
+  content: "\f23d";
+}
+.fa-expeditedssl:before {
+  content: "\f23e";
+}
+.fa-battery-4:before,
+.fa-battery:before,
+.fa-battery-full:before {
+  content: "\f240";
+}
+.fa-battery-3:before,
+.fa-battery-three-quarters:before {
+  content: "\f241";
+}
+.fa-battery-2:before,
+.fa-battery-half:before {
+  content: "\f242";
+}
+.fa-battery-1:before,
+.fa-battery-quarter:before {
+  content: "\f243";
+}
+.fa-battery-0:before,
+.fa-battery-empty:before {
+  content: "\f244";
+}
+.fa-mouse-pointer:before {
+  content: "\f245";
+}
+.fa-i-cursor:before {
+  content: "\f246";
+}
+.fa-object-group:before {
+  content: "\f247";
+}
+.fa-object-ungroup:before {
+  content: "\f248";
+}
+.fa-sticky-note:before {
+  content: "\f249";
+}
+.fa-sticky-note-o:before {
+  content: "\f24a";
+}
+.fa-cc-jcb:before {
+  content: "\f24b";
+}
+.fa-cc-diners-club:before {
+  content: "\f24c";
+}
+.fa-clone:before {
+  content: "\f24d";
+}
+.fa-balance-scale:before {
+  content: "\f24e";
+}
+.fa-hourglass-o:before {
+  content: "\f250";
+}
+.fa-hourglass-1:before,
+.fa-hourglass-start:before {
+  content: "\f251";
+}
+.fa-hourglass-2:before,
+.fa-hourglass-half:before {
+  content: "\f252";
+}
+.fa-hourglass-3:before,
+.fa-hourglass-end:before {
+  content: "\f253";
+}
+.fa-hourglass:before {
+  content: "\f254";
+}
+.fa-hand-grab-o:before,
+.fa-hand-rock-o:before {
+  content: "\f255";
+}
+.fa-hand-stop-o:before,
+.fa-hand-paper-o:before {
+  content: "\f256";
+}
+.fa-hand-scissors-o:before {
+  content: "\f257";
+}
+.fa-hand-lizard-o:before {
+  content: "\f258";
+}
+.fa-hand-spock-o:before {
+  content: "\f259";
+}
+.fa-hand-pointer-o:before {
+  content: "\f25a";
+}
+.fa-hand-peace-o:before {
+  content: "\f25b";
+}
+.fa-trademark:before {
+  content: "\f25c";
+}
+.fa-registered:before {
+  content: "\f25d";
+}
+.fa-creative-commons:before {
+  content: "\f25e";
+}
+.fa-gg:before {
+  content: "\f260";
+}
+.fa-gg-circle:before {
+  content: "\f261";
+}
+.fa-tripadvisor:before {
+  content: "\f262";
+}
+.fa-odnoklassniki:before {
+  content: "\f263";
+}
+.fa-odnoklassniki-square:before {
+  content: "\f264";
+}
+.fa-get-pocket:before {
+  content: "\f265";
+}
+.fa-wikipedia-w:before {
+  content: "\f266";
+}
+.fa-safari:before {
+  content: "\f267";
+}
+.fa-chrome:before {
+  content: "\f268";
+}
+.fa-firefox:before {
+  content: "\f269";
+}
+.fa-opera:before {
+  content: "\f26a";
+}
+.fa-internet-explorer:before {
+  content: "\f26b";
+}
+.fa-tv:before,
+.fa-television:before {
+  content: "\f26c";
+}
+.fa-contao:before {
+  content: "\f26d";
+}
+.fa-500px:before {
+  content: "\f26e";
+}
+.fa-amazon:before {
+  content: "\f270";
+}
+.fa-calendar-plus-o:before {
+  content: "\f271";
+}
+.fa-calendar-minus-o:before {
+  content: "\f272";
+}
+.fa-calendar-times-o:before {
+  content: "\f273";
+}
+.fa-calendar-check-o:before {
+  content: "\f274";
+}
+.fa-industry:before {
+  content: "\f275";
+}
+.fa-map-pin:before {
+  content: "\f276";
+}
+.fa-map-signs:before {
+  content: "\f277";
+}
+.fa-map-o:before {
+  content: "\f278";
+}
+.fa-map:before {
+  content: "\f279";
+}
+.fa-commenting:before {
+  content: "\f27a";
+}
+.fa-commenting-o:before {
+  content: "\f27b";
+}
+.fa-houzz:before {
+  content: "\f27c";
+}
+.fa-vimeo:before {
+  content: "\f27d";
+}
+.fa-black-tie:before {
+  content: "\f27e";
+}
+.fa-fonticons:before {
+  content: "\f280";
+}
+.fa-reddit-alien:before {
+  content: "\f281";
+}
+.fa-edge:before {
+  content: "\f282";
+}
+.fa-credit-card-alt:before {
+  content: "\f283";
+}
+.fa-codiepie:before {
+  content: "\f284";
+}
+.fa-modx:before {
+  content: "\f285";
+}
+.fa-fort-awesome:before {
+  content: "\f286";
+}
+.fa-usb:before {
+  content: "\f287";
+}
+.fa-product-hunt:before {
+  content: "\f288";
+}
+.fa-mixcloud:before {
+  content: "\f289";
+}
+.fa-scribd:before {
+  content: "\f28a";
+}
+.fa-pause-circle:before {
+  content: "\f28b";
+}
+.fa-pause-circle-o:before {
+  content: "\f28c";
+}
+.fa-stop-circle:before {
+  content: "\f28d";
+}
+.fa-stop-circle-o:before {
+  content: "\f28e";
+}
+.fa-shopping-bag:before {
+  content: "\f290";
+}
+.fa-shopping-basket:before {
+  content: "\f291";
+}
+.fa-hashtag:before {
+  content: "\f292";
+}
+.fa-bluetooth:before {
+  content: "\f293";
+}
+.fa-bluetooth-b:before {
+  content: "\f294";
+}
+.fa-percent:before {
+  content: "\f295";
+}
+.fa-gitlab:before {
+  content: "\f296";
+}
+.fa-wpbeginner:before {
+  content: "\f297";
+}
+.fa-wpforms:before {
+  content: "\f298";
+}
+.fa-envira:before {
+  content: "\f299";
+}
+.fa-universal-access:before {
+  content: "\f29a";
+}
+.fa-wheelchair-alt:before {
+  content: "\f29b";
+}
+.fa-question-circle-o:before {
+  content: "\f29c";
+}
+.fa-blind:before {
+  content: "\f29d";
+}
+.fa-audio-description:before {
+  content: "\f29e";
+}
+.fa-volume-control-phone:before {
+  content: "\f2a0";
+}
+.fa-braille:before {
+  content: "\f2a1";
+}
+.fa-assistive-listening-systems:before {
+  content: "\f2a2";
+}
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: "\f2a3";
+}
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: "\f2a4";
+}
+.fa-glide:before {
+  content: "\f2a5";
+}
+.fa-glide-g:before {
+  content: "\f2a6";
+}
+.fa-signing:before,
+.fa-sign-language:before {
+  content: "\f2a7";
+}
+.fa-low-vision:before {
+  content: "\f2a8";
+}
+.fa-viadeo:before {
+  content: "\f2a9";
+}
+.fa-viadeo-square:before {
+  content: "\f2aa";
+}
+.fa-snapchat:before {
+  content: "\f2ab";
+}
+.fa-snapchat-ghost:before {
+  content: "\f2ac";
+}
+.fa-snapchat-square:before {
+  content: "\f2ad";
+}
+.fa-pied-piper:before {
+  content: "\f2ae";
+}
+.fa-first-order:before {
+  content: "\f2b0";
+}
+.fa-yoast:before {
+  content: "\f2b1";
+}
+.fa-themeisle:before {
+  content: "\f2b2";
+}
+.fa-google-plus-circle:before,
+.fa-google-plus-official:before {
+  content: "\f2b3";
+}
+.fa-fa:before,
+.fa-font-awesome:before {
+  content: "\f2b4";
+}
+.fa-handshake-o:before {
+  content: "\f2b5";
+}
+.fa-envelope-open:before {
+  content: "\f2b6";
+}
+.fa-envelope-open-o:before {
+  content: "\f2b7";
+}
+.fa-linode:before {
+  content: "\f2b8";
+}
+.fa-address-book:before {
+  content: "\f2b9";
+}
+.fa-address-book-o:before {
+  content: "\f2ba";
+}
+.fa-vcard:before,
+.fa-address-card:before {
+  content: "\f2bb";
+}
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: "\f2bc";
+}
+.fa-user-circle:before {
+  content: "\f2bd";
+}
+.fa-user-circle-o:before {
+  content: "\f2be";
+}
+.fa-user-o:before {
+  content: "\f2c0";
+}
+.fa-id-badge:before {
+  content: "\f2c1";
+}
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: "\f2c2";
+}
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: "\f2c3";
+}
+.fa-quora:before {
+  content: "\f2c4";
+}
+.fa-free-code-camp:before {
+  content: "\f2c5";
+}
+.fa-telegram:before {
+  content: "\f2c6";
+}
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: "\f2c7";
+}
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: "\f2c8";
+}
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: "\f2c9";
+}
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: "\f2ca";
+}
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: "\f2cb";
+}
+.fa-shower:before {
+  content: "\f2cc";
+}
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: "\f2cd";
+}
+.fa-podcast:before {
+  content: "\f2ce";
+}
+.fa-window-maximize:before {
+  content: "\f2d0";
+}
+.fa-window-minimize:before {
+  content: "\f2d1";
+}
+.fa-window-restore:before {
+  content: "\f2d2";
+}
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: "\f2d3";
+}
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: "\f2d4";
+}
+.fa-bandcamp:before {
+  content: "\f2d5";
+}
+.fa-grav:before {
+  content: "\f2d6";
+}
+.fa-etsy:before {
+  content: "\f2d7";
+}
+.fa-imdb:before {
+  content: "\f2d8";
+}
+.fa-ravelry:before {
+  content: "\f2d9";
+}
+.fa-eercast:before {
+  content: "\f2da";
+}
+.fa-microchip:before {
+  content: "\f2db";
+}
+.fa-snowflake-o:before {
+  content: "\f2dc";
+}
+.fa-superpowers:before {
+  content: "\f2dd";
+}
+.fa-wpexplorer:before {
+  content: "\f2de";
+}
+.fa-meetup:before {
+  content: "\f2e0";
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
 }
 /*!
 *
@@ -8694,6 +9372,10 @@ div.traceback-wrapper {
   max-width: 800px;
   margin: auto;
 }
+div.traceback-wrapper pre.traceback {
+  max-height: 600px;
+  overflow: auto;
+}
 /**
  * Primary styles
  *
@@ -8719,6 +9401,10 @@ body > #header {
   z-index: 100;
 }
 body > #header #header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
   box-sizing: border-box;
@@ -8750,13 +9436,16 @@ body > #header .header-bar {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-@media (max-width: 991px) {
-  #ipython_notebook {
-    margin-left: 10px;
-  }
-}
 [dir="rtl"] #ipython_notebook {
+  margin-right: 10px;
+  margin-left: 0;
+}
+[dir="rtl"] #ipython_notebook.pull-left {
   float: right !important;
+  float: right;
+}
+.flex-spacer {
+  flex: 1;
 }
 #noscript {
   width: auto;
@@ -8791,8 +9480,14 @@ body > #header .header-bar {
 input.ui-button {
   padding: 0.3em 0.9em;
 }
+span#kernel_logo_widget {
+  margin: 0 10px;
+}
 span#login_widget {
   float: right;
+}
+[dir="rtl"] span#login_widget {
+  float: left;
 }
 span#login_widget > .button,
 #logout {
@@ -8908,6 +9603,9 @@ span#login_widget > .button .badge,
   overflow: auto;
   flex: 1;
 }
+.modal-header {
+  cursor: move;
+}
 @media (min-width: 768px) {
   .modal .modal-dialog {
     width: 700px;
@@ -8928,6 +9626,19 @@ span#login_widget > .button .badge,
   display: inline-block;
   margin-bottom: -4px;
 }
+[dir="rtl"] .center-nav form.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] .center-nav .navbar-text {
+  float: right;
+}
+[dir="rtl"] .navbar-inner {
+  text-align: right;
+}
+[dir="rtl"] div.text-left {
+  text-align: right;
+}
 /*!
 *
 * IPython tree view
@@ -8944,34 +9655,42 @@ span#login_widget > .button .badge,
   margin: 0;
 }
 .alternate_upload input.fileinput {
-  text-align: center;
-  vertical-align: middle;
-  display: inline;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
   opacity: 0;
   z-index: 2;
-  width: 12ex;
-  margin-right: -12ex;
+}
+.alternate_upload .btn-xs > input.fileinput {
+  margin: -1px -5px;
 }
 .alternate_upload .btn-upload {
+  position: relative;
   height: 22px;
+}
+::-webkit-file-upload-button {
+  cursor: pointer;
 }
 /**
  * Primary styles
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
   padding-bottom: 4px;
+}
+[dir="rtl"] ul#tabs.nav-tabs > li {
+  float: right;
+}
+[dir="rtl"] ul#tabs.nav.nav-tabs {
+  padding-right: 0;
 }
 ul.breadcrumb a:focus,
 ul.breadcrumb a:hover {
@@ -8991,15 +9710,13 @@ ul.breadcrumb span {
 .list_toolbar .tree-buttons {
   padding-top: 1px;
 }
-[dir="rtl"] .list_toolbar .tree-buttons {
+[dir="rtl"] .list_toolbar .tree-buttons .pull-right {
   float: left !important;
+  float: left;
 }
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
+[dir="rtl"] .list_toolbar .col-sm-4,
+[dir="rtl"] .list_toolbar .col-sm-8 {
+  float: right;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9055,7 +9772,7 @@ ul.breadcrumb span {
 .list_item > div input {
   margin-right: 7px;
   margin-left: 14px;
-  vertical-align: baseline;
+  vertical-align: text-bottom;
   line-height: 22px;
   position: relative;
   top: -1px;
@@ -9065,6 +9782,9 @@ ul.breadcrumb span {
   margin-left: -1px;
   vertical-align: baseline;
   line-height: 22px;
+}
+[dir="rtl"] .list_item > div input {
+  margin-right: 0;
 }
 .new-file input[type=checkbox] {
   visibility: hidden;
@@ -9080,6 +9800,14 @@ ul.breadcrumb span {
   margin-left: 7px;
   line-height: 22px;
   vertical-align: baseline;
+}
+.item_modified {
+  margin-right: 7px;
+  margin-left: 7px;
+}
+[dir="rtl"] .item_modified.pull-right {
+  float: left !important;
+  float: left;
 }
 .item_buttons {
   line-height: 1em;
@@ -9108,6 +9836,14 @@ ul.breadcrumb span {
   margin-right: 7px;
   float: left;
 }
+[dir="rtl"] .item_buttons.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .item_buttons .kernel-name {
+  margin-left: 7px;
+  float: right;
+}
 .toolbar_info {
   height: 24px;
   line-height: 24px;
@@ -9133,18 +9869,32 @@ ul.breadcrumb span {
   background-color: transparent;
   font-weight: bold;
 }
+.sort_button {
+  display: inline-block;
+  padding-left: 7px;
+}
+[dir="rtl"] .sort_button.pull-right {
+  float: left !important;
+  float: left;
+}
 #tree-selector {
   padding-right: 0px;
-}
-[dir="rtl"] #tree-selector a {
-  float: right;
 }
 #button-select-all {
   min-width: 50px;
 }
+[dir="rtl"] #button-select-all.btn {
+  float: right ;
+}
 #select-all {
   margin-left: 7px;
   margin-right: 2px;
+  margin-top: 2px;
+  height: 16px;
+}
+[dir="rtl"] #select-all.pull-left {
+  float: right !important;
+  float: right;
 }
 .menu_icon {
   margin-right: 2px;
@@ -9162,6 +9912,12 @@ ul.breadcrumb span {
   -moz-osx-font-smoothing: grayscale;
   content: "\f114";
 }
+.folder_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.folder_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .folder_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9178,6 +9934,12 @@ ul.breadcrumb span {
   content: "\f02d";
   position: relative;
   top: -1px;
+}
+.notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .notebook_icon:before.pull-left {
   margin-right: .3em;
@@ -9197,6 +9959,12 @@ ul.breadcrumb span {
   top: -1px;
   color: #5cb85c;
 }
+.running_notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.running_notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .running_notebook_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9214,6 +9982,12 @@ ul.breadcrumb span {
   position: relative;
   top: -2px;
 }
+.file_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.file_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .file_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9228,8 +10002,11 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
+#new-menu .dropdown-header {
+  font-size: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 0 3px;
+  margin: -3px 20px 0;
 }
 .kernel-menu-icon {
   padding-right: 12px;
@@ -9276,9 +10053,6 @@ ul#new-menu {
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
 }
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
-}
 .delete-button {
   display: none;
 }
@@ -9286,6 +10060,12 @@ ul#new-menu {
   display: none;
 }
 .rename-button {
+  display: none;
+}
+.move-button {
+  display: none;
+}
+.download-button {
   display: none;
 }
 .shutdown-button {
@@ -9328,6 +10108,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator.pull-left {
   margin-right: .3em;
 }
@@ -9342,6 +10128,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
+}
+.dirty-indicator-dirty.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-dirty.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-dirty.pull-left {
   margin-right: .3em;
@@ -9358,6 +10150,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator-clean.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator-clean.pull-left {
   margin-right: .3em;
 }
@@ -9372,6 +10170,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f00c";
+}
+.dirty-indicator-clean:before.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean:before.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-clean:before.pull-left {
   margin-right: .3em;
@@ -9417,14 +10221,132 @@ ul#new-menu {
     box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
   }
 }
+.CodeMirror-dialog {
+  background-color: #fff;
+}
 /*!
 *
 * IPython notebook
 *
 */
-/* CSS font colors for translated ANSI colors. */
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
 .ansibold {
   font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
 }
 /* use dark versions for foreground, to improve visibility */
 .ansiblack {
@@ -9503,12 +10425,20 @@ div.cell {
   /* This acts as a spacer between cells, that is outside the border */
   margin: 0px;
   outline: none;
-  border-left-width: 1px;
-  padding-left: 5px;
-  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
 }
 div.cell.jupyter-soft-selected {
-  border-left-color: #90CAF9;
   border-left-color: #E3F2FD;
   border-left-width: 1px;
   padding-left: 5px;
@@ -9521,27 +10451,39 @@ div.cell.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected {
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
   border-color: #ababab;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
 }
 @media print {
-  div.cell.selected {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected.jupyter-soft-selected {
-  border-left-width: 0;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
-}
 .edit_mode div.cell.selected {
   border-color: #66BB6A;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
 }
 @media print {
   .edit_mode div.cell.selected {
@@ -9737,7 +10679,9 @@ div.input_area > div.highlight > pre {
 .CodeMirror-lines {
   /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
   /* we have set a different line-height and want this to scale with that. */
-  padding: 0.4em;
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
 }
 .CodeMirror-linenumber {
   padding: 0 8px 0 4px;
@@ -9747,11 +10691,24 @@ div.input_area > div.highlight > pre {
   border-top-left-radius: 2px;
 }
 .CodeMirror pre {
-  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
-  /* .CodeMirror-lines */
-  padding: 0;
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
   border: 0;
   border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
 }
 /*
 
@@ -10005,6 +10962,9 @@ div.output_area img.unconfined,
 div.output_area svg.unconfined {
   max-width: none;
 }
+div.output_area .mglyph > img {
+  max-width: none;
+}
 /* This is needed to protect the pre formating from global settings such
    as that of bootstrap */
 .output {
@@ -10043,7 +11003,7 @@ div.output_area svg.unconfined {
 }
 div.output_area pre {
   margin: 0;
-  padding: 0;
+  padding: 1px 0 1px 0;
   border: 0;
   vertical-align: baseline;
   color: black;
@@ -10203,39 +11163,35 @@ div.output_unrecognized a:hover {
 .rendered_html h6:first-child {
   margin-top: 1em;
 }
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
 .rendered_html ul {
   list-style: disc;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ul ul {
   list-style: square;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ul ul ul {
   list-style: circle;
-  margin: 0em 2em;
 }
 .rendered_html ol {
   list-style: decimal;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ol ol {
   list-style: upper-alpha;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ol ol ol {
   list-style: lower-alpha;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol {
   list-style: lower-roman;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol ol {
   list-style: decimal;
-  margin: 0em 2em;
 }
 .rendered_html * + ul {
   margin-top: 1em;
@@ -10249,14 +11205,23 @@ div.output_unrecognized a:hover {
 }
 .rendered_html pre {
   margin: 1em 2em;
+  padding: 0px;
+  background-color: #fff;
+}
+.rendered_html code {
+  background-color: #eff0f1;
+}
+.rendered_html p code {
+  padding: 1px 5px;
+}
+.rendered_html pre code {
+  background-color: #fff;
 }
 .rendered_html pre,
 .rendered_html code {
   border: 0;
-  background-color: #fff;
   color: #000;
   font-size: 100%;
-  padding: 0px;
 }
 .rendered_html blockquote {
   margin: 1em 2em;
@@ -10264,24 +11229,36 @@ div.output_unrecognized a:hover {
 .rendered_html table {
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  border: none;
   border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
 }
 .rendered_html tr,
 .rendered_html th,
 .rendered_html td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  margin: 1em 2em;
-}
-.rendered_html td,
-.rendered_html th {
-  text-align: left;
+  text-align: right;
   vertical-align: middle;
-  padding: 4px;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
 }
 .rendered_html th {
   font-weight: bold;
+}
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
 }
 .rendered_html * + table {
   margin-top: 1em;
@@ -10308,6 +11285,15 @@ div.output_unrecognized a:hover {
 .rendered_html img.unconfined,
 .rendered_html svg.unconfined {
   max-width: none;
+}
+.rendered_html .alert {
+  margin-bottom: initial;
+}
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] .rendered_html p {
+  text-align: right;
 }
 div.text_cell {
   /* Old browsers */
@@ -10362,8 +11348,17 @@ h6:hover .anchor-link {
   overflow-x: auto;
   overflow-y: hidden;
 }
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered .rendered_html td {
+  max-width: none;
+}
 .text_cell.unrendered .text_cell_render {
   display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
 }
 .cm-header-1,
 .cm-header-2,
@@ -10500,6 +11495,28 @@ kbd {
   padding-top: 1px;
   padding-bottom: 1px;
 }
+.jupyter-keybindings {
+  padding: 1px;
+  line-height: 24px;
+  border-bottom: 1px solid gray;
+}
+.jupyter-keybindings input {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.jupyter-keybindings i {
+  padding: 6px;
+}
+.well code {
+  background-color: #ffffff;
+  border-color: #ababab;
+  border-width: 1px;
+  border-style: solid;
+  padding: 2px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
 /* CSS for the cell toolbar */
 .celltoolbar {
   border: thin solid #CFCFCF;
@@ -10632,6 +11649,152 @@ select[multiple].celltoolbar select {
   margin-left: 5px;
   margin-right: 5px;
 }
+.tags_button_container {
+  width: 100%;
+  display: flex;
+}
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+.tag-container > * {
+  margin: 0 4px;
+}
+.remove-tag-btn {
+  margin-left: 4px;
+}
+.tags-input {
+  display: flex;
+}
+.cell-tag:last-child:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  /* Fade to background color of cell toolbar */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #EEE);
+}
+.tags-input > * {
+  margin-left: 4px;
+}
+.cell-tag,
+.tags-input input,
+.tags-input button {
+  display: block;
+  width: 100%;
+  height: 32px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 1px;
+  box-shadow: none;
+  width: inherit;
+  font-size: inherit;
+  height: 22px;
+  line-height: 22px;
+  padding: 0px 4px;
+  display: inline-block;
+}
+.cell-tag:focus,
+.tags-input input:focus,
+.tags-input button:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.cell-tag::-moz-placeholder,
+.tags-input input::-moz-placeholder,
+.tags-input button::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.cell-tag:-ms-input-placeholder,
+.tags-input input:-ms-input-placeholder,
+.tags-input button:-ms-input-placeholder {
+  color: #999;
+}
+.cell-tag::-webkit-input-placeholder,
+.tags-input input::-webkit-input-placeholder,
+.tags-input button::-webkit-input-placeholder {
+  color: #999;
+}
+.cell-tag::-ms-expand,
+.tags-input input::-ms-expand,
+.tags-input button::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+.cell-tag[readonly],
+.tags-input input[readonly],
+.tags-input button[readonly],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  cursor: not-allowed;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button {
+  height: auto;
+}
+select.cell-tag,
+select.tags-input input,
+select.tags-input button {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button,
+select[multiple].cell-tag,
+select[multiple].tags-input input,
+select[multiple].tags-input button {
+  height: auto;
+}
+.cell-tag,
+.tags-input button {
+  padding: 0px 4px;
+}
+.cell-tag {
+  background-color: #fff;
+  white-space: nowrap;
+}
+.tags-input input[type=text]:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #ccc;
+}
 .completions {
   position: absolute;
   z-index: 110;
@@ -10657,16 +11820,28 @@ select[multiple].celltoolbar select {
 .completions select option.context {
   color: #286090;
 }
-#kernel_logo_widget {
-  float: right !important;
-  float: right;
-}
 #kernel_logo_widget .current_kernel_logo {
   display: none;
   margin-top: -1px;
   margin-bottom: -1px;
   width: 32px;
   height: 32px;
+}
+[dir="rtl"] #kernel_logo_widget {
+  float: left !important;
+  float: left;
+}
+.modal .modal-body .move-path {
+  display: flex;
+  flex-direction: row;
+  justify-content: space;
+  align-items: center;
+}
+.modal .modal-body .move-path .server-root {
+  padding-right: 20px;
+}
+.modal .modal-body .move-path .path-input {
+  flex: 1;
 }
 #menubar {
   box-sizing: border-box;
@@ -10688,11 +11863,41 @@ select[multiple].celltoolbar select {
 #menubar .navbar-collapse {
   clear: left;
 }
+[dir="rtl"] #menubar .navbar-toggle {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-collapse {
+  clear: right;
+}
+[dir="rtl"] #menubar .navbar-nav {
+  float: right;
+}
+[dir="rtl"] #menubar .nav {
+  padding-right: 0px;
+}
+[dir="rtl"] #menubar .navbar-nav > li {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-right {
+  float: left !important;
+}
+[dir="rtl"] ul.dropdown-menu {
+  text-align: right;
+  left: auto;
+}
+[dir="rtl"] ul#new-menu.dropdown-menu {
+  right: auto;
+  left: 0;
+}
 .nav-wrapper {
   border-bottom: 1px solid #e7e7e7;
 }
 i.menu-icon {
   padding-top: 4px;
+}
+[dir="rtl"] i.menu-icon.pull-right {
+  float: left !important;
+  float: left;
 }
 ul#help_menu li a {
   overflow: hidden;
@@ -10700,6 +11905,17 @@ ul#help_menu li a {
 }
 ul#help_menu li a i {
   margin-right: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a {
+  padding-left: 2.2em;
+}
+[dir="rtl"] ul#help_menu li a i {
+  margin-right: 0;
+  margin-left: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a i.pull-right {
+  float: left !important;
+  float: left;
 }
 .dropdown-submenu {
   position: relative;
@@ -10709,6 +11925,10 @@ ul#help_menu li a i {
   left: 100%;
   margin-top: -6px;
   margin-left: -1px;
+}
+[dir="rtl"] .dropdown-submenu > .dropdown-menu {
+  right: 100%;
+  margin-right: -1px;
 }
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
@@ -10727,11 +11947,23 @@ ul#help_menu li a i {
   margin-top: 2px;
   margin-right: -10px;
 }
+.dropdown-submenu > a:after.fa-pull-left {
+  margin-right: .3em;
+}
+.dropdown-submenu > a:after.fa-pull-right {
+  margin-left: .3em;
+}
 .dropdown-submenu > a:after.pull-left {
   margin-right: .3em;
 }
 .dropdown-submenu > a:after.pull-right {
   margin-left: .3em;
+}
+[dir="rtl"] .dropdown-submenu > a:after {
+  float: left;
+  content: "\f0d9";
+  margin-right: 0;
+  margin-left: -10px;
 }
 .dropdown-submenu:hover > a:after {
   color: #262626;
@@ -10748,6 +11980,10 @@ ul#help_menu li a i {
   float: right;
   z-index: 10;
 }
+[dir="rtl"] #notification_area {
+  float: left !important;
+  float: left;
+}
 .indicator_area {
   float: right !important;
   float: right;
@@ -10758,6 +11994,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] .indicator_area {
+  float: left !important;
+  float: left;
 }
 #kernel_indicator {
   float: right !important;
@@ -10775,6 +12015,12 @@ ul#help_menu li a i {
   padding-left: 5px;
   padding-right: 5px;
 }
+[dir="rtl"] #kernel_indicator {
+  float: left !important;
+  float: left;
+  border-left: 0;
+  border-right: 1px solid;
+}
 #modal_indicator {
   float: right !important;
   float: right;
@@ -10785,6 +12031,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] #modal_indicator {
+  float: left !important;
+  float: left;
 }
 #readonly-indicator {
   float: right !important;
@@ -10815,6 +12065,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f040";
 }
+.edit_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.edit_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
+}
 .edit_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
 }
@@ -10829,6 +12085,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: ' ';
+}
+.command_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.command_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
 }
 .command_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
@@ -10845,6 +12107,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f10c";
 }
+.kernel_idle_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_idle_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_idle_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10859,6 +12127,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f111";
+}
+.kernel_busy_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_busy_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_busy_icon:before.pull-left {
   margin-right: .3em;
@@ -10875,6 +12149,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f1e2";
 }
+.kernel_dead_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_dead_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_dead_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10889,6 +12169,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f127";
+}
+.kernel_disconnected_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_disconnected_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_disconnected_icon:before.pull-left {
   margin-right: .3em;
@@ -11279,27 +12565,46 @@ div#pager .ui-resizable-handle::after {
   flex: 1;
 }
 span.save_widget {
-  margin-top: 6px;
+  height: 30px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  width: 50%;
+  flex: 1;
 }
 span.save_widget span.filename {
-  height: 1em;
+  height: 100%;
   line-height: 1em;
-  padding: 3px;
   margin-left: 16px;
   border: none;
   font-size: 146.5%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   border-radius: 2px;
 }
 span.save_widget span.filename:hover {
   background-color: #e6e6e6;
 }
+[dir="rtl"] span.save_widget.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] span.save_widget span.filename {
+  margin-left: 0;
+  margin-right: 16px;
+}
 span.checkpoint_status,
 span.autosave_status {
   font-size: small;
+  white-space: nowrap;
+  padding: 0 5px;
 }
 @media (max-width: 767px) {
   span.save_widget {
     font-size: small;
+    padding: 0 0 0 5px;
   }
   span.checkpoint_status,
   span.autosave_status {
@@ -11343,6 +12648,9 @@ span.autosave_status {
   margin-top: 0px;
   margin-left: 5px;
 }
+.toolbar-btn-label {
+  margin-left: 6px;
+}
 #maintoolbar {
   margin-bottom: -3px;
   margin-top: -8px;
@@ -11362,6 +12670,10 @@ span.autosave_status {
 }
 .select-xs {
   height: 24px;
+}
+[dir="rtl"] .btn-group > .btn,
+.btn-group-vertical > .btn {
+  float: right;
 }
 .pulse,
 .dropdown-menu > li > a.pulse,
@@ -11512,6 +12824,10 @@ ul.typeahead-list i {
   margin-left: -10px;
   width: 18px;
 }
+[dir="rtl"] ul.typeahead-list i {
+  margin-left: 0;
+  margin-right: -10px;
+}
 ul.typeahead-list {
   max-height: 80vh;
   overflow: auto;
@@ -11520,6 +12836,13 @@ ul.typeahead-list > li > a {
   /** Firefox bug **/
   /* see https://github.com/jupyter/notebook/issues/559 */
   white-space: normal;
+}
+ul.typeahead-list  > li > a.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .typeahead-list {
+  text-align: right;
 }
 .cmd-palette .modal-body {
   padding: 7px;
@@ -11531,10 +12854,19 @@ ul.typeahead-list > li > a {
   outline: none;
 }
 .no-shortcut {
-  display: none;
+  min-width: 20px;
+  color: transparent;
+}
+[dir="rtl"] .no-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .command-shortcut.pull-right {
+  float: left !important;
+  float: left;
 }
 .command-shortcut:before {
-  content: "(command)";
+  content: "(command mode)";
   padding-right: 3px;
   color: #777777;
 }
@@ -11543,6 +12875,10 @@ ul.typeahead-list > li > a {
   padding-right: 3px;
   color: #777777;
 }
+[dir="rtl"] .edit-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
 #find-and-replace #replace-preview .match,
 #find-and-replace #replace-preview .insert {
   background-color: #BBDEFB;
@@ -11550,6 +12886,12 @@ ul.typeahead-list > li > a {
   border-style: solid;
   border-width: 1px;
   border-radius: 0px;
+}
+[dir="ltr"] #find-and-replace .input-group-btn + .form-control {
+  border-left: none;
+}
+[dir="rtl"] #find-and-replace .input-group-btn + .form-control {
+  border-right: none;
 }
 #find-and-replace #replace-preview .replace .match {
   background-color: #FFCDD2;
@@ -11675,45 +13017,6 @@ ul.typeahead-list > li > a {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
 
 
 <style type="text/css">
@@ -11747,7 +13050,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11779,13 +13082,13 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
 <span class="kn">import</span> <span class="nn">copy</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -11795,11 +13098,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\Desktop\Lockdown\data\Covid-19\40\case_time_series.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\Desktop\Lockdown\data\Covid-19\43\case_time_series.csv&quot;</span><span class="p">)</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -11809,7 +13112,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -11913,7 +13216,7 @@ div#notebook {
 <span class="n">data_total</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -11923,7 +13226,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -12025,7 +13328,7 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12035,7 +13338,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -12069,36 +13372,6 @@ div#notebook {
   </thead>
   <tbody>
     <tr>
-      <th>137</th>
-      <td>07 August</td>
-      <td>61455</td>
-      <td>2086878</td>
-      <td>50387</td>
-      <td>1427662</td>
-      <td>937</td>
-      <td>42590</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>08 August</td>
-      <td>65156</td>
-      <td>2152034</td>
-      <td>52135</td>
-      <td>1479797</td>
-      <td>875</td>
-      <td>43465</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>09 August</td>
-      <td>62117</td>
-      <td>2214151</td>
-      <td>54474</td>
-      <td>1534271</td>
-      <td>1013</td>
-      <td>44478</td>
-    </tr>
-    <tr>
       <th>140</th>
       <td>10 August</td>
       <td>53016</td>
@@ -12117,6 +13390,36 @@ div#notebook {
       <td>1638094</td>
       <td>835</td>
       <td>46200</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>12 August</td>
+      <td>67066</td>
+      <td>2395485</td>
+      <td>57759</td>
+      <td>1695853</td>
+      <td>950</td>
+      <td>47150</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>13 August</td>
+      <td>64141</td>
+      <td>2459626</td>
+      <td>54776</td>
+      <td>1750629</td>
+      <td>1006</td>
+      <td>48156</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>14 August</td>
+      <td>65610</td>
+      <td>2525236</td>
+      <td>56920</td>
+      <td>1807549</td>
+      <td>990</td>
+      <td>49146</td>
     </tr>
   </tbody>
 </table>
@@ -12138,7 +13441,7 @@ div#notebook {
 <span class="n">colls</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12148,7 +13451,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -12177,7 +13480,7 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total</span><span class="o">.</span><span class="n">dtypes</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12187,7 +13490,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -12217,7 +13520,7 @@ dtype: object</pre>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total</span><span class="p">[</span><span class="n">data_total</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12227,7 +13530,7 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -12279,7 +13582,7 @@ dtype: object</pre>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_total</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">)</span> 
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12289,16 +13592,16 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:1: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-8-99f82638761e&gt;:1: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  &#34;&#34;&#34;Entry point for launching an IPython kernel.
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#39;Date&#39;] = data_total[&#39;Date&#39;].astype(&#39;str&#39;)
 </pre>
 </div>
 </div>
@@ -12319,7 +13622,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12329,25 +13632,25 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:2: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-9-d239740191b3&gt;:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  
-C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\IPython\core\interactiveshell.py:2963: SettingWithCopyWarning: 
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;][i]=data_total[&#34;Date&#34;][i].strip(&#34; March&#34;)
+C:\ProgramData\Anaconda3\lib\site-packages\IPython\core\interactiveshell.py:3343: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   exec(code_obj, self.user_global_ns, self.user_ns)
-C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:4: SettingWithCopyWarning: 
+&lt;ipython-input-9-d239740191b3&gt;:4: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  after removing the cwd from sys.path.
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;][i]=&#34;2020-03-&#34;+data_total[&#34;Date&#34;][i]
 </pre>
 </div>
 </div>
@@ -12368,7 +13671,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12378,25 +13681,20 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:2: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-10-aa71c839161c&gt;:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  
-C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\IPython\core\interactiveshell.py:2963: SettingWithCopyWarning: 
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;][i]=data_total[&#34;Date&#34;][i].strip(&#34; April&#34;)
+&lt;ipython-input-10-aa71c839161c&gt;:4: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  exec(code_obj, self.user_global_ns, self.user_ns)
-C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:4: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  after removing the cwd from sys.path.
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;][i]=&#34;2020-04-&#34;+data_total[&#34;Date&#34;][i]
 </pre>
 </div>
 </div>
@@ -12417,7 +13715,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12427,25 +13725,20 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:2: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-11-53c499d84780&gt;:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  
-C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\IPython\core\interactiveshell.py:2963: SettingWithCopyWarning: 
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;][i]=data_total[&#34;Date&#34;][i].strip(&#34; May&#34;)
+&lt;ipython-input-11-53c499d84780&gt;:4: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  exec(code_obj, self.user_global_ns, self.user_ns)
-C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:4: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  after removing the cwd from sys.path.
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;][i]=&#34;2020-05-&#34;+data_total[&#34;Date&#34;][i]
 </pre>
 </div>
 </div>
@@ -12466,7 +13759,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12476,25 +13769,20 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:2: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-12-1a0a85fafe5b&gt;:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  
-C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\IPython\core\interactiveshell.py:2963: SettingWithCopyWarning: 
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;][i]=data_total[&#34;Date&#34;][i].strip(&#34; June&#34;)
+&lt;ipython-input-12-1a0a85fafe5b&gt;:4: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  exec(code_obj, self.user_global_ns, self.user_ns)
-C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:4: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  after removing the cwd from sys.path.
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;][i]=&#34;2020-06-&#34;+data_total[&#34;Date&#34;][i]
 </pre>
 </div>
 </div>
@@ -12515,7 +13803,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12525,25 +13813,20 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:2: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-13-208466873f51&gt;:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  
-C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\IPython\core\interactiveshell.py:2963: SettingWithCopyWarning: 
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;][i]=data_total[&#34;Date&#34;][i].strip(&#34; July&#34;)
+&lt;ipython-input-13-208466873f51&gt;:4: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  exec(code_obj, self.user_global_ns, self.user_ns)
-C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:4: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  after removing the cwd from sys.path.
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;][i]=&#34;2020-07-&#34;+data_total[&#34;Date&#34;][i]
 </pre>
 </div>
 </div>
@@ -12563,7 +13846,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;2020-08-&quot;</span><span class="o">+</span><span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12573,25 +13856,20 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:3: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-14-3bacb11f10f3&gt;:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  This is separate from the ipykernel package so we can avoid doing imports until
-C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\IPython\core\interactiveshell.py:2963: SettingWithCopyWarning: 
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;][i]=data_total[&#34;Date&#34;][i].strip(&#34; August&#34;)
+&lt;ipython-input-14-3bacb11f10f3&gt;:4: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  exec(code_obj, self.user_global_ns, self.user_ns)
-C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:5: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  &#34;&#34;&#34;
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;][i]=&#34;2020-08-&#34;+data_total[&#34;Date&#34;][i]
 </pre>
 </div>
 </div>
@@ -12608,7 +13886,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;datetime64[ns]&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12618,16 +13896,16 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:1: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-15-a317546e137f&gt;:1: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  &#34;&#34;&#34;Entry point for launching an IPython kernel.
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;]=data_total[&#34;Date&#34;].astype(&#39;datetime64[ns]&#39;)
 </pre>
 </div>
 </div>
@@ -12644,7 +13922,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total</span><span class="o">.</span><span class="n">dtypes</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12654,7 +13932,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -12684,7 +13962,7 @@ dtype: object</pre>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total_ratio_with_two_precision</span><span class="o">=</span><span class="n">data_total</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12710,7 +13988,7 @@ dtype: object</pre>
         
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12720,22 +13998,22 @@ dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:7: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-18-c038b6b9f526&gt;:7: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  import sys
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total_ratio_with_two_precision[i][0]=1
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -12873,7 +14151,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total_ratio</span><span class="o">=</span><span class="n">data_total</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12899,7 +14177,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
         
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12909,22 +14187,22 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:7: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-20-6e1737506d3a&gt;:7: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  import sys
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total_ratio[i][0]=1
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -13141,7 +14419,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">d</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;tramprd_df_strd.xlsx&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13151,14 +14429,15 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:79: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-21-f50cc3349488&gt;:79: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  d[&#39;original_val&#39;][len(d)-2]=data_total_ratio[&#39;Total Recovered&#39;][len(data_total_ratio)-1]
 </pre>
 </div>
 </div>
@@ -13173,10 +14452,11 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tc</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\tramprd_df_strd.xlsx&quot;</span><span class="p">)</span>
+<span class="n">tc</span> <span class="o">=</span> <span class="n">tc</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="o">~</span><span class="n">tc</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;^Unnamed&#39;</span><span class="p">)]</span>
 <span class="n">tc</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13186,7 +14466,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -13223,45 +14503,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
   </thead>
   <tbody>
     <tr>
-      <th>130</th>
-      <td>2020-08-08</td>
-      <td>1479797</td>
-      <td>1332045</td>
-      <td>1494603</td>
-      <td>1482712</td>
-      <td>1342727</td>
-      <td>1482712</td>
-      <td>1329512</td>
-      <td>1479892</td>
-      <td>1334903</td>
-    </tr>
-    <tr>
-      <th>131</th>
-      <td>2020-08-09</td>
-      <td>1534271</td>
-      <td>1379464</td>
-      <td>1541403</td>
-      <td>1534665</td>
-      <td>1385520</td>
-      <td>1534665</td>
-      <td>1378718</td>
-      <td>1533836</td>
-      <td>1374338</td>
-    </tr>
-    <tr>
-      <th>132</th>
-      <td>2020-08-10</td>
-      <td>1581633</td>
-      <td>1431195</td>
-      <td>1598144</td>
-      <td>1591515</td>
-      <td>1437156</td>
-      <td>1591515</td>
-      <td>1430507</td>
-      <td>1590750</td>
-      <td>1429310</td>
-    </tr>
-    <tr>
       <th>133</th>
       <td>2020-08-11</td>
       <td>1638094</td>
@@ -13277,7 +14518,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>134</th>
       <td>2020-08-12</td>
-      <td>0</td>
+      <td>1695853</td>
       <td>1533689</td>
       <td>1699984</td>
       <td>1696558</td>
@@ -13286,6 +14527,45 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>1533701</td>
       <td>1696571</td>
       <td>1533836</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>2020-08-13</td>
+      <td>1750629</td>
+      <td>1588176</td>
+      <td>1759925</td>
+      <td>1756304</td>
+      <td>1591450</td>
+      <td>1756304</td>
+      <td>1587584</td>
+      <td>1755649</td>
+      <td>1590750</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>2020-08-14</td>
+      <td>1807549</td>
+      <td>1642171</td>
+      <td>1815073</td>
+      <td>1811661</td>
+      <td>1645263</td>
+      <td>1811661</td>
+      <td>1638104</td>
+      <td>1807174</td>
+      <td>1630457</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>2020-08-15</td>
+      <td>0</td>
+      <td>1697378</td>
+      <td>1874088</td>
+      <td>1869515</td>
+      <td>1701531</td>
+      <td>1869515</td>
+      <td>1694477</td>
+      <td>1866320</td>
+      <td>1696571</td>
     </tr>
   </tbody>
 </table>
@@ -13306,7 +14586,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tce</span><span class="o">=</span><span class="n">tc</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13327,7 +14607,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
         
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13337,7 +14617,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -13370,7 +14650,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">tce</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13380,22 +14660,22 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Anaconda3_64\lib\site-packages\ipykernel_launcher.py:3: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-25-35e3607d3c2a&gt;:3: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  This is separate from the ipykernel package so we can avoid doing imports until
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  tce[j][k]=tce[&#34;original_val&#34;][k]-tce[i][k]
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -13545,531 +14825,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>122</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>2020-04-05</td>
-      <td>329</td>
-      <td>215</td>
-      <td>384</td>
-      <td>341</td>
-      <td>243</td>
-      <td>341</td>
-      <td>225</td>
-      <td>356</td>
-      <td>190</td>
-      <td>114</td>
-      <td>-55</td>
-      <td>-12</td>
-      <td>86</td>
-      <td>-12</td>
-      <td>104</td>
-      <td>-27</td>
-      <td>139</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>2020-04-06</td>
-      <td>394</td>
-      <td>253</td>
-      <td>442</td>
-      <td>390</td>
-      <td>286</td>
-      <td>390</td>
-      <td>245</td>
-      <td>378</td>
-      <td>216</td>
-      <td>141</td>
-      <td>-48</td>
-      <td>4</td>
-      <td>108</td>
-      <td>4</td>
-      <td>149</td>
-      <td>16</td>
-      <td>178</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>2020-04-07</td>
-      <td>469</td>
-      <td>291</td>
-      <td>490</td>
-      <td>459</td>
-      <td>311</td>
-      <td>459</td>
-      <td>299</td>
-      <td>472</td>
-      <td>277</td>
-      <td>178</td>
-      <td>-21</td>
-      <td>10</td>
-      <td>158</td>
-      <td>10</td>
-      <td>170</td>
-      <td>-3</td>
-      <td>192</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>2020-04-08</td>
-      <td>565</td>
-      <td>348</td>
-      <td>583</td>
-      <td>552</td>
-      <td>367</td>
-      <td>552</td>
-      <td>352</td>
-      <td>558</td>
-      <td>356</td>
-      <td>217</td>
-      <td>-18</td>
-      <td>13</td>
-      <td>198</td>
-      <td>13</td>
-      <td>213</td>
-      <td>7</td>
-      <td>209</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>2020-04-09</td>
-      <td>635</td>
-      <td>418</td>
-      <td>703</td>
-      <td>672</td>
-      <td>438</td>
-      <td>672</td>
-      <td>424</td>
-      <td>681</td>
-      <td>378</td>
-      <td>217</td>
-      <td>-68</td>
-      <td>-37</td>
-      <td>197</td>
-      <td>-37</td>
-      <td>211</td>
-      <td>-46</td>
-      <td>257</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>2020-04-10</td>
-      <td>786</td>
-      <td>493</td>
-      <td>790</td>
-      <td>754</td>
-      <td>517</td>
-      <td>754</td>
-      <td>467</td>
-      <td>714</td>
-      <td>472</td>
-      <td>293</td>
-      <td>-4</td>
-      <td>32</td>
-      <td>269</td>
-      <td>32</td>
-      <td>319</td>
-      <td>72</td>
-      <td>314</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>2020-04-11</td>
-      <td>972</td>
-      <td>590</td>
-      <td>977</td>
-      <td>937</td>
-      <td>615</td>
-      <td>937</td>
-      <td>613</td>
-      <td>973</td>
-      <td>558</td>
-      <td>382</td>
-      <td>-5</td>
-      <td>35</td>
-      <td>357</td>
-      <td>35</td>
-      <td>359</td>
-      <td>-1</td>
-      <td>414</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>2020-04-12</td>
-      <td>1086</td>
-      <td>706</td>
-      <td>1203</td>
-      <td>1158</td>
-      <td>734</td>
-      <td>1158</td>
-      <td>733</td>
-      <td>1202</td>
-      <td>681</td>
-      <td>380</td>
-      <td>-117</td>
-      <td>-72</td>
-      <td>352</td>
-      <td>-72</td>
-      <td>353</td>
-      <td>-116</td>
-      <td>405</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>2020-04-13</td>
-      <td>1198</td>
-      <td>832</td>
-      <td>1344</td>
-      <td>1289</td>
-      <td>868</td>
-      <td>1289</td>
-      <td>783</td>
-      <td>1213</td>
-      <td>714</td>
-      <td>366</td>
-      <td>-146</td>
-      <td>-91</td>
-      <td>330</td>
-      <td>-91</td>
-      <td>415</td>
-      <td>-15</td>
-      <td>484</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>2020-04-14</td>
-      <td>1365</td>
-      <td>957</td>
-      <td>1483</td>
-      <td>1406</td>
-      <td>1010</td>
-      <td>1406</td>
-      <td>900</td>
-      <td>1322</td>
-      <td>973</td>
-      <td>408</td>
-      <td>-118</td>
-      <td>-41</td>
-      <td>355</td>
-      <td>-41</td>
-      <td>465</td>
-      <td>43</td>
-      <td>392</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>2020-04-15</td>
-      <td>1509</td>
-      <td>1101</td>
-      <td>1690</td>
-      <td>1592</td>
-      <td>1168</td>
-      <td>1592</td>
-      <td>1075</td>
-      <td>1555</td>
-      <td>1202</td>
-      <td>408</td>
-      <td>-181</td>
-      <td>-83</td>
-      <td>341</td>
-      <td>-83</td>
-      <td>434</td>
-      <td>-46</td>
-      <td>307</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>2020-04-16</td>
-      <td>1767</td>
-      <td>1243</td>
-      <td>1868</td>
-      <td>1738</td>
-      <td>1335</td>
-      <td>1738</td>
-      <td>1193</td>
-      <td>1668</td>
-      <td>1213</td>
-      <td>524</td>
-      <td>-101</td>
-      <td>29</td>
-      <td>432</td>
-      <td>29</td>
-      <td>574</td>
-      <td>99</td>
-      <td>554</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>2020-04-17</td>
-      <td>2040</td>
-      <td>1437</td>
-      <td>2187</td>
-      <td>2047</td>
-      <td>1535</td>
-      <td>2047</td>
-      <td>1453</td>
-      <td>2069</td>
-      <td>1322</td>
-      <td>603</td>
-      <td>-147</td>
-      <td>-7</td>
-      <td>505</td>
-      <td>-7</td>
-      <td>587</td>
-      <td>-29</td>
-      <td>718</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>2020-04-18</td>
-      <td>2466</td>
-      <td>1628</td>
-      <td>2523</td>
-      <td>2339</td>
-      <td>1756</td>
-      <td>2339</td>
-      <td>1639</td>
-      <td>2355</td>
-      <td>1555</td>
-      <td>838</td>
-      <td>-57</td>
-      <td>127</td>
-      <td>710</td>
-      <td>127</td>
-      <td>827</td>
-      <td>111</td>
-      <td>911</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>2020-04-19</td>
-      <td>2854</td>
-      <td>1866</td>
-      <td>2981</td>
-      <td>2818</td>
-      <td>1974</td>
-      <td>2818</td>
-      <td>1974</td>
-      <td>2981</td>
-      <td>1668</td>
-      <td>988</td>
-      <td>-127</td>
-      <td>36</td>
-      <td>880</td>
-      <td>36</td>
-      <td>880</td>
-      <td>-127</td>
-      <td>1186</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>2020-04-20</td>
-      <td>3273</td>
-      <td>2166</td>
-      <td>3450</td>
-      <td>3278</td>
-      <td>2279</td>
-      <td>3278</td>
-      <td>2182</td>
-      <td>3303</td>
-      <td>2069</td>
-      <td>1107</td>
-      <td>-177</td>
-      <td>-5</td>
-      <td>994</td>
-      <td>-5</td>
-      <td>1091</td>
-      <td>-30</td>
-      <td>1204</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>2020-04-21</td>
-      <td>3976</td>
-      <td>2520</td>
-      <td>3956</td>
-      <td>3780</td>
-      <td>2638</td>
-      <td>3780</td>
-      <td>2502</td>
-      <td>3754</td>
-      <td>2355</td>
-      <td>1456</td>
-      <td>20</td>
-      <td>196</td>
-      <td>1338</td>
-      <td>196</td>
-      <td>1474</td>
-      <td>222</td>
-      <td>1621</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>2020-04-22</td>
-      <td>4370</td>
-      <td>2978</td>
-      <td>4830</td>
-      <td>4634</td>
-      <td>3104</td>
-      <td>4634</td>
-      <td>3104</td>
-      <td>4830</td>
-      <td>2981</td>
-      <td>1392</td>
-      <td>-460</td>
-      <td>-264</td>
-      <td>1266</td>
-      <td>-264</td>
-      <td>1266</td>
-      <td>-460</td>
-      <td>1389</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>2020-04-23</td>
-      <td>5012</td>
-      <td>3452</td>
-      <td>5309</td>
-      <td>5089</td>
-      <td>3600</td>
-      <td>5089</td>
-      <td>3257</td>
-      <td>4803</td>
-      <td>3303</td>
-      <td>1560</td>
-      <td>-297</td>
-      <td>-77</td>
-      <td>1412</td>
-      <td>-77</td>
-      <td>1755</td>
-      <td>209</td>
-      <td>1709</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>2020-04-24</td>
-      <td>5496</td>
-      <td>3980</td>
-      <td>6089</td>
-      <td>5820</td>
-      <td>4163</td>
-      <td>5820</td>
-      <td>3931</td>
-      <td>5748</td>
-      <td>3754</td>
-      <td>1516</td>
-      <td>-593</td>
-      <td>-324</td>
-      <td>1333</td>
-      <td>-324</td>
-      <td>1565</td>
-      <td>-252</td>
-      <td>1742</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>2020-04-25</td>
-      <td>5938</td>
-      <td>4521</td>
-      <td>6676</td>
-      <td>6336</td>
-      <td>4763</td>
-      <td>6336</td>
-      <td>4300</td>
-      <td>6027</td>
-      <td>4830</td>
-      <td>1417</td>
-      <td>-738</td>
-      <td>-398</td>
-      <td>1175</td>
-      <td>-398</td>
-      <td>1638</td>
-      <td>-89</td>
-      <td>1108</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>2020-04-26</td>
-      <td>6523</td>
-      <td>5011</td>
-      <td>7213</td>
-      <td>6737</td>
-      <td>5366</td>
-      <td>6737</td>
-      <td>4772</td>
-      <td>6416</td>
-      <td>4803</td>
-      <td>1512</td>
-      <td>-690</td>
-      <td>-214</td>
-      <td>1157</td>
-      <td>-214</td>
-      <td>1751</td>
-      <td>107</td>
-      <td>1720</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>2020-04-27</td>
-      <td>7103</td>
-      <td>5565</td>
-      <td>7924</td>
-      <td>7346</td>
-      <td>6002</td>
-      <td>7346</td>
-      <td>5428</td>
-      <td>7166</td>
-      <td>5748</td>
-      <td>1538</td>
-      <td>-821</td>
-      <td>-243</td>
-      <td>1101</td>
-      <td>-243</td>
-      <td>1675</td>
-      <td>-63</td>
-      <td>1355</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>2020-04-28</td>
-      <td>7739</td>
-      <td>6135</td>
-      <td>8629</td>
-      <td>7940</td>
-      <td>6667</td>
-      <td>7940</td>
-      <td>5976</td>
-      <td>7735</td>
-      <td>6027</td>
-      <td>1604</td>
-      <td>-890</td>
-      <td>-201</td>
-      <td>1072</td>
-      <td>-201</td>
-      <td>1763</td>
-      <td>4</td>
-      <td>1712</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>2020-04-29</td>
-      <td>8429</td>
-      <td>6628</td>
-      <td>8876</td>
-      <td>8513</td>
-      <td>6911</td>
-      <td>8513</td>
-      <td>6565</td>
-      <td>8432</td>
-      <td>6416</td>
-      <td>1801</td>
-      <td>-447</td>
-      <td>-84</td>
-      <td>1518</td>
-      <td>-84</td>
-      <td>1864</td>
-      <td>-3</td>
-      <td>2013</td>
-    </tr>
-    <tr>
       <th>...</th>
       <td>...</td>
       <td>...</td>
@@ -14089,594 +14844,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>...</td>
       <td>...</td>
       <td>...</td>
-    </tr>
-    <tr>
-      <th>105</th>
-      <td>2020-07-14</td>
-      <td>593090</td>
-      <td>535183</td>
-      <td>596532</td>
-      <td>593943</td>
-      <td>537516</td>
-      <td>593943</td>
-      <td>531954</td>
-      <td>590360</td>
-      <td>537370</td>
-      <td>57907</td>
-      <td>-3442</td>
-      <td>-853</td>
-      <td>55574</td>
-      <td>-853</td>
-      <td>61136</td>
-      <td>2730</td>
-      <td>55720</td>
-    </tr>
-    <tr>
-      <th>106</th>
-      <td>2020-07-15</td>
-      <td>613736</td>
-      <td>555239</td>
-      <td>618405</td>
-      <td>615587</td>
-      <td>557780</td>
-      <td>615587</td>
-      <td>554562</td>
-      <td>614836</td>
-      <td>556986</td>
-      <td>58497</td>
-      <td>-4669</td>
-      <td>-1851</td>
-      <td>55956</td>
-      <td>-1851</td>
-      <td>59174</td>
-      <td>-1100</td>
-      <td>56750</td>
-    </tr>
-    <tr>
-      <th>107</th>
-      <td>2020-07-16</td>
-      <td>636603</td>
-      <td>574956</td>
-      <td>638843</td>
-      <td>636325</td>
-      <td>577230</td>
-      <td>636325</td>
-      <td>573849</td>
-      <td>635101</td>
-      <td>573246</td>
-      <td>61647</td>
-      <td>-2240</td>
-      <td>278</td>
-      <td>59373</td>
-      <td>278</td>
-      <td>62754</td>
-      <td>1502</td>
-      <td>63357</td>
-    </tr>
-    <tr>
-      <th>108</th>
-      <td>2020-07-17</td>
-      <td>654079</td>
-      <td>595502</td>
-      <td>662645</td>
-      <td>659719</td>
-      <td>598144</td>
-      <td>659719</td>
-      <td>596047</td>
-      <td>660322</td>
-      <td>590360</td>
-      <td>58577</td>
-      <td>-8566</td>
-      <td>-5640</td>
-      <td>55935</td>
-      <td>-5640</td>
-      <td>58032</td>
-      <td>-6243</td>
-      <td>63719</td>
-    </tr>
-    <tr>
-      <th>109</th>
-      <td>2020-07-18</td>
-      <td>677662</td>
-      <td>614764</td>
-      <td>679395</td>
-      <td>676572</td>
-      <td>617329</td>
-      <td>676572</td>
-      <td>610642</td>
-      <td>672035</td>
-      <td>614836</td>
-      <td>62898</td>
-      <td>-1733</td>
-      <td>1090</td>
-      <td>60333</td>
-      <td>1090</td>
-      <td>67020</td>
-      <td>5627</td>
-      <td>62826</td>
-    </tr>
-    <tr>
-      <th>110</th>
-      <td>2020-07-19</td>
-      <td>700392</td>
-      <td>635431</td>
-      <td>702911</td>
-      <td>700710</td>
-      <td>637427</td>
-      <td>700710</td>
-      <td>636687</td>
-      <td>702095</td>
-      <td>635101</td>
-      <td>64961</td>
-      <td>-2519</td>
-      <td>-318</td>
-      <td>62965</td>
-      <td>-318</td>
-      <td>63705</td>
-      <td>-1703</td>
-      <td>65291</td>
-    </tr>
-    <tr>
-      <th>111</th>
-      <td>2020-07-20</td>
-      <td>724695</td>
-      <td>656956</td>
-      <td>726488</td>
-      <td>724173</td>
-      <td>659056</td>
-      <td>724173</td>
-      <td>656694</td>
-      <td>723884</td>
-      <td>660322</td>
-      <td>67739</td>
-      <td>-1793</td>
-      <td>522</td>
-      <td>65639</td>
-      <td>522</td>
-      <td>68001</td>
-      <td>811</td>
-      <td>64373</td>
-    </tr>
-    <tr>
-      <th>112</th>
-      <td>2020-07-21</td>
-      <td>752284</td>
-      <td>679757</td>
-      <td>751696</td>
-      <td>749592</td>
-      <td>681665</td>
-      <td>749592</td>
-      <td>679983</td>
-      <td>749841</td>
-      <td>672035</td>
-      <td>72527</td>
-      <td>588</td>
-      <td>2692</td>
-      <td>70619</td>
-      <td>2692</td>
-      <td>72301</td>
-      <td>2443</td>
-      <td>80249</td>
-    </tr>
-    <tr>
-      <th>113</th>
-      <td>2020-07-22</td>
-      <td>784159</td>
-      <td>703417</td>
-      <td>780923</td>
-      <td>778279</td>
-      <td>705806</td>
-      <td>778279</td>
-      <td>705806</td>
-      <td>780923</td>
-      <td>702095</td>
-      <td>80742</td>
-      <td>3236</td>
-      <td>5880</td>
-      <td>78353</td>
-      <td>5880</td>
-      <td>78353</td>
-      <td>3236</td>
-      <td>82064</td>
-    </tr>
-    <tr>
-      <th>114</th>
-      <td>2020-07-23</td>
-      <td>817485</td>
-      <td>729365</td>
-      <td>817385</td>
-      <td>812103</td>
-      <td>734108</td>
-      <td>812103</td>
-      <td>734108</td>
-      <td>817385</td>
-      <td>723884</td>
-      <td>88120</td>
-      <td>100</td>
-      <td>5382</td>
-      <td>83377</td>
-      <td>5382</td>
-      <td>83377</td>
-      <td>100</td>
-      <td>93601</td>
-    </tr>
-    <tr>
-      <th>115</th>
-      <td>2020-07-24</td>
-      <td>849999</td>
-      <td>756672</td>
-      <td>852227</td>
-      <td>847228</td>
-      <td>761137</td>
-      <td>847228</td>
-      <td>761137</td>
-      <td>852227</td>
-      <td>749841</td>
-      <td>93327</td>
-      <td>-2228</td>
-      <td>2771</td>
-      <td>88862</td>
-      <td>2771</td>
-      <td>88862</td>
-      <td>-2228</td>
-      <td>100158</td>
-    </tr>
-    <tr>
-      <th>116</th>
-      <td>2020-07-25</td>
-      <td>887124</td>
-      <td>787014</td>
-      <td>886123</td>
-      <td>882422</td>
-      <td>790315</td>
-      <td>882422</td>
-      <td>788249</td>
-      <td>883806</td>
-      <td>780923</td>
-      <td>100110</td>
-      <td>1001</td>
-      <td>4702</td>
-      <td>96809</td>
-      <td>4702</td>
-      <td>98875</td>
-      <td>3318</td>
-      <td>106201</td>
-    </tr>
-    <tr>
-      <th>117</th>
-      <td>2020-07-26</td>
-      <td>918636</td>
-      <td>818936</td>
-      <td>925870</td>
-      <td>921928</td>
-      <td>822438</td>
-      <td>921928</td>
-      <td>822438</td>
-      <td>925870</td>
-      <td>817385</td>
-      <td>99700</td>
-      <td>-7234</td>
-      <td>-3292</td>
-      <td>96198</td>
-      <td>-3292</td>
-      <td>96198</td>
-      <td>-7234</td>
-      <td>101251</td>
-    </tr>
-    <tr>
-      <th>118</th>
-      <td>2020-07-27</td>
-      <td>952990</td>
-      <td>851569</td>
-      <td>958759</td>
-      <td>954937</td>
-      <td>854977</td>
-      <td>954937</td>
-      <td>848297</td>
-      <td>951267</td>
-      <td>852227</td>
-      <td>101421</td>
-      <td>-5769</td>
-      <td>-1947</td>
-      <td>98013</td>
-      <td>-1947</td>
-      <td>104693</td>
-      <td>1723</td>
-      <td>100763</td>
-    </tr>
-    <tr>
-      <th>119</th>
-      <td>2020-07-28</td>
-      <td>988673</td>
-      <td>885799</td>
-      <td>994613</td>
-      <td>991015</td>
-      <td>889015</td>
-      <td>991015</td>
-      <td>883666</td>
-      <td>988629</td>
-      <td>883806</td>
-      <td>102874</td>
-      <td>-5940</td>
-      <td>-2342</td>
-      <td>99658</td>
-      <td>-2342</td>
-      <td>105007</td>
-      <td>44</td>
-      <td>104867</td>
-    </tr>
-    <tr>
-      <th>120</th>
-      <td>2020-07-29</td>
-      <td>1021559</td>
-      <td>920837</td>
-      <td>1031855</td>
-      <td>1028034</td>
-      <td>924260</td>
-      <td>1028034</td>
-      <td>918740</td>
-      <td>1025692</td>
-      <td>925870</td>
-      <td>100722</td>
-      <td>-10296</td>
-      <td>-6475</td>
-      <td>97299</td>
-      <td>-6475</td>
-      <td>102819</td>
-      <td>-4133</td>
-      <td>95689</td>
-    </tr>
-    <tr>
-      <th>121</th>
-      <td>2020-07-30</td>
-      <td>1058984</td>
-      <td>954905</td>
-      <td>1066177</td>
-      <td>1060900</td>
-      <td>959655</td>
-      <td>1060900</td>
-      <td>950080</td>
-      <td>1055539</td>
-      <td>951267</td>
-      <td>104079</td>
-      <td>-7193</td>
-      <td>-1916</td>
-      <td>99329</td>
-      <td>-1916</td>
-      <td>108904</td>
-      <td>3445</td>
-      <td>107717</td>
-    </tr>
-    <tr>
-      <th>122</th>
-      <td>2020-07-31</td>
-      <td>1095538</td>
-      <td>989935</td>
-      <td>1105237</td>
-      <td>1098879</td>
-      <td>995662</td>
-      <td>1098879</td>
-      <td>988945</td>
-      <td>1097780</td>
-      <td>988629</td>
-      <td>105603</td>
-      <td>-9699</td>
-      <td>-3341</td>
-      <td>99876</td>
-      <td>-3341</td>
-      <td>106593</td>
-      <td>-2242</td>
-      <td>106909</td>
-    </tr>
-    <tr>
-      <th>123</th>
-      <td>2020-08-01</td>
-      <td>1146906</td>
-      <td>1025591</td>
-      <td>1143387</td>
-      <td>1135987</td>
-      <td>1032271</td>
-      <td>1135987</td>
-      <td>1023213</td>
-      <td>1133354</td>
-      <td>1025692</td>
-      <td>121315</td>
-      <td>3519</td>
-      <td>10919</td>
-      <td>114635</td>
-      <td>10919</td>
-      <td>123693</td>
-      <td>13552</td>
-      <td>121214</td>
-    </tr>
-    <tr>
-      <th>124</th>
-      <td>2020-08-02</td>
-      <td>1187261</td>
-      <td>1064543</td>
-      <td>1200683</td>
-      <td>1189778</td>
-      <td>1074300</td>
-      <td>1189778</td>
-      <td>1074300</td>
-      <td>1200683</td>
-      <td>1055539</td>
-      <td>122718</td>
-      <td>-13422</td>
-      <td>-2517</td>
-      <td>112961</td>
-      <td>-2517</td>
-      <td>112961</td>
-      <td>-13422</td>
-      <td>131722</td>
-    </tr>
-    <tr>
-      <th>125</th>
-      <td>2020-08-03</td>
-      <td>1230331</td>
-      <td>1104302</td>
-      <td>1242930</td>
-      <td>1231585</td>
-      <td>1114474</td>
-      <td>1231585</td>
-      <td>1102016</td>
-      <td>1229036</td>
-      <td>1097780</td>
-      <td>126029</td>
-      <td>-12599</td>
-      <td>-1254</td>
-      <td>115857</td>
-      <td>-1254</td>
-      <td>128315</td>
-      <td>1295</td>
-      <td>132551</td>
-    </tr>
-    <tr>
-      <th>126</th>
-      <td>2020-08-04</td>
-      <td>1281551</td>
-      <td>1145224</td>
-      <td>1288019</td>
-      <td>1276066</td>
-      <td>1155952</td>
-      <td>1276066</td>
-      <td>1144235</td>
-      <td>1274963</td>
-      <td>1133354</td>
-      <td>136327</td>
-      <td>-6468</td>
-      <td>5485</td>
-      <td>125599</td>
-      <td>5485</td>
-      <td>137316</td>
-      <td>6588</td>
-      <td>148197</td>
-    </tr>
-    <tr>
-      <th>127</th>
-      <td>2020-08-05</td>
-      <td>1327134</td>
-      <td>1189305</td>
-      <td>1341641</td>
-      <td>1329957</td>
-      <td>1199754</td>
-      <td>1329957</td>
-      <td>1193729</td>
-      <td>1334903</td>
-      <td>1200683</td>
-      <td>137829</td>
-      <td>-14507</td>
-      <td>-2823</td>
-      <td>127380</td>
-      <td>-2823</td>
-      <td>133405</td>
-      <td>-7769</td>
-      <td>126451</td>
-    </tr>
-    <tr>
-      <th>128</th>
-      <td>2020-08-06</td>
-      <td>1377275</td>
-      <td>1234999</td>
-      <td>1389361</td>
-      <td>1377699</td>
-      <td>1245454</td>
-      <td>1377699</td>
-      <td>1231987</td>
-      <td>1374338</td>
-      <td>1229036</td>
-      <td>142276</td>
-      <td>-12086</td>
-      <td>-424</td>
-      <td>131821</td>
-      <td>-424</td>
-      <td>145288</td>
-      <td>2937</td>
-      <td>148239</td>
-    </tr>
-    <tr>
-      <th>129</th>
-      <td>2020-08-07</td>
-      <td>1427662</td>
-      <td>1282404</td>
-      <td>1441853</td>
-      <td>1429975</td>
-      <td>1293056</td>
-      <td>1429975</td>
-      <td>1281808</td>
-      <td>1429310</td>
-      <td>1274963</td>
-      <td>145258</td>
-      <td>-14191</td>
-      <td>-2313</td>
-      <td>134606</td>
-      <td>-2313</td>
-      <td>145854</td>
-      <td>-1648</td>
-      <td>152699</td>
-    </tr>
-    <tr>
-      <th>130</th>
-      <td>2020-08-08</td>
-      <td>1479797</td>
-      <td>1332045</td>
-      <td>1494603</td>
-      <td>1482712</td>
-      <td>1342727</td>
-      <td>1482712</td>
-      <td>1329512</td>
-      <td>1479892</td>
-      <td>1334903</td>
-      <td>147752</td>
-      <td>-14806</td>
-      <td>-2915</td>
-      <td>137070</td>
-      <td>-2915</td>
-      <td>150285</td>
-      <td>-95</td>
-      <td>144894</td>
-    </tr>
-    <tr>
-      <th>131</th>
-      <td>2020-08-09</td>
-      <td>1534271</td>
-      <td>1379464</td>
-      <td>1541403</td>
-      <td>1534665</td>
-      <td>1385520</td>
-      <td>1534665</td>
-      <td>1378718</td>
-      <td>1533836</td>
-      <td>1374338</td>
-      <td>154807</td>
-      <td>-7132</td>
-      <td>-394</td>
-      <td>148751</td>
-      <td>-394</td>
-      <td>155553</td>
-      <td>435</td>
-      <td>159933</td>
-    </tr>
-    <tr>
-      <th>132</th>
-      <td>2020-08-10</td>
-      <td>1581633</td>
-      <td>1431195</td>
-      <td>1598144</td>
-      <td>1591515</td>
-      <td>1437156</td>
-      <td>1591515</td>
-      <td>1430507</td>
-      <td>1590750</td>
-      <td>1429310</td>
-      <td>150438</td>
-      <td>-16511</td>
-      <td>-9882</td>
-      <td>144477</td>
-      <td>-9882</td>
-      <td>151126</td>
-      <td>-9117</td>
-      <td>152323</td>
     </tr>
     <tr>
       <th>133</th>
@@ -14702,7 +14869,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>134</th>
       <td>2020-08-12</td>
-      <td>0</td>
+      <td>1695853</td>
       <td>1533689</td>
       <td>1699984</td>
       <td>1696558</td>
@@ -14711,18 +14878,81 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>1533701</td>
       <td>1696571</td>
       <td>1533836</td>
-      <td>-1533689</td>
-      <td>-1699984</td>
-      <td>-1696558</td>
-      <td>-1536786</td>
-      <td>-1696558</td>
-      <td>-1533701</td>
+      <td>162164</td>
+      <td>-4131</td>
+      <td>-705</td>
+      <td>159067</td>
+      <td>-705</td>
+      <td>162152</td>
+      <td>-718</td>
+      <td>162017</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>2020-08-13</td>
+      <td>1750629</td>
+      <td>1588176</td>
+      <td>1759925</td>
+      <td>1756304</td>
+      <td>1591450</td>
+      <td>1756304</td>
+      <td>1587584</td>
+      <td>1755649</td>
+      <td>1590750</td>
+      <td>162453</td>
+      <td>-9296</td>
+      <td>-5675</td>
+      <td>159179</td>
+      <td>-5675</td>
+      <td>163045</td>
+      <td>-5020</td>
+      <td>159879</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>2020-08-14</td>
+      <td>1807549</td>
+      <td>1642171</td>
+      <td>1815073</td>
+      <td>1811661</td>
+      <td>1645263</td>
+      <td>1811661</td>
+      <td>1638104</td>
+      <td>1807174</td>
+      <td>1630457</td>
+      <td>165378</td>
+      <td>-7524</td>
+      <td>-4112</td>
+      <td>162286</td>
+      <td>-4112</td>
+      <td>169445</td>
+      <td>375</td>
+      <td>177092</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>2020-08-15</td>
+      <td>0</td>
+      <td>1697378</td>
+      <td>1874088</td>
+      <td>1869515</td>
+      <td>1701531</td>
+      <td>1869515</td>
+      <td>1694477</td>
+      <td>1866320</td>
+      <td>1696571</td>
+      <td>-1697378</td>
+      <td>-1874088</td>
+      <td>-1869515</td>
+      <td>-1701531</td>
+      <td>-1869515</td>
+      <td>-1694477</td>
+      <td>-1866320</td>
       <td>-1696571</td>
-      <td>-1533836</td>
     </tr>
   </tbody>
 </table>
-<p>135 rows × 18 columns</p>
+<p>138 rows × 18 columns</p>
 </div>
 </div>
 
@@ -14738,9 +14968,12 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tce</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;tramerrprd_df_strd.xlsx&quot;</span><span class="p">)</span>
+<span class="n">tce</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\tramerrprd_df_strd.xlsx&quot;</span><span class="p">)</span>
+<span class="n">tce</span> <span class="o">=</span> <span class="n">tce</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="o">~</span><span class="n">tce</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;^Unnamed&#39;</span><span class="p">)]</span>
+<span class="n">tce</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;tramerrprd_df_strd.xlsx&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -14754,7 +14987,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">edf</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -14764,7 +14997,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -14854,281 +15087,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>122</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>114</td>
-      <td>-55</td>
-      <td>-12</td>
-      <td>86</td>
-      <td>-12</td>
-      <td>104</td>
-      <td>-27</td>
-      <td>139</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>141</td>
-      <td>-48</td>
-      <td>4</td>
-      <td>108</td>
-      <td>4</td>
-      <td>149</td>
-      <td>16</td>
-      <td>178</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>178</td>
-      <td>-21</td>
-      <td>10</td>
-      <td>158</td>
-      <td>10</td>
-      <td>170</td>
-      <td>-3</td>
-      <td>192</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>217</td>
-      <td>-18</td>
-      <td>13</td>
-      <td>198</td>
-      <td>13</td>
-      <td>213</td>
-      <td>7</td>
-      <td>209</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>217</td>
-      <td>-68</td>
-      <td>-37</td>
-      <td>197</td>
-      <td>-37</td>
-      <td>211</td>
-      <td>-46</td>
-      <td>257</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>293</td>
-      <td>-4</td>
-      <td>32</td>
-      <td>269</td>
-      <td>32</td>
-      <td>319</td>
-      <td>72</td>
-      <td>314</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>382</td>
-      <td>-5</td>
-      <td>35</td>
-      <td>357</td>
-      <td>35</td>
-      <td>359</td>
-      <td>-1</td>
-      <td>414</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>380</td>
-      <td>-117</td>
-      <td>-72</td>
-      <td>352</td>
-      <td>-72</td>
-      <td>353</td>
-      <td>-116</td>
-      <td>405</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>366</td>
-      <td>-146</td>
-      <td>-91</td>
-      <td>330</td>
-      <td>-91</td>
-      <td>415</td>
-      <td>-15</td>
-      <td>484</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>408</td>
-      <td>-118</td>
-      <td>-41</td>
-      <td>355</td>
-      <td>-41</td>
-      <td>465</td>
-      <td>43</td>
-      <td>392</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>408</td>
-      <td>-181</td>
-      <td>-83</td>
-      <td>341</td>
-      <td>-83</td>
-      <td>434</td>
-      <td>-46</td>
-      <td>307</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>524</td>
-      <td>-101</td>
-      <td>29</td>
-      <td>432</td>
-      <td>29</td>
-      <td>574</td>
-      <td>99</td>
-      <td>554</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>603</td>
-      <td>-147</td>
-      <td>-7</td>
-      <td>505</td>
-      <td>-7</td>
-      <td>587</td>
-      <td>-29</td>
-      <td>718</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>838</td>
-      <td>-57</td>
-      <td>127</td>
-      <td>710</td>
-      <td>127</td>
-      <td>827</td>
-      <td>111</td>
-      <td>911</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>988</td>
-      <td>-127</td>
-      <td>36</td>
-      <td>880</td>
-      <td>36</td>
-      <td>880</td>
-      <td>-127</td>
-      <td>1186</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>1107</td>
-      <td>-177</td>
-      <td>-5</td>
-      <td>994</td>
-      <td>-5</td>
-      <td>1091</td>
-      <td>-30</td>
-      <td>1204</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>1456</td>
-      <td>20</td>
-      <td>196</td>
-      <td>1338</td>
-      <td>196</td>
-      <td>1474</td>
-      <td>222</td>
-      <td>1621</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>1392</td>
-      <td>-460</td>
-      <td>-264</td>
-      <td>1266</td>
-      <td>-264</td>
-      <td>1266</td>
-      <td>-460</td>
-      <td>1389</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>1560</td>
-      <td>-297</td>
-      <td>-77</td>
-      <td>1412</td>
-      <td>-77</td>
-      <td>1755</td>
-      <td>209</td>
-      <td>1709</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>1516</td>
-      <td>-593</td>
-      <td>-324</td>
-      <td>1333</td>
-      <td>-324</td>
-      <td>1565</td>
-      <td>-252</td>
-      <td>1742</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>1417</td>
-      <td>-738</td>
-      <td>-398</td>
-      <td>1175</td>
-      <td>-398</td>
-      <td>1638</td>
-      <td>-89</td>
-      <td>1108</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>1512</td>
-      <td>-690</td>
-      <td>-214</td>
-      <td>1157</td>
-      <td>-214</td>
-      <td>1751</td>
-      <td>107</td>
-      <td>1720</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>1538</td>
-      <td>-821</td>
-      <td>-243</td>
-      <td>1101</td>
-      <td>-243</td>
-      <td>1675</td>
-      <td>-63</td>
-      <td>1355</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>1604</td>
-      <td>-890</td>
-      <td>-201</td>
-      <td>1072</td>
-      <td>-201</td>
-      <td>1763</td>
-      <td>4</td>
-      <td>1712</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>1801</td>
-      <td>-447</td>
-      <td>-84</td>
-      <td>1518</td>
-      <td>-84</td>
-      <td>1864</td>
-      <td>-3</td>
-      <td>2013</td>
-    </tr>
-    <tr>
       <th>...</th>
       <td>...</td>
       <td>...</td>
@@ -15138,314 +15096,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
       <td>...</td>
       <td>...</td>
       <td>...</td>
-    </tr>
-    <tr>
-      <th>105</th>
-      <td>57907</td>
-      <td>-3442</td>
-      <td>-853</td>
-      <td>55574</td>
-      <td>-853</td>
-      <td>61136</td>
-      <td>2730</td>
-      <td>55720</td>
-    </tr>
-    <tr>
-      <th>106</th>
-      <td>58497</td>
-      <td>-4669</td>
-      <td>-1851</td>
-      <td>55956</td>
-      <td>-1851</td>
-      <td>59174</td>
-      <td>-1100</td>
-      <td>56750</td>
-    </tr>
-    <tr>
-      <th>107</th>
-      <td>61647</td>
-      <td>-2240</td>
-      <td>278</td>
-      <td>59373</td>
-      <td>278</td>
-      <td>62754</td>
-      <td>1502</td>
-      <td>63357</td>
-    </tr>
-    <tr>
-      <th>108</th>
-      <td>58577</td>
-      <td>-8566</td>
-      <td>-5640</td>
-      <td>55935</td>
-      <td>-5640</td>
-      <td>58032</td>
-      <td>-6243</td>
-      <td>63719</td>
-    </tr>
-    <tr>
-      <th>109</th>
-      <td>62898</td>
-      <td>-1733</td>
-      <td>1090</td>
-      <td>60333</td>
-      <td>1090</td>
-      <td>67020</td>
-      <td>5627</td>
-      <td>62826</td>
-    </tr>
-    <tr>
-      <th>110</th>
-      <td>64961</td>
-      <td>-2519</td>
-      <td>-318</td>
-      <td>62965</td>
-      <td>-318</td>
-      <td>63705</td>
-      <td>-1703</td>
-      <td>65291</td>
-    </tr>
-    <tr>
-      <th>111</th>
-      <td>67739</td>
-      <td>-1793</td>
-      <td>522</td>
-      <td>65639</td>
-      <td>522</td>
-      <td>68001</td>
-      <td>811</td>
-      <td>64373</td>
-    </tr>
-    <tr>
-      <th>112</th>
-      <td>72527</td>
-      <td>588</td>
-      <td>2692</td>
-      <td>70619</td>
-      <td>2692</td>
-      <td>72301</td>
-      <td>2443</td>
-      <td>80249</td>
-    </tr>
-    <tr>
-      <th>113</th>
-      <td>80742</td>
-      <td>3236</td>
-      <td>5880</td>
-      <td>78353</td>
-      <td>5880</td>
-      <td>78353</td>
-      <td>3236</td>
-      <td>82064</td>
-    </tr>
-    <tr>
-      <th>114</th>
-      <td>88120</td>
-      <td>100</td>
-      <td>5382</td>
-      <td>83377</td>
-      <td>5382</td>
-      <td>83377</td>
-      <td>100</td>
-      <td>93601</td>
-    </tr>
-    <tr>
-      <th>115</th>
-      <td>93327</td>
-      <td>-2228</td>
-      <td>2771</td>
-      <td>88862</td>
-      <td>2771</td>
-      <td>88862</td>
-      <td>-2228</td>
-      <td>100158</td>
-    </tr>
-    <tr>
-      <th>116</th>
-      <td>100110</td>
-      <td>1001</td>
-      <td>4702</td>
-      <td>96809</td>
-      <td>4702</td>
-      <td>98875</td>
-      <td>3318</td>
-      <td>106201</td>
-    </tr>
-    <tr>
-      <th>117</th>
-      <td>99700</td>
-      <td>-7234</td>
-      <td>-3292</td>
-      <td>96198</td>
-      <td>-3292</td>
-      <td>96198</td>
-      <td>-7234</td>
-      <td>101251</td>
-    </tr>
-    <tr>
-      <th>118</th>
-      <td>101421</td>
-      <td>-5769</td>
-      <td>-1947</td>
-      <td>98013</td>
-      <td>-1947</td>
-      <td>104693</td>
-      <td>1723</td>
-      <td>100763</td>
-    </tr>
-    <tr>
-      <th>119</th>
-      <td>102874</td>
-      <td>-5940</td>
-      <td>-2342</td>
-      <td>99658</td>
-      <td>-2342</td>
-      <td>105007</td>
-      <td>44</td>
-      <td>104867</td>
-    </tr>
-    <tr>
-      <th>120</th>
-      <td>100722</td>
-      <td>-10296</td>
-      <td>-6475</td>
-      <td>97299</td>
-      <td>-6475</td>
-      <td>102819</td>
-      <td>-4133</td>
-      <td>95689</td>
-    </tr>
-    <tr>
-      <th>121</th>
-      <td>104079</td>
-      <td>-7193</td>
-      <td>-1916</td>
-      <td>99329</td>
-      <td>-1916</td>
-      <td>108904</td>
-      <td>3445</td>
-      <td>107717</td>
-    </tr>
-    <tr>
-      <th>122</th>
-      <td>105603</td>
-      <td>-9699</td>
-      <td>-3341</td>
-      <td>99876</td>
-      <td>-3341</td>
-      <td>106593</td>
-      <td>-2242</td>
-      <td>106909</td>
-    </tr>
-    <tr>
-      <th>123</th>
-      <td>121315</td>
-      <td>3519</td>
-      <td>10919</td>
-      <td>114635</td>
-      <td>10919</td>
-      <td>123693</td>
-      <td>13552</td>
-      <td>121214</td>
-    </tr>
-    <tr>
-      <th>124</th>
-      <td>122718</td>
-      <td>-13422</td>
-      <td>-2517</td>
-      <td>112961</td>
-      <td>-2517</td>
-      <td>112961</td>
-      <td>-13422</td>
-      <td>131722</td>
-    </tr>
-    <tr>
-      <th>125</th>
-      <td>126029</td>
-      <td>-12599</td>
-      <td>-1254</td>
-      <td>115857</td>
-      <td>-1254</td>
-      <td>128315</td>
-      <td>1295</td>
-      <td>132551</td>
-    </tr>
-    <tr>
-      <th>126</th>
-      <td>136327</td>
-      <td>-6468</td>
-      <td>5485</td>
-      <td>125599</td>
-      <td>5485</td>
-      <td>137316</td>
-      <td>6588</td>
-      <td>148197</td>
-    </tr>
-    <tr>
-      <th>127</th>
-      <td>137829</td>
-      <td>-14507</td>
-      <td>-2823</td>
-      <td>127380</td>
-      <td>-2823</td>
-      <td>133405</td>
-      <td>-7769</td>
-      <td>126451</td>
-    </tr>
-    <tr>
-      <th>128</th>
-      <td>142276</td>
-      <td>-12086</td>
-      <td>-424</td>
-      <td>131821</td>
-      <td>-424</td>
-      <td>145288</td>
-      <td>2937</td>
-      <td>148239</td>
-    </tr>
-    <tr>
-      <th>129</th>
-      <td>145258</td>
-      <td>-14191</td>
-      <td>-2313</td>
-      <td>134606</td>
-      <td>-2313</td>
-      <td>145854</td>
-      <td>-1648</td>
-      <td>152699</td>
-    </tr>
-    <tr>
-      <th>130</th>
-      <td>147752</td>
-      <td>-14806</td>
-      <td>-2915</td>
-      <td>137070</td>
-      <td>-2915</td>
-      <td>150285</td>
-      <td>-95</td>
-      <td>144894</td>
-    </tr>
-    <tr>
-      <th>131</th>
-      <td>154807</td>
-      <td>-7132</td>
-      <td>-394</td>
-      <td>148751</td>
-      <td>-394</td>
-      <td>155553</td>
-      <td>435</td>
-      <td>159933</td>
-    </tr>
-    <tr>
-      <th>132</th>
-      <td>150438</td>
-      <td>-16511</td>
-      <td>-9882</td>
-      <td>144477</td>
-      <td>-9882</td>
-      <td>151126</td>
-      <td>-9117</td>
-      <td>152323</td>
     </tr>
     <tr>
       <th>133</th>
@@ -15460,18 +15110,51 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     </tr>
     <tr>
       <th>134</th>
-      <td>-1533689</td>
-      <td>-1699984</td>
-      <td>-1696558</td>
-      <td>-1536786</td>
-      <td>-1696558</td>
-      <td>-1533701</td>
+      <td>162164</td>
+      <td>-4131</td>
+      <td>-705</td>
+      <td>159067</td>
+      <td>-705</td>
+      <td>162152</td>
+      <td>-718</td>
+      <td>162017</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>162453</td>
+      <td>-9296</td>
+      <td>-5675</td>
+      <td>159179</td>
+      <td>-5675</td>
+      <td>163045</td>
+      <td>-5020</td>
+      <td>159879</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>165378</td>
+      <td>-7524</td>
+      <td>-4112</td>
+      <td>162286</td>
+      <td>-4112</td>
+      <td>169445</td>
+      <td>375</td>
+      <td>177092</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>-1697378</td>
+      <td>-1874088</td>
+      <td>-1869515</td>
+      <td>-1701531</td>
+      <td>-1869515</td>
+      <td>-1694477</td>
+      <td>-1866320</td>
       <td>-1696571</td>
-      <td>-1533836</td>
     </tr>
   </tbody>
 </table>
-<p>135 rows × 8 columns</p>
+<p>138 rows × 8 columns</p>
 </div>
 </div>
 
@@ -15509,7 +15192,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;for date: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">tce</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">][</span><span class="n">k</span><span class="p">])</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;00:00:00&quot;</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; the lowest positve error was by the method: &quot;</span><span class="o">+</span><span class="n">psc</span><span class="o">+</span><span class="s2">&quot; and the highest negative error by the method: &quot;</span><span class="o">+</span><span class="n">ngc</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -15519,7 +15202,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -15657,6 +15340,9 @@ for date: 2020-08-08  the lowest positve error was by the method: mxmb and the h
 for date: 2020-08-09  the lowest positve error was by the method: lb and the highest negative error by the method: memb
 for date: 2020-08-10  the lowest positve error was by the method: mxmb and the highest negative error by the method: lb
 for date: 2020-08-11  the lowest positve error was by the method: lb and the highest negative error by the method: memb
+for date: 2020-08-12  the lowest positve error was by the method: mxmb and the highest negative error by the method: memb
+for date: 2020-08-13  the lowest positve error was by the method: mxmb and the highest negative error by the method: lb
+for date: 2020-08-14  the lowest positve error was by the method: lb and the highest negative error by the method: memb
 </pre>
 </div>
 </div>
@@ -15735,7 +15421,7 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
 <span class="n">err_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;nprd_val&quot;</span><span class="p">:</span><span class="n">nprd_val</span><span class="p">})</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -15748,7 +15434,7 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_dict</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -15758,7 +15444,7 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -15898,7 +15584,10 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
   &#39;2020-08-09 &#39;,
   &#39;2020-08-10 &#39;,
   &#39;2020-08-11 &#39;,
-  &#39;2020-08-12 &#39;],
+  &#39;2020-08-12 &#39;,
+  &#39;2020-08-13 &#39;,
+  &#39;2020-08-14 &#39;,
+  &#39;2020-08-15 &#39;],
  &#39;mipe&#39;: [&#39;mxmb&#39;,
   &#39;lb&#39;,
   &#39;lb&#39;,
@@ -16031,6 +15720,9 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
   &#39;mxmb&#39;,
   &#39;mxmb&#39;,
   &#39;lb&#39;,
+  &#39;mxmb&#39;,
+  &#39;lb&#39;,
+  &#39;mxmb&#39;,
   &#39;mxmb&#39;,
   &#39;lb&#39;,
   &#39;No&#39;],
@@ -16168,7 +15860,10 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
   &#39;memb&#39;,
   &#39;lb&#39;,
   &#39;memb&#39;,
-  &#39;mb&#39;],
+  &#39;memb&#39;,
+  &#39;lb&#39;,
+  &#39;memb&#39;,
+  &#39;lmb&#39;],
  &#39;mipv&#39;: [28,
   5,
   1,
@@ -16303,6 +15998,9 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
   435,
   144477,
   7637,
+  159067,
+  159179,
+  375,
   &#39;No&#39;],
  &#39;mxnv&#39;: [-26,
   -13,
@@ -16438,7 +16136,10 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
   -394,
   -9117,
   -1328,
-  -1533689],
+  -705,
+  -5020,
+  -4112,
+  -1694477],
  &#39;original_val&#39;: [150,
   169,
   191,
@@ -16573,6 +16274,9 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
   1534271,
   1581633,
   1638094,
+  1695853,
+  1750629,
+  1807549,
   0],
  &#39;pprd_val&#39;: [122,
   164,
@@ -16708,6 +16412,9 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
   1533836,
   1437156,
   1630457,
+  1536786,
+  1591450,
+  1807174,
   &#39;No&#39;],
  &#39;nprd_val&#39;: [176,
   182,
@@ -16843,7 +16550,10 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
   1534665,
   1590750,
   1639422,
-  1533689]}</pre>
+  1696558,
+  1755649,
+  1811661,
+  1694477]}</pre>
 </div>
 
 </div>
@@ -16861,7 +16571,7 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
 <span class="n">err_df</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -16871,7 +16581,7 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[31]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -16961,281 +16671,6 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
       <td>309</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>2020-04-05</td>
-      <td>mxmb</td>
-      <td>memb</td>
-      <td>86</td>
-      <td>-12</td>
-      <td>329</td>
-      <td>243</td>
-      <td>341</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>2020-04-06</td>
-      <td>memb</td>
-      <td>mxb</td>
-      <td>4</td>
-      <td>-48</td>
-      <td>394</td>
-      <td>390</td>
-      <td>442</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>2020-04-07</td>
-      <td>memb</td>
-      <td>lb</td>
-      <td>10</td>
-      <td>-3</td>
-      <td>469</td>
-      <td>459</td>
-      <td>472</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>2020-04-08</td>
-      <td>lb</td>
-      <td>mxb</td>
-      <td>7</td>
-      <td>-18</td>
-      <td>565</td>
-      <td>558</td>
-      <td>583</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>2020-04-09</td>
-      <td>mxmb</td>
-      <td>memb</td>
-      <td>197</td>
-      <td>-37</td>
-      <td>635</td>
-      <td>438</td>
-      <td>672</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>2020-04-10</td>
-      <td>memb</td>
-      <td>mxb</td>
-      <td>32</td>
-      <td>-4</td>
-      <td>786</td>
-      <td>754</td>
-      <td>790</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>2020-04-11</td>
-      <td>memb</td>
-      <td>lb</td>
-      <td>35</td>
-      <td>-1</td>
-      <td>972</td>
-      <td>937</td>
-      <td>973</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>2020-04-12</td>
-      <td>mxmb</td>
-      <td>memb</td>
-      <td>352</td>
-      <td>-72</td>
-      <td>1086</td>
-      <td>734</td>
-      <td>1158</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>2020-04-13</td>
-      <td>mxmb</td>
-      <td>lb</td>
-      <td>330</td>
-      <td>-15</td>
-      <td>1198</td>
-      <td>868</td>
-      <td>1213</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>2020-04-14</td>
-      <td>lb</td>
-      <td>memb</td>
-      <td>43</td>
-      <td>-41</td>
-      <td>1365</td>
-      <td>1322</td>
-      <td>1406</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>2020-04-15</td>
-      <td>mdb</td>
-      <td>lb</td>
-      <td>307</td>
-      <td>-46</td>
-      <td>1509</td>
-      <td>1202</td>
-      <td>1555</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>2020-04-16</td>
-      <td>memb</td>
-      <td>mxb</td>
-      <td>29</td>
-      <td>-101</td>
-      <td>1767</td>
-      <td>1738</td>
-      <td>1868</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>2020-04-17</td>
-      <td>mxmb</td>
-      <td>memb</td>
-      <td>505</td>
-      <td>-7</td>
-      <td>2040</td>
-      <td>1535</td>
-      <td>2047</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>2020-04-18</td>
-      <td>lb</td>
-      <td>mxb</td>
-      <td>111</td>
-      <td>-57</td>
-      <td>2466</td>
-      <td>2355</td>
-      <td>2523</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>2020-04-19</td>
-      <td>memb</td>
-      <td>mxb</td>
-      <td>36</td>
-      <td>-127</td>
-      <td>2854</td>
-      <td>2818</td>
-      <td>2981</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>2020-04-20</td>
-      <td>mxmb</td>
-      <td>memb</td>
-      <td>994</td>
-      <td>-5</td>
-      <td>3273</td>
-      <td>2279</td>
-      <td>3278</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>2020-04-21</td>
-      <td>mxb</td>
-      <td>No</td>
-      <td>20</td>
-      <td>No</td>
-      <td>3976</td>
-      <td>3956</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>2020-04-22</td>
-      <td>mxmb</td>
-      <td>memb</td>
-      <td>1266</td>
-      <td>-264</td>
-      <td>4370</td>
-      <td>3104</td>
-      <td>4634</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>2020-04-23</td>
-      <td>lb</td>
-      <td>memb</td>
-      <td>209</td>
-      <td>-77</td>
-      <td>5012</td>
-      <td>4803</td>
-      <td>5089</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>2020-04-24</td>
-      <td>mxmb</td>
-      <td>lb</td>
-      <td>1333</td>
-      <td>-252</td>
-      <td>5496</td>
-      <td>4163</td>
-      <td>5748</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>2020-04-25</td>
-      <td>mdb</td>
-      <td>lb</td>
-      <td>1108</td>
-      <td>-89</td>
-      <td>5938</td>
-      <td>4830</td>
-      <td>6027</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>2020-04-26</td>
-      <td>lb</td>
-      <td>memb</td>
-      <td>107</td>
-      <td>-214</td>
-      <td>6523</td>
-      <td>6416</td>
-      <td>6737</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>2020-04-27</td>
-      <td>mxmb</td>
-      <td>lb</td>
-      <td>1101</td>
-      <td>-63</td>
-      <td>7103</td>
-      <td>6002</td>
-      <td>7166</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>2020-04-28</td>
-      <td>lb</td>
-      <td>memb</td>
-      <td>4</td>
-      <td>-201</td>
-      <td>7739</td>
-      <td>7735</td>
-      <td>7940</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>2020-04-29</td>
-      <td>mxmb</td>
-      <td>lb</td>
-      <td>1518</td>
-      <td>-3</td>
-      <td>8429</td>
-      <td>6911</td>
-      <td>8432</td>
-    </tr>
-    <tr>
       <th>...</th>
       <td>...</td>
       <td>...</td>
@@ -17245,314 +16680,6 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
       <td>...</td>
       <td>...</td>
       <td>...</td>
-    </tr>
-    <tr>
-      <th>105</th>
-      <td>2020-07-14</td>
-      <td>lb</td>
-      <td>memb</td>
-      <td>2730</td>
-      <td>-853</td>
-      <td>593090</td>
-      <td>590360</td>
-      <td>593943</td>
-    </tr>
-    <tr>
-      <th>106</th>
-      <td>2020-07-15</td>
-      <td>mxmb</td>
-      <td>lb</td>
-      <td>55956</td>
-      <td>-1100</td>
-      <td>613736</td>
-      <td>557780</td>
-      <td>614836</td>
-    </tr>
-    <tr>
-      <th>107</th>
-      <td>2020-07-16</td>
-      <td>memb</td>
-      <td>mxb</td>
-      <td>278</td>
-      <td>-2240</td>
-      <td>636603</td>
-      <td>636325</td>
-      <td>638843</td>
-    </tr>
-    <tr>
-      <th>108</th>
-      <td>2020-07-17</td>
-      <td>mxmb</td>
-      <td>memb</td>
-      <td>55935</td>
-      <td>-5640</td>
-      <td>654079</td>
-      <td>598144</td>
-      <td>659719</td>
-    </tr>
-    <tr>
-      <th>109</th>
-      <td>2020-07-18</td>
-      <td>memb</td>
-      <td>mxb</td>
-      <td>1090</td>
-      <td>-1733</td>
-      <td>677662</td>
-      <td>676572</td>
-      <td>679395</td>
-    </tr>
-    <tr>
-      <th>110</th>
-      <td>2020-07-19</td>
-      <td>mxmb</td>
-      <td>memb</td>
-      <td>62965</td>
-      <td>-318</td>
-      <td>700392</td>
-      <td>637427</td>
-      <td>700710</td>
-    </tr>
-    <tr>
-      <th>111</th>
-      <td>2020-07-20</td>
-      <td>memb</td>
-      <td>mxb</td>
-      <td>522</td>
-      <td>-1793</td>
-      <td>724695</td>
-      <td>724173</td>
-      <td>726488</td>
-    </tr>
-    <tr>
-      <th>112</th>
-      <td>2020-07-21</td>
-      <td>mxb</td>
-      <td>No</td>
-      <td>588</td>
-      <td>No</td>
-      <td>752284</td>
-      <td>751696</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>113</th>
-      <td>2020-07-22</td>
-      <td>mxb</td>
-      <td>No</td>
-      <td>3236</td>
-      <td>No</td>
-      <td>784159</td>
-      <td>780923</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>114</th>
-      <td>2020-07-23</td>
-      <td>mxb</td>
-      <td>No</td>
-      <td>100</td>
-      <td>No</td>
-      <td>817485</td>
-      <td>817385</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>115</th>
-      <td>2020-07-24</td>
-      <td>memb</td>
-      <td>mxb</td>
-      <td>2771</td>
-      <td>-2228</td>
-      <td>849999</td>
-      <td>847228</td>
-      <td>852227</td>
-    </tr>
-    <tr>
-      <th>116</th>
-      <td>2020-07-25</td>
-      <td>mxb</td>
-      <td>No</td>
-      <td>1001</td>
-      <td>No</td>
-      <td>887124</td>
-      <td>886123</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>117</th>
-      <td>2020-07-26</td>
-      <td>mxmb</td>
-      <td>memb</td>
-      <td>96198</td>
-      <td>-3292</td>
-      <td>918636</td>
-      <td>822438</td>
-      <td>921928</td>
-    </tr>
-    <tr>
-      <th>118</th>
-      <td>2020-07-27</td>
-      <td>lb</td>
-      <td>memb</td>
-      <td>1723</td>
-      <td>-1947</td>
-      <td>952990</td>
-      <td>951267</td>
-      <td>954937</td>
-    </tr>
-    <tr>
-      <th>119</th>
-      <td>2020-07-28</td>
-      <td>lb</td>
-      <td>memb</td>
-      <td>44</td>
-      <td>-2342</td>
-      <td>988673</td>
-      <td>988629</td>
-      <td>991015</td>
-    </tr>
-    <tr>
-      <th>120</th>
-      <td>2020-07-29</td>
-      <td>mdb</td>
-      <td>lb</td>
-      <td>95689</td>
-      <td>-4133</td>
-      <td>1021559</td>
-      <td>925870</td>
-      <td>1025692</td>
-    </tr>
-    <tr>
-      <th>121</th>
-      <td>2020-07-30</td>
-      <td>lb</td>
-      <td>memb</td>
-      <td>3445</td>
-      <td>-1916</td>
-      <td>1058984</td>
-      <td>1055539</td>
-      <td>1060900</td>
-    </tr>
-    <tr>
-      <th>122</th>
-      <td>2020-07-31</td>
-      <td>mxmb</td>
-      <td>lb</td>
-      <td>99876</td>
-      <td>-2242</td>
-      <td>1095538</td>
-      <td>995662</td>
-      <td>1097780</td>
-    </tr>
-    <tr>
-      <th>123</th>
-      <td>2020-08-01</td>
-      <td>mxb</td>
-      <td>No</td>
-      <td>3519</td>
-      <td>No</td>
-      <td>1146906</td>
-      <td>1143387</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>124</th>
-      <td>2020-08-02</td>
-      <td>mxmb</td>
-      <td>memb</td>
-      <td>112961</td>
-      <td>-2517</td>
-      <td>1187261</td>
-      <td>1074300</td>
-      <td>1189778</td>
-    </tr>
-    <tr>
-      <th>125</th>
-      <td>2020-08-03</td>
-      <td>lb</td>
-      <td>memb</td>
-      <td>1295</td>
-      <td>-1254</td>
-      <td>1230331</td>
-      <td>1229036</td>
-      <td>1231585</td>
-    </tr>
-    <tr>
-      <th>126</th>
-      <td>2020-08-04</td>
-      <td>memb</td>
-      <td>mxb</td>
-      <td>5485</td>
-      <td>-6468</td>
-      <td>1281551</td>
-      <td>1276066</td>
-      <td>1288019</td>
-    </tr>
-    <tr>
-      <th>127</th>
-      <td>2020-08-05</td>
-      <td>mdb</td>
-      <td>memb</td>
-      <td>126451</td>
-      <td>-2823</td>
-      <td>1327134</td>
-      <td>1200683</td>
-      <td>1329957</td>
-    </tr>
-    <tr>
-      <th>128</th>
-      <td>2020-08-06</td>
-      <td>lb</td>
-      <td>memb</td>
-      <td>2937</td>
-      <td>-424</td>
-      <td>1377275</td>
-      <td>1374338</td>
-      <td>1377699</td>
-    </tr>
-    <tr>
-      <th>129</th>
-      <td>2020-08-07</td>
-      <td>mxmb</td>
-      <td>lb</td>
-      <td>134606</td>
-      <td>-1648</td>
-      <td>1427662</td>
-      <td>1293056</td>
-      <td>1429310</td>
-    </tr>
-    <tr>
-      <th>130</th>
-      <td>2020-08-08</td>
-      <td>mxmb</td>
-      <td>lb</td>
-      <td>137070</td>
-      <td>-95</td>
-      <td>1479797</td>
-      <td>1342727</td>
-      <td>1479892</td>
-    </tr>
-    <tr>
-      <th>131</th>
-      <td>2020-08-09</td>
-      <td>lb</td>
-      <td>memb</td>
-      <td>435</td>
-      <td>-394</td>
-      <td>1534271</td>
-      <td>1533836</td>
-      <td>1534665</td>
-    </tr>
-    <tr>
-      <th>132</th>
-      <td>2020-08-10</td>
-      <td>mxmb</td>
-      <td>lb</td>
-      <td>144477</td>
-      <td>-9117</td>
-      <td>1581633</td>
-      <td>1437156</td>
-      <td>1590750</td>
     </tr>
     <tr>
       <th>133</th>
@@ -17568,17 +16695,50 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
     <tr>
       <th>134</th>
       <td>2020-08-12</td>
+      <td>mxmb</td>
+      <td>memb</td>
+      <td>159067</td>
+      <td>-705</td>
+      <td>1695853</td>
+      <td>1536786</td>
+      <td>1696558</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>2020-08-13</td>
+      <td>mxmb</td>
+      <td>lb</td>
+      <td>159179</td>
+      <td>-5020</td>
+      <td>1750629</td>
+      <td>1591450</td>
+      <td>1755649</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>2020-08-14</td>
+      <td>lb</td>
+      <td>memb</td>
+      <td>375</td>
+      <td>-4112</td>
+      <td>1807549</td>
+      <td>1807174</td>
+      <td>1811661</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>2020-08-15</td>
       <td>No</td>
-      <td>mb</td>
+      <td>lmb</td>
       <td>No</td>
-      <td>-1533689</td>
+      <td>-1694477</td>
       <td>0</td>
       <td>No</td>
-      <td>1533689</td>
+      <td>1694477</td>
     </tr>
   </tbody>
 </table>
-<p>135 rows × 8 columns</p>
+<p>138 rows × 8 columns</p>
 </div>
 </div>
 
@@ -17594,9 +16754,12 @@ for date: 2020-08-11  the lowest positve error was by the method: lb and the hig
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;trerr_df.xlsx&quot;</span><span class="p">)</span>
+<span class="n">errdf</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\trerr_df.xlsx&quot;</span><span class="p">)</span>
+<span class="n">errdf</span> <span class="o">=</span> <span class="n">errdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="o">~</span><span class="n">errdf</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;^Unnamed&#39;</span><span class="p">)]</span>
+<span class="n">errdf</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;trerr_df.xlsx&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
