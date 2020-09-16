@@ -1,0 +1,2805 @@
+\documentclass[11pt]{article}
+
+    \usepackage[breakable]{tcolorbox}
+    \usepackage{parskip} % Stop auto-indenting (to mimic markdown behaviour)
+    
+    \usepackage{iftex}
+    \ifPDFTeX
+    	\usepackage[T1]{fontenc}
+    	\usepackage{mathpazo}
+    \else
+    	\usepackage{fontspec}
+    \fi
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % Maintain compatibility with old templates. Remove in nbconvert 6.0
+    \let\Oldincludegraphics\includegraphics
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionFormat{nocaption}{}
+    \captionsetup{format=nocaption,aboveskip=0pt,belowskip=0pt}
+
+    \usepackage[Export]{adjustbox} % Used to constrain images to a maximum size
+    \adjustboxset{max size={0.9\linewidth}{0.9\paperheight}}
+    \usepackage{float}
+    \floatplacement{figure}{H} % forces figures to be placed at the correct location
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range
+    \makeatletter % fix for grffile with XeLaTeX
+    \def\Gread@@xetex#1{%
+      \IfFileExists{"\Gin@base".bb}%
+      {\Gread@eps{\Gin@base.bb}}%
+      {\Gread@@xetex@aux#1}%
+    }
+    \makeatother
+
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    % The default LaTeX title has an obnoxious amount of whitespace. By default,
+    % titling removes some of it. It also provides customization options.
+    \usepackage{titling}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    \usepackage{mathrsfs}
+    
+
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+    \definecolor{ansi-default-inverse-fg}{HTML}{FFFFFF}
+    \definecolor{ansi-default-inverse-bg}{HTML}{000000}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatibility definitions
+    \def\gt{>}
+    \def\lt{<}
+    \let\Oldtex\TeX
+    \let\Oldlatex\LaTeX
+    \renewcommand{\TeX}{\textrm{\Oldtex}}
+    \renewcommand{\LaTeX}{\textrm{\Oldlatex}}
+    % Document parameters
+    % Document title
+    \title{Daily\_Recovered\_Analysis\_Using\_Ratio\_Method}
+    
+    
+    
+    
+    
+% Pygments definitions
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % For linebreaks inside Verbatim environment from package fancyvrb. 
+    \makeatletter
+        \newbox\Wrappedcontinuationbox 
+        \newbox\Wrappedvisiblespacebox 
+        \newcommand*\Wrappedvisiblespace {\textcolor{red}{\textvisiblespace}} 
+        \newcommand*\Wrappedcontinuationsymbol {\textcolor{red}{\llap{\tiny$\m@th\hookrightarrow$}}} 
+        \newcommand*\Wrappedcontinuationindent {3ex } 
+        \newcommand*\Wrappedafterbreak {\kern\Wrappedcontinuationindent\copy\Wrappedcontinuationbox} 
+        % Take advantage of the already applied Pygments mark-up to insert 
+        % potential linebreaks for TeX processing. 
+        %        {, <, #, %, $, ' and ": go to next line. 
+        %        _, }, ^, &, >, - and ~: stay at end of broken line. 
+        % Use of \textquotesingle for straight quote. 
+        \newcommand*\Wrappedbreaksatspecials {% 
+            \def\PYGZus{\discretionary{\char`\_}{\Wrappedafterbreak}{\char`\_}}% 
+            \def\PYGZob{\discretionary{}{\Wrappedafterbreak\char`\{}{\char`\{}}% 
+            \def\PYGZcb{\discretionary{\char`\}}{\Wrappedafterbreak}{\char`\}}}% 
+            \def\PYGZca{\discretionary{\char`\^}{\Wrappedafterbreak}{\char`\^}}% 
+            \def\PYGZam{\discretionary{\char`\&}{\Wrappedafterbreak}{\char`\&}}% 
+            \def\PYGZlt{\discretionary{}{\Wrappedafterbreak\char`\<}{\char`\<}}% 
+            \def\PYGZgt{\discretionary{\char`\>}{\Wrappedafterbreak}{\char`\>}}% 
+            \def\PYGZsh{\discretionary{}{\Wrappedafterbreak\char`\#}{\char`\#}}% 
+            \def\PYGZpc{\discretionary{}{\Wrappedafterbreak\char`\%}{\char`\%}}% 
+            \def\PYGZdl{\discretionary{}{\Wrappedafterbreak\char`\$}{\char`\$}}% 
+            \def\PYGZhy{\discretionary{\char`\-}{\Wrappedafterbreak}{\char`\-}}% 
+            \def\PYGZsq{\discretionary{}{\Wrappedafterbreak\textquotesingle}{\textquotesingle}}% 
+            \def\PYGZdq{\discretionary{}{\Wrappedafterbreak\char`\"}{\char`\"}}% 
+            \def\PYGZti{\discretionary{\char`\~}{\Wrappedafterbreak}{\char`\~}}% 
+        } 
+        % Some characters . , ; ? ! / are not pygmentized. 
+        % This macro makes them "active" and they will insert potential linebreaks 
+        \newcommand*\Wrappedbreaksatpunct {% 
+            \lccode`\~`\.\lowercase{\def~}{\discretionary{\hbox{\char`\.}}{\Wrappedafterbreak}{\hbox{\char`\.}}}% 
+            \lccode`\~`\,\lowercase{\def~}{\discretionary{\hbox{\char`\,}}{\Wrappedafterbreak}{\hbox{\char`\,}}}% 
+            \lccode`\~`\;\lowercase{\def~}{\discretionary{\hbox{\char`\;}}{\Wrappedafterbreak}{\hbox{\char`\;}}}% 
+            \lccode`\~`\:\lowercase{\def~}{\discretionary{\hbox{\char`\:}}{\Wrappedafterbreak}{\hbox{\char`\:}}}% 
+            \lccode`\~`\?\lowercase{\def~}{\discretionary{\hbox{\char`\?}}{\Wrappedafterbreak}{\hbox{\char`\?}}}% 
+            \lccode`\~`\!\lowercase{\def~}{\discretionary{\hbox{\char`\!}}{\Wrappedafterbreak}{\hbox{\char`\!}}}% 
+            \lccode`\~`\/\lowercase{\def~}{\discretionary{\hbox{\char`\/}}{\Wrappedafterbreak}{\hbox{\char`\/}}}% 
+            \catcode`\.\active
+            \catcode`\,\active 
+            \catcode`\;\active
+            \catcode`\:\active
+            \catcode`\?\active
+            \catcode`\!\active
+            \catcode`\/\active 
+            \lccode`\~`\~ 	
+        }
+    \makeatother
+
+    \let\OriginalVerbatim=\Verbatim
+    \makeatletter
+    \renewcommand{\Verbatim}[1][1]{%
+        %\parskip\z@skip
+        \sbox\Wrappedcontinuationbox {\Wrappedcontinuationsymbol}%
+        \sbox\Wrappedvisiblespacebox {\FV@SetupFont\Wrappedvisiblespace}%
+        \def\FancyVerbFormatLine ##1{\hsize\linewidth
+            \vtop{\raggedright\hyphenpenalty\z@\exhyphenpenalty\z@
+                \doublehyphendemerits\z@\finalhyphendemerits\z@
+                \strut ##1\strut}%
+        }%
+        % If the linebreak is at a space, the latter will be displayed as visible
+        % space at end of first line, and a continuation symbol starts next line.
+        % Stretch/shrink are however usually zero for typewriter font.
+        \def\FV@Space {%
+            \nobreak\hskip\z@ plus\fontdimen3\font minus\fontdimen4\font
+            \discretionary{\copy\Wrappedvisiblespacebox}{\Wrappedafterbreak}
+            {\kern\fontdimen2\font}%
+        }%
+        
+        % Allow breaks at special characters using \PYG... macros.
+        \Wrappedbreaksatspecials
+        % Breaks at punctuation characters . , ; ? ! and / need catcode=\active 	
+        \OriginalVerbatim[#1,codes*=\Wrappedbreaksatpunct]%
+    }
+    \makeatother
+
+    % Exact colors from NB
+    \definecolor{incolor}{HTML}{303F9F}
+    \definecolor{outcolor}{HTML}{D84315}
+    \definecolor{cellborder}{HTML}{CFCFCF}
+    \definecolor{cellbackground}{HTML}{F7F7F7}
+    
+    % prompt
+    \makeatletter
+    \newcommand{\boxspacing}{\kern\kvtcb@left@rule\kern\kvtcb@boxsep}
+    \makeatother
+    \newcommand{\prompt}[4]{
+        \ttfamily\llap{{\color{#2}[#3]:\hspace{3pt}#4}}\vspace{-\baselineskip}
+    }
+    
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+\begin{document}
+    
+    \maketitle
+    
+    
+
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{1}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
+\PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np} 
+\PY{k+kn}{import} \PY{n+nn}{copy}
+\PY{k+kn}{from} \PY{n+nn}{matplotlib} \PY{k+kn}{import} \PY{n}{pyplot} \PY{k}{as} \PY{n}{plt}
+\PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k}{as} \PY{n+nn}{sns}
+\PY{k+kn}{from} \PY{n+nn}{collections} \PY{k+kn}{import} \PY{o}{*}
+\PY{k+kn}{import} \PY{n+nn}{datetime}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{2}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+sa}{r}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{C:}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{Users}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{Mark 1}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{Desktop}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{Lockdown}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{data}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{Covid\PYZhy{}19}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{74}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{case\PYZus{}time\PYZus{}series.csv}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{data}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{2}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+           Date  Daily Confirmed  Total Confirmed  Daily Recovered  \textbackslash{}
+0   30 January                 1                1                0
+1   31 January                 0                1                0
+2  01 February                 0                1                0
+3  02 February                 1                2                0
+4  03 February                 1                3                0
+
+   Total Recovered  Daily Deceased  Total Deceased
+0                0               0               0
+1                0               0               0
+2                0               0               0
+3                0               0               0
+4                0               0               0
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{3}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}daily}\PY{o}{=}\PY{n}{data}\PY{p}{[}\PY{l+m+mi}{53}\PY{p}{:}\PY{p}{]}
+\PY{n}{data\PYZus{}daily}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{n}{drop}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,}\PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+\PY{n}{data\PYZus{}daily}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{3}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+        Date  Daily Confirmed  Total Confirmed  Daily Recovered  \textbackslash{}
+0  23 March                94              497                2
+1  24 March                74              571               15
+2  25 March                86              657                3
+3  26 March                73              730                7
+4  27 March               153              883               25
+
+   Total Recovered  Daily Deceased  Total Deceased
+0               25               2               9
+1               40               1              10
+2               43               1              11
+3               50               5              16
+4               75               3              19
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{4}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}daily}\PY{o}{.}\PY{n}{tail}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{4}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+              Date  Daily Confirmed  Total Confirmed  Daily Recovered  \textbackslash{}
+171  10 September             96760          4559738            70899
+172  11 September             97654          4657392            81455
+173  12 September             94409          4751801            77860
+174  13 September             93215          4845016            77746
+175  14 September             81911          4926927            79202
+
+     Total Recovered  Daily Deceased  Total Deceased
+171          3539976            1213           75717
+172          3621431            1202           76919
+173          3699291            1111           78030
+174          3777037            1140           79170
+175          3856239            1054           80224
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{5}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{colls}\PY{o}{=}\PY{n+nb}{list}\PY{p}{(}\PY{n}{data\PYZus{}daily}\PY{o}{.}\PY{n}{columns}\PY{p}{)}
+\PY{n}{colls}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{5}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+['Date',
+ 'Daily Confirmed',
+ 'Total Confirmed',
+ 'Daily Recovered',
+ 'Total Recovered',
+ 'Daily Deceased',
+ 'Total Deceased']
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{6}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}daily}\PY{o}{.}\PY{n}{dtypes}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{6}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+Date               object
+Daily Confirmed     int64
+Total Confirmed     int64
+Daily Recovered     int64
+Total Recovered     int64
+Daily Deceased      int64
+Total Deceased      int64
+dtype: object
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{7}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{n}{data\PYZus{}daily}\PY{o}{.}\PY{n}{duplicated}\PY{p}{(}\PY{p}{)}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{7}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+Empty DataFrame
+Columns: [Date, Daily Confirmed, Total Confirmed, Daily Recovered, Total
+Recovered, Daily Deceased, Total Deceased]
+Index: []
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{8}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{astype}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{str}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} 
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<ipython-input-8-b893dc2657ae>:1: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row\_indexer,col\_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily['Date'] = data\_daily['Date'].astype('str')
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{9}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{)}\PY{p}{:}
+    \PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{.}\PY{n}{strip}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ March}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{)}\PY{p}{:}
+    \PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{2020\PYZhy{}03\PYZhy{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{+}\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+    
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<ipython-input-9-5d3a9c25c0f3>:2: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily["Date"][i]=data\_daily["Date"][i].strip(" March")
+C:\textbackslash{}ProgramData\textbackslash{}Anaconda3\textbackslash{}lib\textbackslash{}site-
+packages\textbackslash{}IPython\textbackslash{}core\textbackslash{}interactiveshell.py:3343: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  exec(code\_obj, self.user\_global\_ns, self.user\_ns)
+<ipython-input-9-5d3a9c25c0f3>:4: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily["Date"][i]="2020-03-"+data\_daily["Date"][i]
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{10}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{9}\PY{p}{,}\PY{l+m+mi}{39}\PY{p}{)}\PY{p}{:}
+    \PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{.}\PY{n}{strip}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ April}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{9}\PY{p}{,}\PY{l+m+mi}{39}\PY{p}{)}\PY{p}{:}
+    \PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{2020\PYZhy{}04\PYZhy{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{+}\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+    
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<ipython-input-10-e708bf0423ae>:2: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily["Date"][i]=data\_daily["Date"][i].strip(" April")
+<ipython-input-10-e708bf0423ae>:4: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily["Date"][i]="2020-04-"+data\_daily["Date"][i]
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{11}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{39}\PY{p}{,}\PY{l+m+mi}{70}\PY{p}{)}\PY{p}{:}
+    \PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{.}\PY{n}{strip}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ May}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{39}\PY{p}{,}\PY{l+m+mi}{70}\PY{p}{)}\PY{p}{:}
+    \PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{2020\PYZhy{}05\PYZhy{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{+}\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+    
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<ipython-input-11-3a877ff4aac3>:2: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily["Date"][i]=data\_daily["Date"][i].strip(" May")
+<ipython-input-11-3a877ff4aac3>:4: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily["Date"][i]="2020-05-"+data\_daily["Date"][i]
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{12}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{70}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{:}
+    \PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{.}\PY{n}{strip}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ June}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{70}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{:}
+    \PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{2020\PYZhy{}06\PYZhy{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{+}\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+    
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<ipython-input-12-7dad98128838>:2: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily["Date"][i]=data\_daily["Date"][i].strip(" June")
+<ipython-input-12-7dad98128838>:4: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily["Date"][i]="2020-06-"+data\_daily["Date"][i]
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{13}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{131}\PY{p}{)}\PY{p}{:}
+    \PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{.}\PY{n}{strip}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ July}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{131}\PY{p}{)}\PY{p}{:}
+    \PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{2020\PYZhy{}07\PYZhy{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{+}\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+    
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<ipython-input-13-8446ec7a3871>:2: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily["Date"][i]=data\_daily["Date"][i].strip(" July")
+<ipython-input-13-8446ec7a3871>:4: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily["Date"][i]="2020-07-"+data\_daily["Date"][i]
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{14}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{131}\PY{p}{,}\PY{l+m+mi}{162}\PY{p}{)}\PY{p}{:}
+    \PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{.}\PY{n}{strip}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ August}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{131}\PY{p}{,}\PY{l+m+mi}{162}\PY{p}{)}\PY{p}{:}
+    \PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{2020\PYZhy{}08\PYZhy{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{+}\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<ipython-input-14-8378c44cbf95>:2: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily["Date"][i]=data\_daily["Date"][i].strip(" August")
+<ipython-input-14-8378c44cbf95>:4: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily["Date"][i]="2020-08-"+data\_daily["Date"][i]
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{15}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{162}\PY{p}{,}\PY{n+nb}{len}\PY{p}{(}\PY{n}{data\PYZus{}daily}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+    \PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{.}\PY{n}{strip}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ September}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{162}\PY{p}{,}\PY{n+nb}{len}\PY{p}{(}\PY{n}{data\PYZus{}daily}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+    \PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{2020\PYZhy{}09\PYZhy{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{+}\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<ipython-input-15-884c3fd8c426>:2: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily["Date"][i]=data\_daily["Date"][i].strip(" September")
+<ipython-input-15-884c3fd8c426>:4: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily["Date"][i]="2020-09-"+data\_daily["Date"][i]
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{16}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{}data\PYZus{}daily[\PYZsq{}Date\PYZsq{}][162]=data\PYZus{}daily[\PYZsq{}Date\PYZsq{}][162].strip(\PYZdq{}2020\PYZhy{}09\PYZhy{}2020\PYZhy{}08\PYZhy{}01\PYZdq{})}
+\PY{c+c1}{\PYZsh{}data\PYZus{}daily[\PYZsq{}Date\PYZsq{}][162]=\PYZdq{}2020\PYZhy{}09\PYZhy{}01\PYZdq{}}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{17}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{=}\PY{n}{data\PYZus{}daily}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{astype}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{datetime64[ns]}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<ipython-input-17-523dc667f175>:1: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row\_indexer,col\_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily["Date"]=data\_daily["Date"].astype('datetime64[ns]')
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{18}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}daily}\PY{o}{.}\PY{n}{dtypes}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{18}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+Date               datetime64[ns]
+Daily Confirmed             int64
+Total Confirmed             int64
+Daily Recovered             int64
+Total Recovered             int64
+Daily Deceased              int64
+Total Deceased              int64
+dtype: object
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{19}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}daily\PYZus{}ratio\PYZus{}with\PYZus{}two\PYZus{}precision}\PY{o}{=}\PY{n}{data\PYZus{}daily}\PY{o}{.}\PY{n}{copy}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{20}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{new\PYZus{}cols}\PY{o}{=}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily\PYZus{}Confirmed\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Total\PYZus{}Confirmed\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily\PYZus{}Recovered\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Total\PYZus{}Recovered\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily\PYZus{}Deceased\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Total\PYZus{}Deceased\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+\PY{n}{existing\PYZus{}cols}\PY{o}{=}\PY{n+nb}{list}\PY{p}{(}\PY{n}{data\PYZus{}daily\PYZus{}ratio\PYZus{}with\PYZus{}two\PYZus{}precision}\PY{o}{.}\PY{n}{columns}\PY{p}{)}
+\PY{n}{existing\PYZus{}cols}\PY{o}{.}\PY{n}{pop}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{existing\PYZus{}cols}
+\PY{k}{for} \PY{n}{i}\PY{p}{,}\PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{new\PYZus{}cols}\PY{p}{,}\PY{n}{existing\PYZus{}cols}\PY{p}{)}\PY{p}{:}
+    \PY{n}{data\PYZus{}daily\PYZus{}ratio\PYZus{}with\PYZus{}two\PYZus{}precision}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{n+nb}{list}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{data\PYZus{}daily\PYZus{}ratio\PYZus{}with\PYZus{}two\PYZus{}precision}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+    \PY{n}{data\PYZus{}daily\PYZus{}ratio\PYZus{}with\PYZus{}two\PYZus{}precision}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{=}\PY{l+m+mi}{1}
+    \PY{n}{tmp}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+    \PY{n}{tmp}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{data\PYZus{}daily\PYZus{}ratio\PYZus{}with\PYZus{}two\PYZus{}precision}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
+    \PY{k}{for} \PY{n}{k} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{n+nb}{len}\PY{p}{(}\PY{n}{data\PYZus{}daily\PYZus{}ratio\PYZus{}with\PYZus{}two\PYZus{}precision}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{:}
+        \PY{n}{tmp}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n+nb}{round}\PY{p}{(}\PY{n}{data\PYZus{}daily\PYZus{}ratio\PYZus{}with\PYZus{}two\PYZus{}precision}\PY{p}{[}\PY{n}{j}\PY{p}{]}\PY{p}{[}\PY{n}{k}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{/}\PY{n}{data\PYZus{}daily\PYZus{}ratio\PYZus{}with\PYZus{}two\PYZus{}precision}\PY{p}{[}\PY{n}{j}\PY{p}{]}\PY{p}{[}\PY{n}{k}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
+    \PY{n}{data\PYZus{}daily\PYZus{}ratio\PYZus{}with\PYZus{}two\PYZus{}precision}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{n}{tmp}
+\PY{n}{data\PYZus{}daily\PYZus{}ratio\PYZus{}with\PYZus{}two\PYZus{}precision}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+        
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<ipython-input-20-f5761363647c>:7: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily\_ratio\_with\_two\_precision[i][0]=1
+    \end{Verbatim}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{20}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+        Date  Daily Confirmed  Total Confirmed  Daily Recovered  \textbackslash{}
+0 2020-03-23               94              497                2
+1 2020-03-24               74              571               15
+2 2020-03-25               86              657                3
+3 2020-03-26               73              730                7
+4 2020-03-27              153              883               25
+
+   Total Recovered  Daily Deceased  Total Deceased  Daily\_Confirmed\_Ratio  \textbackslash{}
+0               25               2               9                   1.00
+1               40               1              10                   0.79
+2               43               1              11                   1.16
+3               50               5              16                   0.85
+4               75               3              19                   2.10
+
+   Total\_Confirmed\_Ratio  Daily\_Recovered\_Ratio  Total\_Recovered\_Ratio  \textbackslash{}
+0                   1.00                   1.00                   1.00
+1                   1.15                   7.50                   1.60
+2                   1.15                   0.20                   1.08
+3                   1.11                   2.33                   1.16
+4                   1.21                   3.57                   1.50
+
+   Daily\_Deceased\_Ratio  Total\_Deceased\_Ratio
+0                   1.0                  1.00
+1                   0.5                  1.11
+2                   1.0                  1.10
+3                   5.0                  1.45
+4                   0.6                  1.19
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{21}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{o}{=}\PY{n}{data\PYZus{}daily}\PY{o}{.}\PY{n}{copy}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{22}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{new\PYZus{}cols}\PY{o}{=}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily\PYZus{}Confirmed\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Total\PYZus{}Confirmed\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily\PYZus{}Recovered\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Total\PYZus{}Recovered\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily\PYZus{}Deceased\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Total\PYZus{}Deceased\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+\PY{n}{existing\PYZus{}cols}\PY{o}{=}\PY{n+nb}{list}\PY{p}{(}\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{o}{.}\PY{n}{columns}\PY{p}{)}
+\PY{n}{existing\PYZus{}cols}\PY{o}{.}\PY{n}{pop}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{existing\PYZus{}cols}
+\PY{k}{for} \PY{n}{i}\PY{p}{,}\PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{new\PYZus{}cols}\PY{p}{,}\PY{n}{existing\PYZus{}cols}\PY{p}{)}\PY{p}{:}
+    \PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{n+nb}{list}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+    \PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{=}\PY{l+m+mi}{1}
+    \PY{n}{tmp}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+    \PY{n}{tmp}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
+    \PY{k}{for} \PY{n}{k} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{n+nb}{len}\PY{p}{(}\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{:}
+        \PY{n}{tmp}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{p}{[}\PY{n}{j}\PY{p}{]}\PY{p}{[}\PY{n}{k}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{/}\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{p}{[}\PY{n}{j}\PY{p}{]}\PY{p}{[}\PY{n}{k}\PY{p}{]}\PY{p}{)}
+    \PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{n}{tmp}
+\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+        
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<ipython-input-22-d765217f50de>:7: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  data\_daily\_ratio[i][0]=1
+    \end{Verbatim}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{22}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+        Date  Daily Confirmed  Total Confirmed  Daily Recovered  \textbackslash{}
+0 2020-03-23               94              497                2
+1 2020-03-24               74              571               15
+2 2020-03-25               86              657                3
+3 2020-03-26               73              730                7
+4 2020-03-27              153              883               25
+
+   Total Recovered  Daily Deceased  Total Deceased  Daily\_Confirmed\_Ratio  \textbackslash{}
+0               25               2               9               1.000000
+1               40               1              10               0.787234
+2               43               1              11               1.162162
+3               50               5              16               0.848837
+4               75               3              19               2.095890
+
+   Total\_Confirmed\_Ratio  Daily\_Recovered\_Ratio  Total\_Recovered\_Ratio  \textbackslash{}
+0               1.000000               1.000000               1.000000
+1               1.148893               7.500000               1.600000
+2               1.150613               0.200000               1.075000
+3               1.111111               2.333333               1.162791
+4               1.209589               3.571429               1.500000
+
+   Daily\_Deceased\_Ratio  Total\_Deceased\_Ratio
+0                   1.0              1.000000
+1                   0.5              1.111111
+2                   1.0              1.100000
+3                   5.0              1.454545
+4                   0.6              1.187500
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{23}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{strt\PYZus{}cnt}\PY{o}{=}\PY{l+m+mi}{1}
+\PY{n}{end\PYZus{}cnt}\PY{o}{=}\PY{l+m+mi}{8}
+\PY{n}{strt\PYZus{}lst}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+\PY{n}{end\PYZus{}lst}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+\PY{n}{strt\PYZus{}lst}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{strt\PYZus{}cnt}\PY{p}{)}
+\PY{n}{end\PYZus{}lst}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{end\PYZus{}cnt}\PY{p}{)}
+\PY{k}{while}\PY{p}{(}\PY{n}{end\PYZus{}cnt}\PY{o}{\PYZlt{}}\PY{o}{=}\PY{n+nb}{len}\PY{p}{(}\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+        \PY{n}{strt\PYZus{}cnt}\PY{o}{+}\PY{o}{=}\PY{l+m+mi}{1}
+        \PY{n}{strt\PYZus{}lst}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{strt\PYZus{}cnt}\PY{p}{)}
+        \PY{n}{end\PYZus{}cnt}\PY{o}{+}\PY{o}{=}\PY{l+m+mi}{1}
+        \PY{n}{end\PYZus{}lst}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{end\PYZus{}cnt}\PY{p}{)}
+\PY{k}{if}\PY{p}{(}\PY{n}{end\PYZus{}lst}\PY{p}{[}\PY{n+nb}{len}\PY{p}{(}\PY{n}{end\PYZus{}lst}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{\PYZgt{}}\PY{o}{=}\PY{n+nb}{len}\PY{p}{(}\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+    \PY{n}{end\PYZus{}lst}\PY{o}{.}\PY{n}{pop}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{end\PYZus{}lst}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}
+\PY{n}{strt\PYZus{}lst}\PY{o}{.}\PY{n}{pop}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{strt\PYZus{}lst}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}
+\PY{c+c1}{\PYZsh{}print(strt\PYZus{}lst)}
+\PY{c+c1}{\PYZsh{}print(end\PYZus{}lst)}
+\PY{c+c1}{\PYZsh{}print(len(strt\PYZus{}lst)==len(end\PYZus{}lst))}
+
+\PY{k}{for} \PY{n}{st}\PY{p}{,}\PY{n}{en} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{strt\PYZus{}lst}\PY{p}{,}\PY{n}{end\PYZus{}lst}\PY{p}{)}\PY{p}{:}
+
+    \PY{n}{dcr}\PY{o}{=}\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{n}{st}\PY{p}{:}\PY{n}{en}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{:}\PY{l+m+mi}{10}\PY{p}{]}
+    \PY{n}{dcr}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{n}{inplace} \PY{o}{=} \PY{k+kc}{True}\PY{p}{,} \PY{n}{drop} \PY{o}{=} \PY{k+kc}{True}\PY{p}{)}
+    \PY{n}{dc}\PY{o}{=}\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{n}{st}\PY{p}{:}\PY{n}{en}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{:}\PY{l+m+mi}{4}\PY{p}{]}
+    \PY{n}{dc}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{n}{inplace} \PY{o}{=} \PY{k+kc}{True}\PY{p}{,} \PY{n}{drop} \PY{o}{=} \PY{k+kc}{True}\PY{p}{)}
+
+
+
+    \PY{n}{next\PYZus{}day\PYZus{}recovered\PYZus{}case\PYZus{}count\PYZus{}mean\PYZus{}based}\PY{o}{=}\PY{n}{dcr}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{*}\PY{n}{dc}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
+
+    \PY{n}{next\PYZus{}day\PYZus{}recovered\PYZus{}case\PYZus{}count\PYZus{}max\PYZus{}based}\PY{o}{=}\PY{n+nb}{max}\PY{p}{(}\PY{n}{dcr}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily\PYZus{}Recovered\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{)}\PY{o}{*}\PY{n+nb}{max}\PY{p}{(}\PY{n}{dc}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily Recovered}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{)}
+
+
+    \PY{n}{next\PYZus{}day\PYZus{}recovered\PYZus{}case\PYZus{}count\PYZus{}mean\PYZus{}max\PYZus{}based}\PY{o}{=}\PY{n}{dcr}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{*}\PY{n+nb}{max}\PY{p}{(}\PY{n}{dc}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily Recovered}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{)}
+
+
+    \PY{n}{next\PYZus{}day\PYZus{}recovered\PYZus{}case\PYZus{}count\PYZus{}max\PYZus{}mean\PYZus{}based}\PY{o}{=}\PY{n+nb}{max}\PY{p}{(}\PY{n}{dcr}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily\PYZus{}Recovered\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{)}\PY{o}{*}\PY{n}{dc}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
+
+
+    \PY{n}{next\PYZus{}day\PYZus{}recovered\PYZus{}case\PYZus{}count\PYZus{}mean\PYZus{}last\PYZus{}based}\PY{o}{=}\PY{n}{dcr}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{*}\PY{n}{dc}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily Recovered}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n+nb}{len}\PY{p}{(}\PY{n}{dc}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}
+
+
+    \PY{n}{next\PYZus{}day\PYZus{}recovered\PYZus{}case\PYZus{}count\PYZus{}last\PYZus{}mean\PYZus{}based}\PY{o}{=}\PY{n}{dcr}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily\PYZus{}Recovered\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n+nb}{len}\PY{p}{(}\PY{n}{dcr}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{*}\PY{n}{dc}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
+
+
+    \PY{n}{next\PYZus{}day\PYZus{}recovered\PYZus{}case\PYZus{}count\PYZus{}last\PYZus{}based}\PY{o}{=}\PY{n}{dcr}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily\PYZus{}Recovered\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n+nb}{len}\PY{p}{(}\PY{n}{dcr}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{*}\PY{n}{dc}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily Recovered}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n+nb}{len}\PY{p}{(}\PY{n}{dc}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}
+
+
+    \PY{n}{next\PYZus{}day\PYZus{}recovered\PYZus{}case\PYZus{}count\PYZus{}middle\PYZus{}based}\PY{o}{=}\PY{n}{dcr}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily\PYZus{}Recovered\PYZus{}Ratio}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{]}\PY{o}{*}\PY{n}{dc}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily Recovered}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{]}
+
+
+    \PY{n}{pred\PYZus{}val}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+    \PY{n}{pred\PYZus{}val}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{round}\PY{p}{(}\PY{n}{next\PYZus{}day\PYZus{}recovered\PYZus{}case\PYZus{}count\PYZus{}mean\PYZus{}based}\PY{p}{)}\PY{p}{)}
+    \PY{n}{pred\PYZus{}val}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{round}\PY{p}{(}\PY{n}{next\PYZus{}day\PYZus{}recovered\PYZus{}case\PYZus{}count\PYZus{}max\PYZus{}based}\PY{p}{)}\PY{p}{)}
+    \PY{n}{pred\PYZus{}val}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{round}\PY{p}{(}\PY{n}{next\PYZus{}day\PYZus{}recovered\PYZus{}case\PYZus{}count\PYZus{}mean\PYZus{}max\PYZus{}based}\PY{p}{)}\PY{p}{)}
+    \PY{n}{pred\PYZus{}val}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{round}\PY{p}{(}\PY{n}{next\PYZus{}day\PYZus{}recovered\PYZus{}case\PYZus{}count\PYZus{}max\PYZus{}mean\PYZus{}based}\PY{p}{)}\PY{p}{)}
+    \PY{n}{pred\PYZus{}val}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{round}\PY{p}{(}\PY{n}{next\PYZus{}day\PYZus{}recovered\PYZus{}case\PYZus{}count\PYZus{}mean\PYZus{}last\PYZus{}based}\PY{p}{)}\PY{p}{)}
+    \PY{n}{pred\PYZus{}val}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{round}\PY{p}{(}\PY{n}{next\PYZus{}day\PYZus{}recovered\PYZus{}case\PYZus{}count\PYZus{}last\PYZus{}mean\PYZus{}based}\PY{p}{)}\PY{p}{)}
+    \PY{n}{pred\PYZus{}val}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{round}\PY{p}{(}\PY{n}{next\PYZus{}day\PYZus{}recovered\PYZus{}case\PYZus{}count\PYZus{}last\PYZus{}based}\PY{p}{)}\PY{p}{)}
+    \PY{n}{pred\PYZus{}val}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{round}\PY{p}{(}\PY{n}{next\PYZus{}day\PYZus{}recovered\PYZus{}case\PYZus{}count\PYZus{}middle\PYZus{}based}\PY{p}{)}\PY{p}{)}
+
+    \PY{k}{if}\PY{p}{(}\PY{n}{en}\PY{o}{\PYZlt{}}\PY{n+nb}{len}\PY{p}{(}\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+        \PY{n}{pred\PYZus{}dict}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{en}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{+}\PY{n}{datetime}\PY{o}{.}\PY{n}{timedelta}\PY{p}{(}\PY{n}{hours}\PY{o}{=}\PY{l+m+mi}{24}\PY{p}{)}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{original\PYZus{}val}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Daily Recovered}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{en}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mean\PYZus{}based}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pred\PYZus{}val}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{max\PYZus{}based}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pred\PYZus{}val}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mean\PYZus{}max\PYZus{}based}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pred\PYZus{}val}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{max\PYZus{}mean\PYZus{}based}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pred\PYZus{}val}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mean\PYZus{}last\PYZus{}based}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pred\PYZus{}val}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{last\PYZus{}mean\PYZus{}based}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pred\PYZus{}val}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{last\PYZus{}based}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pred\PYZus{}val}\PY{p}{[}\PY{l+m+mi}{6}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{middle\PYZus{}based}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pred\PYZus{}val}\PY{p}{[}\PY{l+m+mi}{7}\PY{p}{]}\PY{p}{\PYZcb{}}
+    \PY{k}{else}\PY{p}{:}
+        \PY{n}{pred\PYZus{}dict}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{en}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{+}\PY{n}{datetime}\PY{o}{.}\PY{n}{timedelta}\PY{p}{(}\PY{n}{hours}\PY{o}{=}\PY{l+m+mi}{24}\PY{p}{)}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{original\PYZus{}val}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mean\PYZus{}based}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pred\PYZus{}val}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{max\PYZus{}based}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pred\PYZus{}val}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mean\PYZus{}max\PYZus{}based}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pred\PYZus{}val}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{max\PYZus{}mean\PYZus{}based}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pred\PYZus{}val}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mean\PYZus{}last\PYZus{}based}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pred\PYZus{}val}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{last\PYZus{}mean\PYZus{}based}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pred\PYZus{}val}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{last\PYZus{}based}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pred\PYZus{}val}\PY{p}{[}\PY{l+m+mi}{6}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{middle\PYZus{}based}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pred\PYZus{}val}\PY{p}{[}\PY{l+m+mi}{7}\PY{p}{]}\PY{p}{\PYZcb{}}
+        
+    
+    \PY{n}{pred\PYZus{}df}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{pred\PYZus{}dict}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
+    
+
+\PY{n}{d}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}excel}\PY{p}{(}\PY{l+s+sa}{r}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{C:}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{Users}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{Mark 1}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{ramprd\PYZus{}df\PYZus{}strd.xlsx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{d}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{concat}\PY{p}{(}\PY{p}{[}\PY{n}{d}\PY{p}{,}\PY{n}{pred\PYZus{}df}\PY{p}{]}\PY{p}{)}
+\PY{n}{d}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{n}{drop}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,}\PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+\PY{n}{d}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{original\PYZus{}val}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{n+nb}{len}\PY{p}{(}\PY{n}{d}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{=}\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Daily Recovered}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{n+nb}{len}\PY{p}{(}\PY{n}{data\PYZus{}daily\PYZus{}ratio}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}
+\PY{n}{d}\PY{o}{.}\PY{n}{to\PYZus{}excel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ramprd\PYZus{}df\PYZus{}strd.xlsx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<ipython-input-23-ec28887caa50>:73: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  d['original\_val'][len(d)-2]=data\_daily\_ratio['Daily
+Recovered'][len(data\_daily\_ratio)-1]
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{24}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{dc}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}excel}\PY{p}{(}\PY{l+s+sa}{r}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{C:}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{Users}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{Mark 1}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{ramprd\PYZus{}df\PYZus{}strd.xlsx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{dc} \PY{o}{=} \PY{n}{dc}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{o}{\PYZti{}}\PY{n}{dc}\PY{o}{.}\PY{n}{columns}\PY{o}{.}\PY{n}{str}\PY{o}{.}\PY{n}{contains}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZca{}Unnamed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}
+\PY{n}{dc}\PY{o}{.}\PY{n}{tail}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{24}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+          date  original\_val  mean\_based  max\_based  mean\_max\_based  \textbackslash{}
+164 2020-09-12         77860       75663      93583           83458
+165 2020-09-13         77860       75340      93583           82354
+166 2020-09-13         77746       75340      93583           82354
+167 2020-09-14         79202       77020      93583           82899
+168 2020-09-15             0       77258      93583           82365
+
+     max\_mean\_based  mean\_last\_based  last\_mean\_based  last\_based  \textbackslash{}
+164           84841            83458            84841       93583
+165           85613            78719            71229       74424
+166           85613            78719            71229       74424
+167           86946            79125            75567       77632
+168           87779            80087            77835       80685
+
+     middle\_based
+164         75094
+165         71539
+166         71539
+167         68805
+168         93583
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{25}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{dce}\PY{o}{=}\PY{n}{dc}\PY{o}{.}\PY{n}{copy}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{26}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{colls}\PY{o}{=}\PY{n+nb}{list}\PY{p}{(}\PY{n}{dc}\PY{o}{.}\PY{n}{columns}\PY{p}{)}
+\PY{n}{colls}\PY{o}{.}\PY{n}{pop}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{colls}\PY{o}{.}\PY{n}{pop}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{collss}\PY{o}{=}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mb}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mxb}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{memb}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mxmb}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mlb}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{lmb}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{lb}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mdb}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+\PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n}{collss}\PY{p}{:}
+    \PY{n}{dce}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{Series}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{n+nb}{len}\PY{p}{(}\PY{n}{dce}\PY{p}{)}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+\PY{n}{colls}
+
+        
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{26}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+['mean\_based',
+ 'max\_based',
+ 'mean\_max\_based',
+ 'max\_mean\_based',
+ 'mean\_last\_based',
+ 'last\_mean\_based',
+ 'last\_based',
+ 'middle\_based']
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{27}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{for} \PY{n}{i}\PY{p}{,}\PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{colls}\PY{p}{,}\PY{n}{collss}\PY{p}{)}\PY{p}{:}
+    \PY{k}{for} \PY{n}{k} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{dce}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+        \PY{n}{dce}\PY{p}{[}\PY{n}{j}\PY{p}{]}\PY{p}{[}\PY{n}{k}\PY{p}{]}\PY{o}{=}\PY{n}{dce}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{original\PYZus{}val}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{k}\PY{p}{]}\PY{o}{\PYZhy{}}\PY{n}{dce}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{[}\PY{n}{k}\PY{p}{]}
+\PY{n}{dce}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<ipython-input-27-e3d4143616d2>:3: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  dce[j][k]=dce["original\_val"][k]-dce[i][k]
+    \end{Verbatim}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{27}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+          date  original\_val  mean\_based  max\_based  mean\_max\_based  \textbackslash{}
+0   2020-03-31            13          41        262              89
+1   2020-04-01            19          24        125              53
+2   2020-04-02            22          31        125              59
+3   2020-04-03            39          31        125              54
+4   2020-04-04            56          28         80              50
+..         {\ldots}           {\ldots}         {\ldots}        {\ldots}             {\ldots}
+164 2020-09-12         77860       75663      93583           83458
+165 2020-09-13         77860       75340      93583           82354
+166 2020-09-13         77746       75340      93583           82354
+167 2020-09-14         79202       77020      93583           82899
+168 2020-09-15             0       77258      93583           82365
+
+     max\_mean\_based  mean\_last\_based  last\_mean\_based  last\_based  \textbackslash{}
+0               120               89               33          72
+1                56               20                6           5
+2                64               32               26          28
+3                72               34               23          25
+4                46               50               39          69
+..              {\ldots}              {\ldots}              {\ldots}         {\ldots}
+164           84841            83458            84841       93583
+165           85613            78719            71229       74424
+166           85613            78719            71229       74424
+167           86946            79125            75567       77632
+168           87779            80087            77835       80685
+
+     middle\_based     mb    mxb   memb   mxmb    mlb    lmb     lb    mdb
+0              89    -28   -249    -76   -107    -76    -20    -59    -76
+1               4     -5   -106    -34    -37     -1     13     14     15
+2              29     -9   -103    -37    -42    -10     -4     -6     -7
+3              72      8    -86    -15    -33      5     16     14    -33
+4               5     28    -24      6     10      6     17    -13     51
+..            {\ldots}    {\ldots}    {\ldots}    {\ldots}    {\ldots}    {\ldots}    {\ldots}    {\ldots}    {\ldots}
+164         75094   2197 -15723  -5598  -6981  -5598  -6981 -15723   2766
+165         71539   2520 -15723  -4494  -7753   -859   6631   3436   6321
+166         71539   2406 -15837  -4608  -7867   -973   6517   3322   6207
+167         68805   2182 -14381  -3697  -7744     77   3635   1570  10397
+168         93583 -77258 -93583 -82365 -87779 -80087 -77835 -80685 -93583
+
+[169 rows x 18 columns]
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{28}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{dce}\PY{o}{.}\PY{n}{to\PYZus{}excel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ramerrprd\PYZus{}df\PYZus{}strd.xlsx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{dce}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}excel}\PY{p}{(}\PY{l+s+sa}{r}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{C:}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{Users}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{Mark 1}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{ramerrprd\PYZus{}df\PYZus{}strd.xlsx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{dce} \PY{o}{=} \PY{n}{dce}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{o}{\PYZti{}}\PY{n}{dce}\PY{o}{.}\PY{n}{columns}\PY{o}{.}\PY{n}{str}\PY{o}{.}\PY{n}{contains}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZca{}Unnamed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}
+\PY{n}{dce}\PY{o}{.}\PY{n}{to\PYZus{}excel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ramerrprd\PYZus{}df\PYZus{}strd.xlsx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{29}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{edf}\PY{o}{=}\PY{n}{dce}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{n+nb}{len}\PY{p}{(}\PY{n}{dce}\PY{p}{)}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{:}\PY{p}{]}
+\PY{n}{edf}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{29}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+        mb    mxb   memb   mxmb    mlb    lmb     lb    mdb
+0      -28   -249    -76   -107    -76    -20    -59    -76
+1       -5   -106    -34    -37     -1     13     14     15
+2       -9   -103    -37    -42    -10     -4     -6     -7
+3        8    -86    -15    -33      5     16     14    -33
+4       28    -24      6     10      6     17    -13     51
+..     {\ldots}    {\ldots}    {\ldots}    {\ldots}    {\ldots}    {\ldots}    {\ldots}    {\ldots}
+164   2197 -15723  -5598  -6981  -5598  -6981 -15723   2766
+165   2520 -15723  -4494  -7753   -859   6631   3436   6321
+166   2406 -15837  -4608  -7867   -973   6517   3322   6207
+167   2182 -14381  -3697  -7744     77   3635   1570  10397
+168 -77258 -93583 -82365 -87779 -80087 -77835 -80685 -93583
+
+[169 rows x 8 columns]
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{30}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{}}
+\PY{l+s+sd}{for j,k in zip(range(len(edf)),range(len(dce)\PYZhy{}1)):}
+\PY{l+s+sd}{    }
+\PY{l+s+sd}{    a=list(edf.loc[j])}
+\PY{l+s+sd}{    pos=[]}
+\PY{l+s+sd}{    neg=[]}
+\PY{l+s+sd}{    for i in a:}
+\PY{l+s+sd}{        if(i\PYZgt{}=0):}
+\PY{l+s+sd}{            pos.append(i)}
+\PY{l+s+sd}{        else:}
+\PY{l+s+sd}{            neg.append(i)}
+\PY{l+s+sd}{    if(len(pos)):}
+\PY{l+s+sd}{        ps=min(pos)}
+\PY{l+s+sd}{        psi=a.index(ps)}
+\PY{l+s+sd}{        psc=list(edf.columns)[psi]}
+\PY{l+s+sd}{    if(len(neg)):}
+\PY{l+s+sd}{        ng=max(neg)}
+\PY{l+s+sd}{        ngi=a.index(ng)}
+\PY{l+s+sd}{        ngc=list(edf.columns)[ngi]}
+\PY{l+s+sd}{    }
+\PY{l+s+sd}{    }
+\PY{l+s+sd}{    print(\PYZdq{}for date: \PYZdq{}+str(dce[\PYZdq{}date\PYZdq{}][k]).strip(\PYZdq{}00:00:00\PYZdq{})+\PYZdq{} the lowest positve error was by the method: \PYZdq{}+ psc +\PYZdq{} and the highest negative error by the method: \PYZdq{}+ngc)}
+\PY{l+s+sd}{    \PYZdq{}\PYZdq{}\PYZdq{}}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{30}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+'\textbackslash{}nfor j,k in zip(range(len(edf)),range(len(dce)-1)):\textbackslash{}n    \textbackslash{}n
+a=list(edf.loc[j])\textbackslash{}n    pos=[]\textbackslash{}n    neg=[]\textbackslash{}n    for i in a:\textbackslash{}n        if(i>=0):\textbackslash{}n
+pos.append(i)\textbackslash{}n        else:\textbackslash{}n            neg.append(i)\textbackslash{}n    if(len(pos)):\textbackslash{}n
+ps=min(pos)\textbackslash{}n        psi=a.index(ps)\textbackslash{}n        psc=list(edf.columns)[psi]\textbackslash{}n
+if(len(neg)):\textbackslash{}n        ng=max(neg)\textbackslash{}n        ngi=a.index(ng)\textbackslash{}n
+ngc=list(edf.columns)[ngi]\textbackslash{}n    \textbackslash{}n    \textbackslash{}n    print("for date:
+"+str(dce["date"][k]).strip("00:00:00")+" the lowest positve error was by the
+method: "+ psc +" and the highest negative error by the method: "+ngc)\textbackslash{}n    '
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{31}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{err\PYZus{}dict}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{p}{[}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mipe}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{p}{[}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mxne}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{p}{[}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mipv}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{p}{[}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mxnv}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{p}{[}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{original\PYZus{}val}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{p}{[}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{pprd\PYZus{}val}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{p}{[}\PY{p}{]}\PY{p}{,}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{nprd\PYZus{}val}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{p}{[}\PY{p}{]}\PY{p}{\PYZcb{}}
+\PY{n}{psc}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+\PY{n}{ngc}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+\PY{n}{date}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+\PY{n}{ps}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+\PY{n}{ng}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+\PY{n}{org\PYZus{}val}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+\PY{n}{pprd\PYZus{}val}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+\PY{n}{nprd\PYZus{}val}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+\PY{k}{for} \PY{n}{j}\PY{p}{,}\PY{n}{k} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{edf}\PY{p}{)}\PY{p}{)}\PY{p}{,}\PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{dce}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+    
+    \PY{n}{a}\PY{o}{=}\PY{n+nb}{list}\PY{p}{(}\PY{n}{edf}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{j}\PY{p}{]}\PY{p}{)}
+    \PY{n}{pos}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+    \PY{n}{neg}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+    \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n}{a}\PY{p}{:}
+        \PY{k}{if}\PY{p}{(}\PY{n}{i}\PY{o}{\PYZgt{}}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}\PY{p}{:}
+            \PY{n}{pos}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{i}\PY{p}{)}
+        \PY{k}{else}\PY{p}{:}
+            \PY{n}{neg}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{i}\PY{p}{)}
+    \PY{k}{if}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{pos}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+        \PY{n}{aa}\PY{o}{=}\PY{n+nb}{min}\PY{p}{(}\PY{n}{pos}\PY{p}{)}
+    
+        \PY{n}{psi}\PY{o}{=}\PY{n}{a}\PY{o}{.}\PY{n}{index}\PY{p}{(}\PY{n}{aa}\PY{p}{)}
+    
+        \PY{n}{ps}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{aa}\PY{p}{)}
+    
+        \PY{n}{psc}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n+nb}{list}\PY{p}{(}\PY{n}{edf}\PY{o}{.}\PY{n}{columns}\PY{p}{)}\PY{p}{[}\PY{n}{psi}\PY{p}{]}\PY{p}{)}
+    
+    
+        \PY{n}{pprd\PYZus{}val}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{dce}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{original\PYZus{}val}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{k}\PY{p}{]}\PY{o}{\PYZhy{}}\PY{n}{aa}\PY{p}{)}
+    \PY{k}{else}\PY{p}{:}
+        \PY{n}{ps}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{No}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    
+        \PY{n}{psc}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{No}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    
+    
+        \PY{n}{pprd\PYZus{}val}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{No}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        
+    
+    \PY{k}{if}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{neg}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+        \PY{n}{bb}\PY{o}{=}\PY{n+nb}{max}\PY{p}{(}\PY{n}{neg}\PY{p}{)}
+        \PY{n}{ngi}\PY{o}{=}\PY{n}{a}\PY{o}{.}\PY{n}{index}\PY{p}{(}\PY{n}{bb}\PY{p}{)}
+        \PY{n}{ng}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{bb}\PY{p}{)}
+        \PY{n}{ngc}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n+nb}{list}\PY{p}{(}\PY{n}{edf}\PY{o}{.}\PY{n}{columns}\PY{p}{)}\PY{p}{[}\PY{n}{ngi}\PY{p}{]}\PY{p}{)}
+        \PY{n}{nprd\PYZus{}val}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{dce}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{original\PYZus{}val}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{k}\PY{p}{]}\PY{o}{\PYZhy{}}\PY{n}{bb}\PY{p}{)}
+    \PY{k}{else}\PY{p}{:}
+        \PY{n}{ng}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{No}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    
+        \PY{n}{ngc}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{No}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    
+    
+        \PY{n}{nprd\PYZus{}val}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{No}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    
+    \PY{n}{date}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n+nb}{str}\PY{p}{(}\PY{n}{dce}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{k}\PY{p}{]}\PY{p}{)}\PY{o}{.}\PY{n}{strip}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{00:00:00}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{)}
+    \PY{n}{org\PYZus{}val}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{dce}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{original\PYZus{}val}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{n}{k}\PY{p}{]}\PY{p}{)}
+\PY{n}{err\PYZus{}dict}\PY{o}{.}\PY{n}{update}\PY{p}{(}\PY{p}{\PYZob{}}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{date}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{date}\PY{p}{\PYZcb{}}\PY{p}{)}
+\PY{n}{err\PYZus{}dict}\PY{o}{.}\PY{n}{update}\PY{p}{(}\PY{p}{\PYZob{}}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mipe}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{psc}\PY{p}{\PYZcb{}}\PY{p}{)}
+\PY{n}{err\PYZus{}dict}\PY{o}{.}\PY{n}{update}\PY{p}{(}\PY{p}{\PYZob{}}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mxne}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{ngc}\PY{p}{\PYZcb{}}\PY{p}{)}
+\PY{n}{err\PYZus{}dict}\PY{o}{.}\PY{n}{update}\PY{p}{(}\PY{p}{\PYZob{}}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mipv}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{ps}\PY{p}{\PYZcb{}}\PY{p}{)}
+\PY{n}{err\PYZus{}dict}\PY{o}{.}\PY{n}{update}\PY{p}{(}\PY{p}{\PYZob{}}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mxnv}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{ng}\PY{p}{\PYZcb{}}\PY{p}{)}
+\PY{n}{err\PYZus{}dict}\PY{o}{.}\PY{n}{update}\PY{p}{(}\PY{p}{\PYZob{}}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{original\PYZus{}val}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{org\PYZus{}val}\PY{p}{\PYZcb{}}\PY{p}{)}
+\PY{n}{err\PYZus{}dict}\PY{o}{.}\PY{n}{update}\PY{p}{(}\PY{p}{\PYZob{}}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{pprd\PYZus{}val}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{pprd\PYZus{}val}\PY{p}{\PYZcb{}}\PY{p}{)}
+\PY{n}{err\PYZus{}dict}\PY{o}{.}\PY{n}{update}\PY{p}{(}\PY{p}{\PYZob{}}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{nprd\PYZus{}val}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}\PY{n}{nprd\PYZus{}val}\PY{p}{\PYZcb{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{32}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{err\PYZus{}dict}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{32}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\{'date': ['2020-03-31 ',
+  '2020-04-01 ',
+  '2020-04-02 ',
+  '2020-04-03 ',
+  '2020-04-04 ',
+  '2020-04-05 ',
+  '2020-04-06 ',
+  '2020-04-07 ',
+  '2020-04-08 ',
+  '2020-04-09 ',
+  '2020-04-10 ',
+  '2020-04-11 ',
+  '2020-04-12 ',
+  '2020-04-13 ',
+  '2020-04-14 ',
+  '2020-04-15 ',
+  '2020-04-16 ',
+  '2020-04-17 ',
+  '2020-04-18 ',
+  '2020-04-19 ',
+  '2020-04-20 ',
+  '2020-04-21 ',
+  '2020-04-22 ',
+  '2020-04-23 ',
+  '2020-04-24 ',
+  '2020-04-25 ',
+  '2020-04-26 ',
+  '2020-04-27 ',
+  '2020-04-28 ',
+  '2020-04-29 ',
+  '2020-04-30 ',
+  '2020-05-01 ',
+  '2020-05-02 ',
+  '2020-05-03 ',
+  '2020-05-04 ',
+  '2020-05-05 ',
+  '2020-05-06 ',
+  '2020-05-07 ',
+  '2020-05-08 ',
+  '2020-05-09 ',
+  '2020-05-10 ',
+  '2020-05-11 ',
+  '2020-05-12 ',
+  '2020-05-13 ',
+  '2020-05-14 ',
+  '2020-05-15 ',
+  '2020-05-16 ',
+  '2020-05-17 ',
+  '2020-05-18 ',
+  '2020-05-19 ',
+  '2020-05-20 ',
+  '2020-05-21 ',
+  '2020-05-22 ',
+  '2020-05-23 ',
+  '2020-05-24 ',
+  '2020-05-25 ',
+  '2020-05-26 ',
+  '2020-05-27 ',
+  '2020-05-28 ',
+  '2020-05-29 ',
+  '2020-05-30 ',
+  '2020-05-31 ',
+  '2020-06-01 ',
+  '2020-06-02 ',
+  '2020-06-03 ',
+  '2020-06-04 ',
+  '2020-06-05 ',
+  '2020-06-06 ',
+  '2020-06-07 ',
+  '2020-06-08 ',
+  '2020-06-09 ',
+  '2020-06-10 ',
+  '2020-06-11 ',
+  '2020-06-12 ',
+  '2020-06-13 ',
+  '2020-06-14 ',
+  '2020-06-15 ',
+  '2020-06-16 ',
+  '2020-06-17 ',
+  '2020-06-18 ',
+  '2020-06-19 ',
+  '2020-06-20 ',
+  '2020-06-21 ',
+  '2020-06-22 ',
+  '2020-06-23 ',
+  '2020-06-24 ',
+  '2020-06-25 ',
+  '2020-06-26 ',
+  '2020-06-27 ',
+  '2020-06-28 ',
+  '2020-06-29 ',
+  '2020-06-30 ',
+  '2020-07-01 ',
+  '2020-07-02 ',
+  '2020-07-03 ',
+  '2020-07-04 ',
+  '2020-07-05 ',
+  '2020-07-06 ',
+  '2020-07-07 ',
+  '2020-07-08 ',
+  '2020-07-09 ',
+  '2020-07-10 ',
+  '2020-07-11 ',
+  '2020-07-12 ',
+  '2020-07-13 ',
+  '2020-07-14 ',
+  '2020-07-15 ',
+  '2020-07-16 ',
+  '2020-07-17 ',
+  '2020-07-18 ',
+  '2020-07-19 ',
+  '2020-07-20 ',
+  '2020-07-21 ',
+  '2020-07-22 ',
+  '2020-07-23 ',
+  '2020-07-24 ',
+  '2020-07-25 ',
+  '2020-07-26 ',
+  '2020-07-27 ',
+  '2020-07-28 ',
+  '2020-07-29 ',
+  '2020-07-30 ',
+  '2020-07-31 ',
+  '2020-08-01 ',
+  '2020-08-02 ',
+  '2020-08-03 ',
+  '2020-08-04 ',
+  '2020-08-05 ',
+  '2020-08-06 ',
+  '2020-08-07 ',
+  '2020-08-08 ',
+  '2020-08-09 ',
+  '2020-08-10 ',
+  '2020-08-11 ',
+  '2020-08-12 ',
+  '2020-08-13 ',
+  '2020-08-14 ',
+  '2020-08-15 ',
+  '2020-08-16 ',
+  '2020-08-17 ',
+  '2020-08-18 ',
+  '2020-08-19 ',
+  '2020-08-20 ',
+  '2020-08-21 ',
+  '2020-08-22 ',
+  '2020-08-23 ',
+  '2020-08-24 ',
+  '2020-08-25 ',
+  '2020-08-26 ',
+  '2020-08-27 ',
+  '2020-08-28 ',
+  '2020-08-29 ',
+  '2020-08-30 ',
+  '2020-08-31 ',
+  '2020-09-01 ',
+  '2020-09-02 ',
+  '2020-09-04 ',
+  '2020-09-05 ',
+  '2020-09-06 ',
+  '2020-09-07 ',
+  '2020-09-08 ',
+  '2020-09-09 ',
+  '2020-09-10 ',
+  '2020-09-11 ',
+  '2020-09-12 ',
+  '2020-09-13 ',
+  '2020-09-13 ',
+  '2020-09-14 ',
+  '2020-09-15 '],
+ 'mipe': ['No',
+  'lmb',
+  'No',
+  'mlb',
+  'memb',
+  'mb',
+  'mlb',
+  'mdb',
+  'lb',
+  'mdb',
+  'memb',
+  'mxmb',
+  'No',
+  'lb',
+  'mb',
+  'No',
+  'memb',
+  'mb',
+  'mxmb',
+  'mxmb',
+  'lb',
+  'memb',
+  'No',
+  'mb',
+  'mdb',
+  'lmb',
+  'mb',
+  'No',
+  'mb',
+  'memb',
+  'lmb',
+  'mxb',
+  'mb',
+  'mb',
+  'memb',
+  'lb',
+  'lmb',
+  'memb',
+  'No',
+  'mb',
+  'memb',
+  'lmb',
+  'memb',
+  'mxmb',
+  'No',
+  'mxmb',
+  'mxb',
+  'mdb',
+  'lb',
+  'mlb',
+  'mb',
+  'mb',
+  'lb',
+  'No',
+  'mdb',
+  'No',
+  'mdb',
+  'mb',
+  'lmb',
+  'mxb',
+  'mdb',
+  'mdb',
+  'mdb',
+  'lmb',
+  'mdb',
+  'lmb',
+  'mdb',
+  'mdb',
+  'lmb',
+  'mdb',
+  'mxmb',
+  'mdb',
+  'lmb',
+  'mxb',
+  'memb',
+  'mdb',
+  'mxb',
+  'No',
+  'lmb',
+  'mb',
+  'No',
+  'mxmb',
+  'mdb',
+  'mb',
+  'mb',
+  'mlb',
+  'lmb',
+  'No',
+  'mb',
+  'No',
+  'mb',
+  'mdb',
+  'lmb',
+  'mxb',
+  'No',
+  'mdb',
+  'mlb',
+  'No',
+  'mlb',
+  'lb',
+  'lmb',
+  'memb',
+  'mdb',
+  'lmb',
+  'lmb',
+  'memb',
+  'mb',
+  'memb',
+  'mdb',
+  'mxmb',
+  'mb',
+  'mlb',
+  'lb',
+  'mdb',
+  'mxmb',
+  'mb',
+  'memb',
+  'No',
+  'mlb',
+  'lmb',
+  'No',
+  'mb',
+  'mb',
+  'mxb',
+  'mb',
+  'mdb',
+  'lb',
+  'mb',
+  'mlb',
+  'lmb',
+  'lb',
+  'lb',
+  'No',
+  'memb',
+  'memb',
+  'mb',
+  'mlb',
+  'No',
+  'mb',
+  'mlb',
+  'memb',
+  'lmb',
+  'mxmb',
+  'lmb',
+  'No',
+  'lmb',
+  'mxb',
+  'mdb',
+  'mdb',
+  'mlb',
+  'lmb',
+  'mlb',
+  'mdb',
+  'mdb',
+  'mb',
+  'mxmb',
+  'memb',
+  'lb',
+  'mb',
+  'mxmb',
+  'lmb',
+  'mb',
+  'lmb',
+  'mxb',
+  'mb',
+  'mb',
+  'mb',
+  'mlb',
+  'No'],
+ 'mxne': ['lmb',
+  'mlb',
+  'lmb',
+  'memb',
+  'lb',
+  'mxmb',
+  'mxmb',
+  'memb',
+  'memb',
+  'lmb',
+  'mxb',
+  'memb',
+  'lmb',
+  'mb',
+  'memb',
+  'mb',
+  'mxmb',
+  'lmb',
+  'mxb',
+  'memb',
+  'mxmb',
+  'mxb',
+  'mb',
+  'mxmb',
+  'mb',
+  'mlb',
+  'memb',
+  'mb',
+  'mlb',
+  'lb',
+  'mb',
+  'No',
+  'mxmb',
+  'mlb',
+  'mxmb',
+  'mdb',
+  'mxmb',
+  'mxmb',
+  'mb',
+  'mxmb',
+  'lb',
+  'mxmb',
+  'mxb',
+  'memb',
+  'lmb',
+  'mxb',
+  'No',
+  'mb',
+  'mb',
+  'mdb',
+  'lmb',
+  'lb',
+  'mb',
+  'lmb',
+  'mxmb',
+  'mb',
+  'mxmb',
+  'memb',
+  'mb',
+  'No',
+  'mb',
+  'mlb',
+  'lmb',
+  'mlb',
+  'lb',
+  'mlb',
+  'lb',
+  'mxb',
+  'mxmb',
+  'mlb',
+  'memb',
+  'mxb',
+  'mxmb',
+  'No',
+  'mxb',
+  'mxmb',
+  'No',
+  'mb',
+  'mlb',
+  'memb',
+  'mb',
+  'mxb',
+  'mb',
+  'mxmb',
+  'mlb',
+  'memb',
+  'mlb',
+  'lmb',
+  'memb',
+  'mb',
+  'mdb',
+  'mb',
+  'mlb',
+  'No',
+  'mb',
+  'mb',
+  'memb',
+  'lmb',
+  'memb',
+  'memb',
+  'mlb',
+  'mxb',
+  'mxmb',
+  'mb',
+  'mlb',
+  'mdb',
+  'memb',
+  'mxmb',
+  'mb',
+  'mdb',
+  'memb',
+  'memb',
+  'mxmb',
+  'mxb',
+  'memb',
+  'lb',
+  'mxmb',
+  'mb',
+  'mdb',
+  'mlb',
+  'lmb',
+  'memb',
+  'mdb',
+  'No',
+  'mxmb',
+  'mxmb',
+  'memb',
+  'lmb',
+  'memb',
+  'mlb',
+  'mlb',
+  'mxmb',
+  'lmb',
+  'mxmb',
+  'mxmb',
+  'mdb',
+  'memb',
+  'mb',
+  'memb',
+  'memb',
+  'mxmb',
+  'memb',
+  'mdb',
+  'mxmb',
+  'mb',
+  'mdb',
+  'No',
+  'memb',
+  'lmb',
+  'mb',
+  'memb',
+  'lmb',
+  'lmb',
+  'memb',
+  'mlb',
+  'mxb',
+  'mxmb',
+  'mxb',
+  'lmb',
+  'memb',
+  'mxmb',
+  'lb',
+  'lb',
+  'No',
+  'memb',
+  'mlb',
+  'mlb',
+  'memb',
+  'mb'],
+ 'mipv': ['No',
+  13,
+  'No',
+  5,
+  6,
+  2,
+  10,
+  6,
+  9,
+  37,
+  32,
+  15,
+  'No',
+  42,
+  33,
+  'No',
+  44,
+  62,
+  105,
+  6,
+  66,
+  170,
+  'No',
+  138,
+  32,
+  70,
+  52,
+  'No',
+  22,
+  23,
+  1,
+  49,
+  106,
+  129,
+  41,
+  10,
+  67,
+  54,
+  'No',
+  248,
+  52,
+  27,
+  113,
+  88,
+  'No',
+  191,
+  881,
+  515,
+  876,
+  246,
+  245,
+  79,
+  131,
+  'No',
+  89,
+  'No',
+  149,
+  183,
+  119,
+  7163,
+  36,
+  1639,
+  954,
+  588,
+  2211,
+  49,
+  1712,
+  144,
+  29,
+  85,
+  86,
+  87,
+  179,
+  116,
+  353,
+  369,
+  915,
+  'No',
+  1757,
+  2805,
+  'No',
+  617,
+  2505,
+  294,
+  182,
+  1565,
+  176,
+  'No',
+  1873,
+  'No',
+  701,
+  5057,
+  196,
+  239,
+  'No',
+  3049,
+  513,
+  'No',
+  791,
+  1000,
+  99,
+  676,
+  1473,
+  307,
+  829,
+  208,
+  510,
+  1656,
+  293,
+  225,
+  1734,
+  510,
+  1604,
+  51,
+  472,
+  4891,
+  494,
+  'No',
+  1169,
+  128,
+  'No',
+  3209,
+  1291,
+  8636,
+  1020,
+  480,
+  5252,
+  852,
+  1614,
+  370,
+  1501,
+  530,
+  'No',
+  951,
+  201,
+  78,
+  1226,
+  'No',
+  2605,
+  63,
+  373,
+  187,
+  85,
+  2213,
+  'No',
+  586,
+  791,
+  292,
+  622,
+  3671,
+  37,
+  8,
+  11189,
+  1177,
+  193,
+  710,
+  427,
+  1335,
+  1943,
+  111,
+  990,
+  185,
+  718,
+  2027,
+  2197,
+  2520,
+  2406,
+  77,
+  'No'],
+ 'mxnv': [-20,
+  -1,
+  -4,
+  -15,
+  -13,
+  -16,
+  -2,
+  -4,
+  -3,
+  -2,
+  -19,
+  -9,
+  -7,
+  -22,
+  -49,
+  -11,
+  -33,
+  -17,
+  -63,
+  -121,
+  -34,
+  -60,
+  -82,
+  -90,
+  -77,
+  -123,
+  -171,
+  -14,
+  -14,
+  -7,
+  -16,
+  'No',
+  -156,
+  -15,
+  -61,
+  -174,
+  -235,
+  -24,
+  -155,
+  -14,
+  -131,
+  -95,
+  -219,
+  -85,
+  -42,
+  -264,
+  'No',
+  -18,
+  -45,
+  -99,
+  -3,
+  -65,
+  -100,
+  -655,
+  -232,
+  -119,
+  -319,
+  -278,
+  -97,
+  'No',
+  -1825,
+  -808,
+  -1708,
+  -500,
+  -1500,
+  -442,
+  -316,
+  -319,
+  -99,
+  -117,
+  -62,
+  -253,
+  -58,
+  'No',
+  -636,
+  -139,
+  'No',
+  -980,
+  -777,
+  -304,
+  -311,
+  -2770,
+  -1590,
+  -4170,
+  -1082,
+  -2304,
+  -991,
+  -2038,
+  -572,
+  -497,
+  -1441,
+  -560,
+  -1129,
+  'No',
+  -291,
+  -589,
+  -4942,
+  -498,
+  -4116,
+  -1925,
+  -2052,
+  -2315,
+  -202,
+  -810,
+  -935,
+  -233,
+  -1088,
+  -381,
+  -3163,
+  -1302,
+  -1777,
+  -383,
+  -1826,
+  -5355,
+  -1030,
+  -2329,
+  -644,
+  -491,
+  -489,
+  -597,
+  -2190,
+  -30,
+  -898,
+  'No',
+  -11797,
+  -10857,
+  -2593,
+  -4174,
+  -4544,
+  -2720,
+  -1435,
+  -2081,
+  -4435,
+  -3222,
+  -2961,
+  -2142,
+  -1807,
+  -2329,
+  -768,
+  -296,
+  -6748,
+  -1755,
+  -165,
+  -26,
+  -833,
+  -1399,
+  'No',
+  -3553,
+  -3318,
+  -1171,
+  -1723,
+  -945,
+  -1881,
+  -2711,
+  -2199,
+  -2783,
+  -872,
+  -2883,
+  -201,
+  -621,
+  -917,
+  -2037,
+  -640,
+  'No',
+  -5598,
+  -859,
+  -973,
+  -3697,
+  -77258],
+ 'original\_val': [13,
+  19,
+  22,
+  39,
+  56,
+  43,
+  65,
+  75,
+  96,
+  70,
+  151,
+  186,
+  114,
+  112,
+  167,
+  144,
+  258,
+  273,
+  426,
+  388,
+  419,
+  703,
+  394,
+  642,
+  484,
+  442,
+  585,
+  580,
+  636,
+  690,
+  630,
+  962,
+  831,
+  911,
+  1082,
+  1295,
+  1161,
+  1475,
+  1111,
+  1414,
+  1669,
+  1579,
+  1905,
+  1963,
+  1594,
+  2234,
+  4012,
+  2538,
+  2482,
+  3032,
+  3113,
+  3131,
+  3280,
+  2576,
+  3285,
+  3012,
+  3585,
+  3434,
+  3171,
+  11735,
+  4303,
+  4928,
+  3882,
+  4531,
+  3789,
+  4390,
+  4770,
+  5433,
+  5191,
+  5171,
+  5634,
+  6275,
+  6044,
+  7263,
+  8092,
+  7358,
+  10639,
+  7226,
+  6890,
+  10741,
+  9029,
+  13974,
+  9075,
+  10879,
+  10462,
+  13089,
+  13983,
+  10246,
+  14229,
+  11631,
+  13497,
+  12565,
+  12064,
+  19999,
+  14417,
+  14746,
+  15829,
+  15315,
+  16836,
+  19508,
+  19408,
+  20289,
+  19981,
+  18198,
+  17683,
+  20977,
+  20646,
+  22867,
+  17476,
+  23583,
+  22730,
+  24303,
+  27589,
+  31875,
+  33326,
+  32514,
+  37125,
+  31512,
+  34354,
+  35683,
+  32886,
+  37425,
+  36554,
+  51368,
+  40355,
+  43070,
+  51220,
+  45583,
+  50141,
+  50387,
+  52135,
+  54474,
+  47362,
+  56461,
+  57759,
+  54776,
+  56920,
+  53116,
+  57404,
+  58172,
+  60455,
+  59365,
+  61873,
+  62858,
+  59101,
+  56896,
+  66305,
+  64151,
+  56191,
+  59620,
+  64475,
+  64982,
+  60408,
+  64435,
+  62144,
+  67491,
+  69625,
+  73161,
+  69624,
+  74123,
+  74607,
+  73057,
+  70899,
+  81455,
+  77860,
+  77860,
+  77746,
+  79202,
+  0],
+ 'pprd\_val': ['No',
+  6,
+  'No',
+  34,
+  50,
+  41,
+  55,
+  69,
+  87,
+  33,
+  119,
+  171,
+  'No',
+  70,
+  134,
+  'No',
+  214,
+  211,
+  321,
+  382,
+  353,
+  533,
+  'No',
+  504,
+  452,
+  372,
+  533,
+  'No',
+  614,
+  667,
+  629,
+  913,
+  725,
+  782,
+  1041,
+  1285,
+  1094,
+  1421,
+  'No',
+  1166,
+  1617,
+  1552,
+  1792,
+  1875,
+  'No',
+  2043,
+  3131,
+  2023,
+  1606,
+  2786,
+  2868,
+  3052,
+  3149,
+  'No',
+  3196,
+  'No',
+  3436,
+  3251,
+  3052,
+  4572,
+  4267,
+  3289,
+  2928,
+  3943,
+  1578,
+  4341,
+  3058,
+  5289,
+  5162,
+  5086,
+  5548,
+  6188,
+  5865,
+  7147,
+  7739,
+  6989,
+  9724,
+  'No',
+  5133,
+  7936,
+  'No',
+  13357,
+  6570,
+  10585,
+  10280,
+  11524,
+  13807,
+  'No',
+  12356,
+  'No',
+  12796,
+  7508,
+  11868,
+  19760,
+  'No',
+  11697,
+  15316,
+  'No',
+  16045,
+  18508,
+  19309,
+  19613,
+  18508,
+  17891,
+  16854,
+  20769,
+  20136,
+  21211,
+  17183,
+  23358,
+  20996,
+  23793,
+  25985,
+  31824,
+  32854,
+  27623,
+  36631,
+  'No',
+  33185,
+  35555,
+  'No',
+  34216,
+  35263,
+  42732,
+  39335,
+  42590,
+  45968,
+  44731,
+  48527,
+  50017,
+  50634,
+  53944,
+  'No',
+  55510,
+  57558,
+  54698,
+  55694,
+  'No',
+  54799,
+  58109,
+  60082,
+  59178,
+  61788,
+  60645,
+  'No',
+  56310,
+  65514,
+  63859,
+  55569,
+  55949,
+  64438,
+  64974,
+  49219,
+  63258,
+  61951,
+  66781,
+  69198,
+  71826,
+  67681,
+  74012,
+  73617,
+  72872,
+  70181,
+  79428,
+  75663,
+  75340,
+  75340,
+  79125,
+  'No'],
+ 'nprd\_val': [33,
+  20,
+  26,
+  54,
+  69,
+  59,
+  67,
+  79,
+  99,
+  72,
+  170,
+  195,
+  121,
+  134,
+  216,
+  155,
+  291,
+  290,
+  489,
+  509,
+  453,
+  763,
+  476,
+  732,
+  561,
+  565,
+  756,
+  594,
+  650,
+  697,
+  646,
+  'No',
+  987,
+  926,
+  1143,
+  1469,
+  1396,
+  1499,
+  1266,
+  1428,
+  1800,
+  1674,
+  2124,
+  2048,
+  1636,
+  2498,
+  'No',
+  2556,
+  2527,
+  3131,
+  3116,
+  3196,
+  3380,
+  3231,
+  3517,
+  3131,
+  3904,
+  3712,
+  3268,
+  'No',
+  6128,
+  5736,
+  5590,
+  5031,
+  5289,
+  4832,
+  5086,
+  5752,
+  5290,
+  5288,
+  5696,
+  6528,
+  6102,
+  'No',
+  8728,
+  7497,
+  'No',
+  8206,
+  7667,
+  11045,
+  9340,
+  16744,
+  10665,
+  15049,
+  11544,
+  15393,
+  14974,
+  12284,
+  14801,
+  12128,
+  14938,
+  13125,
+  13193,
+  'No',
+  14708,
+  15335,
+  20771,
+  15813,
+  20952,
+  21433,
+  21460,
+  22604,
+  20183,
+  19008,
+  18618,
+  21210,
+  21734,
+  23248,
+  20639,
+  24885,
+  24507,
+  24686,
+  29415,
+  37230,
+  34356,
+  34843,
+  37769,
+  32003,
+  34843,
+  36280,
+  35076,
+  37455,
+  37452,
+  'No',
+  52152,
+  53927,
+  53813,
+  49757,
+  54685,
+  53107,
+  53570,
+  56555,
+  51797,
+  59683,
+  60720,
+  56918,
+  58727,
+  55445,
+  58172,
+  58468,
+  67203,
+  61120,
+  62038,
+  62884,
+  59934,
+  58295,
+  'No',
+  67704,
+  59509,
+  60791,
+  66198,
+  65927,
+  62289,
+  67146,
+  64343,
+  70274,
+  70497,
+  76044,
+  69825,
+  74744,
+  75524,
+  75094,
+  71539,
+  'No',
+  83458,
+  78719,
+  78719,
+  82899,
+  77258]\}
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{33}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{err\PYZus{}df}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{err\PYZus{}dict}\PY{p}{)}
+\PY{n}{err\PYZus{}df}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{33}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+            date  mipe  mxne  mipv    mxnv  original\_val pprd\_val nprd\_val
+0    2020-03-31     No   lmb    No     -20            13       No       33
+1    2020-04-01    lmb   mlb    13      -1            19        6       20
+2    2020-04-02     No   lmb    No      -4            22       No       26
+3    2020-04-03    mlb  memb     5     -15            39       34       54
+4    2020-04-04   memb    lb     6     -13            56       50       69
+..           {\ldots}   {\ldots}   {\ldots}   {\ldots}     {\ldots}           {\ldots}      {\ldots}      {\ldots}
+164  2020-09-12     mb  memb  2197   -5598         77860    75663    83458
+165  2020-09-13     mb   mlb  2520    -859         77860    75340    78719
+166  2020-09-13     mb   mlb  2406    -973         77746    75340    78719
+167  2020-09-14    mlb  memb    77   -3697         79202    79125    82899
+168  2020-09-15     No    mb    No  -77258             0       No    77258
+
+[169 rows x 8 columns]
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{34}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{err\PYZus{}df}\PY{o}{.}\PY{n}{to\PYZus{}excel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{edrrr\PYZus{}df.xlsx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{errdf}\PY{o}{=}\PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}excel}\PY{p}{(}\PY{l+s+sa}{r}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{C:}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{Users}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{Mark 1}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{edrrr\PYZus{}df.xlsx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{errdf} \PY{o}{=} \PY{n}{errdf}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{o}{\PYZti{}}\PY{n}{errdf}\PY{o}{.}\PY{n}{columns}\PY{o}{.}\PY{n}{str}\PY{o}{.}\PY{n}{contains}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZca{}Unnamed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}
+\PY{n}{errdf}\PY{o}{.}\PY{n}{to\PYZus{}excel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{edrrr\PYZus{}df.xlsx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{35}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Counter}\PY{p}{(}\PY{n}{err\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mipe}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{35}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+Counter(\{'No': 22,
+         'lmb': 24,
+         'mlb': 14,
+         'memb': 18,
+         'mb': 32,
+         'mdb': 26,
+         'lb': 12,
+         'mxmb': 12,
+         'mxb': 9\})
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{36}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{mnval}\PY{o}{=}\PY{n+nb}{max}\PY{p}{(}\PY{n+nb}{list}\PY{p}{(}\PY{n}{Counter}\PY{p}{(}\PY{n}{err\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mipe}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+\PY{n}{mnvalidx}\PY{o}{=}\PY{n+nb}{list}\PY{p}{(}\PY{n}{Counter}\PY{p}{(}\PY{n}{err\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mipe}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{index}\PY{p}{(}\PY{n}{mnval}\PY{p}{)}
+\PY{n}{mnkys}\PY{o}{=}\PY{n+nb}{list}\PY{p}{(}\PY{n}{Counter}\PY{p}{(}\PY{n}{err\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mipe}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{[}\PY{n}{mnvalidx}\PY{p}{]}
+\PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{method: }\PY{l+s+s2}{\PYZdq{}}\PY{o}{+}\PY{n}{mnkys}\PY{o}{+}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ and values is: }\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n}{Counter}\PY{p}{(}\PY{n}{err\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mipe}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{[}\PY{n}{mnkys}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+method: mb and values is:  32
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{37}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Counter}\PY{p}{(}\PY{n}{err\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mxne}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{37}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+Counter(\{'lmb': 18,
+         'mlb': 20,
+         'memb': 33,
+         'lb': 9,
+         'mxmb': 30,
+         'mxb': 13,
+         'mb': 27,
+         'No': 9,
+         'mdb': 10\})
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{38}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{mxval}\PY{o}{=}\PY{n+nb}{max}\PY{p}{(}\PY{n+nb}{list}\PY{p}{(}\PY{n}{Counter}\PY{p}{(}\PY{n}{err\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mxne}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+\PY{n}{mxvalidx}\PY{o}{=}\PY{n+nb}{list}\PY{p}{(}\PY{n}{Counter}\PY{p}{(}\PY{n}{err\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mxne}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{index}\PY{p}{(}\PY{n}{mxval}\PY{p}{)}
+\PY{n}{mxkys}\PY{o}{=}\PY{n+nb}{list}\PY{p}{(}\PY{n}{Counter}\PY{p}{(}\PY{n}{err\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mxne}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{[}\PY{n}{mxvalidx}\PY{p}{]}
+\PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{method: }\PY{l+s+s2}{\PYZdq{}}\PY{o}{+}\PY{n}{mxkys}\PY{o}{+}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ and values is: }\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n}{Counter}\PY{p}{(}\PY{n}{err\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mxne}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{[}\PY{n}{mxkys}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+method: memb and values is:  33
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{39}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{err\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mipe}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{n+nb}{len}\PY{p}{(}\PY{n}{err\PYZus{}df}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{39}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+'mlb'
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{40}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{err\PYZus{}df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mxne}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{n+nb}{len}\PY{p}{(}\PY{n}{err\PYZus{}df}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{40}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+'memb'
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{ }{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+
+\end{Verbatim}
+\end{tcolorbox}
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+\end{document}
