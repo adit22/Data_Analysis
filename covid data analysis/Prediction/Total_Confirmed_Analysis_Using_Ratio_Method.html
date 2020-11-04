@@ -13098,7 +13098,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\Desktop\Lockdown\data\Covid-19\119\case_time_series.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\Desktop\Lockdown\data\Covid-19\123\case_time_series.csv&quot;</span><span class="p">)</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -13372,54 +13372,54 @@ div#notebook {
   </thead>
   <tbody>
     <tr>
-      <th>216</th>
-      <td>25-Oct</td>
-      <td>45922</td>
-      <td>7909964</td>
-      <td>59304</td>
-      <td>7135115</td>
-      <td>483</td>
-      <td>118467</td>
-    </tr>
-    <tr>
-      <th>217</th>
-      <td>26-Oct</td>
-      <td>36019</td>
-      <td>7945983</td>
-      <td>63734</td>
-      <td>7198849</td>
-      <td>485</td>
-      <td>118952</td>
-    </tr>
-    <tr>
-      <th>218</th>
-      <td>27-Oct</td>
-      <td>43036</td>
-      <td>7989019</td>
-      <td>58429</td>
-      <td>7257278</td>
-      <td>511</td>
-      <td>119463</td>
-    </tr>
-    <tr>
-      <th>219</th>
-      <td>28-Oct</td>
-      <td>50188</td>
-      <td>8039207</td>
-      <td>56594</td>
-      <td>7313872</td>
-      <td>514</td>
-      <td>119977</td>
-    </tr>
-    <tr>
       <th>220</th>
       <td>29-Oct</td>
-      <td>48762</td>
-      <td>8087969</td>
-      <td>57859</td>
-      <td>7371731</td>
+      <td>48765</td>
+      <td>8087972</td>
+      <td>57867</td>
+      <td>7371739</td>
       <td>562</td>
-      <td>120539</td>
+      <td>120540</td>
+    </tr>
+    <tr>
+      <th>221</th>
+      <td>30-Oct</td>
+      <td>48117</td>
+      <td>8136089</td>
+      <td>59005</td>
+      <td>7430744</td>
+      <td>550</td>
+      <td>121090</td>
+    </tr>
+    <tr>
+      <th>222</th>
+      <td>31-Oct</td>
+      <td>47228</td>
+      <td>8183317</td>
+      <td>58682</td>
+      <td>7489426</td>
+      <td>469</td>
+      <td>121559</td>
+    </tr>
+    <tr>
+      <th>223</th>
+      <td>01-Nov</td>
+      <td>45928</td>
+      <td>8229245</td>
+      <td>53312</td>
+      <td>7542738</td>
+      <td>491</td>
+      <td>122050</td>
+    </tr>
+    <tr>
+      <th>224</th>
+      <td>02-Nov</td>
+      <td>37592</td>
+      <td>8266837</td>
+      <td>58524</td>
+      <td>7601262</td>
+      <td>497</td>
+      <td>122547</td>
     </tr>
   </tbody>
 </table>
@@ -13926,9 +13926,9 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">192</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">data_total</span><span class="p">)):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">192</span><span class="p">,</span><span class="mi">223</span><span class="p">):</span>
     <span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot; October&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">192</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">data_total</span><span class="p">)):</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">192</span><span class="p">,</span><span class="mi">223</span><span class="p">):</span>
     <span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;2020-10-&quot;</span><span class="o">+</span><span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
 </pre></div>
 
@@ -13946,12 +13946,12 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-16-e530b2cfaa41&gt;:2: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-16-486d5f6c3d05&gt;:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   data_total[&#34;Date&#34;][i]=data_total[&#34;Date&#34;][i].strip(&#34; October&#34;)
-&lt;ipython-input-16-e530b2cfaa41&gt;:4: SettingWithCopyWarning: 
+&lt;ipython-input-16-486d5f6c3d05&gt;:4: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -13967,6 +13967,49 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">223</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">data_total</span><span class="p">)):</span>
+    <span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;-Nov&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">223</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">data_total</span><span class="p">)):</span>
+    <span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;2020-11-&quot;</span><span class="o">+</span><span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>&lt;ipython-input-17-0a82facb756a&gt;:2: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;][i]=data_total[&#34;Date&#34;][i].strip(&#34;-Nov&#34;)
+&lt;ipython-input-17-0a82facb756a&gt;:4: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;][i]=&#34;2020-11-&#34;+data_total[&#34;Date&#34;][i]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;datetime64[ns]&#39;</span><span class="p">)</span>
@@ -13986,7 +14029,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-17-a317546e137f&gt;:1: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-18-a317546e137f&gt;:1: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -14002,7 +14045,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total</span><span class="o">.</span><span class="n">dtypes</span>
@@ -14018,7 +14061,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -14042,7 +14085,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total_ratio_with_two_precision</span><span class="o">=</span><span class="n">data_total</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -14055,7 +14098,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_Ratio&quot;</span><span class="p">]</span>
@@ -14088,7 +14131,7 @@ dtype: object</pre>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-20-c038b6b9f526&gt;:7: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-21-c038b6b9f526&gt;:7: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -14099,7 +14142,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -14231,7 +14274,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total_ratio</span><span class="o">=</span><span class="n">data_total</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -14244,7 +14287,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_Ratio&quot;</span><span class="p">]</span>
@@ -14277,7 +14320,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-22-6e1737506d3a&gt;:7: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-23-6e1737506d3a&gt;:7: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -14288,7 +14331,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -14420,7 +14463,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">strt_cnt</span><span class="o">=</span><span class="mi">1</span>
@@ -14519,7 +14562,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-23-c41a4c4d7bab&gt;:79: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-24-c41a4c4d7bab&gt;:79: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -14534,7 +14577,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tc</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\tamprd_df_strd.xlsx&quot;</span><span class="p">)</span>
@@ -14552,7 +14595,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -14667,61 +14710,9 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>...</td>
     </tr>
     <tr>
-      <th>209</th>
-      <td>2020-10-26</td>
-      <td>7945983</td>
-      <td>7808561</td>
-      <td>7968147</td>
-      <td>7962883</td>
-      <td>7813723</td>
-      <td>7962883</td>
-      <td>7801963</td>
-      <td>7956154</td>
-      <td>7814500</td>
-    </tr>
-    <tr>
-      <th>210</th>
-      <td>2020-10-27</td>
-      <td>7989017</td>
-      <td>7857427</td>
-      <td>8004431</td>
-      <td>7997470</td>
-      <td>7864266</td>
-      <td>7997470</td>
-      <td>7842391</td>
-      <td>7982166</td>
-      <td>7867982</td>
-    </tr>
-    <tr>
-      <th>211</th>
-      <td>2020-10-28</td>
-      <td>8039244</td>
-      <td>7904347</td>
-      <td>8047781</td>
-      <td>8038796</td>
-      <td>7913182</td>
-      <td>8038796</td>
-      <td>7897944</td>
-      <td>8032284</td>
-      <td>7914733</td>
-    </tr>
-    <tr>
-      <th>212</th>
-      <td>2020-10-29</td>
-      <td>8087969</td>
-      <td>7951134</td>
-      <td>8095971</td>
-      <td>8088109</td>
-      <td>7958862</td>
-      <td>8088109</td>
-      <td>7952781</td>
-      <td>8089785</td>
-      <td>7956154</td>
-    </tr>
-    <tr>
       <th>213</th>
       <td>2020-10-30</td>
-      <td>0</td>
+      <td>8136089</td>
       <td>7997172</td>
       <td>8144181</td>
       <td>8135980</td>
@@ -14731,9 +14722,61 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>8137027</td>
       <td>7982166</td>
     </tr>
+    <tr>
+      <th>214</th>
+      <td>2020-10-31</td>
+      <td>8182819</td>
+      <td>8042362</td>
+      <td>8188533</td>
+      <td>8183223</td>
+      <td>8047581</td>
+      <td>8183223</td>
+      <td>8043610</td>
+      <td>8184492</td>
+      <td>8032288</td>
+    </tr>
+    <tr>
+      <th>215</th>
+      <td>2020-11-01</td>
+      <td>8229245</td>
+      <td>8087359</td>
+      <td>8234224</td>
+      <td>8229403</td>
+      <td>8092097</td>
+      <td>8229403</td>
+      <td>8087766</td>
+      <td>8229817</td>
+      <td>8089710</td>
+    </tr>
+    <tr>
+      <th>216</th>
+      <td>2020-11-02</td>
+      <td>8266837</td>
+      <td>8133110</td>
+      <td>8280942</td>
+      <td>8275898</td>
+      <td>8138067</td>
+      <td>8275898</td>
+      <td>8132651</td>
+      <td>8275431</td>
+      <td>8137033</td>
+    </tr>
+    <tr>
+      <th>217</th>
+      <td>2020-11-03</td>
+      <td>0</td>
+      <td>8179223</td>
+      <td>8318770</td>
+      <td>8313720</td>
+      <td>8184191</td>
+      <td>8313720</td>
+      <td>8170251</td>
+      <td>8304601</td>
+      <td>8184492</td>
+    </tr>
   </tbody>
 </table>
-<p>214 rows × 10 columns</p>
+<p>218 rows × 10 columns</p>
 </div>
 </div>
 
@@ -14745,7 +14788,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tc</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;tamprd_df_strd.xlsx&quot;</span><span class="p">)</span>
@@ -14758,7 +14801,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tce</span><span class="o">=</span><span class="n">tc</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -14771,7 +14814,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colls</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">tc</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -14795,7 +14838,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -14819,7 +14862,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">colls</span><span class="p">,</span><span class="n">collss</span><span class="p">):</span>
@@ -14842,7 +14885,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-28-35e3607d3c2a&gt;:3: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-29-35e3607d3c2a&gt;:3: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -14853,7 +14896,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -15024,93 +15067,9 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>...</td>
     </tr>
     <tr>
-      <th>209</th>
-      <td>2020-10-26</td>
-      <td>7945983</td>
-      <td>7808561</td>
-      <td>7968147</td>
-      <td>7962883</td>
-      <td>7813723</td>
-      <td>7962883</td>
-      <td>7801963</td>
-      <td>7956154</td>
-      <td>7814500</td>
-      <td>137422</td>
-      <td>-22164</td>
-      <td>-16900</td>
-      <td>132260</td>
-      <td>-16900</td>
-      <td>144020</td>
-      <td>-10171</td>
-      <td>131483</td>
-    </tr>
-    <tr>
-      <th>210</th>
-      <td>2020-10-27</td>
-      <td>7989017</td>
-      <td>7857427</td>
-      <td>8004431</td>
-      <td>7997470</td>
-      <td>7864266</td>
-      <td>7997470</td>
-      <td>7842391</td>
-      <td>7982166</td>
-      <td>7867982</td>
-      <td>131590</td>
-      <td>-15414</td>
-      <td>-8453</td>
-      <td>124751</td>
-      <td>-8453</td>
-      <td>146626</td>
-      <td>6851</td>
-      <td>121035</td>
-    </tr>
-    <tr>
-      <th>211</th>
-      <td>2020-10-28</td>
-      <td>8039244</td>
-      <td>7904347</td>
-      <td>8047781</td>
-      <td>8038796</td>
-      <td>7913182</td>
-      <td>8038796</td>
-      <td>7897944</td>
-      <td>8032284</td>
-      <td>7914733</td>
-      <td>134897</td>
-      <td>-8537</td>
-      <td>448</td>
-      <td>126062</td>
-      <td>448</td>
-      <td>141300</td>
-      <td>6960</td>
-      <td>124511</td>
-    </tr>
-    <tr>
-      <th>212</th>
-      <td>2020-10-29</td>
-      <td>8087969</td>
-      <td>7951134</td>
-      <td>8095971</td>
-      <td>8088109</td>
-      <td>7958862</td>
-      <td>8088109</td>
-      <td>7952781</td>
-      <td>8089785</td>
-      <td>7956154</td>
-      <td>136835</td>
-      <td>-8002</td>
-      <td>-140</td>
-      <td>129107</td>
-      <td>-140</td>
-      <td>135188</td>
-      <td>-1816</td>
-      <td>131815</td>
-    </tr>
-    <tr>
       <th>213</th>
       <td>2020-10-30</td>
-      <td>0</td>
+      <td>8136089</td>
       <td>7997172</td>
       <td>8144181</td>
       <td>8135980</td>
@@ -15119,18 +15078,102 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>7998201</td>
       <td>8137027</td>
       <td>7982166</td>
-      <td>-7997172</td>
-      <td>-8144181</td>
-      <td>-8135980</td>
-      <td>-8005233</td>
-      <td>-8135980</td>
-      <td>-7998201</td>
-      <td>-8137027</td>
-      <td>-7982166</td>
+      <td>138917</td>
+      <td>-8092</td>
+      <td>109</td>
+      <td>130856</td>
+      <td>109</td>
+      <td>137888</td>
+      <td>-938</td>
+      <td>153923</td>
+    </tr>
+    <tr>
+      <th>214</th>
+      <td>2020-10-31</td>
+      <td>8182819</td>
+      <td>8042362</td>
+      <td>8188533</td>
+      <td>8183223</td>
+      <td>8047581</td>
+      <td>8183223</td>
+      <td>8043610</td>
+      <td>8184492</td>
+      <td>8032288</td>
+      <td>140457</td>
+      <td>-5714</td>
+      <td>-404</td>
+      <td>135238</td>
+      <td>-404</td>
+      <td>139209</td>
+      <td>-1673</td>
+      <td>150531</td>
+    </tr>
+    <tr>
+      <th>215</th>
+      <td>2020-11-01</td>
+      <td>8229245</td>
+      <td>8087359</td>
+      <td>8234224</td>
+      <td>8229403</td>
+      <td>8092097</td>
+      <td>8229403</td>
+      <td>8087766</td>
+      <td>8229817</td>
+      <td>8089710</td>
+      <td>141886</td>
+      <td>-4979</td>
+      <td>-158</td>
+      <td>137148</td>
+      <td>-158</td>
+      <td>141479</td>
+      <td>-572</td>
+      <td>139535</td>
+    </tr>
+    <tr>
+      <th>216</th>
+      <td>2020-11-02</td>
+      <td>8266837</td>
+      <td>8133110</td>
+      <td>8280942</td>
+      <td>8275898</td>
+      <td>8138067</td>
+      <td>8275898</td>
+      <td>8132651</td>
+      <td>8275431</td>
+      <td>8137033</td>
+      <td>133727</td>
+      <td>-14105</td>
+      <td>-9061</td>
+      <td>128770</td>
+      <td>-9061</td>
+      <td>134186</td>
+      <td>-8594</td>
+      <td>129804</td>
+    </tr>
+    <tr>
+      <th>217</th>
+      <td>2020-11-03</td>
+      <td>0</td>
+      <td>8179223</td>
+      <td>8318770</td>
+      <td>8313720</td>
+      <td>8184191</td>
+      <td>8313720</td>
+      <td>8170251</td>
+      <td>8304601</td>
+      <td>8184492</td>
+      <td>-8179223</td>
+      <td>-8318770</td>
+      <td>-8313720</td>
+      <td>-8184191</td>
+      <td>-8313720</td>
+      <td>-8170251</td>
+      <td>-8304601</td>
+      <td>-8184492</td>
     </tr>
   </tbody>
 </table>
-<p>214 rows × 18 columns</p>
+<p>218 rows × 18 columns</p>
 </div>
 </div>
 
@@ -15142,7 +15185,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tce</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;tamerrprd_df_strd.xlsx&quot;</span><span class="p">)</span>
@@ -15158,7 +15201,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">edf</span><span class="o">=</span><span class="n">tce</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">tce</span><span class="p">),</span><span class="mi">10</span><span class="p">:]</span>
@@ -15175,7 +15218,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -15276,63 +15319,63 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>...</td>
     </tr>
     <tr>
-      <th>209</th>
-      <td>137422</td>
-      <td>-22164</td>
-      <td>-16900</td>
-      <td>132260</td>
-      <td>-16900</td>
-      <td>144020</td>
-      <td>-10171</td>
-      <td>131483</td>
-    </tr>
-    <tr>
-      <th>210</th>
-      <td>131590</td>
-      <td>-15414</td>
-      <td>-8453</td>
-      <td>124751</td>
-      <td>-8453</td>
-      <td>146626</td>
-      <td>6851</td>
-      <td>121035</td>
-    </tr>
-    <tr>
-      <th>211</th>
-      <td>134897</td>
-      <td>-8537</td>
-      <td>448</td>
-      <td>126062</td>
-      <td>448</td>
-      <td>141300</td>
-      <td>6960</td>
-      <td>124511</td>
-    </tr>
-    <tr>
-      <th>212</th>
-      <td>136835</td>
-      <td>-8002</td>
-      <td>-140</td>
-      <td>129107</td>
-      <td>-140</td>
-      <td>135188</td>
-      <td>-1816</td>
-      <td>131815</td>
-    </tr>
-    <tr>
       <th>213</th>
-      <td>-7997172</td>
-      <td>-8144181</td>
-      <td>-8135980</td>
-      <td>-8005233</td>
-      <td>-8135980</td>
-      <td>-7998201</td>
-      <td>-8137027</td>
-      <td>-7982166</td>
+      <td>138917</td>
+      <td>-8092</td>
+      <td>109</td>
+      <td>130856</td>
+      <td>109</td>
+      <td>137888</td>
+      <td>-938</td>
+      <td>153923</td>
+    </tr>
+    <tr>
+      <th>214</th>
+      <td>140457</td>
+      <td>-5714</td>
+      <td>-404</td>
+      <td>135238</td>
+      <td>-404</td>
+      <td>139209</td>
+      <td>-1673</td>
+      <td>150531</td>
+    </tr>
+    <tr>
+      <th>215</th>
+      <td>141886</td>
+      <td>-4979</td>
+      <td>-158</td>
+      <td>137148</td>
+      <td>-158</td>
+      <td>141479</td>
+      <td>-572</td>
+      <td>139535</td>
+    </tr>
+    <tr>
+      <th>216</th>
+      <td>133727</td>
+      <td>-14105</td>
+      <td>-9061</td>
+      <td>128770</td>
+      <td>-9061</td>
+      <td>134186</td>
+      <td>-8594</td>
+      <td>129804</td>
+    </tr>
+    <tr>
+      <th>217</th>
+      <td>-8179223</td>
+      <td>-8318770</td>
+      <td>-8313720</td>
+      <td>-8184191</td>
+      <td>-8313720</td>
+      <td>-8170251</td>
+      <td>-8304601</td>
+      <td>-8184492</td>
     </tr>
   </tbody>
 </table>
-<p>214 rows × 8 columns</p>
+<p>218 rows × 8 columns</p>
 </div>
 </div>
 
@@ -15344,7 +15387,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -15382,7 +15425,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[31]:</div>
+    <div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -15399,7 +15442,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_dict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:[],</span><span class="s2">&quot;mipe&quot;</span><span class="p">:[],</span><span class="s2">&quot;mxne&quot;</span><span class="p">:[],</span><span class="s2">&quot;mipv&quot;</span><span class="p">:[],</span><span class="s2">&quot;mxnv&quot;</span><span class="p">:[],</span><span class="s2">&quot;original_val&quot;</span><span class="p">:[],</span><span class="s2">&quot;pprd_val&quot;</span><span class="p">:[],</span><span class="s2">&quot;nprd_val&quot;</span><span class="p">:[]}</span>
@@ -15474,7 +15517,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_dict</span>
@@ -15490,7 +15533,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[33]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -15709,7 +15752,11 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
   &#39;2020-10-27 &#39;,
   &#39;2020-10-28 &#39;,
   &#39;2020-10-29 &#39;,
-  &#39;2020-10-30 &#39;],
+  &#39;2020-10-30 &#39;,
+  &#39;2020-10-31 &#39;,
+  &#39;2020-11-01 &#39;,
+  &#39;2020-11-02 &#39;,
+  &#39;2020-11-03 &#39;],
  &#39;mipe&#39;: [&#39;mxb&#39;,
   &#39;mxb&#39;,
   &#39;memb&#39;,
@@ -15922,6 +15969,10 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
   &#39;mdb&#39;,
   &#39;lb&#39;,
   &#39;memb&#39;,
+  &#39;mxmb&#39;,
+  &#39;memb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxmb&#39;,
   &#39;mxmb&#39;,
   &#39;No&#39;],
  &#39;mxne&#39;: [&#39;No&#39;,
@@ -16137,7 +16188,11 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
   &#39;memb&#39;,
   &#39;mxb&#39;,
   &#39;memb&#39;,
-  &#39;mdb&#39;],
+  &#39;lb&#39;,
+  &#39;memb&#39;,
+  &#39;memb&#39;,
+  &#39;lb&#39;,
+  &#39;lmb&#39;],
  &#39;mipv&#39;: [31,
   43,
   119,
@@ -16351,6 +16406,10 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
   6851,
   448,
   129107,
+  109,
+  135238,
+  137148,
+  128770,
   &#39;No&#39;],
  &#39;mxnv&#39;: [&#39;No&#39;,
   &#39;No&#39;,
@@ -16565,7 +16624,11 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
   -8453,
   -8537,
   -140,
-  -7982166],
+  -938,
+  -404,
+  -158,
+  -8594,
+  -8170251],
  &#39;original_val&#39;: [1635,
   2059,
   2545,
@@ -16779,6 +16842,10 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
   7989017,
   8039244,
   8087969,
+  8136089,
+  8182819,
+  8229245,
+  8266837,
   0],
  &#39;pprd_val&#39;: [1604,
   2016,
@@ -16993,6 +17060,10 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
   7982166,
   8038796,
   7958862,
+  8135980,
+  8047581,
+  8092097,
+  8138067,
   &#39;No&#39;],
  &#39;nprd_val&#39;: [&#39;No&#39;,
   &#39;No&#39;,
@@ -17207,7 +17278,11 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
   7997470,
   8047781,
   8088109,
-  7982166]}</pre>
+  8137027,
+  8183223,
+  8229403,
+  8275431,
+  8170251]}</pre>
 </div>
 
 </div>
@@ -17218,7 +17293,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">err_dict</span><span class="p">)</span>
@@ -17235,7 +17310,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[34]:</div>
+    <div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -17336,63 +17411,63 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>...</td>
     </tr>
     <tr>
-      <th>209</th>
-      <td>2020-10-26</td>
-      <td>mdb</td>
-      <td>lb</td>
-      <td>131483</td>
-      <td>-10171</td>
-      <td>7945983</td>
-      <td>7814500</td>
-      <td>7956154</td>
-    </tr>
-    <tr>
-      <th>210</th>
-      <td>2020-10-27</td>
-      <td>lb</td>
-      <td>memb</td>
-      <td>6851</td>
-      <td>-8453</td>
-      <td>7989017</td>
-      <td>7982166</td>
-      <td>7997470</td>
-    </tr>
-    <tr>
-      <th>211</th>
-      <td>2020-10-28</td>
-      <td>memb</td>
-      <td>mxb</td>
-      <td>448</td>
-      <td>-8537</td>
-      <td>8039244</td>
-      <td>8038796</td>
-      <td>8047781</td>
-    </tr>
-    <tr>
-      <th>212</th>
-      <td>2020-10-29</td>
-      <td>mxmb</td>
-      <td>memb</td>
-      <td>129107</td>
-      <td>-140</td>
-      <td>8087969</td>
-      <td>7958862</td>
-      <td>8088109</td>
-    </tr>
-    <tr>
       <th>213</th>
       <td>2020-10-30</td>
+      <td>memb</td>
+      <td>lb</td>
+      <td>109</td>
+      <td>-938</td>
+      <td>8136089</td>
+      <td>8135980</td>
+      <td>8137027</td>
+    </tr>
+    <tr>
+      <th>214</th>
+      <td>2020-10-31</td>
+      <td>mxmb</td>
+      <td>memb</td>
+      <td>135238</td>
+      <td>-404</td>
+      <td>8182819</td>
+      <td>8047581</td>
+      <td>8183223</td>
+    </tr>
+    <tr>
+      <th>215</th>
+      <td>2020-11-01</td>
+      <td>mxmb</td>
+      <td>memb</td>
+      <td>137148</td>
+      <td>-158</td>
+      <td>8229245</td>
+      <td>8092097</td>
+      <td>8229403</td>
+    </tr>
+    <tr>
+      <th>216</th>
+      <td>2020-11-02</td>
+      <td>mxmb</td>
+      <td>lb</td>
+      <td>128770</td>
+      <td>-8594</td>
+      <td>8266837</td>
+      <td>8138067</td>
+      <td>8275431</td>
+    </tr>
+    <tr>
+      <th>217</th>
+      <td>2020-11-03</td>
       <td>No</td>
-      <td>mdb</td>
+      <td>lmb</td>
       <td>No</td>
-      <td>-7982166</td>
+      <td>-8170251</td>
       <td>0</td>
       <td>No</td>
-      <td>7982166</td>
+      <td>8170251</td>
     </tr>
   </tbody>
 </table>
-<p>214 rows × 8 columns</p>
+<p>218 rows × 8 columns</p>
 </div>
 </div>
 
@@ -17404,7 +17479,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;tcerr_df.xlsx&quot;</span><span class="p">)</span>
@@ -17420,7 +17495,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Counter</span><span class="p">(</span><span class="n">err_df</span><span class="p">[</span><span class="s1">&#39;mipe&#39;</span><span class="p">])</span>
@@ -17436,13 +17511,13 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[36]:</div>
+    <div class="prompt output_prompt">Out[37]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Counter({&#39;mxb&#39;: 10, &#39;memb&#39;: 38, &#39;mxmb&#39;: 89, &#39;lb&#39;: 65, &#39;mdb&#39;: 11, &#39;No&#39;: 1})</pre>
+<pre>Counter({&#39;mxb&#39;: 10, &#39;memb&#39;: 39, &#39;mxmb&#39;: 92, &#39;lb&#39;: 65, &#39;mdb&#39;: 11, &#39;No&#39;: 1})</pre>
 </div>
 
 </div>
@@ -17453,7 +17528,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mnval</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">err_df</span><span class="p">[</span><span class="s1">&#39;mipe&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
@@ -17476,7 +17551,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>method: mxmb and values is:  89
+<pre>method: mxmb and values is:  92
 </pre>
 </div>
 </div>
@@ -17487,7 +17562,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">min_err_track_dict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:[],</span><span class="s2">&quot;min_val_method&quot;</span><span class="p">:[]}</span>
@@ -17519,7 +17594,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[42]:</div>
+    <div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -17578,33 +17653,33 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>...</td>
     </tr>
     <tr>
-      <th>208</th>
-      <td>2020-10-25</td>
-      <td>mxmb</td>
-    </tr>
-    <tr>
-      <th>209</th>
-      <td>2020-10-26</td>
-      <td>mxmb</td>
-    </tr>
-    <tr>
-      <th>210</th>
-      <td>2020-10-27</td>
-      <td>mxmb</td>
-    </tr>
-    <tr>
-      <th>211</th>
-      <td>2020-10-28</td>
-      <td>mxmb</td>
-    </tr>
-    <tr>
       <th>212</th>
       <td>2020-10-29</td>
       <td>mxmb</td>
     </tr>
+    <tr>
+      <th>213</th>
+      <td>2020-10-30</td>
+      <td>mxmb</td>
+    </tr>
+    <tr>
+      <th>214</th>
+      <td>2020-10-31</td>
+      <td>mxmb</td>
+    </tr>
+    <tr>
+      <th>215</th>
+      <td>2020-11-01</td>
+      <td>mxmb</td>
+    </tr>
+    <tr>
+      <th>216</th>
+      <td>2020-11-02</td>
+      <td>mxmb</td>
+    </tr>
   </tbody>
 </table>
-<p>213 rows × 2 columns</p>
+<p>217 rows × 2 columns</p>
 </div>
 </div>
 
@@ -17616,7 +17691,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Counter</span><span class="p">(</span><span class="n">err_df</span><span class="p">[</span><span class="s1">&#39;mxne&#39;</span><span class="p">])</span>
@@ -17632,13 +17707,13 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[38]:</div>
+    <div class="prompt output_prompt">Out[40]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Counter({&#39;No&#39;: 10, &#39;mxb&#39;: 40, &#39;lb&#39;: 76, &#39;memb&#39;: 87, &#39;mdb&#39;: 1})</pre>
+<pre>Counter({&#39;No&#39;: 10, &#39;mxb&#39;: 40, &#39;lb&#39;: 78, &#39;memb&#39;: 89, &#39;lmb&#39;: 1})</pre>
 </div>
 
 </div>
@@ -17649,7 +17724,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mxval</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">err_df</span><span class="p">[</span><span class="s1">&#39;mxne&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
@@ -17672,7 +17747,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>method: memb and values is:  87
+<pre>method: memb and values is:  89
 </pre>
 </div>
 </div>
@@ -17683,7 +17758,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">max_err_track_dict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:[],</span><span class="s2">&quot;max_val_method&quot;</span><span class="p">:[]}</span>
@@ -17715,7 +17790,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[43]:</div>
+    <div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -17774,33 +17849,33 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>...</td>
     </tr>
     <tr>
-      <th>208</th>
-      <td>2020-10-25</td>
-      <td>memb</td>
-    </tr>
-    <tr>
-      <th>209</th>
-      <td>2020-10-26</td>
-      <td>memb</td>
-    </tr>
-    <tr>
-      <th>210</th>
-      <td>2020-10-27</td>
-      <td>memb</td>
-    </tr>
-    <tr>
-      <th>211</th>
-      <td>2020-10-28</td>
-      <td>memb</td>
-    </tr>
-    <tr>
       <th>212</th>
       <td>2020-10-29</td>
       <td>memb</td>
     </tr>
+    <tr>
+      <th>213</th>
+      <td>2020-10-30</td>
+      <td>memb</td>
+    </tr>
+    <tr>
+      <th>214</th>
+      <td>2020-10-31</td>
+      <td>memb</td>
+    </tr>
+    <tr>
+      <th>215</th>
+      <td>2020-11-01</td>
+      <td>memb</td>
+    </tr>
+    <tr>
+      <th>216</th>
+      <td>2020-11-02</td>
+      <td>memb</td>
+    </tr>
   </tbody>
 </table>
-<p>213 rows × 2 columns</p>
+<p>217 rows × 2 columns</p>
 </div>
 </div>
 
@@ -17812,7 +17887,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_df</span><span class="p">[</span><span class="s1">&#39;mipe&#39;</span><span class="p">][</span><span class="nb">len</span><span class="p">(</span><span class="n">err_df</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
@@ -17828,7 +17903,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[40]:</div>
+    <div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -17845,7 +17920,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_df</span><span class="p">[</span><span class="s1">&#39;mxne&#39;</span><span class="p">][</span><span class="nb">len</span><span class="p">(</span><span class="n">err_df</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
@@ -17861,17 +17936,30 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[41]:</div>
+    <div class="prompt output_prompt">Out[44]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;memb&#39;</pre>
+<pre>&#39;lb&#39;</pre>
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 

@@ -13098,7 +13098,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\Desktop\Lockdown\data\Covid-19\119\case_time_series.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\Desktop\Lockdown\data\Covid-19\123\case_time_series.csv&quot;</span><span class="p">)</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -13372,54 +13372,54 @@ div#notebook {
   </thead>
   <tbody>
     <tr>
-      <th>216</th>
-      <td>25-Oct</td>
-      <td>45922</td>
-      <td>7909964</td>
-      <td>59304</td>
-      <td>7135115</td>
-      <td>483</td>
-      <td>118467</td>
-    </tr>
-    <tr>
-      <th>217</th>
-      <td>26-Oct</td>
-      <td>36019</td>
-      <td>7945983</td>
-      <td>63734</td>
-      <td>7198849</td>
-      <td>485</td>
-      <td>118952</td>
-    </tr>
-    <tr>
-      <th>218</th>
-      <td>27-Oct</td>
-      <td>43036</td>
-      <td>7989019</td>
-      <td>58429</td>
-      <td>7257278</td>
-      <td>511</td>
-      <td>119463</td>
-    </tr>
-    <tr>
-      <th>219</th>
-      <td>28-Oct</td>
-      <td>50188</td>
-      <td>8039207</td>
-      <td>56594</td>
-      <td>7313872</td>
-      <td>514</td>
-      <td>119977</td>
-    </tr>
-    <tr>
       <th>220</th>
       <td>29-Oct</td>
-      <td>48762</td>
-      <td>8087969</td>
-      <td>57859</td>
-      <td>7371731</td>
+      <td>48765</td>
+      <td>8087972</td>
+      <td>57867</td>
+      <td>7371739</td>
       <td>562</td>
-      <td>120539</td>
+      <td>120540</td>
+    </tr>
+    <tr>
+      <th>221</th>
+      <td>30-Oct</td>
+      <td>48117</td>
+      <td>8136089</td>
+      <td>59005</td>
+      <td>7430744</td>
+      <td>550</td>
+      <td>121090</td>
+    </tr>
+    <tr>
+      <th>222</th>
+      <td>31-Oct</td>
+      <td>47228</td>
+      <td>8183317</td>
+      <td>58682</td>
+      <td>7489426</td>
+      <td>469</td>
+      <td>121559</td>
+    </tr>
+    <tr>
+      <th>223</th>
+      <td>01-Nov</td>
+      <td>45928</td>
+      <td>8229245</td>
+      <td>53312</td>
+      <td>7542738</td>
+      <td>491</td>
+      <td>122050</td>
+    </tr>
+    <tr>
+      <th>224</th>
+      <td>02-Nov</td>
+      <td>37592</td>
+      <td>8266837</td>
+      <td>58524</td>
+      <td>7601262</td>
+      <td>497</td>
+      <td>122547</td>
     </tr>
   </tbody>
 </table>
@@ -13926,9 +13926,9 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">192</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">data_total</span><span class="p">)):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">192</span><span class="p">,</span><span class="mi">223</span><span class="p">):</span>
     <span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot; October&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">192</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">data_total</span><span class="p">)):</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">192</span><span class="p">,</span><span class="mi">223</span><span class="p">):</span>
     <span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;2020-10-&quot;</span><span class="o">+</span><span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
 </pre></div>
 
@@ -13946,12 +13946,12 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-16-e530b2cfaa41&gt;:2: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-16-486d5f6c3d05&gt;:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   data_total[&#34;Date&#34;][i]=data_total[&#34;Date&#34;][i].strip(&#34; October&#34;)
-&lt;ipython-input-16-e530b2cfaa41&gt;:4: SettingWithCopyWarning: 
+&lt;ipython-input-16-486d5f6c3d05&gt;:4: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -13967,6 +13967,49 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">223</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">data_total</span><span class="p">)):</span>
+    <span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;-Nov&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">223</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">data_total</span><span class="p">)):</span>
+    <span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;2020-11-&quot;</span><span class="o">+</span><span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>&lt;ipython-input-17-0a82facb756a&gt;:2: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;][i]=data_total[&#34;Date&#34;][i].strip(&#34;-Nov&#34;)
+&lt;ipython-input-17-0a82facb756a&gt;:4: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data_total[&#34;Date&#34;][i]=&#34;2020-11-&#34;+data_total[&#34;Date&#34;][i]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">data_total</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;datetime64[ns]&#39;</span><span class="p">)</span>
@@ -13986,7 +14029,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-17-a317546e137f&gt;:1: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-18-a317546e137f&gt;:1: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -14002,7 +14045,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total</span><span class="o">.</span><span class="n">dtypes</span>
@@ -14018,7 +14061,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -14042,7 +14085,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total_ratio_with_two_precision</span><span class="o">=</span><span class="n">data_total</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -14055,7 +14098,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_Ratio&quot;</span><span class="p">]</span>
@@ -14088,7 +14131,7 @@ dtype: object</pre>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-20-c038b6b9f526&gt;:7: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-21-c038b6b9f526&gt;:7: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -14099,7 +14142,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -14231,7 +14274,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_total_ratio</span><span class="o">=</span><span class="n">data_total</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -14244,7 +14287,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Daily_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Confirmed_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Recovered_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Daily_Deceased_Ratio&quot;</span><span class="p">,</span><span class="s2">&quot;Total_Deceased_Ratio&quot;</span><span class="p">]</span>
@@ -14277,7 +14320,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-22-6e1737506d3a&gt;:7: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-23-6e1737506d3a&gt;:7: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -14288,7 +14331,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -14420,7 +14463,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">strt_cnt</span><span class="o">=</span><span class="mi">1</span>
@@ -14498,43 +14541,21 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
     
     
 
-<span class="n">d</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\tramprd_df_strd.xlsx&quot;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">d</span><span class="p">,</span><span class="n">pred_df</span><span class="p">])</span>
-<span class="n">d</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">d</span><span class="p">[</span><span class="s1">&#39;original_val&#39;</span><span class="p">][</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">data_total_ratio</span><span class="p">[</span><span class="s1">&#39;Total Recovered&#39;</span><span class="p">][</span><span class="nb">len</span><span class="p">(</span><span class="n">data_total_ratio</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">d</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;tramprd_df_strd.xlsx&quot;</span><span class="p">)</span>
+    <span class="n">d</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\tramprd_df_strd.xlsx&quot;</span><span class="p">)</span>
+    <span class="n">d</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">d</span><span class="p">,</span><span class="n">pred_df</span><span class="p">])</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1">#d[&#39;original_val&#39;][len(d)-2]=data_total_ratio[&#39;Total Recovered&#39;][len(data_total_ratio)-1]</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;tramprd_df_strd.xlsx&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-23-f50cc3349488&gt;:79: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  d[&#39;original_val&#39;][len(d)-2]=data_total_ratio[&#39;Total Recovered&#39;][len(data_total_ratio)-1]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tc</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Mark 1\tramprd_df_strd.xlsx&quot;</span><span class="p">)</span>
@@ -14552,7 +14573,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -14589,69 +14610,69 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
   </thead>
   <tbody>
     <tr>
-      <th>209</th>
-      <td>2020-10-26</td>
-      <td>7198849</td>
-      <td>7006521</td>
-      <td>7218690</td>
-      <td>7205583</td>
-      <td>7019266</td>
-      <td>7205583</td>
-      <td>6996149</td>
-      <td>7194916</td>
-      <td>7021925</td>
-    </tr>
-    <tr>
-      <th>210</th>
-      <td>2020-10-27</td>
-      <td>7257277</td>
-      <td>7072528</td>
-      <td>7283171</td>
-      <td>7268356</td>
-      <td>7086944</td>
-      <td>7268356</td>
-      <td>7067465</td>
-      <td>7263152</td>
-      <td>7081181</td>
-    </tr>
-    <tr>
-      <th>211</th>
-      <td>2020-10-28</td>
-      <td>7313872</td>
-      <td>7138497</td>
-      <td>7342283</td>
-      <td>7326239</td>
-      <td>7154130</td>
-      <td>7326239</td>
-      <td>7128695</td>
-      <td>7316179</td>
-      <td>7138634</td>
-    </tr>
-    <tr>
-      <th>212</th>
-      <td>2020-10-29</td>
-      <td>7371731</td>
-      <td>7198235</td>
-      <td>7393236</td>
-      <td>7379281</td>
-      <td>7211847</td>
-      <td>7379281</td>
-      <td>7190066</td>
-      <td>7370907</td>
-      <td>7194916</td>
-    </tr>
-    <tr>
       <th>213</th>
       <td>2020-10-30</td>
-      <td>0</td>
-      <td>7256496</td>
-      <td>7442826</td>
-      <td>7434561</td>
-      <td>7264563</td>
-      <td>7434561</td>
-      <td>7252091</td>
-      <td>7430048</td>
+      <td>7430744</td>
+      <td>7256499</td>
+      <td>7442834</td>
+      <td>7434570</td>
+      <td>7264564</td>
+      <td>7434570</td>
+      <td>7252100</td>
+      <td>7430064</td>
       <td>7263152</td>
+    </tr>
+    <tr>
+      <th>214</th>
+      <td>2020-10-31</td>
+      <td>7489426</td>
+      <td>7314907</td>
+      <td>7497119</td>
+      <td>7492337</td>
+      <td>7319575</td>
+      <td>7492337</td>
+      <td>7312841</td>
+      <td>7490221</td>
+      <td>7316181</td>
+    </tr>
+    <tr>
+      <th>215</th>
+      <td>2020-11-01</td>
+      <td>7542738</td>
+      <td>7373460</td>
+      <td>7556325</td>
+      <td>7550456</td>
+      <td>7379191</td>
+      <td>7550456</td>
+      <td>7371619</td>
+      <td>7548571</td>
+      <td>7370907</td>
+    </tr>
+    <tr>
+      <th>216</th>
+      <td>2020-11-02</td>
+      <td>7601262</td>
+      <td>7430836</td>
+      <td>7610113</td>
+      <td>7602842</td>
+      <td>7437943</td>
+      <td>7602842</td>
+      <td>7424569</td>
+      <td>7596429</td>
+      <td>7430064</td>
+    </tr>
+    <tr>
+      <th>217</th>
+      <td>2020-11-03</td>
+      <td>0</td>
+      <td>7487536</td>
+      <td>7662957</td>
+      <td>7660558</td>
+      <td>7489882</td>
+      <td>7660558</td>
+      <td>7487226</td>
+      <td>7660240</td>
+      <td>7490221</td>
     </tr>
   </tbody>
 </table>
@@ -14666,7 +14687,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tce</span><span class="o">=</span><span class="n">tc</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -14679,7 +14700,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colls</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">tc</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -14703,7 +14724,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[26]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -14727,7 +14748,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">colls</span><span class="p">,</span><span class="n">collss</span><span class="p">):</span>
@@ -14750,7 +14771,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-27-35e3607d3c2a&gt;:3: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-28-35e3607d3c2a&gt;:3: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -14761,7 +14782,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -14932,113 +14953,113 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>...</td>
     </tr>
     <tr>
-      <th>209</th>
-      <td>2020-10-26</td>
-      <td>7198849</td>
-      <td>7006521</td>
-      <td>7218690</td>
-      <td>7205583</td>
-      <td>7019266</td>
-      <td>7205583</td>
-      <td>6996149</td>
-      <td>7194916</td>
-      <td>7021925</td>
-      <td>192328</td>
-      <td>-19841</td>
-      <td>-6734</td>
-      <td>179583</td>
-      <td>-6734</td>
-      <td>202700</td>
-      <td>3933</td>
-      <td>176924</td>
-    </tr>
-    <tr>
-      <th>210</th>
-      <td>2020-10-27</td>
-      <td>7257277</td>
-      <td>7072528</td>
-      <td>7283171</td>
-      <td>7268356</td>
-      <td>7086944</td>
-      <td>7268356</td>
-      <td>7067465</td>
-      <td>7263152</td>
-      <td>7081181</td>
-      <td>184749</td>
-      <td>-25894</td>
-      <td>-11079</td>
-      <td>170333</td>
-      <td>-11079</td>
-      <td>189812</td>
-      <td>-5875</td>
-      <td>176096</td>
-    </tr>
-    <tr>
-      <th>211</th>
-      <td>2020-10-28</td>
-      <td>7313872</td>
-      <td>7138497</td>
-      <td>7342283</td>
-      <td>7326239</td>
-      <td>7154130</td>
-      <td>7326239</td>
-      <td>7128695</td>
-      <td>7316179</td>
-      <td>7138634</td>
-      <td>175375</td>
-      <td>-28411</td>
-      <td>-12367</td>
-      <td>159742</td>
-      <td>-12367</td>
-      <td>185177</td>
-      <td>-2307</td>
-      <td>175238</td>
-    </tr>
-    <tr>
-      <th>212</th>
-      <td>2020-10-29</td>
-      <td>7371731</td>
-      <td>7198235</td>
-      <td>7393236</td>
-      <td>7379281</td>
-      <td>7211847</td>
-      <td>7379281</td>
-      <td>7190066</td>
-      <td>7370907</td>
-      <td>7194916</td>
-      <td>173496</td>
-      <td>-21505</td>
-      <td>-7550</td>
-      <td>159884</td>
-      <td>-7550</td>
-      <td>181665</td>
-      <td>824</td>
-      <td>176815</td>
-    </tr>
-    <tr>
       <th>213</th>
       <td>2020-10-30</td>
-      <td>0</td>
-      <td>7256496</td>
-      <td>7442826</td>
-      <td>7434561</td>
-      <td>7264563</td>
-      <td>7434561</td>
-      <td>7252091</td>
-      <td>7430048</td>
+      <td>7430744</td>
+      <td>7256499</td>
+      <td>7442834</td>
+      <td>7434570</td>
+      <td>7264564</td>
+      <td>7434570</td>
+      <td>7252100</td>
+      <td>7430064</td>
       <td>7263152</td>
-      <td>-7256496</td>
-      <td>-7442826</td>
-      <td>-7434561</td>
-      <td>-7264563</td>
-      <td>-7434561</td>
-      <td>-7252091</td>
-      <td>-7430048</td>
-      <td>-7263152</td>
+      <td>174245</td>
+      <td>-12090</td>
+      <td>-3826</td>
+      <td>166180</td>
+      <td>-3826</td>
+      <td>178644</td>
+      <td>680</td>
+      <td>167592</td>
+    </tr>
+    <tr>
+      <th>214</th>
+      <td>2020-10-31</td>
+      <td>7489426</td>
+      <td>7314907</td>
+      <td>7497119</td>
+      <td>7492337</td>
+      <td>7319575</td>
+      <td>7492337</td>
+      <td>7312841</td>
+      <td>7490221</td>
+      <td>7316181</td>
+      <td>174519</td>
+      <td>-7693</td>
+      <td>-2911</td>
+      <td>169851</td>
+      <td>-2911</td>
+      <td>176585</td>
+      <td>-795</td>
+      <td>173245</td>
+    </tr>
+    <tr>
+      <th>215</th>
+      <td>2020-11-01</td>
+      <td>7542738</td>
+      <td>7373460</td>
+      <td>7556325</td>
+      <td>7550456</td>
+      <td>7379191</td>
+      <td>7550456</td>
+      <td>7371619</td>
+      <td>7548571</td>
+      <td>7370907</td>
+      <td>169278</td>
+      <td>-13587</td>
+      <td>-7718</td>
+      <td>163547</td>
+      <td>-7718</td>
+      <td>171119</td>
+      <td>-5833</td>
+      <td>171831</td>
+    </tr>
+    <tr>
+      <th>216</th>
+      <td>2020-11-02</td>
+      <td>7601262</td>
+      <td>7430836</td>
+      <td>7610113</td>
+      <td>7602842</td>
+      <td>7437943</td>
+      <td>7602842</td>
+      <td>7424569</td>
+      <td>7596429</td>
+      <td>7430064</td>
+      <td>170426</td>
+      <td>-8851</td>
+      <td>-1580</td>
+      <td>163319</td>
+      <td>-1580</td>
+      <td>176693</td>
+      <td>4833</td>
+      <td>171198</td>
+    </tr>
+    <tr>
+      <th>217</th>
+      <td>2020-11-03</td>
+      <td>0</td>
+      <td>7487536</td>
+      <td>7662957</td>
+      <td>7660558</td>
+      <td>7489882</td>
+      <td>7660558</td>
+      <td>7487226</td>
+      <td>7660240</td>
+      <td>7490221</td>
+      <td>-7487536</td>
+      <td>-7662957</td>
+      <td>-7660558</td>
+      <td>-7489882</td>
+      <td>-7660558</td>
+      <td>-7487226</td>
+      <td>-7660240</td>
+      <td>-7490221</td>
     </tr>
   </tbody>
 </table>
-<p>214 rows × 18 columns</p>
+<p>218 rows × 18 columns</p>
 </div>
 </div>
 
@@ -15050,7 +15071,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tce</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;tramerrprd_df_strd.xlsx&quot;</span><span class="p">)</span>
@@ -15066,7 +15087,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">edf</span><span class="o">=</span><span class="n">tce</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">tce</span><span class="p">),</span><span class="mi">10</span><span class="p">:]</span>
@@ -15083,7 +15104,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -15184,63 +15205,63 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>...</td>
     </tr>
     <tr>
-      <th>209</th>
-      <td>192328</td>
-      <td>-19841</td>
-      <td>-6734</td>
-      <td>179583</td>
-      <td>-6734</td>
-      <td>202700</td>
-      <td>3933</td>
-      <td>176924</td>
-    </tr>
-    <tr>
-      <th>210</th>
-      <td>184749</td>
-      <td>-25894</td>
-      <td>-11079</td>
-      <td>170333</td>
-      <td>-11079</td>
-      <td>189812</td>
-      <td>-5875</td>
-      <td>176096</td>
-    </tr>
-    <tr>
-      <th>211</th>
-      <td>175375</td>
-      <td>-28411</td>
-      <td>-12367</td>
-      <td>159742</td>
-      <td>-12367</td>
-      <td>185177</td>
-      <td>-2307</td>
-      <td>175238</td>
-    </tr>
-    <tr>
-      <th>212</th>
-      <td>173496</td>
-      <td>-21505</td>
-      <td>-7550</td>
-      <td>159884</td>
-      <td>-7550</td>
-      <td>181665</td>
-      <td>824</td>
-      <td>176815</td>
-    </tr>
-    <tr>
       <th>213</th>
-      <td>-7256496</td>
-      <td>-7442826</td>
-      <td>-7434561</td>
-      <td>-7264563</td>
-      <td>-7434561</td>
-      <td>-7252091</td>
-      <td>-7430048</td>
-      <td>-7263152</td>
+      <td>174245</td>
+      <td>-12090</td>
+      <td>-3826</td>
+      <td>166180</td>
+      <td>-3826</td>
+      <td>178644</td>
+      <td>680</td>
+      <td>167592</td>
+    </tr>
+    <tr>
+      <th>214</th>
+      <td>174519</td>
+      <td>-7693</td>
+      <td>-2911</td>
+      <td>169851</td>
+      <td>-2911</td>
+      <td>176585</td>
+      <td>-795</td>
+      <td>173245</td>
+    </tr>
+    <tr>
+      <th>215</th>
+      <td>169278</td>
+      <td>-13587</td>
+      <td>-7718</td>
+      <td>163547</td>
+      <td>-7718</td>
+      <td>171119</td>
+      <td>-5833</td>
+      <td>171831</td>
+    </tr>
+    <tr>
+      <th>216</th>
+      <td>170426</td>
+      <td>-8851</td>
+      <td>-1580</td>
+      <td>163319</td>
+      <td>-1580</td>
+      <td>176693</td>
+      <td>4833</td>
+      <td>171198</td>
+    </tr>
+    <tr>
+      <th>217</th>
+      <td>-7487536</td>
+      <td>-7662957</td>
+      <td>-7660558</td>
+      <td>-7489882</td>
+      <td>-7660558</td>
+      <td>-7487226</td>
+      <td>-7660240</td>
+      <td>-7490221</td>
     </tr>
   </tbody>
 </table>
-<p>214 rows × 8 columns</p>
+<p>218 rows × 8 columns</p>
 </div>
 </div>
 
@@ -15252,7 +15273,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">k</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">edf</span><span class="p">)),</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tce</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)):</span>
@@ -15505,6 +15526,10 @@ for date: 2020-10-26  the lowest positve error was by the method: lb and the hig
 for date: 2020-10-27  the lowest positve error was by the method: mxmb and the highest negative error by the method: lb
 for date: 2020-10-28  the lowest positve error was by the method: mxmb and the highest negative error by the method: lb
 for date: 2020-10-29  the lowest positve error was by the method: lb and the highest negative error by the method: memb
+for date: 2020-10-30  the lowest positve error was by the method: lb and the highest negative error by the method: memb
+for date: 2020-10-31  the lowest positve error was by the method: mxmb and the highest negative error by the method: lb
+for date: 2020-11-01  the lowest positve error was by the method: mxmb and the highest negative error by the method: lb
+for date: 2020-11-02  the lowest positve error was by the method: lb and the highest negative error by the method: memb
 </pre>
 </div>
 </div>
@@ -15515,7 +15540,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_dict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:[],</span><span class="s2">&quot;mipe&quot;</span><span class="p">:[],</span><span class="s2">&quot;mxne&quot;</span><span class="p">:[],</span><span class="s2">&quot;mipv&quot;</span><span class="p">:[],</span><span class="s2">&quot;mxnv&quot;</span><span class="p">:[],</span><span class="s2">&quot;original_val&quot;</span><span class="p">:[],</span><span class="s2">&quot;pprd_val&quot;</span><span class="p">:[],</span><span class="s2">&quot;nprd_val&quot;</span><span class="p">:[]}</span>
@@ -15590,7 +15615,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_dict</span>
@@ -15606,7 +15631,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[32]:</div>
+    <div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -15825,7 +15850,11 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
   &#39;2020-10-27 &#39;,
   &#39;2020-10-28 &#39;,
   &#39;2020-10-29 &#39;,
-  &#39;2020-10-30 &#39;],
+  &#39;2020-10-30 &#39;,
+  &#39;2020-10-31 &#39;,
+  &#39;2020-11-01 &#39;,
+  &#39;2020-11-02 &#39;,
+  &#39;2020-11-03 &#39;],
  &#39;mipe&#39;: [&#39;mxmb&#39;,
   &#39;lb&#39;,
   &#39;lb&#39;,
@@ -16035,6 +16064,10 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
   &#39;mxmb&#39;,
   &#39;mxmb&#39;,
   &#39;mdb&#39;,
+  &#39;lb&#39;,
+  &#39;mxmb&#39;,
+  &#39;mxmb&#39;,
+  &#39;lb&#39;,
   &#39;lb&#39;,
   &#39;mxmb&#39;,
   &#39;mxmb&#39;,
@@ -16253,6 +16286,10 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
   &#39;lb&#39;,
   &#39;lb&#39;,
   &#39;memb&#39;,
+  &#39;memb&#39;,
+  &#39;lb&#39;,
+  &#39;lb&#39;,
+  &#39;memb&#39;,
   &#39;lmb&#39;],
  &#39;mipv&#39;: [28,
   5,
@@ -16447,16 +16484,16 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
   77,
   235008,
   2818,
-  4316,
+  4318,
   235172,
-  5958,
-  223835,
-  6981,
+  5957,
+  224011,
+  6621,
   214933,
   206046,
   1243,
-  195842,
-  6510,
+  197722,
+  2713,
   188256,
   5958,
   1320,
@@ -16464,9 +16501,13 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
   194682,
   182644,
   3933,
-  170333,
+  170334,
   159742,
-  824,
+  832,
+  680,
+  169851,
+  163547,
+  4833,
   &#39;No&#39;],
  &#39;mxnv&#39;: [-26,
   -13,
@@ -16661,16 +16702,16 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
   -1029,
   -5088,
   -1141,
-  -1073,
+  -1071,
   -14246,
   -6568,
-  -5461,
-  -2178,
+  -5285,
+  -2385,
   -11847,
   -1009,
   -7811,
-  -8853,
-  -4947,
+  -6973,
+  -7120,
   -8703,
   -8414,
   -5924,
@@ -16678,10 +16719,14 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
   -5370,
   -3519,
   -6734,
-  -5875,
-  -2307,
-  -7550,
-  -7252091],
+  -5874,
+  -2309,
+  -7542,
+  -3826,
+  -795,
+  -5833,
+  -1580,
+  -7487226],
  &#39;original_val&#39;: [150,
   169,
   191,
@@ -16875,15 +16920,15 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
   5824440,
   5903185,
   5985813,
-  6074835,
-  6146399,
-  6224764,
-  6298667,
+  6074837,
+  6146402,
+  6224767,
+  6298846,
   6380428,
   6451220,
   6521788,
   6594371,
-  6658909,
+  6660789,
   6730589,
   6792417,
   6871978,
@@ -16892,9 +16937,13 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
   7075811,
   7135115,
   7198849,
-  7257277,
+  7257278,
   7313872,
-  7371731,
+  7371739,
+  7430744,
+  7489426,
+  7542738,
+  7601262,
   0],
  &#39;pprd_val&#39;: [122,
   164,
@@ -17090,15 +17139,15 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
   5668177,
   5982995,
   6070519,
-  5911227,
-  6218806,
-  6074832,
-  6373447,
+  5911230,
+  6218810,
+  6074835,
+  6373807,
   6236287,
   6315742,
   6593128,
   6463067,
-  6724079,
+  6727876,
   6604161,
   6866020,
   6945227,
@@ -17109,6 +17158,10 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
   7086944,
   7154130,
   7370907,
+  7430064,
+  7319575,
+  7379191,
+  7596429,
   &#39;No&#39;],
  &#39;nprd_val&#39;: [176,
   182,
@@ -17304,15 +17357,15 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
   5908273,
   5986954,
   6075908,
-  6160645,
-  6231332,
-  6304128,
-  6382606,
+  6160648,
+  6231335,
+  6304131,
+  6382813,
   6463067,
   6522797,
   6602182,
   6667762,
-  6735536,
+  6737709,
   6801120,
   6880392,
   6952471,
@@ -17321,9 +17374,13 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
   7138634,
   7205583,
   7263152,
-  7316179,
+  7316181,
   7379281,
-  7252091]}</pre>
+  7434570,
+  7490221,
+  7548571,
+  7602842,
+  7487226]}</pre>
 </div>
 
 </div>
@@ -17334,7 +17391,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">err_dict</span><span class="p">)</span>
@@ -17351,7 +17408,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[33]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -17452,63 +17509,63 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
       <td>...</td>
     </tr>
     <tr>
-      <th>209</th>
-      <td>2020-10-26</td>
-      <td>lb</td>
-      <td>memb</td>
-      <td>3933</td>
-      <td>-6734</td>
-      <td>7198849</td>
-      <td>7194916</td>
-      <td>7205583</td>
-    </tr>
-    <tr>
-      <th>210</th>
-      <td>2020-10-27</td>
-      <td>mxmb</td>
-      <td>lb</td>
-      <td>170333</td>
-      <td>-5875</td>
-      <td>7257277</td>
-      <td>7086944</td>
-      <td>7263152</td>
-    </tr>
-    <tr>
-      <th>211</th>
-      <td>2020-10-28</td>
-      <td>mxmb</td>
-      <td>lb</td>
-      <td>159742</td>
-      <td>-2307</td>
-      <td>7313872</td>
-      <td>7154130</td>
-      <td>7316179</td>
-    </tr>
-    <tr>
-      <th>212</th>
-      <td>2020-10-29</td>
-      <td>lb</td>
-      <td>memb</td>
-      <td>824</td>
-      <td>-7550</td>
-      <td>7371731</td>
-      <td>7370907</td>
-      <td>7379281</td>
-    </tr>
-    <tr>
       <th>213</th>
       <td>2020-10-30</td>
+      <td>lb</td>
+      <td>memb</td>
+      <td>680</td>
+      <td>-3826</td>
+      <td>7430744</td>
+      <td>7430064</td>
+      <td>7434570</td>
+    </tr>
+    <tr>
+      <th>214</th>
+      <td>2020-10-31</td>
+      <td>mxmb</td>
+      <td>lb</td>
+      <td>169851</td>
+      <td>-795</td>
+      <td>7489426</td>
+      <td>7319575</td>
+      <td>7490221</td>
+    </tr>
+    <tr>
+      <th>215</th>
+      <td>2020-11-01</td>
+      <td>mxmb</td>
+      <td>lb</td>
+      <td>163547</td>
+      <td>-5833</td>
+      <td>7542738</td>
+      <td>7379191</td>
+      <td>7548571</td>
+    </tr>
+    <tr>
+      <th>216</th>
+      <td>2020-11-02</td>
+      <td>lb</td>
+      <td>memb</td>
+      <td>4833</td>
+      <td>-1580</td>
+      <td>7601262</td>
+      <td>7596429</td>
+      <td>7602842</td>
+    </tr>
+    <tr>
+      <th>217</th>
+      <td>2020-11-03</td>
       <td>No</td>
       <td>lmb</td>
       <td>No</td>
-      <td>-7252091</td>
+      <td>-7487226</td>
       <td>0</td>
       <td>No</td>
-      <td>7252091</td>
+      <td>7487226</td>
     </tr>
   </tbody>
 </table>
-<p>214 rows × 8 columns</p>
+<p>218 rows × 8 columns</p>
 </div>
 </div>
 
@@ -17520,7 +17577,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;trerr_df.xlsx&quot;</span><span class="p">)</span>
@@ -17536,7 +17593,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Counter</span><span class="p">(</span><span class="n">err_df</span><span class="p">[</span><span class="s1">&#39;mipe&#39;</span><span class="p">])</span>
@@ -17552,13 +17609,13 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[35]:</div>
+    <div class="prompt output_prompt">Out[36]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Counter({&#39;mxmb&#39;: 96, &#39;lb&#39;: 57, &#39;memb&#39;: 32, &#39;mdb&#39;: 13, &#39;mxb&#39;: 15, &#39;No&#39;: 1})</pre>
+<pre>Counter({&#39;mxmb&#39;: 98, &#39;lb&#39;: 59, &#39;memb&#39;: 32, &#39;mdb&#39;: 13, &#39;mxb&#39;: 15, &#39;No&#39;: 1})</pre>
 </div>
 
 </div>
@@ -17569,7 +17626,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mnval</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">err_df</span><span class="p">[</span><span class="s1">&#39;mipe&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
@@ -17592,7 +17649,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>method: mxmb and values is:  96
+<pre>method: mxmb and values is:  98
 </pre>
 </div>
 </div>
@@ -17603,7 +17660,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">min_err_track_dict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:[],</span><span class="s2">&quot;min_val_method&quot;</span><span class="p">:[]}</span>
@@ -17635,7 +17692,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[41]:</div>
+    <div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -17694,33 +17751,33 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
       <td>...</td>
     </tr>
     <tr>
-      <th>208</th>
-      <td>2020-10-25</td>
-      <td>mxmb</td>
-    </tr>
-    <tr>
-      <th>209</th>
-      <td>2020-10-26</td>
-      <td>mxmb</td>
-    </tr>
-    <tr>
-      <th>210</th>
-      <td>2020-10-27</td>
-      <td>mxmb</td>
-    </tr>
-    <tr>
-      <th>211</th>
-      <td>2020-10-28</td>
-      <td>mxmb</td>
-    </tr>
-    <tr>
       <th>212</th>
       <td>2020-10-29</td>
       <td>mxmb</td>
     </tr>
+    <tr>
+      <th>213</th>
+      <td>2020-10-30</td>
+      <td>mxmb</td>
+    </tr>
+    <tr>
+      <th>214</th>
+      <td>2020-10-31</td>
+      <td>mxmb</td>
+    </tr>
+    <tr>
+      <th>215</th>
+      <td>2020-11-01</td>
+      <td>mxmb</td>
+    </tr>
+    <tr>
+      <th>216</th>
+      <td>2020-11-02</td>
+      <td>mxmb</td>
+    </tr>
   </tbody>
 </table>
-<p>213 rows × 2 columns</p>
+<p>217 rows × 2 columns</p>
 </div>
 </div>
 
@@ -17732,7 +17789,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Counter</span><span class="p">(</span><span class="n">err_df</span><span class="p">[</span><span class="s1">&#39;mxne&#39;</span><span class="p">])</span>
@@ -17748,13 +17805,13 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[37]:</div>
+    <div class="prompt output_prompt">Out[39]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Counter({&#39;memb&#39;: 92, &#39;mxb&#39;: 37, &#39;lb&#39;: 69, &#39;No&#39;: 15, &#39;lmb&#39;: 1})</pre>
+<pre>Counter({&#39;memb&#39;: 94, &#39;mxb&#39;: 37, &#39;lb&#39;: 71, &#39;No&#39;: 15, &#39;lmb&#39;: 1})</pre>
 </div>
 
 </div>
@@ -17765,7 +17822,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mxval</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">err_df</span><span class="p">[</span><span class="s1">&#39;mxne&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
@@ -17788,7 +17845,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>method: memb and values is:  92
+<pre>method: memb and values is:  94
 </pre>
 </div>
 </div>
@@ -17799,7 +17856,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">max_err_track_dict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:[],</span><span class="s2">&quot;max_val_method&quot;</span><span class="p">:[]}</span>
@@ -17831,7 +17888,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[42]:</div>
+    <div class="prompt output_prompt">Out[41]:</div>
 
 
 
@@ -17890,33 +17947,33 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
       <td>...</td>
     </tr>
     <tr>
-      <th>208</th>
-      <td>2020-10-25</td>
-      <td>memb</td>
-    </tr>
-    <tr>
-      <th>209</th>
-      <td>2020-10-26</td>
-      <td>memb</td>
-    </tr>
-    <tr>
-      <th>210</th>
-      <td>2020-10-27</td>
-      <td>memb</td>
-    </tr>
-    <tr>
-      <th>211</th>
-      <td>2020-10-28</td>
-      <td>memb</td>
-    </tr>
-    <tr>
       <th>212</th>
       <td>2020-10-29</td>
       <td>memb</td>
     </tr>
+    <tr>
+      <th>213</th>
+      <td>2020-10-30</td>
+      <td>memb</td>
+    </tr>
+    <tr>
+      <th>214</th>
+      <td>2020-10-31</td>
+      <td>memb</td>
+    </tr>
+    <tr>
+      <th>215</th>
+      <td>2020-11-01</td>
+      <td>memb</td>
+    </tr>
+    <tr>
+      <th>216</th>
+      <td>2020-11-02</td>
+      <td>memb</td>
+    </tr>
   </tbody>
 </table>
-<p>213 rows × 2 columns</p>
+<p>217 rows × 2 columns</p>
 </div>
 </div>
 
@@ -17928,7 +17985,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_df</span><span class="p">[</span><span class="s1">&#39;mipe&#39;</span><span class="p">][</span><span class="nb">len</span><span class="p">(</span><span class="n">err_df</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
@@ -17944,7 +18001,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[39]:</div>
+    <div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -17961,7 +18018,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">err_df</span><span class="p">[</span><span class="s1">&#39;mxne&#39;</span><span class="p">][</span><span class="nb">len</span><span class="p">(</span><span class="n">err_df</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
@@ -17977,7 +18034,7 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[40]:</div>
+    <div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -17988,6 +18045,32 @@ for date: 2020-10-29  the lowest positve error was by the method: lb and the hig
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 
